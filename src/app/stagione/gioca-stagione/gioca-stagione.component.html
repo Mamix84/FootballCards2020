@@ -1,0 +1,15 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-fieldset legend="Gioca Stagione">
+      <div class="ui-g-12" *ngFor="let i = index; let campionato of stagione.listaCampionati">
+        <p-fieldset
+          legend="{{campionato.denominazioneLega === undefined ? 'Nuovo Campionato - ' +i : campionato.denominazioneLega}}"
+          [toggleable]="true">
+          <app-gioca-campionato [(campionato)]="stagione.listaCampionati[i]"
+            (aggiornaSalvataggioStagione)="aggiornaStagione()" (proseguiStagioneEvent)="proseguiStagione()">
+          </app-gioca-campionato>
+        </p-fieldset>
+      </div>
+    </p-fieldset>
+  </div>
+</div>

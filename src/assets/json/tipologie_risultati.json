@@ -1,0 +1,7 @@
+{
+  "listaTipologieRisultati":[
+    {"label": "ISTANTANEO", "value": 0},
+    {"label": "IMMEDIATO", "value": 1},
+    {"label": "INTERATTIVO", "value": 2}
+  ]
+}

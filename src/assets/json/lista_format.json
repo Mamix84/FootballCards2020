@@ -1,0 +1,16 @@
+{
+  "listaFormat": [
+    {
+      "label": "Seleziona il format",
+      "value": null
+    },
+    {
+      "label": "RETROCESSIONE DIRETTA",
+      "value": "0"
+    },
+    {
+      "label": "SERIE A / SERIE B / SERIE CA - SERIE CB",
+      "value": "1"
+    }
+  ]
+}

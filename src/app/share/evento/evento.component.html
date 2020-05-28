@@ -1,0 +1,70 @@
+<div class="ui-g">
+  <div class="ui-g-1">
+    <div>
+      <p-checkbox [disabled]="evento.goalC != undefined && evento.goalFC != undefined" [(ngModel)]="checked"
+        binary="true" class="appCheckBox" (onChange)="onChangheCheckBox()"></p-checkbox>
+    </div>
+  </div>
+  <div class="ui-g-1"><img class="teamLogo" src={{evento.teamC.logo}} width="30" heigth="30" /></div>
+  <div class="ui-g-3">
+    <h3 pTooltip="{{'Valore tecnico ' +evento.teamC.nome.toUpperCase() +': '+ evento.teamC.valoreTecnico}}"
+      tooltipPosition="top">{{evento.teamC.nome.toUpperCase()}}</h3>
+  </div>
+  <div class="ui-g-1"><img class="teamLogo" src={{evento.teamFC.logo}} width="30" heigth="30" /></div>
+  <div class="ui-g-3"
+    pTooltip="{{'Valore tecnico ' +evento.teamFC.nome.toUpperCase() +': '+ evento.teamFC.valoreTecnico}}"
+    tooltipPosition="top">
+    <h3>{{evento.teamFC.nome.toUpperCase()}}</h3>
+  </div>
+  <div class="ui-g-1">
+    <h2>{{evento.goalC}} - {{evento.goalFC}}</h2>
+  </div>
+  <div class="ui-g-1">
+    <p-button class="appButton" icon="pi pi-chart-line" (onClick)="visualizzaAndamentoSquadre()"></p-button>
+  </div>
+  <div class="ui-g-1">
+    <p-button *ngIf="(evento.goalC >= 0 && evento.goalC <= 10) ||
+    (evento.goalFC >= 4 && evento.goalFC <= 7)" class="appButton" icon="pi pi-sliders-h"
+      (onClick)="visualizzaPopUpRisultati()"></p-button>
+  </div>
+</div>
+
+<p-dialog header="Andamento squadre # {{evento.teamC.nome}} - {{evento.teamFC.nome}}"
+  [(visible)]="displayAndamentoSquadre">
+  <div class="ui-g">
+    <div class="ui-g-12">
+      <p-chart type="line" [data]="data" (onDataSelect)="selectData($event)" width="80vw" height="50vh"></p-chart>
+    </div>
+  </div>
+</p-dialog>
+
+<p-dialog header="Risultato # {{evento.teamC.nome}} - {{evento.teamFC.nome}}" [(visible)]="displayModificaRisultato">
+  <div class="ui-g" style="width: 450px; height: 240px;">
+    <div class="ui-g-12">
+      <div class="ui-g">
+        <div class="ui-g-6">
+          <h3>RISULTATO CASA</h3>
+        </div>
+        <div class="ui-g-6">
+          <h3>RISULTATO FUORI CASA</h3>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown" [options]="opzioniGoalC" [(ngModel)]="evento.goalC"
+            [disabled]="disableDropdownC"></p-dropdown>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown" [options]="opzioniGoalFC" [(ngModel)]="evento.goalFC"
+            [disabled]="disableDropdownFC"></p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-8"></div>
+        <div class="ui-g-4" style="margin-top: 5.0em;">
+          <p-button class="appButton" label="CONFERMA" (onClick)="confermaNuovoRisultato()"></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</p-dialog>

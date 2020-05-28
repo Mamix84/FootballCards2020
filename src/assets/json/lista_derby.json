@@ -1,0 +1,102 @@
+{
+  "listaDerby": [
+    {
+      "teamA": {
+        "id": 123,
+        "nome": "INTER",
+        "logo": "/assets/images/teams/inter.png",
+        "valoreTecnico": 0
+      },
+      "teamB": {
+        "id": 163,
+        "nome": "MILAN",
+        "logo": "/assets/images/teams/milan.png",
+        "valoreTecnico": 0
+      }
+    },
+    {
+      "teamA": {
+        "id": 128,
+        "nome": "JUVENTUS",
+        "logo": "/assets/images/teams/juventus.png",
+        "valoreTecnico": 0
+      },
+      "teamB": {
+        "id": 275,
+        "nome": "TORINO",
+        "logo": "/assets/images/teams/torino.png",
+        "valoreTecnico": 0
+      }
+    },
+    {
+      "teamA": {
+        "id": 225,
+        "nome": "ROMA",
+        "logo": "/assets/images/teams/roma.png",
+        "valoreTecnico": 0
+      },
+      "teamB": {
+        "id": 138,
+        "nome": "LAZIO",
+        "logo": "/assets/images/teams/lazio.png",
+        "valoreTecnico": 0
+      }
+    },
+    {
+      "teamA": {
+        "id": 291,
+        "nome": "VERONA",
+        "logo": "/assets/images/teams/verona.png",
+        "valoreTecnico": 0
+      },
+      "teamB": {
+        "id": 62,
+        "nome": "CHIEVO",
+        "logo": "/assets/images/teams/chievo.png",
+        "valoreTecnico": 0
+      }
+    },
+    {
+      "teamA": {
+        "id": 235,
+        "nome": "SAMPDORIA",
+        "logo": "/assets/images/teams/sampdoria.png",
+        "valoreTecnico": 0
+      },
+      "teamB": {
+        "id": 110,
+        "nome": "GENOA",
+        "logo": "/assets/images/teams/genoa.png",
+        "valoreTecnico": 0
+      }
+    },
+    {
+      "teamA": {
+        "id": 217,
+        "nome": "REGGIANA",
+        "logo": "/assets/images/teams/reggiana.png",
+        "valoreTecnico": 0
+      },
+      "teamB": {
+        "id": 242,
+        "nome": "SASSUOLO",
+        "logo": "/assets/images/teams/sassuolo.png",
+        "valoreTecnico": 0
+      }
+    },
+    {
+      "teamA": {
+        "id": 17,
+        "nome": "ATALANTA",
+        "logo": "/assets/images/teams/atalanta.png",
+        "valoreTecnico": 0
+      },
+      "teamB": {
+        "id": 301,
+        "nome": "ALBINOLEFFE",
+        "logo": "/assets/images/teams/albinoleffe.png",
+        "valoreTecnico": 0
+      }
+    }
+  ]
+}

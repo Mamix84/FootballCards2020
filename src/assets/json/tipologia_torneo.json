@@ -1,0 +1,48 @@
+{
+  "listaTipologieTorneo": [
+    {
+      "label": "Seleziona la tipologia di torneo",
+      "value": null
+    },
+    {
+      "label": "SERIE A",
+      "value": 0
+    },
+    {
+      "label": "SERIE B",
+      "value": 1
+    },
+    {
+      "label": "SERIE C",
+      "value": 2
+    },
+    {
+      "label": "SERIE D",
+      "value": 3
+    },
+    {
+      "label": "ECCELLENZA",
+      "value": 4
+    },
+    {
+      "label": "PROMOZIONE",
+      "value": 5
+    },
+    {
+      "label": "I CATEGORIA",
+      "value": 6
+    },
+    {
+      "label": "II CATEGORIA",
+      "value": 7
+    },
+    {
+      "label": "III CATEGORIA",
+      "value": 8
+    },
+    {
+      "label": "TORNEO",
+      "value": 9
+    }
+  ]
+}

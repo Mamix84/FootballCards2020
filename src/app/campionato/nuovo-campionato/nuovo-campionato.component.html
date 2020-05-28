@@ -1,0 +1,89 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-fieldset legend="Nuovo Campionato">
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>DENOMINAZIONE LEGA</h3>
+        </div>
+        <div class="ui-g-6">
+          <input type="text" pInputText [(ngModel)]="campionato.denominazioneLega" />
+        </div>
+        <div class="ui-g-3">
+          <p-selectButton class="appSelectButton" [options]="listaTipologieRisultati" [(ngModel)]="campionato.tipologiaRisultati"></p-selectButton>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>TIPOLOGIA TORNEO</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown
+            [disabled]="campionato.denominazioneLega === undefined || campionato.denominazioneLega === '' ? true: false"
+            class="appDropDown" [options]="listaTipologieTorneo" [(ngModel)]="campionato.tipologia"
+            (onChange)="preparaListaTeams()">
+          </p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>STAGIONE</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown"
+            [disabled]="campionato.tipologia===undefined || campionato.tipologia===null ? true : false"
+            [options]="stagioni" [(ngModel)]="campionato.stagione"></p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>NUMERO SQUADRE</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown"
+            [disabled]="campionato.stagione===undefined || campionato.stagione===null || numeroSquadre === undefined ? true : false"
+            [options]="numeroSquadre" [(ngModel)]="campionato.numeroTeams" (onChange)="preparaListaTeams()">
+          </p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>FORMAT</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown" [disabled]="(campionato.numeroTeams===undefined || campionato.numeroTeams===null || listaFormat===undefined) ||
+            (listaFormat!=undefined && listaFormat.length <=1) ? true : false" [options]="listaFormat"
+            [(ngModel)]="campionato.format"></p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>SELEZIONE SQUADRE</h3>
+        </div>
+      </div>
+      <div class="ui-g" *ngIf="campionato.stagione && campionato.numeroTeams && campionato.denominazioneLega">
+        <div class="ui-g-12" *ngFor="let i = index; let team of listaTeamsDaSelezionare">
+          <div class="ui-g-3">
+            <h3>SQUADRA N° {{i+1}}</h3>
+          </div>
+          <div class="ui-g-6">
+            <p-dropdown class="appDropDown" [options]="listaTeams" filter="true" [(ngModel)]="listaTeamsSelezionati[i]">
+            </p-dropdown>
+          </div>
+          <div class="ui-g-3" *ngIf="listaTeamsSelezionati[i] != null">
+            <p-dropdown class="appDropDown" [options]="listaValoriTecnici" filter="true"
+              [(ngModel)]="listaTeamsSelezionati[i].valoreTecnico">
+            </p-dropdown>
+          </div>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-10">
+        </div>
+        <div class="ui-g-2">
+          <p-button class="appButton" [disabled]="checkCampionatoCompleto()" label="PREPARA"
+            (onClick)="preparaCampionato()"></p-button>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+</div>

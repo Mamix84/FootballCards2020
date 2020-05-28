@@ -1,0 +1,37 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-fieldset legend="Carica Campionato">
+      <div class="ui-g">
+        <div class="ui-g-12">
+          <p-table #dt [value]="listaSalvataggi" dataKey="id" styleClass="ui-table-customers" [rowHover]="true"
+            [rows]="idFile" [paginator]="false">
+            <ng-template pTemplate="header">
+              <tr>
+                <th pColumn="idCampionato">ID</th>
+                <th pColumn="descrizione">DESCRIZIONE</th>
+                <th pColumn="stagione">STAGIONE</th>
+                <th pColumn="numeroTeams">NUMERO SQUADRE</th>
+                <th pColumn="dataCreazione">DATA CREAZIONE</th>
+                <th pColumn="dataUltimoSalvataggio">DATA SALVATAGGIO</th>
+                <th pColumn="buttonCarica"></th>
+                <th pColumn="buttonElimina"></th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-salvataggio>
+              <tr>
+                <td>{{salvataggio.idCampionato}}</td>
+                <td>{{salvataggio.descrizione}}</td>
+                <td>{{salvataggio.stagione}}</td>
+                <td>{{salvataggio.numeroTeams}}</td>
+                <td>{{salvataggio.dataCreazione | date : 'medium'}}</td>
+                <td>{{salvataggio.dataUltimoSalvataggio  | date : 'medium'}}</td>
+                <td><p-button class="appButton" label="CARICA" (onClick)="caricaCampionato(salvataggio.idCampionato)"></p-button></td>
+                <td><p-button class="appButton" label="ELIMINA" (onClick)="eliminaSalvataggio(salvataggio.idCampionato)"></p-button></td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+</div>

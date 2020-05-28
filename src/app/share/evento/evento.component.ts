@@ -1,0 +1,269 @@
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { CardsService } from 'src/app/services/cards.service';
+import { Evento } from 'src/app/model/campionato';
+import { Subscription } from 'rxjs';
+import { MessageService, SelectItem } from 'primeng/api';
+import { CampionatoService } from 'src/app/services/campionato.service';
+
+@Component({
+  selector: 'app-evento',
+  templateUrl: './evento.component.html',
+  styleUrls: ['./evento.component.css'],
+})
+export class EventoComponent implements OnInit {
+  disableCheck: boolean;
+  checked: boolean;
+
+  @Input() evento: Evento;
+  @Output() selected = new EventEmitter<any>();
+  @Output() aggiornaClassifica = new EventEmitter<any>();
+
+  data: any;
+  displayAndamentoSquadre: boolean = false;
+  displayModificaRisultato: boolean = false;
+  visualizzaModificaRisultati: boolean = false;
+
+  subscription: Subscription;
+
+  opzioniGoalC: SelectItem[];
+  opzioniGoalFC: SelectItem[];
+
+  disableDropdownC: boolean = false;
+  disableDropdownFC: boolean = false;
+
+  constructor(
+    private cardsService: CardsService,
+    private messageService: MessageService,
+    private campionatoService: CampionatoService
+  ) {}
+
+  ngOnInit(): void {
+    if (this.evento.goalC != null && this.evento.goalFC != null) {
+      this.checked = true;
+      this.disableCheck = true;
+    }
+  }
+
+  onChangheCheckBox() {
+    this.cardsService.prossimaGiocata(this.evento);
+    this.selected.emit(this.evento.id);
+    //this.disableCheck = true;
+  }
+
+  visualizzaAndamentoSquadre() {
+    //this.data = this.campionatoService.preparaAndamentoClassifica(this.evento);
+
+    this.displayAndamentoSquadre = true;
+  }
+
+  selectData(event) {
+    this.messageService.add({
+      severity: 'info',
+      summary: 'Data Selected',
+      detail: this.data.datasets[event.element._datasetIndex].data[
+        event.element._index
+      ],
+    });
+  }
+
+  visualizzaPopUpRisultati() {
+    this.opzioniGoalC = [];
+    if (this.evento.goalC >= 0 && this.evento.goalC <= 10) {
+      this.opzioniGoalC.push({
+        label: this.evento.goalC + '',
+        value: this.evento.goalC,
+      });
+      switch (this.evento.goalC) {
+        case 0:
+          this.opzioniGoalC.push({ label: '0', value: 0 });
+          this.opzioniGoalC.push({ label: '1', value: 1 });
+          this.opzioniGoalC.push({ label: '2', value: 2 });
+          this.opzioniGoalC.push({ label: '3', value: 3 });
+          this.opzioniGoalC.push({ label: '4', value: 4 });
+          this.opzioniGoalC.push({ label: '5', value: 5 });
+          this.opzioniGoalC.push({ label: '6', value: 6 });
+          this.opzioniGoalC.push({ label: '7', value: 7 });
+          break;
+        case 1:
+          this.opzioniGoalC.push({ label: '0', value: 0 });
+          this.opzioniGoalC.push({ label: '1', value: 1 });
+          this.opzioniGoalC.push({ label: '2', value: 2 });
+          this.opzioniGoalC.push({ label: '3', value: 3 });
+          this.opzioniGoalC.push({ label: '4', value: 4 });
+          this.opzioniGoalC.push({ label: '5', value: 5 });
+          this.opzioniGoalC.push({ label: '6', value: 6 });
+          this.opzioniGoalC.push({ label: '7', value: 7 });
+          break;
+        case 2:
+          this.opzioniGoalC.push({ label: '0', value: 0 });
+          this.opzioniGoalC.push({ label: '1', value: 1 });
+          this.opzioniGoalC.push({ label: '2', value: 2 });
+          this.opzioniGoalC.push({ label: '3', value: 3 });
+          this.opzioniGoalC.push({ label: '4', value: 4 });
+          this.opzioniGoalC.push({ label: '5', value: 5 });
+          this.opzioniGoalC.push({ label: '6', value: 6 });
+          this.opzioniGoalC.push({ label: '7', value: 7 });
+          break;
+        case 3:
+          this.opzioniGoalC.push({ label: '0', value: 0 });
+          this.opzioniGoalC.push({ label: '1', value: 1 });
+          this.opzioniGoalC.push({ label: '2', value: 2 });
+          this.opzioniGoalC.push({ label: '3', value: 3 });
+          this.opzioniGoalC.push({ label: '4', value: 4 });
+          this.opzioniGoalC.push({ label: '5', value: 5 });
+          this.opzioniGoalC.push({ label: '6', value: 6 });
+          this.opzioniGoalC.push({ label: '7', value: 7 });
+          break;
+        case 4:
+          this.opzioniGoalC.push({ label: '0', value: 0 });
+          this.opzioniGoalC.push({ label: '1', value: 1 });
+          this.opzioniGoalC.push({ label: '2', value: 2 });
+          this.opzioniGoalC.push({ label: '3', value: 3 });
+          this.opzioniGoalC.push({ label: '4', value: 4 });
+          this.opzioniGoalC.push({ label: '5', value: 5 });
+          this.opzioniGoalC.push({ label: '6', value: 6 });
+          this.opzioniGoalC.push({ label: '7', value: 7 });
+          break;
+        case 5:
+          this.opzioniGoalC.push({ label: '0', value: 0 });
+          this.opzioniGoalC.push({ label: '1', value: 1 });
+          this.opzioniGoalC.push({ label: '2', value: 2 });
+          this.opzioniGoalC.push({ label: '3', value: 3 });
+          this.opzioniGoalC.push({ label: '4', value: 4 });
+          this.opzioniGoalC.push({ label: '5', value: 5 });
+          this.opzioniGoalC.push({ label: '6', value: 6 });
+          this.opzioniGoalC.push({ label: '7', value: 7 });
+          break;
+        case 6:
+          this.opzioniGoalC.push({ label: '0', value: 0 });
+          this.opzioniGoalC.push({ label: '1', value: 1 });
+          this.opzioniGoalC.push({ label: '2', value: 2 });
+          this.opzioniGoalC.push({ label: '3', value: 3 });
+          this.opzioniGoalC.push({ label: '4', value: 4 });
+          this.opzioniGoalC.push({ label: '5', value: 5 });
+          this.opzioniGoalC.push({ label: '6', value: 6 });
+          this.opzioniGoalC.push({ label: '7', value: 7 });
+          break;
+        case 7:
+          this.opzioniGoalC.push({ label: '0', value: 0 });
+          this.opzioniGoalC.push({ label: '1', value: 1 });
+          this.opzioniGoalC.push({ label: '2', value: 2 });
+          this.opzioniGoalC.push({ label: '3', value: 3 });
+          this.opzioniGoalC.push({ label: '4', value: 4 });
+          this.opzioniGoalC.push({ label: '5', value: 5 });
+          this.opzioniGoalC.push({ label: '6', value: 6 });
+          this.opzioniGoalC.push({ label: '7', value: 7 });
+          break;
+      }
+    } else {
+      this.opzioniGoalC.push({
+        label: this.evento.goalC + '',
+        value: this.evento.goalC,
+      });
+      this.disableDropdownC = false;
+    }
+
+    this.opzioniGoalFC = [];
+    if (this.evento.goalFC >= 0 && this.evento.goalFC <= 10) {
+      this.opzioniGoalFC.push({
+        label: this.evento.goalFC + '',
+        value: this.evento.goalFC,
+      });
+      switch (this.evento.goalFC) {
+        case 0:
+          this.opzioniGoalFC.push({ label: '0', value: 0 });
+          this.opzioniGoalFC.push({ label: '1', value: 1 });
+          this.opzioniGoalFC.push({ label: '2', value: 2 });
+          this.opzioniGoalFC.push({ label: '3', value: 3 });
+          this.opzioniGoalFC.push({ label: '4', value: 4 });
+          this.opzioniGoalFC.push({ label: '5', value: 5 });
+          this.opzioniGoalFC.push({ label: '6', value: 6 });
+          this.opzioniGoalFC.push({ label: '7', value: 7 });
+          break;
+        case 1:
+          this.opzioniGoalFC.push({ label: '0', value: 0 });
+          this.opzioniGoalFC.push({ label: '1', value: 1 });
+          this.opzioniGoalFC.push({ label: '2', value: 2 });
+          this.opzioniGoalFC.push({ label: '3', value: 3 });
+          this.opzioniGoalFC.push({ label: '4', value: 4 });
+          this.opzioniGoalFC.push({ label: '5', value: 5 });
+          this.opzioniGoalFC.push({ label: '6', value: 6 });
+          this.opzioniGoalFC.push({ label: '7', value: 7 });
+          break;
+        case 2:
+          this.opzioniGoalFC.push({ label: '0', value: 0 });
+          this.opzioniGoalFC.push({ label: '1', value: 1 });
+          this.opzioniGoalFC.push({ label: '2', value: 2 });
+          this.opzioniGoalFC.push({ label: '3', value: 3 });
+          this.opzioniGoalFC.push({ label: '4', value: 4 });
+          this.opzioniGoalFC.push({ label: '5', value: 5 });
+          this.opzioniGoalFC.push({ label: '6', value: 6 });
+          this.opzioniGoalFC.push({ label: '7', value: 7 });
+          break;
+        case 3:
+          this.opzioniGoalFC.push({ label: '0', value: 0 });
+          this.opzioniGoalFC.push({ label: '1', value: 1 });
+          this.opzioniGoalFC.push({ label: '2', value: 2 });
+          this.opzioniGoalFC.push({ label: '3', value: 3 });
+          this.opzioniGoalFC.push({ label: '4', value: 4 });
+          this.opzioniGoalFC.push({ label: '5', value: 5 });
+          this.opzioniGoalFC.push({ label: '6', value: 6 });
+          this.opzioniGoalFC.push({ label: '7', value: 7 });
+          break;
+        case 4:
+          this.opzioniGoalFC.push({ label: '0', value: 0 });
+          this.opzioniGoalFC.push({ label: '1', value: 1 });
+          this.opzioniGoalFC.push({ label: '2', value: 2 });
+          this.opzioniGoalFC.push({ label: '3', value: 3 });
+          this.opzioniGoalFC.push({ label: '4', value: 4 });
+          this.opzioniGoalFC.push({ label: '5', value: 5 });
+          this.opzioniGoalFC.push({ label: '6', value: 6 });
+          this.opzioniGoalFC.push({ label: '7', value: 7 });
+          break;
+        case 5:
+          this.opzioniGoalFC.push({ label: '0', value: 0 });
+          this.opzioniGoalFC.push({ label: '1', value: 1 });
+          this.opzioniGoalFC.push({ label: '2', value: 2 });
+          this.opzioniGoalFC.push({ label: '3', value: 3 });
+          this.opzioniGoalFC.push({ label: '4', value: 4 });
+          this.opzioniGoalFC.push({ label: '5', value: 5 });
+          this.opzioniGoalFC.push({ label: '6', value: 6 });
+          this.opzioniGoalFC.push({ label: '7', value: 7 });
+          break;
+        case 6:
+          this.opzioniGoalFC.push({ label: '0', value: 0 });
+          this.opzioniGoalFC.push({ label: '1', value: 1 });
+          this.opzioniGoalFC.push({ label: '2', value: 2 });
+          this.opzioniGoalFC.push({ label: '3', value: 3 });
+          this.opzioniGoalFC.push({ label: '4', value: 4 });
+          this.opzioniGoalFC.push({ label: '5', value: 5 });
+          this.opzioniGoalFC.push({ label: '6', value: 6 });
+          this.opzioniGoalFC.push({ label: '7', value: 7 });
+          break;
+        case 7:
+          this.opzioniGoalFC.push({ label: '0', value: 0 });
+          this.opzioniGoalFC.push({ label: '1', value: 1 });
+          this.opzioniGoalFC.push({ label: '2', value: 2 });
+          this.opzioniGoalFC.push({ label: '3', value: 3 });
+          this.opzioniGoalFC.push({ label: '4', value: 4 });
+          this.opzioniGoalFC.push({ label: '5', value: 5 });
+          this.opzioniGoalFC.push({ label: '6', value: 6 });
+          this.opzioniGoalFC.push({ label: '7', value: 7 });
+          break;
+      }
+    } else {
+      this.opzioniGoalFC.push({
+        label: this.evento.goalFC + '',
+        value: this.evento.goalFC,
+      });
+      this.disableDropdownFC = false;
+    }
+
+    this.displayModificaRisultato = true;
+  }
+
+  confermaNuovoRisultato() {
+    this.displayModificaRisultato = false;
+    this.aggiornaClassifica.emit(null);
+  }
+}

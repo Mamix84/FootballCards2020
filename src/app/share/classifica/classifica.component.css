@@ -1,0 +1,31 @@
+.champions {
+  background-color: #ffc400 !important;
+}
+
+.europa {
+  background-color: rgb(77, 255, 7) !important;
+}
+
+.promozione {
+  background-color: rgb(0, 238, 255) !important;
+}
+
+.vincitore {
+  background-color: rgb(0, 238, 255) !important;
+}
+
+.retrocessione {
+  background-color: rgb(250, 246, 0) !important;
+}
+
+.intertoto {
+  background-color: rgb(247, 199, 43) !important;
+}
+
+.playoff {
+  background-color: rgb(225, 247, 146) !important;
+}
+
+.playout {
+  background-color: rgb(243, 160, 181) !important;
+}

@@ -1,0 +1,42 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-table #dt [value]="classifica.listaTeams" dataKey="id" styleClass="ui-table-customers" [rowHover]="true"
+      [rows]="numeroTeam" [paginator]="false">
+      <ng-template pTemplate="caption">
+        Classifica
+      </ng-template>
+      <ng-template pTemplate="header">
+        <tr>
+          <th pColumn="verdetto" style="display: none;"></th>
+          <th pColumn="teamLogo"></th>
+          <th pColumn="teamNome">SQUADRA</th>
+          <th pColumn="punti">PUNTI</th>
+          <th pColumn="partiteGiocate">GARE</th>
+          <th pColumn="vinte">VINTE</th>
+          <th pColumn="pareggiate">NULLE</th>
+          <th pColumn="perse">PERSE</th>
+          <th pColumn="golFatti">GOAL FATTI</th>
+          <th pColumn="golSubiti">GOAL SUBITI</th>
+          <th pColumn="golSubiti">DIFF. RETI</th>
+
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-team>
+        <tr
+          [ngClass]="team.verdetto">
+          <td style="text-align: center; display: none;">{{team.verdetto}}</td>
+          <td><img class="teamLogo" src={{team.team.logo}} width="30" heigth="30" /></td>
+          <td>{{team.team.nome.toUpperCase()}}</td>
+          <td style="text-align: center;">{{team.punti}}</td>
+          <td style="text-align: center;">{{team.partiteGiocate}}</td>
+          <td style="text-align: center;">{{team.vinte}}</td>
+          <td style="text-align: center;">{{team.pareggiate}}</td>
+          <td style="text-align: center;">{{team.perse}}</td>
+          <td style="text-align: center;">{{team.golFatti}}</td>
+          <td style="text-align: center;">{{team.golSubiti}}</td>
+          <td style="text-align: center;">{{team.golFatti - team.golSubiti}}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="ui-g">
+  <div class="ui-g-6">
+    <div class="ui-g">
+      <div class="ui-g-4">
+        <p-button class="appButton" label="GIORNATA PRECEDENTE" (onClick)="giornataPrecedente()"
+          [disabled]="indiceGiornata===0"></p-button>
+      </div>
+      <div class="ui-g-4">
+        <p-dropdown class="appDropDown" [options]="listaGiornate" [(ngModel)]="indiceGiornata"
+          (onChange)="caricaGiornata()"></p-dropdown>
+      </div>
+      <div class="ui-g-4">
+        <p-button class="appButton" label="GIORNATA SUCCESSIVA" (onClick)="giornataSuccessiva()"
+          [disabled]="indiceGiornata===campionato.listaGiornate.length-1"></p-button>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g-6">
+    <div class="ui-g">
+      <div class="ui-g-6">
+        <div style="visibility: hidden;">
+          <p-button class="appButton" label="GENERA RISULTATI" (onClick)="generaRisultati()"></p-button>
+        </div>
+      </div>
+      <div class="ui-g-6">
+        <h5 style="text-align: right;">{{campionato.denominazioneLega}} - STAGIONE {{campionato.stagione}}</h5>
+        <h4 style="text-align: right;">GIORNATA N°
+          {{giornataCorrente === undefined ? '' : giornataCorrente.girone === 'A' ? giornataCorrente.numeroGiornata : giornataCorrente.numeroGiornata + campionato.listaTeams.length-1}}
+        </h4>
+        <h5 style="text-align: right;">GIRONE DI
+          {{giornataCorrente === undefined ? '' : giornataCorrente.girone === 'A' ? 'ANDATA' : 'RITORNO' }}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <app-giornata [totaleGiornate]="campionato.listaGiornate.length" [giornata]="giornataCorrente"
+      [classifica]="classifica" (aggiornaSalvataggio)="aggiornaSalvataggio()" [tipologiaRisultati]="campionato.tipologiaRisultati"
+      (aggiornaClassificaEvent)="aggiornaClassifica()" (proseguiCampionatoEvent)="proseguiCampionato()"></app-giornata>
+  </div>
+</div>

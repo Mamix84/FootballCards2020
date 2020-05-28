@@ -1,0 +1,53 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-fieldset legend="Nuova Stagione">
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>DENOMINAZIONE STAGIONE</h3>
+        </div>
+        <div class="ui-g-6">
+          <input type="text" pInputText [(ngModel)]="stagione.denominazione" />
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>STAGIONE</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown" [disabled]="stagione.denominazione===undefined ? true: false"
+            [options]="listaStagioni" [(ngModel)]="stagione.stagioneCorrente"></p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>FORMAT</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown" [disabled]="stagione.stagioneCorrente === undefined ? true: false"
+            [options]="listaFormatStagione" [(ngModel)]="stagione.format"></p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-8">
+        </div>
+        <div class="ui-g-2">
+          <p-button class="appButton" label="AGGIUNGI CAMPIONATO" (onClick)="aggiungiCampionato()"
+            [disabled]="stagione.format === undefined ? true: false"></p-button>
+        </div>
+        <div class="ui-g-2">
+          <p-button class="appButton" [disabled]="checkGioca()" label="GIOCA" (onClick)="giocaStagione()"></p-button>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+
+  <div class="ui-g-12" *ngFor="let i = index; let campionato of stagione.listaCampionati">
+    <p-fieldset
+      legend="{{campionato.denominazioneLega === undefined ? 'Nuovo Campionato - ' +i : campionato.denominazioneLega}}"
+      [toggleable]="true" [collapsed]="campionatiPronti[i]">
+      <app-nuovo-campionato [(campionato)]="stagione.listaCampionati[i]" [singolo]="false"
+        (campionatoPronto)="checkCampionatiPronti(i)"></app-nuovo-campionato>
+    </p-fieldset>
+  </div>
+
+</div>
