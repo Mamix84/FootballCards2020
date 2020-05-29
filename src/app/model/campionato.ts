@@ -14,6 +14,7 @@ export class Campionato{
   classifica: Classifica;
   singolo: boolean;
   tipologiaRisultati: number;
+  giornataCorrente: number;
 }
 
 export class Giornata{

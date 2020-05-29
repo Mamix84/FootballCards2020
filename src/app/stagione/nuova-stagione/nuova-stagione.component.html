@@ -46,7 +46,7 @@
       legend="{{campionato.denominazioneLega === undefined ? 'Nuovo Campionato - ' +i : campionato.denominazioneLega}}"
       [toggleable]="true" [collapsed]="campionatiPronti[i]">
       <app-nuovo-campionato [(campionato)]="stagione.listaCampionati[i]" [singolo]="false"
-        (campionatoPronto)="checkCampionatiPronti(i)"></app-nuovo-campionato>
+        (campionatoPronto)="checkCampionatiPronti(i)" (eliminaCampionatoEvent)="eliminaCampionato(i)"></app-nuovo-campionato>
     </p-fieldset>
   </div>
 

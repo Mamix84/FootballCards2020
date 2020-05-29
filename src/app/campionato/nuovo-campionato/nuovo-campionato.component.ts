@@ -25,6 +25,7 @@ export class NuovoCampionatoComponent implements OnInit {
   listaTipologieRisultati: SelectItem[];
 
   @Output() campionatoPronto = new EventEmitter<any>();
+  @Output() eliminaCampionatoEvent = new EventEmitter<any>();
 
   constructor(
     private campionatoService: CampionatoService,
@@ -82,6 +83,7 @@ export class NuovoCampionatoComponent implements OnInit {
     }
 
     this.campionato.singolo = this.singolo;
+    this.campionato.giornataCorrente = 0;
 
     this.campionato.listaGiornate = this.campionatoService.generaCalendario(
       this.campionato,
@@ -110,5 +112,9 @@ export class NuovoCampionatoComponent implements OnInit {
     }
 
     return false;
+  }
+
+  eliminaCampionato(){
+    this.eliminaCampionatoEvent.emit(null);
   }
 }

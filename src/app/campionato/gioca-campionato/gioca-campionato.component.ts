@@ -13,7 +13,6 @@ import { Classifica } from 'src/app/model/classifica';
 })
 export class GiocaCampionatoComponent implements OnInit {
   @Input() campionato: Campionato;
-  indiceGiornata: number;
   giornataCorrente: Giornata;
   listaGiornate: SelectItem[];
   classifica: Classifica;
@@ -26,8 +25,7 @@ export class GiocaCampionatoComponent implements OnInit {
     private classificaService: ClassificaService,
     private route: ActivatedRoute,
     private router: Router
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     if (this.campionato === undefined) {
@@ -35,8 +33,9 @@ export class GiocaCampionatoComponent implements OnInit {
 
       this.campionato = this.campionatoService.caricaCampionato(id);
     }
-    this.giornataCorrente = this.campionato.listaGiornate[0];
-    this.indiceGiornata = 0;
+    this.giornataCorrente = this.campionato.listaGiornate[
+      this.campionato.giornataCorrente
+    ];
 
     this.classificaService.preparaClassifica(this.campionato.listaTeams);
 
@@ -73,25 +72,25 @@ export class GiocaCampionatoComponent implements OnInit {
   }
 
   giornataPrecedente() {
-    if (this.indiceGiornata > 0) {
-      this.indiceGiornata--;
+    if (this.campionato.giornataCorrente > 0) {
+      this.campionato.giornataCorrente--;
       this.giornataCorrente = this.campionato.listaGiornate[
-        this.indiceGiornata
+        this.campionato.giornataCorrente
       ];
     }
   }
 
   giornataSuccessiva() {
-    if (this.indiceGiornata < this.campionato.listaGiornate.length) {
-      this.indiceGiornata++;
+    if (this.campionato.giornataCorrente < this.campionato.listaGiornate.length) {
+      this.campionato.giornataCorrente++;
       this.giornataCorrente = this.campionato.listaGiornate[
-        this.indiceGiornata
+        this.campionato.giornataCorrente
       ];
     }
   }
 
   caricaGiornata() {
-    this.giornataCorrente = this.campionato.listaGiornate[this.indiceGiornata];
+    this.giornataCorrente = this.campionato.listaGiornate[this.campionato.giornataCorrente];
   }
 
   aggiornaSalvataggio() {
@@ -129,11 +128,11 @@ export class GiocaCampionatoComponent implements OnInit {
     }
   }
 
-  proseguiCampionato(){
-    if(this.campionato.singolo === true){
-    this.router.navigate(['/prepara-campionato/'+ this.campionato.id]);
-  }else{
-    this.proseguiStagioneEvent.emit(null);
-  }
+  proseguiCampionato() {
+    if (this.campionato.singolo === true) {
+      this.router.navigate(['/prepara-campionato/' + this.campionato.id]);
+    } else {
+      this.proseguiStagioneEvent.emit(null);
+    }
   }
 }

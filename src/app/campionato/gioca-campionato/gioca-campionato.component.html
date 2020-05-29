@@ -3,15 +3,15 @@
     <div class="ui-g">
       <div class="ui-g-4">
         <p-button class="appButton" label="GIORNATA PRECEDENTE" (onClick)="giornataPrecedente()"
-          [disabled]="indiceGiornata===0"></p-button>
+          [disabled]="this.campionato.giornataCorrente===0"></p-button>
       </div>
       <div class="ui-g-4">
-        <p-dropdown class="appDropDown" [options]="listaGiornate" [(ngModel)]="indiceGiornata"
+        <p-dropdown class="appDropDown" [options]="listaGiornate" [(ngModel)]="this.campionato.giornataCorrente"
           (onChange)="caricaGiornata()"></p-dropdown>
       </div>
       <div class="ui-g-4">
         <p-button class="appButton" label="GIORNATA SUCCESSIVA" (onClick)="giornataSuccessiva()"
-          [disabled]="indiceGiornata===campionato.listaGiornate.length-1"></p-button>
+          [disabled]="this.campionato.giornataCorrente===campionato.listaGiornate.length-1"></p-button>
       </div>
     </div>
   </div>
