@@ -1,4 +1,4 @@
-<p-fieldset legend="Giornata">
+<p-fieldset legend="Giornata" [toggleable]="true">
   <div class="ui-g">
     <div class="ui-g-8">
       <div *ngFor="let evento of giornata.listaEventi">
@@ -19,13 +19,12 @@
     </div>
   </div>
 </p-fieldset>
-<div class="ui-g">
-  <p-fieldset legend="Classifica">
+
+<p-fieldset legend="Classifica" [toggleable]="true">
     <div class="ui-g-12">
       <app-classifica [classifica]="classifica"></app-classifica>
     </div>
-  </p-fieldset>
-</div>
+</p-fieldset>
 
 <p-dialog header="VINCITORE!!!" [(visible)]="visualizzaVincitore">
   <div class="ui-g" style="width: 800px; height: 400px;">

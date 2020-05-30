@@ -37,7 +37,14 @@
 <div class="ui-g">
   <div class="ui-g-12">
     <app-giornata [totaleGiornate]="campionato.listaGiornate.length" [giornata]="giornataCorrente"
-      [classifica]="classifica" (aggiornaSalvataggio)="aggiornaSalvataggio()" [tipologiaRisultati]="campionato.tipologiaRisultati"
-      (aggiornaClassificaEvent)="aggiornaClassifica()" (proseguiCampionatoEvent)="proseguiCampionato()"></app-giornata>
+      [classifica]="classifica" (aggiornaSalvataggio)="aggiornaSalvataggio()"
+      [tipologiaRisultati]="campionato.tipologiaRisultati" (aggiornaClassificaEvent)="aggiornaClassifica()"
+      (proseguiCampionatoEvent)="proseguiCampionato()"></app-giornata>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <app-statistiche [campionato]="this.campionato" [index]="giornataCorrente"></app-statistiche>
   </div>
 </div>

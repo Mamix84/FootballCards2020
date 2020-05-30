@@ -48,12 +48,14 @@ export class GiornataComponent implements OnInit, OnChanges {
   }
   ngOnChanges(changes: import('@angular/core').SimpleChanges): void {
     if (this.giornata != undefined) {
-      this.giornataCorrente =
-        this.giornata.girone === 'A'
-          ? this.giornata.numeroGiornata
-          : this.giornata.numeroGiornata +
-            this.classifica.listaTeams.length -
-            1;
+      if (this.classifica != undefined) {
+        this.giornataCorrente =
+          this.giornata.girone === 'A'
+            ? this.giornata.numeroGiornata
+            : this.giornata.numeroGiornata +
+              this.classifica.listaTeams.length -
+              1;
+      }
       this.aggiornaClassificaEvent.emit(null);
       this.classifica = this.classificaService.caricaClassifica();
     } else {
@@ -135,7 +137,6 @@ export class GiornataComponent implements OnInit, OnChanges {
         this.giornata.listaEventi[
           i
         ].goalFC = this.cardService.trascodificaValoriCarte(carta);
-
       }
 
       this.checkGiornataCompleta();

@@ -2,8 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CardsService } from 'src/app/services/cards.service';
 import { Evento } from 'src/app/model/campionato';
 import { Subscription } from 'rxjs';
-import { MessageService, SelectItem } from 'primeng/api';
-import { CampionatoService } from 'src/app/services/campionato.service';
+import { SelectItem } from 'primeng/api';
 
 @Component({
   selector: 'app-evento',
@@ -18,8 +17,6 @@ export class EventoComponent implements OnInit {
   @Output() selected = new EventEmitter<any>();
   @Output() aggiornaClassifica = new EventEmitter<any>();
 
-  data: any;
-  displayAndamentoSquadre: boolean = false;
   displayModificaRisultato: boolean = false;
   visualizzaModificaRisultati: boolean = false;
 
@@ -31,11 +28,7 @@ export class EventoComponent implements OnInit {
   disableDropdownC: boolean = false;
   disableDropdownFC: boolean = false;
 
-  constructor(
-    private cardsService: CardsService,
-    private messageService: MessageService,
-    private campionatoService: CampionatoService
-  ) {}
+  constructor(private cardsService: CardsService) {}
 
   ngOnInit(): void {
     if (this.evento.goalC != null && this.evento.goalFC != null) {
@@ -48,22 +41,6 @@ export class EventoComponent implements OnInit {
     this.cardsService.prossimaGiocata(this.evento);
     this.selected.emit(this.evento.id);
     //this.disableCheck = true;
-  }
-
-  visualizzaAndamentoSquadre() {
-    //this.data = this.campionatoService.preparaAndamentoClassifica(this.evento);
-
-    this.displayAndamentoSquadre = true;
-  }
-
-  selectData(event) {
-    this.messageService.add({
-      severity: 'info',
-      summary: 'Data Selected',
-      detail: this.data.datasets[event.element._datasetIndex].data[
-        event.element._index
-      ],
-    });
   }
 
   visualizzaPopUpRisultati() {

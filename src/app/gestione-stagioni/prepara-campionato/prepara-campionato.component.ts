@@ -225,6 +225,8 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
   }
 
   proseguiStagione() {
+    this.campionato.giornataCorrente = 0;
+
     this.campionato.listaGiornate = this.campionatoService.generaCalendario(
       this.campionato,
       this.campionato.listaTeams

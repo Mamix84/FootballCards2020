@@ -19,24 +19,12 @@
   <div class="ui-g-1">
     <h2>{{evento.goalC}} - {{evento.goalFC}}</h2>
   </div>
-  <div class="ui-g-1">
-    <p-button class="appButton" icon="pi pi-chart-line" (onClick)="visualizzaAndamentoSquadre()"></p-button>
-  </div>
-  <div class="ui-g-1">
+  <div class="ui-g-2">
     <p-button *ngIf="(evento.goalC >= 0 && evento.goalC <= 10) ||
     (evento.goalFC >= 4 && evento.goalFC <= 7)" class="appButton" icon="pi pi-sliders-h"
       (onClick)="visualizzaPopUpRisultati()"></p-button>
   </div>
 </div>
-
-<p-dialog header="Andamento squadre # {{evento.teamC.nome}} - {{evento.teamFC.nome}}"
-  [(visible)]="displayAndamentoSquadre">
-  <div class="ui-g">
-    <div class="ui-g-12">
-      <p-chart type="line" [data]="data" (onDataSelect)="selectData($event)" width="80vw" height="50vh"></p-chart>
-    </div>
-  </div>
-</p-dialog>
 
 <p-dialog header="Risultato # {{evento.teamC.nome}} - {{evento.teamFC.nome}}" [(visible)]="displayModificaRisultato">
   <div class="ui-g" style="width: 450px; height: 240px;">

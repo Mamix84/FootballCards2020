@@ -109,6 +109,8 @@ export class NuovoCampionatoCasualeComponent implements OnInit {
     }
 
     this.campionato.singolo = true;
+    this.campionato.giornataCorrente = 0;
+    this.campionato.tipologiaRisultati = 0;
 
     this.campionato.listaGiornate = this.campionatoService.generaCalendario(
       this.campionato,
