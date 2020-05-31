@@ -36,4 +36,8 @@ export class GiocaStagioneComponent implements OnInit {
     this.router.navigate(['/prepara-stagione/' + this.stagione.id]);
     }
   }
+
+  preparaSpareggiStagione(){
+    this.router.navigate(['/nuovo-spareggio-stagione/' + this.stagione.id]);
+  }
 }

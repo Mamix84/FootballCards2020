@@ -37,6 +37,7 @@ export class GiornataComponent implements OnInit, OnChanges {
   @Output() aggiornaSalvataggio = new EventEmitter<any>();
   @Output() aggiornaClassificaEvent = new EventEmitter<any>();
   @Output() proseguiCampionatoEvent = new EventEmitter<any>();
+  @Output() preparaSpareggiEvent = new EventEmitter<any>();
 
   constructor(
     private classificaService: ClassificaService,
@@ -185,6 +186,6 @@ export class GiornataComponent implements OnInit, OnChanges {
   }
 
   giocaSpareggi() {
-    this.router.navigate(['/nuovo-spareggio']);
+    this.preparaSpareggiEvent.emit(null);
   }
 }

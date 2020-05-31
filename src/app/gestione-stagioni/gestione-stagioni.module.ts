@@ -14,6 +14,8 @@ import { GiocaSpareggioComponent } from './gioca-spareggio/gioca-spareggio.compo
 import { PreparaCampionatoComponent } from './prepara-campionato/prepara-campionato.component';
 import { PreparaTeamsComponent } from './prepara-teams/prepara-teams.component';
 import { PreparaStagioneComponent } from './prepara-stagione/prepara-stagione.component';
+import { NuovoSpareggioStagioneComponent } from './nuovo-spareggio-stagione/nuovo-spareggio-stagione.component';
+import { ShareModule } from '../share/share.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { PreparaStagioneComponent } from './prepara-stagione/prepara-stagione.co
     PreparaCampionatoComponent,
     PreparaTeamsComponent,
     PreparaStagioneComponent,
+    NuovoSpareggioStagioneComponent,
   ],
   imports: [
     CommonModule,
@@ -32,6 +35,7 @@ import { PreparaStagioneComponent } from './prepara-stagione/prepara-stagione.co
     ButtonModule,
     DropdownModule,
     TableModule,
+    ShareModule
   ],
   exports: [
     NuovoSpareggioComponent,
@@ -39,6 +43,7 @@ import { PreparaStagioneComponent } from './prepara-stagione/prepara-stagione.co
     PreparaCampionatoComponent,
     PreparaTeamsComponent,
     PreparaStagioneComponent,
+    NuovoSpareggioStagioneComponent
   ],
 })
 export class GestioneStagioniModule {}

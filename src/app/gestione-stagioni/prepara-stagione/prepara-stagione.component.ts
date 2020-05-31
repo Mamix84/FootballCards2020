@@ -68,14 +68,14 @@ export class PreparaStagioneComponent implements OnInit {
       );
 
       //SERIE CA
-      this.listaRetrocesse[2] = this.stagione.listaCampionati[0].classifica.listaRetrocesse.slice(
+      this.listaRetrocesse[2] = this.stagione.listaCampionati[1].classifica.listaRetrocesse.slice(
         0,
         2
       );
       this.listaPromosse[2] = [];
 
       //SERIE CB
-      this.listaRetrocesse[3] = this.stagione.listaCampionati[0].classifica.listaRetrocesse.slice(
+      this.listaRetrocesse[3] = this.stagione.listaCampionati[1].classifica.listaRetrocesse.slice(
         2,
         4
       );

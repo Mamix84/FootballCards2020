@@ -6,7 +6,7 @@
           legend="{{campionato.denominazioneLega === undefined ? 'Nuovo Campionato - ' +i : campionato.denominazioneLega}}"
           [toggleable]="true">
           <app-gioca-campionato [(campionato)]="stagione.listaCampionati[i]"
-            (aggiornaSalvataggioStagione)="aggiornaStagione()" (proseguiStagioneEvent)="proseguiStagione()">
+            (aggiornaSalvataggioStagione)="aggiornaStagione()" (proseguiStagioneEvent)="proseguiStagione()" (preparaSpareggiStagioneEvent)="preparaSpareggiStagione()">
           </app-gioca-campionato>
         </p-fieldset>
       </div>

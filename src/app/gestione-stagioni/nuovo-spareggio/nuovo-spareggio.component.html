@@ -1,1 +1,60 @@
-<p>nuovo-spareggio works!</p>
+<p-fieldset legend="Prepara spareggi" [toggleable]="true">
+  <div class="ui-g">
+    <div class="ui-g-6">
+
+      <div class="ui-g">
+        <div class="ui-g-12">
+          <p-table #dt [value]="campionato.classifica.listaTeams" dataKey="id" styleClass="ui-table-customers"
+            [rowHover]="true" [rows]="campionato.listaTeams.length" [paginator]="false">
+            <ng-template pTemplate="caption">
+              Classifica
+            </ng-template>
+            <ng-template pTemplate="header">
+              <tr>
+                <th pColumn="verdetto" style="display: none;"></th>
+                <th pColumn="teamLogo"></th>
+                <th pColumn="teamNome">SQUADRA</th>
+                <th pColumn="punti">PUNTI</th>
+                <th pColumn="vinte">VINTE</th>
+                <th pColumn="pareggiate">NULLE</th>
+                <th pColumn="perse">PERSE</th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-team>
+              <tr [ngClass]="team.verdetto">
+                <td style="text-align: center; display: none;">{{team.verdetto}}</td>
+                <td><img class="teamLogo" src={{team.team.logo}} width="30" heigth="30" /></td>
+                <td>{{team.team.nome.toUpperCase()}}</td>
+                <td style="text-align: center;">{{team.punti}}</td>
+                <td style="text-align: center;">{{team.vinte}}</td>
+                <td style="text-align: center;">{{team.pareggiate}}</td>
+                <td style="text-align: center;">{{team.perse}}</td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+    </div>
+    <div class="ui-g-6">
+      <div class="ui-g" *ngFor="let i=index; let evento of listaEventi">
+        <div class="ui-g-2">
+          SPAREGGIO N° {{i+1}}
+        </div>
+        <div class="ui-g-5">
+          <p-dropdown class="appDropDown" [options]="listaTeams" [(ngModel)]="listaTeams_C[i]">
+          </p-dropdown>
+        </div>
+        <div class="ui-g-5">
+          <p-dropdown class="appDropDown" [options]="listaTeams" [(ngModel)]="listaTeams_FC[i]">
+          </p-dropdown>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g">
+    <div class="ui-g-8"></div>
+    <div class="ui-g-4">
+      <p-button class="appButton" label="CONFERMA SPAREGGI" (onClick)="confermaSpareggi()"></p-button>
+    </div>
+  </div>
+</p-fieldset>

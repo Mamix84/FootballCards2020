@@ -19,6 +19,7 @@ export class GiocaCampionatoComponent implements OnInit {
 
   @Output() aggiornaSalvataggioStagione = new EventEmitter<any>();
   @Output() proseguiStagioneEvent = new EventEmitter<any>();
+  @Output() preparaSpareggiStagioneEvent = new EventEmitter<any>();
 
   constructor(
     private campionatoService: CampionatoService,
@@ -133,6 +134,14 @@ export class GiocaCampionatoComponent implements OnInit {
       this.router.navigate(['/prepara-campionato/' + this.campionato.id]);
     } else {
       this.proseguiStagioneEvent.emit(null);
+    }
+  }
+
+  preparaSpareggi(){
+    if (this.campionato.singolo === true) {
+      this.router.navigate(['/nuovo-spareggio/' + this.campionato.id]);
+    } else {
+      this.preparaSpareggiStagioneEvent.emit(null);
     }
   }
 }

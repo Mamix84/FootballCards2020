@@ -23,6 +23,7 @@ import { GiocaSpareggioComponent } from './gestione-stagioni/gioca-spareggio/gio
 import { PreparaCampionatoComponent } from './gestione-stagioni/prepara-campionato/prepara-campionato.component';
 import { PreparaTeamsComponent } from './gestione-stagioni/prepara-teams/prepara-teams.component';
 import { PreparaStagioneComponent } from './gestione-stagioni/prepara-stagione/prepara-stagione.component';
+import { NuovoSpareggioStagioneComponent } from './gestione-stagioni/nuovo-spareggio-stagione/nuovo-spareggio-stagione.component';
 
 const routes: Routes = [
   { path: '', component: MenuComponent },
@@ -49,11 +50,15 @@ const routes: Routes = [
   { path: 'carica-carriera', component: CaricaCarrieraComponent },
   { path: 'nuova-carriera-casuale', component: NuovaCarrieraCasualeComponent },
 
-  { path: 'nuovo-spareggio', component: NuovoSpareggioComponent },
-  { path: 'gioca-spareggio', component: GiocaSpareggioComponent },
+  { path: 'nuovo-spareggio/:id', component: NuovoSpareggioComponent },
+  { path: 'gioca-spareggio/:id', component: GiocaSpareggioComponent },
   { path: 'prepara-campionato/:id', component: PreparaCampionatoComponent },
   { path: 'prepara-teams', component: PreparaTeamsComponent },
   { path: 'prepara-stagione/:id', component: PreparaStagioneComponent },
+  {
+    path: 'nuovo-spareggio-stagione/:id',
+    component: NuovoSpareggioStagioneComponent,
+  },
 ];
 
 @NgModule({
