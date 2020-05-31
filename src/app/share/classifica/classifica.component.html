@@ -2,9 +2,6 @@
   <div class="ui-g-12">
     <p-table #dt [value]="classifica.listaTeams" dataKey="id" styleClass="ui-table-customers" [rowHover]="true"
       [rows]="numeroTeam" [paginator]="false">
-      <ng-template pTemplate="caption">
-        Classifica
-      </ng-template>
       <ng-template pTemplate="header">
         <tr>
           <th pColumn="verdetto" style="display: none;"></th>
@@ -22,8 +19,7 @@
         </tr>
       </ng-template>
       <ng-template pTemplate="body" let-team>
-        <tr
-          [ngClass]="team.verdetto">
+        <tr [ngClass]="team.verdetto">
           <td style="text-align: center; display: none;">{{team.verdetto}}</td>
           <td><img class="teamLogo" src={{team.team.logo}} width="30" heigth="30" /></td>
           <td>{{team.team.nome.toUpperCase()}}</td>

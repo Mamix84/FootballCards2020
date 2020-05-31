@@ -31,7 +31,7 @@
         </div>
         <div class="ui-g-6">
           <p-dropdown class="appDropDown"
-            [disabled]="campionato.tipologia===undefined || campionato.tipologia===null ? true : false"
+            [disabled]="campionato.tipologia===undefined || campionato.tipologia===null  || campionato.singolo === false ? true : false"
             [options]="stagioni" [(ngModel)]="campionato.stagione"></p-dropdown>
         </div>
       </div>

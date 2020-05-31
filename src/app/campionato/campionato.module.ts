@@ -9,6 +9,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 import {SelectButtonModule} from 'primeng/selectbutton';
+import { DialogModule } from 'primeng/dialog';
 
 import { NuovoCampionatoComponent } from './nuovo-campionato/nuovo-campionato.component';
 import { NuovoCampionatoCasualeComponent } from './nuovo-campionato-casuale/nuovo-campionato-casuale.component';
@@ -28,7 +29,8 @@ import { ShareModule } from '../share/share.module';
     InputTextModule,
     DropdownModule,
     TableModule,
-    SelectButtonModule
+    SelectButtonModule,
+    DialogModule
   ],
   exports: [NuovoCampionatoComponent, NuovoCampionatoCasualeComponent, CaricaCampionatoComponent, GiocaCampionatoComponent],
 })

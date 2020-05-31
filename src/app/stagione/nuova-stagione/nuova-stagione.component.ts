@@ -39,6 +39,7 @@ export class NuovaStagioneComponent implements OnInit {
     let campionato: Campionato = new Campionato();
     campionato.stagione = this.stagione.stagioneCorrente;
     campionato.singolo = false;
+    campionato.tipologiaRisultati = 2;
     this.stagione.listaCampionati.push(campionato);
   }
 

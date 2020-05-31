@@ -5,6 +5,7 @@ import { Campionato, Giornata } from 'src/app/model/campionato';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SelectItem } from 'primeng/api/selectitem';
 import { Classifica } from 'src/app/model/classifica';
+import { Team } from 'src/app/model/team';
 
 @Component({
   selector: 'app-gioca-campionato',
@@ -17,6 +18,10 @@ export class GiocaCampionatoComponent implements OnInit {
   listaGiornate: SelectItem[];
   classifica: Classifica;
 
+  visualizzaVincitore: boolean;
+  visualizzaCampioneDInverno: boolean;
+  vincitore: Team = new Team();
+
   @Output() aggiornaSalvataggioStagione = new EventEmitter<any>();
   @Output() proseguiStagioneEvent = new EventEmitter<any>();
   @Output() preparaSpareggiStagioneEvent = new EventEmitter<any>();
@@ -26,7 +31,9 @@ export class GiocaCampionatoComponent implements OnInit {
     private classificaService: ClassificaService,
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.classifica = new Classifica();
+  }
 
   ngOnInit(): void {
     if (this.campionato === undefined) {
@@ -41,7 +48,7 @@ export class GiocaCampionatoComponent implements OnInit {
     this.classificaService.preparaClassifica(this.campionato.listaTeams);
 
     for (let i = 0; i < this.campionato.listaGiornate.length; i++) {
-      this.classificaService.aggiornaClassifica(
+      this.classifica = this.classificaService.aggiornaClassifica(
         this.giornataCorrente.numeroGiornata,
         this.giornataCorrente.girone,
         this.campionato
@@ -78,20 +85,28 @@ export class GiocaCampionatoComponent implements OnInit {
       this.giornataCorrente = this.campionato.listaGiornate[
         this.campionato.giornataCorrente
       ];
+
+      this.aggiornaClassifica();
     }
   }
 
   giornataSuccessiva() {
-    if (this.campionato.giornataCorrente < this.campionato.listaGiornate.length) {
+    if (
+      this.campionato.giornataCorrente < this.campionato.listaGiornate.length
+    ) {
       this.campionato.giornataCorrente++;
       this.giornataCorrente = this.campionato.listaGiornate[
         this.campionato.giornataCorrente
       ];
+
+      this.aggiornaClassifica();
     }
   }
 
   caricaGiornata() {
-    this.giornataCorrente = this.campionato.listaGiornate[this.campionato.giornataCorrente];
+    this.giornataCorrente = this.campionato.listaGiornate[
+      this.campionato.giornataCorrente
+    ];
   }
 
   aggiornaSalvataggio() {
@@ -126,7 +141,27 @@ export class GiocaCampionatoComponent implements OnInit {
         this.giornataCorrente.girone,
         this.campionato
       );
+
+      let team = this.classificaService.checkVincitore(
+        this.campionato.listaGiornate.length
+      );
+      if (team) {
+        this.visualizzaVincitore = true;
+        this.vincitore = team;
+      }
+
+      team = this.classificaService.checkCampioneDInverno(
+        this.campionato.listaGiornate.length
+      );
+      if (team) {
+        this.visualizzaCampioneDInverno = true;
+        this.vincitore = team;
+      }
     }
+  }
+
+  terminaCampionato() {
+    this.router.navigate(['/']);
   }
 
   proseguiCampionato() {
@@ -137,7 +172,7 @@ export class GiocaCampionatoComponent implements OnInit {
     }
   }
 
-  preparaSpareggi(){
+  preparaSpareggi() {
     if (this.campionato.singolo === true) {
       this.router.navigate(['/nuovo-spareggio/' + this.campionato.id]);
     } else {

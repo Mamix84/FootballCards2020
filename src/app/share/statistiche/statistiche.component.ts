@@ -1,4 +1,10 @@
-import { Component, OnInit, Input, OnChanges, ChangeDetectionStrategy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  OnChanges,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { Campionato, Evento, Giornata } from 'src/app/model/campionato';
 import { MessageService, SelectItem } from 'primeng/api';
 import { StatisticheService } from 'src/app/services/statistiche.service';
@@ -22,8 +28,12 @@ export class StatisticheComponent implements OnInit, OnChanges {
   constructor(
     private messageService: MessageService,
     private statisticheService: StatisticheService
-  ) {}
-  ngOnChanges(changes: import("@angular/core").SimpleChanges): void {
+  ) {
+    this.teamA_grafico = new Team();
+    this.teamB_grafico = new Team();
+  }
+
+  ngOnChanges(changes: import('@angular/core').SimpleChanges): void {
     this.aggiornaAndamentoGrafico();
   }
 
@@ -54,28 +64,34 @@ export class StatisticheComponent implements OnInit, OnChanges {
     this.listaEventi_A = [];
     this.listaEventi_B = [];
 
-    for (let i = 0; i < this.campionato.listaGiornate.length; i++) {
-      for (
-        let j = 0;
-        j < this.campionato.listaGiornate[i].listaEventi.length;
-        j++
-      ) {
-        if (
-          this.campionato.listaGiornate[i].listaEventi[j].teamC.id ===
-            this.teamA_grafico.id ||
-          this.campionato.listaGiornate[i].listaEventi[j].teamFC.id ===
-            this.teamA_grafico.id
+    if (this.teamA_grafico != undefined && this.teamB_grafico != undefined) {
+      for (let i = 0; i < this.campionato.listaGiornate.length; i++) {
+        for (
+          let j = 0;
+          j < this.campionato.listaGiornate[i].listaEventi.length;
+          j++
         ) {
-          this.listaEventi_A.push(this.campionato.listaGiornate[i].listaEventi[j]);
-        }
+          if (
+            this.campionato.listaGiornate[i].listaEventi[j].teamC.id ===
+              this.teamA_grafico.id ||
+            this.campionato.listaGiornate[i].listaEventi[j].teamFC.id ===
+              this.teamA_grafico.id
+          ) {
+            this.listaEventi_A.push(
+              this.campionato.listaGiornate[i].listaEventi[j]
+            );
+          }
 
-        if (
-          this.campionato.listaGiornate[i].listaEventi[j].teamC.id ===
-            this.teamB_grafico.id ||
-          this.campionato.listaGiornate[i].listaEventi[j].teamFC.id ===
-            this.teamB_grafico.id
-        ) {
-          this.listaEventi_B.push(this.campionato.listaGiornate[i].listaEventi[j]);
+          if (
+            this.campionato.listaGiornate[i].listaEventi[j].teamC.id ===
+              this.teamB_grafico.id ||
+            this.campionato.listaGiornate[i].listaEventi[j].teamFC.id ===
+              this.teamB_grafico.id
+          ) {
+            this.listaEventi_B.push(
+              this.campionato.listaGiornate[i].listaEventi[j]
+            );
+          }
         }
       }
     }

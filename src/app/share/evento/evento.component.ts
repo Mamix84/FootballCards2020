@@ -28,7 +28,8 @@ export class EventoComponent implements OnInit {
   disableDropdownC: boolean = false;
   disableDropdownFC: boolean = false;
 
-  constructor(private cardsService: CardsService) {}
+  constructor(private cardsService: CardsService) {
+  }
 
   ngOnInit(): void {
     if (this.evento.goalC != null && this.evento.goalFC != null) {
@@ -40,7 +41,7 @@ export class EventoComponent implements OnInit {
   onChangheCheckBox() {
     this.cardsService.prossimaGiocata(this.evento);
     this.selected.emit(this.evento.id);
-    //this.disableCheck = true;
+//    this.disableCheck = true;
   }
 
   visualizzaPopUpRisultati() {

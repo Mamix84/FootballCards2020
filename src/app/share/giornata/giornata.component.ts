@@ -22,29 +22,18 @@ import { CardsService } from 'src/app/services/cards.service';
 export class GiornataComponent implements OnInit, OnChanges {
   @Input() giornata: Giornata;
   @Input() classifica: Classifica;
-  @Input() totaleGiornate: number;
   @Input() tipologiaRisultati: number;
 
   giornataCorrente: number;
-  giornataGiocata: boolean = false;
   idEventoCorrente: number;
   eventoCorrent: Evento;
 
-  visualizzaVincitore: boolean = false;
-  visualizzaCampioneDInverno: boolean = false;
-  vincitore: Team = new Team();
-
   @Output() aggiornaSalvataggio = new EventEmitter<any>();
   @Output() aggiornaClassificaEvent = new EventEmitter<any>();
-  @Output() proseguiCampionatoEvent = new EventEmitter<any>();
-  @Output() preparaSpareggiEvent = new EventEmitter<any>();
 
   constructor(
-    private classificaService: ClassificaService,
     private cardService: CardsService,
-    private router: Router
   ) {
-    this.classifica = this.classificaService.caricaClassifica();
     this.giornata = new Giornata();
   }
   ngOnChanges(changes: import('@angular/core').SimpleChanges): void {
@@ -57,19 +46,12 @@ export class GiornataComponent implements OnInit, OnChanges {
               this.classifica.listaTeams.length -
               1;
       }
-      this.aggiornaClassificaEvent.emit(null);
-      this.classifica = this.classificaService.caricaClassifica();
     } else {
       this.giornata = new Giornata();
-    }
-
-    if (this.classifica === undefined) {
-      this.classifica = new Classifica();
     }
   }
 
   ngOnInit(): void {
-    if (this.giornata != undefined) this.aggiornaClassificaEvent.emit(null);
   }
 
   inviaRisultatoCasa(risultato: number) {
@@ -163,29 +145,6 @@ export class GiornataComponent implements OnInit, OnChanges {
   aggiornaClassifica() {
     this.aggiornaClassificaEvent.emit(null);
     this.aggiornaSalvataggio.emit(null);
-
-    let team = this.classificaService.checkVincitore(this.totaleGiornate);
-    if (team) {
-      this.visualizzaVincitore = true;
-      this.vincitore = team;
-    }
-
-    team = this.classificaService.checkCampioneDInverno(this.totaleGiornate);
-    if (team) {
-      this.visualizzaCampioneDInverno = true;
-      this.vincitore = team;
-    }
   }
 
-  terminaCampionato() {
-    this.router.navigate(['/']);
-  }
-
-  proseguiCampionato() {
-    this.proseguiCampionatoEvent.emit(null);
-  }
-
-  giocaSpareggi() {
-    this.preparaSpareggiEvent.emit(null);
-  }
 }

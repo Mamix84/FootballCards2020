@@ -14,6 +14,7 @@ export class StatisticheService {
       labels.push(i + 1);
     }
 
+
     let puntiC = [];
     let puntiPrec = 0;
     for (let i = 0; i < campionato.listaGiornate.length; i++) {
@@ -75,7 +76,8 @@ export class StatisticheService {
       for (let j = 0; j < campionato.listaGiornate[i].listaEventi.length; j++) {
         if (
           campionato.listaGiornate[i].listaEventi[j].goalC != undefined &&
-          campionato.listaGiornate[i].listaEventi[j].goalFC != undefined
+          campionato.listaGiornate[i].listaEventi[j].goalFC != undefined &&
+          teamA != undefined && teamB != undefined
         ) {
           if (
             campionato.listaGiornate[i].listaEventi[j].teamC.nome ===
@@ -128,13 +130,13 @@ export class StatisticheService {
       labels: labels,
       datasets: [
         {
-          label: teamA.nome,
+          label: teamA === undefined ? '' : teamA.nome,
           data: puntiC,
           fill: false,
           borderColor: '#4bc0c0',
         },
         {
-          label: teamB.nome,
+          label: teamB === undefined ? '' : teamB.nome,
           data: puntiFC,
           fill: false,
           borderColor: '#565656',
