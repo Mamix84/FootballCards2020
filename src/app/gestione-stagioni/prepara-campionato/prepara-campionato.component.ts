@@ -236,7 +236,9 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
       this.campionato.denominazioneLega.trim() +
       '_' +
       date.getTime().toString();
-    this.campionatoService.salvaCampionato(this.campionato);
+    if (this.campionato.singolo === true) {
+      this.campionatoService.salvaCampionato(this.campionato);
+    }
 
     this.campionatoPronto.emit(null);
     this.checkProsegui = true;

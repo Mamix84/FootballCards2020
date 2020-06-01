@@ -161,6 +161,19 @@ export class CampionatoService {
                 playout: undefined,
               },
             });
+            listaFormat.push({
+              label:
+                'VINCITORE / 3 CHAMPIONS LEAGUE / 3 EUROPA LEAGUE / 3 RETROCESSIONI IN SERIE B',
+              value: {
+                champions: 3,
+                europa: 3,
+                intertoto: undefined,
+                promozione: undefined,
+                retrocessione: 3,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
 
             break;
           }
@@ -299,6 +312,19 @@ export class CampionatoService {
           case '16': {
             listaFormat.push({
               label:
+                'VINCITORE / 2 PROMOSSE IN SERIE B / 3 RETROCESSIONI IN SERIE D',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: 2,
+                retrocessione: 3,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
+            listaFormat.push({
+              label:
                 'VINCITORE / 2 PROMOSSE IN SERIE B / 4 RETROCESSIONI IN SERIE D',
               value: {
                 champions: undefined,
@@ -323,6 +349,19 @@ export class CampionatoService {
                 intertoto: undefined,
                 promozione: 2,
                 retrocessione: 4,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
+            listaFormat.push({
+              label:
+                'VINCITORE / 2 PROMOSSE IN SERIE B / 3 RETROCESSIONI IN SERIE D',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: 2,
+                retrocessione: 3,
                 playoff: undefined,
                 playout: undefined,
               },

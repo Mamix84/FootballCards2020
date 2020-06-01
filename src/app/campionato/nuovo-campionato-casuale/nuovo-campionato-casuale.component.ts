@@ -92,12 +92,14 @@ export class NuovoCampionatoCasualeComponent implements OnInit {
     ].value;
 
     //FORMAT
-    let listaFormat = this.campionatoService.caricaFormatCampionato(tipologia, this.campionato.numeroTeams+'');
+    let listaFormat = this.campionatoService.caricaFormatCampionato(
+      tipologia,
+      this.campionato.numeroTeams + ''
+    );
     xmin = Math.ceil(0);
     xmax = Math.floor(listaFormat.length);
-    this.campionato.format = listaFormat[
-      Math.floor(Math.random() * (xmax - xmin)) + xmin
-    ].value;
+    this.campionato.format =
+      listaFormat[Math.floor(Math.random() * (xmax - xmin)) + xmin].value;
 
     //SQUADRE
     for (let i = 0; i < this.campionato.numeroTeams; i++) {
@@ -123,7 +125,9 @@ export class NuovoCampionatoCasualeComponent implements OnInit {
       '_' +
       date.getTime().toString();
 
-    this.campionatoService.salvaCampionato(this.campionato);
+    if (this.campionato.singolo === true) {
+      this.campionatoService.salvaCampionato(this.campionato);
+    }
     this.router.navigate(['/gioca-campionato/' + this.campionato.id]);
   }
 }

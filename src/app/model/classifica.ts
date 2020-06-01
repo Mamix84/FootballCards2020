@@ -8,7 +8,7 @@ export class Classifica {
 
 export class ClassificaItem {
   verdetto: string;
-  team: Team;
+  team: Team = new Team();
   partiteGiocate: number;
   vinte: number;
   perse: number;

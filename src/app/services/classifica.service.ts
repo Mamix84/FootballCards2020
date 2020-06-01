@@ -9,12 +9,11 @@ import { CampionatoService } from './campionato.service';
   providedIn: 'root',
 })
 export class ClassificaService {
-  classifica = new Classifica();
-
   constructor() {}
 
-  preparaClassifica(listaTeams: Array<Team>) {
-    this.classifica.listaTeams = new Array<ClassificaItem>();
+  preparaClassifica(listaTeams: Array<Team>): Classifica {
+    let classifica = new Classifica();
+    classifica.listaTeams = new Array<ClassificaItem>();
 
     for (let i = 0; i < listaTeams.length; i++) {
       let classificaItem = new ClassificaItem();
@@ -31,12 +30,10 @@ export class ClassificaService {
       classificaItem.golFattiFC = 0;
       classificaItem.golSubitiFC = 0;
 
-      this.classifica.listaTeams.push(classificaItem);
+      classifica.listaTeams.push(classificaItem);
     }
-  }
 
-  caricaClassifica(): Classifica {
-    return this.classifica;
+    return classifica;
   }
 
   aggiornaClassifica(
@@ -44,8 +41,8 @@ export class ClassificaService {
     girone: string,
     campionato: Campionato
   ): Classifica {
-    this.classifica = new Classifica();
-    this.preparaClassifica(campionato.listaTeams);
+    campionato.classifica = new Classifica();
+    campionato.classifica = this.preparaClassifica(campionato.listaTeams);
 
     if (girone === 'R')
       giornataCorrente = campionato.listaTeams.length - 1 + giornataCorrente;
@@ -64,47 +61,47 @@ export class ClassificaService {
 
         if (golC === undefined || golFC === undefined) continue;
 
-        for (let j = 0; j < this.classifica.listaTeams.length; j++) {
-          if (this.classifica.listaTeams[j].team.nome === teamC.nome) {
+        for (let j = 0; j < campionato.classifica.listaTeams.length; j++) {
+          if (campionato.classifica.listaTeams[j].team.nome === teamC.nome) {
             if (golC > golFC) {
-              this.classifica.listaTeams[j].vinte++;
-              this.classifica.listaTeams[j].punti += 3;
+              campionato.classifica.listaTeams[j].vinte++;
+              campionato.classifica.listaTeams[j].punti += 3;
             } else if (golC === golFC) {
-              this.classifica.listaTeams[j].pareggiate++;
-              this.classifica.listaTeams[j].punti += 1;
+              campionato.classifica.listaTeams[j].pareggiate++;
+              campionato.classifica.listaTeams[j].punti += 1;
             } else {
-              this.classifica.listaTeams[j].perse++;
+              campionato.classifica.listaTeams[j].perse++;
             }
 
-            this.classifica.listaTeams[j].partiteGiocate++;
-            this.classifica.listaTeams[j].golFatti += golC;
-            this.classifica.listaTeams[j].golSubiti += golFC;
-            this.classifica.listaTeams[j].golFattiC += golC;
-            this.classifica.listaTeams[j].golSubitiC += golFC;
+            campionato.classifica.listaTeams[j].partiteGiocate++;
+            campionato.classifica.listaTeams[j].golFatti += golC;
+            campionato.classifica.listaTeams[j].golSubiti += golFC;
+            campionato.classifica.listaTeams[j].golFattiC += golC;
+            campionato.classifica.listaTeams[j].golSubitiC += golFC;
           }
 
-          if (this.classifica.listaTeams[j].team.nome === teamFC.nome) {
+          if (campionato.classifica.listaTeams[j].team.nome === teamFC.nome) {
             if (golC > golFC) {
-              this.classifica.listaTeams[j].perse++;
+              campionato.classifica.listaTeams[j].perse++;
             } else if (golC === golFC) {
-              this.classifica.listaTeams[j].pareggiate++;
-              this.classifica.listaTeams[j].punti += 1;
+              campionato.classifica.listaTeams[j].pareggiate++;
+              campionato.classifica.listaTeams[j].punti += 1;
             } else {
-              this.classifica.listaTeams[j].vinte++;
-              this.classifica.listaTeams[j].punti += 3;
+              campionato.classifica.listaTeams[j].vinte++;
+              campionato.classifica.listaTeams[j].punti += 3;
             }
 
-            this.classifica.listaTeams[j].partiteGiocate++;
-            this.classifica.listaTeams[j].golFatti += golFC;
-            this.classifica.listaTeams[j].golSubiti += golC;
-            this.classifica.listaTeams[j].golFattiFC += golFC;
-            this.classifica.listaTeams[j].golSubitiFC += golC;
+            campionato.classifica.listaTeams[j].partiteGiocate++;
+            campionato.classifica.listaTeams[j].golFatti += golFC;
+            campionato.classifica.listaTeams[j].golSubiti += golC;
+            campionato.classifica.listaTeams[j].golFattiFC += golFC;
+            campionato.classifica.listaTeams[j].golSubitiFC += golC;
           }
         }
       }
     }
 
-    var classificaOrdinata: ClassificaItem[] = this.classifica.listaTeams.sort(
+    var classificaOrdinata: ClassificaItem[] = campionato.classifica.listaTeams.sort(
       (obj1, obj2) => {
         if (obj1.punti < obj2.punti) {
           return 1;
@@ -234,13 +231,13 @@ export class ClassificaService {
     let listaretrocesse = new Array<Team>();
 
     //VERDETTI
-    this.classifica.listaTeams[0].verdetto = 'vincitore';
-    listaPromosse.push(this.classifica.listaTeams[0].team);
+    campionato.classifica.listaTeams[0].verdetto = 'vincitore';
+    listaPromosse.push(campionato.classifica.listaTeams[0].team);
 
     if (campionato.format != undefined) {
       if (campionato.format.champions != null) {
         for (let i = 1; i < campionato.format.champions; i++) {
-          this.classifica.listaTeams[i].verdetto = 'champions';
+          campionato.classifica.listaTeams[i].verdetto = 'champions';
         }
       }
 
@@ -250,38 +247,38 @@ export class ClassificaService {
           i < campionato.format.champions + campionato.format.europa;
           i++
         ) {
-          this.classifica.listaTeams[i].verdetto = 'europa';
+          campionato.classifica.listaTeams[i].verdetto = 'europa';
         }
       }
 
       if (campionato.format.promozione != undefined) {
         for (let i = 1; i < campionato.format.promozione; i++) {
-          this.classifica.listaTeams[i].verdetto = 'promozione';
-          listaPromosse.push(this.classifica.listaTeams[i].team);
+          campionato.classifica.listaTeams[i].verdetto = 'promozione';
+          listaPromosse.push(campionato.classifica.listaTeams[i].team);
         }
       }
 
       if (campionato.format.retrocessione != undefined) {
         for (
-          let i = this.classifica.listaTeams.length - 1;
+          let i = campionato.classifica.listaTeams.length - 1;
           i >
-          this.classifica.listaTeams.length -
+          campionato.classifica.listaTeams.length -
             campionato.format.retrocessione -
             1;
           i--
         ) {
-          this.classifica.listaTeams[i].verdetto = 'retrocessione';
-          listaretrocesse.push(this.classifica.listaTeams[i].team);
+          campionato.classifica.listaTeams[i].verdetto = 'retrocessione';
+          listaretrocesse.push(campionato.classifica.listaTeams[i].team);
         }
       }
     }
 
-    this.classifica.listaPromosse = listaPromosse;
-    this.classifica.listaRetrocesse = listaretrocesse;
+    campionato.classifica.listaPromosse = listaPromosse;
+    campionato.classifica.listaRetrocesse = listaretrocesse;
 
-    this.classifica.listaTeams = classificaOrdinata;
+    campionato.classifica.listaTeams = classificaOrdinata;
 
-    return this.classifica;
+    return campionato.classifica;
   }
 
   puntiClassificaAvulsa(
@@ -376,28 +373,28 @@ export class ClassificaService {
     return goal;
   }
 
-  checkVincitore(ultimaGiornata: number): Team {
+  checkVincitore(ultimaGiornata: number, classifica: Classifica): Team {
     let vincitore = true;
-    for (let i = 0; i < this.classifica.listaTeams.length; i++) {
-      if (this.classifica.listaTeams[i].partiteGiocate != ultimaGiornata) {
+    for (let i = 0; i < classifica.listaTeams.length; i++) {
+      if (classifica.listaTeams[i].partiteGiocate != ultimaGiornata) {
         vincitore = false;
       }
     }
 
-    if (vincitore) return this.classifica.listaTeams[0].team;
+    if (vincitore) return classifica.listaTeams[0].team;
 
     return null;
   }
 
-  checkCampioneDInverno(ultimaGiornata: number): Team {
+  checkCampioneDInverno(ultimaGiornata: number, classifica: Classifica): Team {
     let vincitore = true;
-    for (let i = 0; i < this.classifica.listaTeams.length; i++) {
-      if (this.classifica.listaTeams[i].partiteGiocate != ultimaGiornata / 2) {
+    for (let i = 0; i < classifica.listaTeams.length; i++) {
+      if (classifica.listaTeams[i].partiteGiocate != ultimaGiornata / 2) {
         vincitore = false;
       }
     }
 
-    if (vincitore) return this.classifica.listaTeams[0].team;
+    if (vincitore) return classifica.listaTeams[0].team;
 
     return null;
   }

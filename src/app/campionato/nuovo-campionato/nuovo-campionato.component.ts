@@ -94,7 +94,9 @@ export class NuovoCampionatoComponent implements OnInit {
       this.campionato.denominazioneLega.trim() +
       '_' +
       date.getTime().toString();
-    this.campionatoService.salvaCampionato(this.campionato);
+    if (this.campionato.singolo === true) {
+      this.campionatoService.salvaCampionato(this.campionato);
+    }
 
     this.campionatoPronto.emit(null);
 
@@ -114,7 +116,7 @@ export class NuovoCampionatoComponent implements OnInit {
     return false;
   }
 
-  eliminaCampionato(){
+  eliminaCampionato() {
     this.eliminaCampionatoEvent.emit(null);
   }
 }

@@ -35,7 +35,7 @@ export class PreparaStagioneComponent implements OnInit {
       this.listaRetrocesse.push(new Array<Team>());
     }
 
-    if (this.stagione.format === '0') {
+    if (this.stagione.format === '0' && this.stagione.listaCampionati.length > 1) {
       for (let i = 0; i < this.stagione.listaCampionati.length; i++) {
         if (i == 0) {
           this.listaRetrocesse[i] = [];
@@ -92,6 +92,13 @@ export class PreparaStagioneComponent implements OnInit {
 
   proseguiStagione() {
     this.stagioneService.inizializzaStagione(this.stagione);
+
+    //Avanzamento stagione
+    let stagione = this.stagione.stagioneCorrente;
+    let annoPartenza = stagione.slice(0, 4);
+    let annoFine = stagione.slice(5, 9);
+    stagione = parseInt(annoPartenza) + 1 + '/' + (parseInt(annoFine) + 1);
+    this.stagione.stagioneCorrente = stagione;
 
     let date = new Date();
     this.stagione.id =
