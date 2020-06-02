@@ -111,8 +111,6 @@ export class GiocaCampionatoComponent implements OnInit {
 
   aggiornaSalvataggio() {
     this.campionatoService.aggiornaValoriTecnici(
-      this.giornataCorrente.numeroGiornata,
-      this.giornataCorrente.girone,
       this.campionato
     );
     if (this.campionato.singolo === true) {
