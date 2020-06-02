@@ -1,0 +1,10 @@
+{
+  "listaNumeroSquadreCoppa":[
+    {"label": "Seleziona il numero di sqaudre", "value": null},
+    {"label": "64 SQUADRE", "value": 64},
+    {"label": "32 SQUADRE", "value": 32},
+    {"label": "16 SQUADRE", "value": 16},
+    {"label": "8 SQUADRE", "value": 8},
+    {"label": "4 SQUADRE", "value": 4}
+  ]
+}

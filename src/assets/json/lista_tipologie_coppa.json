@@ -1,0 +1,9 @@
+{
+  "listaTipologieCoppa":[
+    {"label": "Seleziona la tipologia", "value": null},
+    {"label": "COPPA ITALIA", "value": 0},
+    {"label": "COPPA ITALIA SERIE C", "value": 1},
+    {"label": "COPPA ITALIA DILETTANTI", "value": 2},
+    {"label": "TORNEO", "value": 3}
+  ]
+}
