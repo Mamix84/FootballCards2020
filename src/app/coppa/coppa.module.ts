@@ -9,6 +9,7 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
 
 import { NuovaCoppaComponent } from './nuova-coppa/nuova-coppa.component';
 import { GiocaCoppaComponent } from './gioca-coppa/gioca-coppa.component';
@@ -33,7 +34,8 @@ import { ShareModule } from '../share/share.module';
     DropdownModule,
     InputTextModule,
     ButtonModule,
-    TableModule
+    TableModule,
+    DialogModule
   ],
   exports: [
     NuovaCoppaComponent,

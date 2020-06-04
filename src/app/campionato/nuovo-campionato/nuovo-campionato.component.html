@@ -78,7 +78,10 @@
         </div>
       </div>
       <div class="ui-g">
-        <div class="ui-g-8">
+        <div class="ui-g-6">
+        </div>
+        <div class="ui-g-2 ui-sm-12">
+          <p-button class="appButton" label="CARICA TEMPLATE" (onClick)="visualizzaCaricaTemplateDialog()"></p-button>
         </div>
         <div class="ui-g-2 ui-sm-12" [ngStyle]="{'visibility': this.singolo === true ? 'hidden' : ''}">
           <p-button class="appButton" label="ELIMINA" (onClick)="eliminaCampionato()"></p-button>
@@ -91,3 +94,34 @@
     </p-fieldset>
   </div>
 </div>
+
+<p-dialog header="CAMPIONE D'INVERNO!!!" [(visible)]="visualizzaCaricaTemplate">
+  <div class="ui-g" style="width: 600px; height: 200px;">
+    <div class="ui-g-12">
+
+      <div class="ui-g">
+        <div class="ui-g-8">
+          <h3>SELEZIONA CAMPIONATO DA CARICARE</h3>
+        </div>
+        <div class="ui-g-4">
+        </div>
+      </div>
+
+      <div class="ui-g">
+        <div class="ui-g-12">
+          <p-dropdown class="appDropDown" appendTo="body" [options]="listaTemplateCampionato" filter="true" [(ngModel)]="campionato">
+          </p-dropdown>
+        </div>
+      </div>
+
+      <div class="ui-g">
+        <div class="ui-g-8">
+        </div>
+        <div class="ui-g-4">
+          <p-button class="appButton" label="CONFERMA" (onClick)="nascondiVisualizzaCaricaTemplate()"></p-button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</p-dialog>

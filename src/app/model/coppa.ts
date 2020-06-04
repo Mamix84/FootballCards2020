@@ -1,4 +1,6 @@
 import { Team } from './team';
+import { TreeNode } from 'primeng/api';
+import { Giornata } from './campionato';
 
 export class Coppa {
   id: string;
@@ -10,6 +12,10 @@ export class Coppa {
   descrizioneTipologia: string;
   format: FormatCoppa;
   tipologiaRisultati: number;
+  tabellone: TreeNode[];
+  faseCorrente: number;
+  descrizioneFase: string;
+  listaFasi: Array<Giornata> = [];
 }
 
 

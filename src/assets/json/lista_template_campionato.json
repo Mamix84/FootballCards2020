@@ -1,0 +1,133 @@
+{
+  "listaCampionati": [
+    {
+      "label": "Seleziona il campionato",
+      "value": null
+    },
+    {
+      "label": "SERIE A 1994-1995",
+      "value": {
+        "tipologia": 0,
+        "denominazioneLega": "STAGIONE 1994-1995",
+        "stagione": "1994/1995",
+        "tipologiaRisultati": 0,
+        "numeroTeams": "18",
+        "format": {
+          "champions": 4,
+          "europa": 4,
+          "retrocessione": 4
+        },
+        "listaTeams": [
+          {
+            "id": 133,
+            "nome": "JUVENTUS",
+            "logo": "/assets/images/teams/juventus.png",
+            "valoreTecnico": 100
+          },
+          {
+            "id": 143,
+            "nome": "LAZIO",
+            "logo": "/assets/images/teams/lazio.png",
+            "valoreTecnico": 95
+          },
+          {
+            "id": 197,
+            "nome": "PARMA",
+            "logo": "/assets/images/teams/parma.png",
+            "valoreTecnico": 95
+          },
+          {
+            "id": 170,
+            "nome": "MILAN",
+            "logo": "/assets/images/teams/milan.png",
+            "valoreTecnico": 95
+          },
+          {
+            "id": 234,
+            "nome": "ROMA",
+            "logo": "/assets/images/teams/roma.png",
+            "valoreTecnico": 95
+          },
+          {
+            "id": 128,
+            "nome": "INTER",
+            "logo": "/assets/images/teams/inter.png",
+            "valoreTecnico": 90
+          },
+          {
+            "id": 180,
+            "nome": "NAPOLI",
+            "logo": "/assets/images/teams/napoli.png",
+            "valoreTecnico": 85
+          },
+          {
+            "id": 244,
+            "nome": "SAMPDORIA",
+            "logo": "/assets/images/teams/sampdoria.png",
+            "valoreTecnico": 85
+          },
+          {
+            "id": 43,
+            "nome": "CAGLIARI",
+            "logo": "/assets/images/teams/cagliari.png",
+            "valoreTecnico": 85
+          },
+          {
+            "id": 97,
+            "nome": "FIORENTINA",
+            "logo": "/assets/images/teams/fiorentina.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 286,
+            "nome": "TORINO",
+            "logo": "/assets/images/teams/torino.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 24,
+            "nome": "BARI",
+            "logo": "/assets/images/teams/bari.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 79,
+            "nome": "CREMONESE",
+            "logo": "/assets/images/teams/cremonese.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 192,
+            "nome": "PADOVA",
+            "logo": "/assets/images/teams/padova.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 115,
+            "nome": "GENOA",
+            "logo": "/assets/images/teams/genoa.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 99,
+            "nome": "FOGGIA",
+            "logo": "/assets/images/teams/foggia.png",
+            "valoreTecnico": 70
+          },
+          {
+            "id": 225,
+            "nome": "REGGIANA",
+            "logo": "/assets/images/teams/reggiana.png",
+            "valoreTecnico": 70
+          },
+          {
+            "id": 41,
+            "nome": "BRESCIA",
+            "logo": "/assets/images/teams/brescia.png",
+            "valoreTecnico": 70
+          }
+        ]
+      }
+    }
+  ]
+}

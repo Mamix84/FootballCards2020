@@ -1,17 +1,5 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  Output,
-  EventEmitter,
-  OnChanges,
-} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Giornata, Evento } from 'src/app/model/campionato';
-import { ClassificaService } from 'src/app/services/classifica.service';
-import { Classifica } from 'src/app/model/classifica';
-import { Team } from 'src/app/model/team';
-import { Router } from '@angular/router';
-import { CardComponent } from '../card/card.component';
 import { CardsService } from 'src/app/services/cards.service';
 
 @Component({
@@ -19,9 +7,8 @@ import { CardsService } from 'src/app/services/cards.service';
   templateUrl: './giornata.component.html',
   styleUrls: ['./giornata.component.css'],
 })
-export class GiornataComponent implements OnInit, OnChanges {
+export class GiornataComponent implements OnInit {
   @Input() giornata: Giornata;
-  @Input() classifica: Classifica;
   @Input() tipologiaRisultati: number;
 
   giornataCorrente: number;
@@ -31,28 +18,11 @@ export class GiornataComponent implements OnInit, OnChanges {
   @Output() aggiornaSalvataggio = new EventEmitter<any>();
   @Output() aggiornaClassificaEvent = new EventEmitter<any>();
 
-  constructor(
-    private cardService: CardsService,
-  ) {
+  constructor(private cardService: CardsService) {
     this.giornata = new Giornata();
   }
-  ngOnChanges(changes: import('@angular/core').SimpleChanges): void {
-    if (this.giornata != undefined) {
-      if (this.classifica != undefined) {
-        this.giornataCorrente =
-          this.giornata.girone === 'A'
-            ? this.giornata.numeroGiornata
-            : this.giornata.numeroGiornata +
-              this.classifica.listaTeams.length -
-              1;
-      }
-    } else {
-      this.giornata = new Giornata();
-    }
-  }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   inviaRisultatoCasa(risultato: number) {
     for (let i = 0; i < this.giornata.listaEventi.length; i++) {
@@ -146,5 +116,4 @@ export class GiornataComponent implements OnInit, OnChanges {
     this.aggiornaClassificaEvent.emit(null);
     this.aggiornaSalvataggio.emit(null);
   }
-
 }

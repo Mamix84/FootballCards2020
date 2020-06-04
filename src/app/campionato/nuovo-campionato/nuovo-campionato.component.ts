@@ -23,6 +23,8 @@ export class NuovoCampionatoComponent implements OnInit {
   listaFormat: SelectItem[];
   listaValoriTecnici: SelectItem[];
   listaTipologieRisultati: SelectItem[];
+  visualizzaCaricaTemplate: boolean = false;
+  listaTemplateCampionato: SelectItem[];
 
   @Output() campionatoPronto = new EventEmitter<any>();
   @Output() eliminaCampionatoEvent = new EventEmitter<any>();
@@ -78,8 +80,10 @@ export class NuovoCampionatoComponent implements OnInit {
   }
 
   preparaCampionato() {
-    for (let i = 0; i < this.listaTeamsSelezionati.length; i++) {
-      this.campionato.listaTeams.push(this.listaTeamsSelezionati[i]);
+    if (this.campionato.listaTeams.length === 0) {
+      for (let i = 0; i < this.listaTeamsSelezionati.length; i++) {
+        this.campionato.listaTeams.push(this.listaTeamsSelezionati[i]);
+      }
     }
 
     this.campionato.singolo = this.singolo;
@@ -118,5 +122,31 @@ export class NuovoCampionatoComponent implements OnInit {
 
   eliminaCampionato() {
     this.eliminaCampionatoEvent.emit(null);
+  }
+
+  visualizzaCaricaTemplateDialog() {
+    this.listaTemplateCampionato = this.campionatoService.caricaListaTemplateCampionato();
+    this.visualizzaCaricaTemplate = true;
+  }
+
+  nascondiVisualizzaCaricaTemplate() {
+    this.preparaListaTeams();
+
+    for (let i = 0; i < this.campionato.listaTeams.length; i++) {
+      this.listaTeamsSelezionati[i] = this.campionato.listaTeams[i];
+
+      for (let j = 0; j < this.listaTeams.length; j++) {
+        if (
+          this.listaTeams[j].value != null &&
+          this.listaTeams[j].value.id === this.campionato.listaTeams[i].id
+        ) {
+          this.listaTeams[j].value.valoreTecnico = this.campionato.listaTeams[
+            i
+          ].valoreTecnico;
+        }
+      }
+    }
+
+    this.visualizzaCaricaTemplate = false;
   }
 }

@@ -81,7 +81,8 @@ export class NuovaCoppaComponent implements OnInit {
       this.coppa.listaTeams.push(this.listaTeamsSelezionati[i]);
     }
 
-    //TODO: Prepara incontri
+    this.coppa.faseCorrente = 0;
+    this.coppaService.generaIncontri(this.coppa);
 
     let date = new Date();
     this.coppa.id =

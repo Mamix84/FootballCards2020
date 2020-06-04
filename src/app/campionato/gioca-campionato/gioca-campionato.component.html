@@ -36,9 +36,15 @@
 
 <div class="ui-g">
   <div class="ui-g-12">
-    <app-giornata [giornata]="giornataCorrente" [classifica]="campionato.classifica" (aggiornaSalvataggio)="aggiornaSalvataggio()"
+    <app-giornata [giornata]="giornataCorrente" (aggiornaSalvataggio)="aggiornaSalvataggio()"
       [tipologiaRisultati]="campionato.tipologiaRisultati" (aggiornaClassificaEvent)="aggiornaClassifica()">
     </app-giornata>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <app-classifica [classifica]="campionato.classifica"></app-classifica>
   </div>
 </div>
 

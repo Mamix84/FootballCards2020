@@ -1,1 +1,68 @@
-<p>gioca-coppa works!</p>
+<div class="ui-g">
+  <div class="ui-g-6">
+    <div class="ui-g">
+      <div class="ui-g-4">
+        <p-button class="appButton" label="FASE PRECEDENTE" (onClick)="fasePrecedente()"
+          [disabled]="coppa.faseCorrente===0"></p-button>
+      </div>
+      <div class="ui-g-4">
+        <p-dropdown class="appDropDown" [options]="listaFasi" [(ngModel)]="coppa.faseCorrente"
+          (onChange)="caricaFase()"></p-dropdown>
+      </div>
+      <div class="ui-g-4">
+        <p-button class="appButton" label="FASE SUCCESSIVA" (onClick)="faseSuccessiva()"
+          [disabled]="coppa.faseCorrente===coppa.listaFasi.length-1"></p-button>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g-6">
+    <div class="ui-g">
+      <div class="ui-g-6">
+      </div>
+      <div class="ui-g-6">
+        <h5 style="text-align: right;">{{coppa.denominazioneCoppa}} - STAGIONE {{coppa.stagione}}</h5>
+        <h4 style="text-align: right;">FASE
+          {{coppa.faseCorrente === undefined ? '' : coppa.descrizioneFase}}
+        </h4>
+        <h5 style="text-align: right;">GIRONE DI
+          {{faseCorrente === undefined ? '' : faseCorrente.girone === 'A' ? 'ANDATA' : 'RITORNO' }}</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <app-giornata [giornata]="faseCorrente" (aggiornaSalvataggio)="aggiornaSalvataggio()"
+      [tipologiaRisultati]="coppa.tipologiaRisultati" (aggiornaClassificaEvent)="aggiornaTabellone()">
+    </app-giornata>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <app-tabellone [tabellone]="coppa.tabellone"></app-tabellone>
+  </div>
+</div>
+
+<p-dialog header="VINCITORE!!!" [(visible)]="visualizzaVincitoreCoppa">
+  <div class="ui-g" style="width: 600px; height: 200px;">
+    <div class="ui-g-12">
+
+      <div class="ui-g">
+        <div class="ui-g-3"></div>
+        <div class="ui-g-6">
+          <h3 style="text-align: center;">{{vincitore.nome}} VINCE LA COPPA!!!</h3>
+        </div>
+        <div class="ui-g-3"></div>
+        <div class="ui-g-3"></div>
+        <div class="ui-g-6" style="align-content: center;">
+          <img style="  display: block;
+          margin-left: auto;
+          margin-right: auto;" class="teamLogo" src={{vincitore.logo}} width="120" heigth="80" />
+        </div>
+        <div class="ui-g-3"></div>
+      </div>
+    </div>
+  </div>
+</p-dialog>

@@ -8,6 +8,7 @@ import { TeamsService } from './teams.service';
 import tipologia_torneo from '../../assets/json/tipologia_torneo.json';
 import lista_stagioni from '../../assets/json/lista_stagioni.json';
 import tipologie_risultati from '../../assets/json/tipologie_risultati.json';
+import lista_template_campionato from '../../assets/json/lista_template_campionato.json';
 
 @Injectable({
   providedIn: 'root',
@@ -1049,5 +1050,11 @@ export class CampionatoService {
     let listaTipologiaRisultati = tipologie_risultati.listaTipologieRisultati;
 
     return listaTipologiaRisultati;
+  }
+
+  caricaListaTemplateCampionato(): SelectItem[]{
+    let listaTeamplateCampionato = lista_template_campionato.listaCampionati;
+
+    return listaTeamplateCampionato;
   }
 }

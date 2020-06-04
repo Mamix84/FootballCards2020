@@ -14,7 +14,8 @@ import { MessageService } from 'primeng/api';
 import { DropdownModule } from 'primeng/dropdown';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { TooltipModule } from 'primeng/tooltip';
-import {ScrollPanelModule} from 'primeng/scrollpanel';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import {OrganizationChartModule} from 'primeng/organizationchart';
 
 import { CardComponent } from './card/card.component';
 import { EventoComponent } from './evento/evento.component';
@@ -23,6 +24,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { GiornataComponent } from './giornata/giornata.component';
 import { StatisticheComponent } from './statistiche/statistiche.component';
+import { TabelloneComponent } from './tabellone/tabellone.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { StatisticheComponent } from './statistiche/statistiche.component';
     FooterComponent,
     GiornataComponent,
     StatisticheComponent,
+    TabelloneComponent,
   ],
   imports: [
     FormsModule,
@@ -49,6 +52,7 @@ import { StatisticheComponent } from './statistiche/statistiche.component';
     TieredMenuModule,
     TooltipModule,
     ScrollPanelModule,
+    OrganizationChartModule
   ],
   exports: [
     HeaderComponent,
@@ -58,6 +62,7 @@ import { StatisticheComponent } from './statistiche/statistiche.component';
     ClassificaComponent,
     GiornataComponent,
     StatisticheComponent,
+    TabelloneComponent,
   ],
   providers: [MessageService],
 })
