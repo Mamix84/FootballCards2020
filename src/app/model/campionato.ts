@@ -6,7 +6,6 @@ export class Campionato{
   stagione: string;
   denominazioneLega: string;
   listaGiornate: Array<Giornata>;
-  listaGiornateSpareggi: Array<Giornata>;
   numeroTeams: number;
   listaTeams: Array<Team> = [];
   tipologia: number;

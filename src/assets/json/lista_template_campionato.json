@@ -128,6 +128,68 @@
           }
         ]
       }
+    },
+    {
+      "label": "TORNEO ESTIVO",
+      "value": {
+        "tipologia": 9,
+        "denominazioneLega": "STAGIONE 1994-1995",
+        "stagione": "1994/1995",
+        "tipologiaRisultati": 0,
+        "numeroTeams": "8",
+        "format": {
+        },
+        "listaTeams": [
+          {
+            "id": 133,
+            "nome": "JUVENTUS",
+            "logo": "/assets/images/teams/juventus.png",
+            "valoreTecnico": 100
+          },
+          {
+            "id": 143,
+            "nome": "LAZIO",
+            "logo": "/assets/images/teams/lazio.png",
+            "valoreTecnico": 95
+          },
+          {
+            "id": 170,
+            "nome": "MILAN",
+            "logo": "/assets/images/teams/milan.png",
+            "valoreTecnico": 95
+          },
+          {
+            "id": 234,
+            "nome": "ROMA",
+            "logo": "/assets/images/teams/roma.png",
+            "valoreTecnico": 95
+          },
+          {
+            "id": 128,
+            "nome": "INTER",
+            "logo": "/assets/images/teams/inter.png",
+            "valoreTecnico": 90
+          },
+          {
+            "id": 244,
+            "nome": "SAMPDORIA",
+            "logo": "/assets/images/teams/sampdoria.png",
+            "valoreTecnico": 85
+          },
+          {
+            "id": 286,
+            "nome": "TORINO",
+            "logo": "/assets/images/teams/torino.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 115,
+            "nome": "GENOA",
+            "logo": "/assets/images/teams/genoa.png",
+            "valoreTecnico": 75
+          }
+        ]
+      }
     }
   ]
 }

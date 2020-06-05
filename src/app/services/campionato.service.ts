@@ -1069,13 +1069,13 @@ export class CampionatoService {
     return listaTeamplateCampionato;
   }
 
-  generaCalendarioSpareggi(listaEventi: Evento[]): Array<Giornata> {
+  generaCalendarioSpareggi(ultimaGiornata: number, listaEventi: Evento[]): Array<Giornata> {
     let listaGiornateSpareggi: Array<Giornata>;
     listaGiornateSpareggi = [];
 
     let giornataAndata = new Giornata();
-    giornataAndata.girone = 'A';
-    giornataAndata.numeroGiornata = 0;
+    giornataAndata.girone = 'AS';
+    giornataAndata.numeroGiornata = ultimaGiornata + 1;
     giornataAndata.listaEventi = [];
     for (let i = 0; i < listaEventi.length; i++) {
       let evento = new Evento();
@@ -1087,8 +1087,8 @@ export class CampionatoService {
     listaGiornateSpareggi.push(giornataAndata);
 
     let giornataRitorno = new Giornata();
-    giornataRitorno.girone = 'R';
-    giornataRitorno.numeroGiornata = 0;
+    giornataRitorno.girone = 'RS';
+    giornataRitorno.numeroGiornata = ultimaGiornata + 1;
     giornataRitorno.listaEventi = [];
     for (let i = 0; i < listaEventi.length; i++) {
       let evento = new Evento();

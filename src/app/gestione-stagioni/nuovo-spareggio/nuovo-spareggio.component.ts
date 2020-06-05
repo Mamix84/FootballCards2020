@@ -64,8 +64,11 @@ export class NuovoSpareggioComponent implements OnInit {
       }
     }
 
-    this.campionato.listaGiornateSpareggi = this.campionatoService.generaCalendarioSpareggi(
-      this.listaEventi
+    this.campionato.listaGiornate = this.campionato.listaGiornate.concat(
+      this.campionatoService.generaCalendarioSpareggi(
+        this.campionato.listaTeams.length - 1,
+        this.listaEventi
+      )
     );
 
     this.campionatoService.salvaCampionato(this.campionato);
