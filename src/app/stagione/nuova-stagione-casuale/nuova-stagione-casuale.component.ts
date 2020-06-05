@@ -39,8 +39,8 @@ export class NuovaStagioneCasualeComponent implements OnInit {
   }
 
   preparaStagione() {
-    let xmin = Math.ceil(1);
-    let xmax = Math.floor(3);
+    let xmin = Math.ceil(2);
+    let xmax = Math.floor(4);
     let numeroCampionati = Math.floor(Math.random() * (xmax - xmin)) + xmin;
 
     //DESCRIZIONE STAGIONE
@@ -57,9 +57,22 @@ export class NuovaStagioneCasualeComponent implements OnInit {
     this.stagione.denominazione =
       descrzione[Math.floor(Math.random() * (xmax - xmin)) + xmin];
 
+    //STAGIONE
+    xmin = Math.ceil(0);
+    xmax = Math.floor(this.stagioni.length);
+    this.stagione.stagioneCorrente = this.stagioni[
+      Math.floor(Math.random() * (xmax - xmin)) + xmin
+    ].value;
+
+    //FORMAT
+    this.stagione.format = '0';
+
     for (let i = 0; i < numeroCampionati; i++) {
       let campionato = new Campionato();
       campionato.singolo = false;
+      campionato.tipologiaRisultati = 0;
+      campionato.giornataCorrente = 0;
+      campionato.stagione = this.stagione.stagioneCorrente;
       campionato.listaTeams = new Array<Team>();
 
       //DESCRIZIONE
@@ -84,13 +97,6 @@ export class NuovaStagioneCasualeComponent implements OnInit {
       campionato.descrizioneTipologia = this.listaTipologieTorneo[
         tipologia
       ].label;
-
-      //STAGIONE
-      xmin = Math.ceil(0);
-      xmax = Math.floor(this.stagioni.length);
-      campionato.stagione = this.stagioni[
-        Math.floor(Math.random() * (xmax - xmin)) + xmin
-      ].value;
 
       //NUMERO SQUADRE
       this.numeroSquadre = this.campionatoService.caricaNumeroSquadre(

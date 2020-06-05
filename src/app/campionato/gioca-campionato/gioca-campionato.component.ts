@@ -31,7 +31,9 @@ export class GiocaCampionatoComponent implements OnInit {
     private classificaService: ClassificaService,
     private route: ActivatedRoute,
     private router: Router
-  ) {}
+  ) {
+    this.giornataCorrente = new Giornata();
+  }
 
   ngOnInit(): void {
     if (this.campionato === undefined) {
