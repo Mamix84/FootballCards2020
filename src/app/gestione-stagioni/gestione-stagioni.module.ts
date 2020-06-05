@@ -8,6 +8,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
+import { DialogModule } from 'primeng/dialog';
 
 import { NuovoSpareggioComponent } from './nuovo-spareggio/nuovo-spareggio.component';
 import { GiocaSpareggioComponent } from './gioca-spareggio/gioca-spareggio.component';
@@ -35,7 +36,8 @@ import { ShareModule } from '../share/share.module';
     ButtonModule,
     DropdownModule,
     TableModule,
-    ShareModule
+    ShareModule,
+    DialogModule
   ],
   exports: [
     NuovoSpareggioComponent,

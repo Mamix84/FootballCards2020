@@ -54,6 +54,22 @@ export class NuovoSpareggioComponent implements OnInit {
   }
 
   confermaSpareggi() {
+    this.listaEventi = [];
+    for (let i = 0; i < this.listaTeams_C.length; i++) {
+      if (this.listaTeams_C[i] != null && this.listaTeams_FC[i] != null) {
+        let evento = new Evento();
+        evento.teamC = this.listaTeams_C[i];
+        evento.teamFC = this.listaTeams_FC[i];
+        this.listaEventi.push(evento);
+      }
+    }
+
+    this.campionato.listaGiornateSpareggi = this.campionatoService.generaCalendarioSpareggi(
+      this.listaEventi
+    );
+
+    this.campionatoService.salvaCampionato(this.campionato);
+
     if (this.campionato.singolo === true) {
       this.router.navigateByUrl('/gioca-spareggio/' + this.campionato.id);
     }

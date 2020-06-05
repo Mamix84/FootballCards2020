@@ -903,23 +903,22 @@ export class CampionatoService {
     }
   }
 
-  aggiornaValoriTecnici(
-    campionato: Campionato
-  ) {
+  aggiornaValoriTecnici(campionato: Campionato) {
     let listaTeams = [];
 
     for (
       let i = 0;
-      i < campionato.listaGiornate[campionato.giornataCorrente].listaEventi.length;
+      i <
+      campionato.listaGiornate[campionato.giornataCorrente].listaEventi.length;
       i++
     ) {
       let valoreTecnicoC =
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].teamC
-          .valoreTecnico;
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .teamC.valoreTecnico;
 
       let valoreTecnicoFC =
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].teamFC
-          .valoreTecnico;
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .teamFC.valoreTecnico;
 
       let rapportoTecnicoC = valoreTecnicoC / valoreTecnicoFC;
       let rapportoTecnicoFC = valoreTecnicoFC / valoreTecnicoC;
@@ -927,8 +926,10 @@ export class CampionatoService {
       let coeffFC = 0.0;
 
       if (
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].goalC >
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].goalFC
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .goalC >
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .goalFC
       ) {
         if (rapportoTecnicoC <= 0.9) {
           coeffC = 1.02;
@@ -950,8 +951,10 @@ export class CampionatoService {
           coeffFC = 0.991;
         }
       } else if (
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].goalC ===
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].goalFC
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .goalC ===
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .goalFC
       ) {
         if (rapportoTecnicoC <= 0.9) {
           coeffC = 1.005;
@@ -973,8 +976,10 @@ export class CampionatoService {
           coeffFC = 1.002;
         }
       } else if (
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].goalC <
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].goalFC
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .goalC <
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .goalFC
       ) {
         if (rapportoTecnicoC <= 0.9) {
           coeffC = 0.999;
@@ -1001,8 +1006,8 @@ export class CampionatoService {
         i
       ].teamC.valoreTecnico =
         Math.round(
-          campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].teamC
-            .valoreTecnico *
+          campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+            .teamC.valoreTecnico *
             coeffC *
             100
         ) / 100;
@@ -1010,20 +1015,26 @@ export class CampionatoService {
         i
       ].teamFC.valoreTecnico =
         Math.round(
-          campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].teamFC
-            .valoreTecnico *
+          campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+            .teamFC.valoreTecnico *
             coeffFC *
             100
         ) / 100;
       listaTeams.push(
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].teamC
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .teamC
       );
       listaTeams.push(
-        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i].teamFC
+        campionato.listaGiornate[campionato.giornataCorrente].listaEventi[i]
+          .teamFC
       );
     }
 
-    for (let j = campionato.giornataCorrente; j < campionato.listaGiornate.length; j++) {
+    for (
+      let j = campionato.giornataCorrente;
+      j < campionato.listaGiornate.length;
+      j++
+    ) {
       for (let k = 0; k < campionato.listaGiornate[j].listaEventi.length; k++) {
         for (let i = 0; i < listaTeams.length; i++) {
           if (
@@ -1052,9 +1063,42 @@ export class CampionatoService {
     return listaTipologiaRisultati;
   }
 
-  caricaListaTemplateCampionato(): SelectItem[]{
+  caricaListaTemplateCampionato(): SelectItem[] {
     let listaTeamplateCampionato = lista_template_campionato.listaCampionati;
 
     return listaTeamplateCampionato;
+  }
+
+  generaCalendarioSpareggi(listaEventi: Evento[]): Array<Giornata> {
+    let listaGiornateSpareggi: Array<Giornata>;
+    listaGiornateSpareggi = [];
+
+    let giornataAndata = new Giornata();
+    giornataAndata.girone = 'A';
+    giornataAndata.numeroGiornata = 0;
+    giornataAndata.listaEventi = [];
+    for (let i = 0; i < listaEventi.length; i++) {
+      let evento = new Evento();
+      evento.id = 1000 + 100 + i;
+      evento.teamC = listaEventi[i].teamC;
+      evento.teamFC = listaEventi[i].teamFC;
+      giornataAndata.listaEventi.push(evento);
+    }
+    listaGiornateSpareggi.push(giornataAndata);
+
+    let giornataRitorno = new Giornata();
+    giornataRitorno.girone = 'R';
+    giornataRitorno.numeroGiornata = 0;
+    giornataRitorno.listaEventi = [];
+    for (let i = 0; i < listaEventi.length; i++) {
+      let evento = new Evento();
+      evento.id = 1000 + 100 + i;
+      evento.teamC = listaEventi[i].teamFC;
+      evento.teamFC = listaEventi[i].teamC;
+      giornataRitorno.listaEventi.push(evento);
+    }
+    listaGiornateSpareggi.push(giornataRitorno);
+
+    return listaGiornateSpareggi;
   }
 }

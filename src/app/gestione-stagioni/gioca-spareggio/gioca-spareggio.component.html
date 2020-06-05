@@ -1,5 +1,71 @@
 <div class="ui-g">
-  <div class="ui-g-12">
-    <app-giornata></app-giornata>
+  <div class="ui-g-6">
+    <div class="ui-g">
+      <div class="ui-g-4">
+        <p-button class="appButton" label="GIORNATA PRECEDENTE" (onClick)="giornataPrecedente()"
+          [disabled]="this.campionato.giornataCorrente===0"></p-button>
+      </div>
+      <div class="ui-g-4">
+        <p-dropdown class="appDropDown" [options]="listaGiornate"
+          [(ngModel)]="this.campionato.giornataCorrente" (onChange)="caricaGiornata()"></p-dropdown>
+      </div>
+      <div class="ui-g-4">
+        <p-button class="appButton" label="GIORNATA SUCCESSIVA" (onClick)="giornataSuccessiva()"
+          [disabled]="this.campionato.giornataCorrente===campionato.listaGiornateSpareggi.length-1"></p-button>
+      </div>
+    </div>
+  </div>
+  <div class="ui-g-6">
+    <div class="ui-g">
+      <div class="ui-g-6">
+      </div>
+      <div class="ui-g-6">
+        <h5 style="text-align: right;">{{campionato.denominazioneLega}} - STAGIONE {{campionato.stagione}}</h5>
+        <h4 style="text-align: right;">GIORNATA N°
+          {{giornataCorrente === undefined ? '' : giornataCorrente.girone === 'A' ? giornataCorrente.numeroGiornata : giornataCorrente.numeroGiornata + campionato.listaTeams.length-1}}
+        </h4>
+        <h5 style="text-align: right;">SPAREGGI - GIORNATA DI
+          {{giornataCorrente === undefined ? '' : giornataCorrente.girone === 'A' ? 'ANDATA' : 'RITORNO' }}</h5>
+      </div>
+    </div>
   </div>
 </div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <app-giornata [giornata]="giornataCorrente" (aggiornaSalvataggio)="aggiornaSalvataggio()"
+      [tipologiaRisultati]="campionato.tipologiaRisultati" (aggiornaClassificaEvent)="aggiornaClassifica()">
+    </app-giornata>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <app-classifica [classifica]="campionato.classifica"></app-classifica>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <app-statistiche [campionato]="this.campionato" [index]="giornataCorrente"></app-statistiche>
+  </div>
+</div>
+
+
+<p-dialog header="PROSEGUI" [(visible)]="visualizzaProsegui">
+  <div class="ui-g" style="width: 800px; height: 400px;">
+    <div class="ui-g-12">
+
+      <div class="ui-g">
+        <div class="ui-g-6"></div>
+        <div class="ui-g-3">
+          <p-button class="appButton" label="TERMINA CAMPIONATO" (onClick)="terminaCampionato()"></p-button>
+        </div>
+        <div class="ui-g-3">
+          <p-button class="appButton" label="PROSEGUI CAMPIONATO" (onClick)="proseguiCampionato()"></p-button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</p-dialog>

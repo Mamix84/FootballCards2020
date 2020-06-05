@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Classifica, ClassificaItem } from '../model/classifica';
-import { Evento, Campionato } from '../model/campionato';
+import { Evento, Campionato, Giornata } from '../model/campionato';
 import { Team } from '../model/team';
 import { IfStmt } from '@angular/compiler';
 import { CampionatoService } from './campionato.service';
@@ -396,6 +396,30 @@ export class ClassificaService {
 
     if (vincitore) return classifica.listaTeams[0].team;
 
+    return null;
+  }
+
+  checkConclusioneSpareggi(listaGiornate: Giornata[]): boolean {
+    let check = true;
+
+    for (let i = 0; i < listaGiornate.length; i++) {
+      for (let j = 0; j < listaGiornate[i].listaEventi.length; j++) {
+        if (
+          listaGiornate[i].listaEventi[j].goalC === undefined ||
+          listaGiornate[i].listaEventi[j].goalFC === undefined
+        )
+          return false;
+      }
+    }
+
+    return check;
+  }
+
+  aggiornaClassificaSpareggi(
+    giornataCorrente: number,
+    girone: string,
+    campionato: Campionato
+  ): Classifica {
     return null;
   }
 }
