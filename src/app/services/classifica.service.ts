@@ -41,61 +41,63 @@ export class ClassificaService {
     girone: string,
     campionato: Campionato
   ): Classifica {
-    campionato.classifica = new Classifica();
-    campionato.classifica = this.preparaClassifica(campionato.listaTeams);
-
     if (girone === 'R')
       giornataCorrente = campionato.listaTeams.length - 1 + giornataCorrente;
 
-    for (
-      let j = 0;
-      j < campionato.listaGiornate.length && j < giornataCorrente;
-      j++
-    ) {
-      let listaEventi = campionato.listaGiornate[j].listaEventi;
-      for (let i = 0; i < listaEventi.length; i++) {
-        let teamC = listaEventi[i].teamC;
-        let teamFC = listaEventi[i].teamFC;
-        let golC = listaEventi[i].goalC;
-        let golFC = listaEventi[i].goalFC;
+    if (girone === 'A' || girone === 'R') {
+      campionato.classifica = new Classifica();
+      campionato.classifica = this.preparaClassifica(campionato.listaTeams);
 
-        if (golC === undefined || golFC === undefined) continue;
+      for (
+        let j = 0;
+        j < campionato.listaGiornate.length && j < giornataCorrente;
+        j++
+      ) {
+        let listaEventi = campionato.listaGiornate[j].listaEventi;
+        for (let i = 0; i < listaEventi.length; i++) {
+          let teamC = listaEventi[i].teamC;
+          let teamFC = listaEventi[i].teamFC;
+          let golC = listaEventi[i].goalC;
+          let golFC = listaEventi[i].goalFC;
 
-        for (let j = 0; j < campionato.classifica.listaTeams.length; j++) {
-          if (campionato.classifica.listaTeams[j].team.nome === teamC.nome) {
-            if (golC > golFC) {
-              campionato.classifica.listaTeams[j].vinte++;
-              campionato.classifica.listaTeams[j].punti += 3;
-            } else if (golC === golFC) {
-              campionato.classifica.listaTeams[j].pareggiate++;
-              campionato.classifica.listaTeams[j].punti += 1;
-            } else {
-              campionato.classifica.listaTeams[j].perse++;
+          if (golC === undefined || golFC === undefined) continue;
+
+          for (let j = 0; j < campionato.classifica.listaTeams.length; j++) {
+            if (campionato.classifica.listaTeams[j].team.nome === teamC.nome) {
+              if (golC > golFC) {
+                campionato.classifica.listaTeams[j].vinte++;
+                campionato.classifica.listaTeams[j].punti += 3;
+              } else if (golC === golFC) {
+                campionato.classifica.listaTeams[j].pareggiate++;
+                campionato.classifica.listaTeams[j].punti += 1;
+              } else {
+                campionato.classifica.listaTeams[j].perse++;
+              }
+
+              campionato.classifica.listaTeams[j].partiteGiocate++;
+              campionato.classifica.listaTeams[j].golFatti += golC;
+              campionato.classifica.listaTeams[j].golSubiti += golFC;
+              campionato.classifica.listaTeams[j].golFattiC += golC;
+              campionato.classifica.listaTeams[j].golSubitiC += golFC;
             }
 
-            campionato.classifica.listaTeams[j].partiteGiocate++;
-            campionato.classifica.listaTeams[j].golFatti += golC;
-            campionato.classifica.listaTeams[j].golSubiti += golFC;
-            campionato.classifica.listaTeams[j].golFattiC += golC;
-            campionato.classifica.listaTeams[j].golSubitiC += golFC;
-          }
+            if (campionato.classifica.listaTeams[j].team.nome === teamFC.nome) {
+              if (golC > golFC) {
+                campionato.classifica.listaTeams[j].perse++;
+              } else if (golC === golFC) {
+                campionato.classifica.listaTeams[j].pareggiate++;
+                campionato.classifica.listaTeams[j].punti += 1;
+              } else {
+                campionato.classifica.listaTeams[j].vinte++;
+                campionato.classifica.listaTeams[j].punti += 3;
+              }
 
-          if (campionato.classifica.listaTeams[j].team.nome === teamFC.nome) {
-            if (golC > golFC) {
-              campionato.classifica.listaTeams[j].perse++;
-            } else if (golC === golFC) {
-              campionato.classifica.listaTeams[j].pareggiate++;
-              campionato.classifica.listaTeams[j].punti += 1;
-            } else {
-              campionato.classifica.listaTeams[j].vinte++;
-              campionato.classifica.listaTeams[j].punti += 3;
+              campionato.classifica.listaTeams[j].partiteGiocate++;
+              campionato.classifica.listaTeams[j].golFatti += golFC;
+              campionato.classifica.listaTeams[j].golSubiti += golC;
+              campionato.classifica.listaTeams[j].golFattiFC += golFC;
+              campionato.classifica.listaTeams[j].golSubitiFC += golC;
             }
-
-            campionato.classifica.listaTeams[j].partiteGiocate++;
-            campionato.classifica.listaTeams[j].golFatti += golFC;
-            campionato.classifica.listaTeams[j].golSubiti += golC;
-            campionato.classifica.listaTeams[j].golFattiFC += golFC;
-            campionato.classifica.listaTeams[j].golSubitiFC += golC;
           }
         }
       }
@@ -211,6 +213,26 @@ export class ClassificaService {
                 obj1.golFatti - obj1.golSubiti ===
                 obj2.golFatti - obj2.golSubiti
               ) {
+                if (
+                  this.checkRisultatiSpareggi(
+                    obj1,
+                    obj2,
+                    giornataCorrente,
+                    campionato
+                  ) > 0
+                )
+                  return -1;
+
+                if (
+                  this.checkRisultatiSpareggi(
+                    obj1,
+                    obj2,
+                    giornataCorrente,
+                    campionato
+                  ) < 0
+                )
+                  return 1;
+
                 return 0;
               }
 
@@ -373,8 +395,61 @@ export class ClassificaService {
     return goal;
   }
 
-  checkVincitore(ultimaGiornata: number, classifica: Classifica): Team {
+  checkRisultatiSpareggi(
+    teamA: ClassificaItem,
+    teamB: ClassificaItem,
+    giornataCorrente: number,
+    campionato: Campionato
+  ): number {
+    let differenzaGoal = 0;
+    let totGoalTeamA = 0;
+    let totGoalTeamB = 0;
+
+    for (let i = 0; i < campionato.listaGiornate.length; i++) {
+      if (
+        campionato.listaGiornate[i].girone === 'AS' ||
+        campionato.listaGiornate[i].girone === 'RS'
+      ) {
+        for (
+          let j = 0;
+          j < campionato.listaGiornate[i].listaEventi.length;
+          j++
+        ) {
+          if (
+            campionato.listaGiornate[i].listaEventi[j].teamC.id ===
+              teamA.team.id &&
+            campionato.listaGiornate[i].listaEventi[j].teamFC.id ===
+              teamB.team.id
+          ) {
+            totGoalTeamA += campionato.listaGiornate[i].listaEventi[j].goalC;
+            totGoalTeamB += campionato.listaGiornate[i].listaEventi[j].goalFC;
+          }
+
+          if (
+            campionato.listaGiornate[i].listaEventi[j].teamFC.id ===
+              teamA.team.id &&
+            campionato.listaGiornate[i].listaEventi[j].teamC.id ===
+              teamB.team.id
+          ) {
+            totGoalTeamA += campionato.listaGiornate[i].listaEventi[j].goalFC;
+            totGoalTeamB += campionato.listaGiornate[i].listaEventi[j].goalC;
+          }
+        }
+      }
+    }
+
+    differenzaGoal = totGoalTeamA - totGoalTeamB;
+
+    return differenzaGoal;
+  }
+
+  checkVincitore(
+    ultimaGiornata: number,
+    classifica: Classifica,
+    spareggi: boolean
+  ): Team {
     let vincitore = true;
+    if (spareggi === true) ultimaGiornata = ultimaGiornata - 2;
     for (let i = 0; i < classifica.listaTeams.length; i++) {
       if (classifica.listaTeams[i].partiteGiocate != ultimaGiornata) {
         vincitore = false;

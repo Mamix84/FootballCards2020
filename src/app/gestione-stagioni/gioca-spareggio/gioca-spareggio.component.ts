@@ -34,49 +34,51 @@ export class GiocaSpareggioComponent implements OnInit {
     if (this.campionato === undefined) {
       let id = this.route.snapshot.paramMap.get('id');
       this.campionato = this.campionatoService.caricaCampionato(id);
+    }
 
+    if (this.campionato != undefined) {
       this.giornataCorrente = this.campionato.listaGiornate[
         this.campionato.giornataCorrente
       ];
-    }
 
-    this.listaGiornate = [];
-    for (let i = 0; i < this.campionato.listaGiornate.length; i++) {
-      if (this.campionato.listaGiornate[i].girone === 'A') {
-        this.listaGiornate.push({
-          label: this.campionato.listaGiornate[i].numeroGiornata + '',
-          value: this.campionato.listaGiornate[i].numeroGiornata - 1,
-        });
-      } else if (this.campionato.listaGiornate[i].girone === 'R') {
-        this.listaGiornate.push({
-          label:
-            this.campionato.listaTeams.length -
-            1 +
-            this.campionato.listaGiornate[i].numeroGiornata +
-            '',
-          value:
-            this.campionato.listaTeams.length -
-            1 +
-            this.campionato.listaGiornate[i].numeroGiornata -
-            1,
-        });
-      } else if (this.campionato.listaGiornate[i].girone === 'AS') {
-        this.listaGiornate.push({
-          label: 'SPAREGGI - ANDATA',
-          value:
-          this.campionato.listaTeams.length -
-          1 +
-          this.campionato.listaGiornate[i].numeroGiornata -
-          1,
-        });
-      } else {
-        this.listaGiornate.push({
-          label: 'SPAREGGI - RITORNO',
-          value:
-            this.campionato.listaTeams.length -
-            1 +
-            this.campionato.listaGiornate[i].numeroGiornata,
-        });
+      this.listaGiornate = [];
+      for (let i = 0; i < this.campionato.listaGiornate.length; i++) {
+        if (this.campionato.listaGiornate[i].girone === 'A') {
+          this.listaGiornate.push({
+            label: this.campionato.listaGiornate[i].numeroGiornata + '',
+            value: this.campionato.listaGiornate[i].numeroGiornata - 1,
+          });
+        } else if (this.campionato.listaGiornate[i].girone === 'R') {
+          this.listaGiornate.push({
+            label:
+              this.campionato.listaTeams.length -
+              1 +
+              this.campionato.listaGiornate[i].numeroGiornata +
+              '',
+            value:
+              this.campionato.listaTeams.length -
+              1 +
+              this.campionato.listaGiornate[i].numeroGiornata -
+              1,
+          });
+        } else if (this.campionato.listaGiornate[i].girone === 'AS') {
+          this.listaGiornate.push({
+            label: 'SPAREGGI - ANDATA',
+            value:
+              this.campionato.listaTeams.length -
+              1 +
+              this.campionato.listaGiornate[i].numeroGiornata -
+              1,
+          });
+        } else {
+          this.listaGiornate.push({
+            label: 'SPAREGGI - RITORNO',
+            value:
+              this.campionato.listaTeams.length -
+              1 +
+              this.campionato.listaGiornate[i].numeroGiornata,
+          });
+        }
       }
     }
   }
@@ -130,8 +132,13 @@ export class GiocaSpareggioComponent implements OnInit {
 
       let team = this.classificaService.checkVincitore(
         this.campionato.listaGiornate.length,
-        this.campionato.classifica
+        this.campionato.classifica,
+        true
       );
+
+      if (team) {
+        this.vincitore = team;
+      }
 
       this.visualizzaProsegui = this.classificaService.checkConclusioneSpareggi(
         this.campionato.listaGiornate

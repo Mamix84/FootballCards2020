@@ -1,1 +1,17 @@
-<p>nuovo-spareggio-stagione works!</p>
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-fieldset legend="Spareggi Stagione">
+      <div class="ui-g-12" *ngFor="let i = index; let campionato of stagione.listaCampionati">
+        <app-nuovo-spareggio [campionato]="campionato" (confermaSpareggiEvent)="confermaSpareggi(i)">
+        </app-nuovo-spareggio>
+      </div>
+    </p-fieldset>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-9"></div>
+  <div class="ui-g-3">
+    <p-button class="appButton" label="PROSEGUI" [disabled]="disabledProsegui" (onClick)="prosegui()"></p-button>
+  </div>
+</div>

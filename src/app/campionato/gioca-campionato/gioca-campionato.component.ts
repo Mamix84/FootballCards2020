@@ -144,7 +144,8 @@ export class GiocaCampionatoComponent implements OnInit {
 
       let team = this.classificaService.checkVincitore(
         this.campionato.listaGiornate.length,
-        this.campionato.classifica
+        this.campionato.classifica,
+        false
       );
       if (team) {
         this.visualizzaVincitore = true;

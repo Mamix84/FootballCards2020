@@ -1,0 +1,11 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <div class="ui-g-12" *ngFor="let i = index; let campionato of stagione.listaCampionati">
+      <p-fieldset legend="Gioca Spareggi {{campionato.denominazioneLega}}" [toggleable]="true">
+        <app-gioca-spareggio [campionato]="campionato" (proseguiStagioneEvent)="proseguiStagione()"
+          (aggiornaSalvataggioStagione)="aggiornaStagione()">
+        </app-gioca-spareggio>
+      </p-fieldset>
+    </div>
+  </div>
+</div>

@@ -54,7 +54,7 @@
   <div class="ui-g">
     <div class="ui-g-8"></div>
     <div class="ui-g-4">
-      <p-button class="appButton" label="CONFERMA SPAREGGI" (onClick)="confermaSpareggi()"></p-button>
+      <p-button class="appButton" label="CONFERMA SPAREGGI" [disabled]="disabledConferma" (onClick)="confermaSpareggi()"></p-button>
     </div>
   </div>
 </p-fieldset>

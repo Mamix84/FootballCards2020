@@ -24,6 +24,7 @@ import { PreparaCampionatoComponent } from './gestione-stagioni/prepara-campiona
 import { PreparaTeamsComponent } from './gestione-stagioni/prepara-teams/prepara-teams.component';
 import { PreparaStagioneComponent } from './gestione-stagioni/prepara-stagione/prepara-stagione.component';
 import { NuovoSpareggioStagioneComponent } from './gestione-stagioni/nuovo-spareggio-stagione/nuovo-spareggio-stagione.component';
+import { GiocaSpareggioStagioneComponent } from './gestione-stagioni/gioca-spareggio-stagione/gioca-spareggio-stagione.component';
 
 const routes: Routes = [
   { path: '', component: MenuComponent },
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: 'nuovo-spareggio-stagione/:id',
     component: NuovoSpareggioStagioneComponent,
+  },
+  {
+    path: 'gioca-spareggio-stagione/:id',
+    component: GiocaSpareggioStagioneComponent,
   },
 ];
 
