@@ -102,7 +102,7 @@ export class NuovoCampionatoComponent implements OnInit {
       this.campionatoService.salvaCampionato(this.campionato);
     }
 
-    this.campionatoPronto.emit(null);
+    this.campionatoPronto.emit(this.campionato);
 
     if (this.singolo === true)
       this.router.navigate(['/gioca-campionato/' + this.campionato.id]);

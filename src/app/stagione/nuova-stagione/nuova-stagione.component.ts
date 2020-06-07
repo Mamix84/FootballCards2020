@@ -67,8 +67,9 @@ export class NuovaStagioneComponent implements OnInit {
     return check
   }
 
-  checkCampionatiPronti(index: number){
+  checkCampionatiPronti(campionato: Campionato, index: number){
     this.campionatiPronti[index] = true;
+    this.stagione.listaCampionati[index] = campionato;
   }
 
   eliminaCampionato(index: number){

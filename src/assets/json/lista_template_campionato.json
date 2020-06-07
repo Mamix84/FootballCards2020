@@ -130,6 +130,260 @@
       }
     },
     {
+      "label": "SERIE A 2003-2004",
+      "value": {
+        "tipologia": 0,
+        "denominazioneLega": "STAGIONE 2003-2004",
+        "stagione": "2003/2004",
+        "tipologiaRisultati": 0,
+        "numeroTeams": "18",
+        "format": {},
+        "listaTeams": [
+          {
+            "id": 12,
+            "nome": "ANCONA",
+            "logo": "/assets/images/teams/ancona.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 35,
+            "nome": "BOLOGNA",
+            "logo": "/assets/images/teams/bologna.png",
+            "valoreTecnico": 85
+          },
+          {
+            "id": 41,
+            "nome": "BRESCIA",
+            "logo": "/assets/images/teams/brescia.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 66,
+            "nome": "CHIEVO",
+            "logo": "/assets/images/teams/chievo.png",
+            "valoreTecnico": 85
+          },
+          {
+            "id": 86,
+            "nome": "EMPOLI",
+            "logo": "/assets/images/teams/empoli.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 128,
+            "nome": "INTER",
+            "logo": "/assets/images/teams/inter.png",
+            "valoreTecnico": 100
+          },
+          {
+            "id": 133,
+            "nome": "JUVENTUS",
+            "logo": "/assets/images/teams/juventus.png",
+            "valoreTecnico": 100
+          },
+          {
+            "id": 143,
+            "nome": "LAZIO",
+            "logo": "/assets/images/teams/lazio.png",
+            "valoreTecnico": 95
+          },
+          {
+            "id": 144,
+            "nome": "LECCE",
+            "logo": "/assets/images/teams/lecce.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 170,
+            "nome": "MILAN",
+            "logo": "/assets/images/teams/milan.png",
+            "valoreTecnico": 100
+          },
+          {
+            "id": 172,
+            "nome": "MODENA",
+            "logo": "/assets/images/teams/modena.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 197,
+            "nome": "PARMA",
+            "logo": "/assets/images/teams/parma.png",
+            "valoreTecnico": 90
+          },
+          {
+            "id": 201,
+            "nome": "PERUGIA",
+            "logo": "/assets/images/teams/perugia.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 226,
+            "nome": "REGGINA",
+            "logo": "/assets/images/teams/reggina.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 234,
+            "nome": "ROMA",
+            "logo": "/assets/images/teams/roma.png",
+            "valoreTecnico": 100
+          },
+          {
+            "id": 244,
+            "nome": "SAMPDORIA",
+            "logo": "/assets/images/teams/sampdoria.png",
+            "valoreTecnico": 85
+          },
+          {
+            "id": 261,
+            "nome": "SIENA",
+            "logo": "/assets/images/teams/siena.png",
+            "valoreTecnico": 80
+          },
+          {
+            "id": 297,
+            "nome": "UDINESE",
+            "logo": "/assets/images/teams/udinese.png",
+            "valoreTecnico": 90
+          }
+        ]
+      }
+    },
+    {
+      "label": "SERIE B 2003-2004",
+      "value": {
+        "tipologia": 1,
+        "denominazioneLega": "STAGIONE 2003-2004",
+        "stagione": "2003/2004",
+        "tipologiaRisultati": 0,
+        "numeroTeams": "20",
+        "format": {},
+        "listaTeams": [
+          {
+            "id": 7,
+            "nome": "ALBINOLEFFE",
+            "logo": "/assets/images/teams/albinoleffe.png",
+            "valoreTecnico": 55
+          },
+          {
+            "id": 17,
+            "nome": "ASCOLI",
+            "logo": "/assets/images/teams/ascoli.png",
+            "valoreTecnico": 65
+          },
+          {
+            "id": 19,
+            "nome": "ATALANTA",
+            "logo": "/assets/images/teams/atalanta.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 20,
+            "nome": "AVELLINO",
+            "logo": "/assets/images/teams/avellino.png",
+            "valoreTecnico": 55
+          },
+          {
+            "id": 24,
+            "nome": "BARI",
+            "logo": "/assets/images/teams/bari.png",
+            "valoreTecnico": 65
+          },
+          {
+            "id": 43,
+            "nome": "CAGLIARI",
+            "logo": "/assets/images/teams/cagliari.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 74,
+            "nome": "COMO",
+            "logo": "/assets/images/teams/como.png",
+            "valoreTecnico": 55
+          },
+          {
+            "id": 149,
+            "nome": "LIVORNO",
+            "logo": "/assets/images/teams/livorno.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 167,
+            "nome": "MESSINA",
+            "logo": "/assets/images/teams/messina.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 180,
+            "nome": "NAPOLI",
+            "logo": "/assets/images/teams/napoli.png",
+            "valoreTecnico": 65
+          },
+          {
+            "id": 194,
+            "nome": "PALERMO",
+            "logo": "/assets/images/teams/palermo.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 202,
+            "nome": "PESCARA",
+            "logo": "/assets/images/teams/pescara.png",
+            "valoreTecnico": 60
+          },
+          {
+            "id": 203,
+            "nome": "PIACENZA",
+            "logo": "/assets/images/teams/piacenza.png",
+            "valoreTecnico": 70
+          },
+          {
+            "id": 280,
+            "nome": "TERNANA",
+            "logo": "/assets/images/teams/ternana.png",
+            "valoreTecnico": 70
+          },
+          {
+            "id": 286,
+            "nome": "TORINO",
+            "logo": "/assets/images/teams/torino.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 292,
+            "nome": "TREVISO",
+            "logo": "/assets/images/teams/treviso.png",
+            "valoreTecnico": 60
+          },
+          {
+            "id": 294,
+            "nome": "TRIESTINA",
+            "logo": "/assets/images/teams/triestina.png",
+            "valoreTecnico": 60
+          },
+          {
+            "id": 301,
+            "nome": "VENEZIA",
+            "logo": "/assets/images/teams/venezia.png",
+            "valoreTecnico": 55
+          },
+          {
+            "id": 302,
+            "nome": "VERONA",
+            "logo": "/assets/images/teams/verona.png",
+            "valoreTecnico": 65
+          },
+          {
+            "id": 305,
+            "nome": "VICENZA",
+            "logo": "/assets/images/teams/vicenza.png",
+            "valoreTecnico": 60
+          }
+        ]
+      }
+    },
+    {
       "label": "TORNEO ESTIVO",
       "value": {
         "tipologia": 9,
@@ -137,8 +391,7 @@
         "stagione": "1994/1995",
         "tipologiaRisultati": 0,
         "numeroTeams": "8",
-        "format": {
-        },
+        "format": {},
         "listaTeams": [
           {
             "id": 133,

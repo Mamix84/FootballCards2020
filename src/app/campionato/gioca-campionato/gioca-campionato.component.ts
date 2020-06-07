@@ -41,42 +41,45 @@ export class GiocaCampionatoComponent implements OnInit {
 
       this.campionato = this.campionatoService.caricaCampionato(id);
     }
-    this.giornataCorrente = this.campionato.listaGiornate[
-      this.campionato.giornataCorrente
-    ];
 
-    this.campionato.classifica = this.classificaService.preparaClassifica(
-      this.campionato.listaTeams
-    );
+    if (this.campionato != undefined) {
+      this.giornataCorrente = this.campionato.listaGiornate[
+        this.campionato.giornataCorrente
+      ];
 
-    for (let i = 0; i < this.campionato.listaGiornate.length; i++) {
-      this.campionato.classifica = this.classificaService.aggiornaClassifica(
-        this.giornataCorrente.numeroGiornata,
-        this.giornataCorrente.girone,
-        this.campionato
+      this.campionato.classifica = this.classificaService.preparaClassifica(
+        this.campionato.listaTeams
       );
-    }
 
-    this.listaGiornate = [];
-    for (let i = 0; i < this.campionato.listaGiornate.length; i++) {
-      if (this.campionato.listaGiornate[i].girone === 'A') {
-        this.listaGiornate.push({
-          label: this.campionato.listaGiornate[i].numeroGiornata + '',
-          value: this.campionato.listaGiornate[i].numeroGiornata - 1,
-        });
-      } else {
-        this.listaGiornate.push({
-          label:
-            this.campionato.listaTeams.length -
-            1 +
-            this.campionato.listaGiornate[i].numeroGiornata +
-            '',
-          value:
-            this.campionato.listaTeams.length -
-            1 +
-            this.campionato.listaGiornate[i].numeroGiornata -
-            1,
-        });
+      for (let i = 0; i < this.campionato.listaGiornate.length; i++) {
+        this.campionato.classifica = this.classificaService.aggiornaClassifica(
+          this.giornataCorrente.numeroGiornata,
+          this.giornataCorrente.girone,
+          this.campionato
+        );
+      }
+
+      this.listaGiornate = [];
+      for (let i = 0; i < this.campionato.listaGiornate.length; i++) {
+        if (this.campionato.listaGiornate[i].girone === 'A') {
+          this.listaGiornate.push({
+            label: this.campionato.listaGiornate[i].numeroGiornata + '',
+            value: this.campionato.listaGiornate[i].numeroGiornata - 1,
+          });
+        } else {
+          this.listaGiornate.push({
+            label:
+              this.campionato.listaTeams.length -
+              1 +
+              this.campionato.listaGiornate[i].numeroGiornata +
+              '',
+            value:
+              this.campionato.listaTeams.length -
+              1 +
+              this.campionato.listaGiornate[i].numeroGiornata -
+              1,
+          });
+        }
       }
     }
   }
@@ -112,9 +115,7 @@ export class GiocaCampionatoComponent implements OnInit {
   }
 
   aggiornaSalvataggio() {
-    this.campionatoService.aggiornaValoriTecnici(
-      this.campionato
-    );
+    this.campionatoService.aggiornaValoriTecnici(this.campionato);
     if (this.campionato.singolo === true) {
       this.campionatoService.salvaCampionato(this.campionato);
     }

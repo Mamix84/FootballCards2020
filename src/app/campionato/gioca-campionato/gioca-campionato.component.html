@@ -1,28 +1,25 @@
 <div class="ui-g">
-  <div class="ui-g-6">
+  <div class="ui-g-6 ui-sm-12">
     <div class="ui-g">
-      <div class="ui-g-4">
+      <div class="ui-g-4 ui-sm-12">
         <p-button class="appButton" label="GIORNATA PRECEDENTE" (onClick)="giornataPrecedente()"
           [disabled]="this.campionato.giornataCorrente===0"></p-button>
       </div>
-      <div class="ui-g-4">
+      <div class="ui-g-4 ui-sm-12">
         <p-dropdown class="appDropDown" [options]="listaGiornate" [(ngModel)]="this.campionato.giornataCorrente"
           (onChange)="caricaGiornata()"></p-dropdown>
       </div>
-      <div class="ui-g-4">
+      <div class="ui-g-4 ui-sm-12">
         <p-button class="appButton" label="GIORNATA SUCCESSIVA" (onClick)="giornataSuccessiva()"
           [disabled]="this.campionato.giornataCorrente===campionato.listaGiornate.length-1"></p-button>
       </div>
     </div>
   </div>
-  <div class="ui-g-6">
+  <div class="ui-g-6 ui-sm-12">
     <div class="ui-g">
-      <div class="ui-g-6">
-        <div style="visibility: hidden;">
-          <p-button class="appButton" label="GENERA RISULTATI" (onClick)="generaRisultati()"></p-button>
-        </div>
+      <div class="ui-g-6 ui-sm-2">
       </div>
-      <div class="ui-g-6">
+      <div class="ui-g-6 ui-sm-10">
         <h5 style="text-align: right;">{{campionato.denominazioneLega}} - STAGIONE {{campionato.stagione}}</h5>
         <h4 style="text-align: right;">GIORNATA N°
           {{giornataCorrente === undefined ? '' : giornataCorrente.girone === 'A' ? giornataCorrente.numeroGiornata : giornataCorrente.numeroGiornata + campionato.listaTeams.length-1}}
