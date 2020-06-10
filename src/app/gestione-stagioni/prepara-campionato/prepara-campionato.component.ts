@@ -146,8 +146,8 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
       }
     }
 
-    // Abilitazione selezione team per Serie C (territorialita)
-    if (this.campionato.tipologia === 2) {
+    // Abilitazione selezione team per Serie inferiori o uguali alla C (territorialita)
+    if (this.campionato.tipologia >= 2) {
       for (let i = 0; i < this.disabledTeams.length; i++) {
         this.disabledTeams[i] = false;
       }

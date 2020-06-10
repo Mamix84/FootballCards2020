@@ -175,6 +175,18 @@ export class CampionatoService {
                 playout: undefined,
               },
             });
+            listaFormat.push({
+              label: '[MERIDIONALE] - CAMPIONE MERIDIONALE / 4 RETROCESSIONI IN SERIE B',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: undefined,
+                retrocessione: 4,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
 
             break;
           }
@@ -238,6 +250,19 @@ export class CampionatoService {
                 europa: undefined,
                 intertoto: undefined,
                 promozione: 3,
+                retrocessione: 4,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
+            listaFormat.push({
+              label:
+                '[MERIDIONALE] - VINCITORE / 4 PROMOSSE IN SERIE A / 4 RETROCESSIONI IN SERIE C',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: 4,
                 retrocessione: 4,
                 playoff: undefined,
                 playout: undefined,
@@ -337,6 +362,19 @@ export class CampionatoService {
                 playout: undefined,
               },
             });
+            listaFormat.push({
+              label:
+                '[MERIDIONALE] - VINCITORE / 2 PROMOSSE IN SERIE B / 4 RETROCESSIONI IN SERIE D',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: 2,
+                retrocessione: 4,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
 
             break;
           }
@@ -407,7 +445,20 @@ export class CampionatoService {
           case '16': {
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSIONI IN SERIE ECCELLENZA',
+                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSIONI IN ECCELLENZA',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: 2,
+                retrocessione: 4,
+                playoff: 2,
+                playout: undefined,
+              },
+            });
+            listaFormat.push({
+              label:
+                '[MERIDIONALE] - VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSIONI IN ECCELLENZA',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -425,7 +476,7 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSIONI IN SERIE ECCELLENZA',
+                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSIONI IN ECCELLENZA',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -438,7 +489,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 9 RETROCESSIONI IN SERIE ECCELLENZA',
+                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 9 RETROCESSIONI IN ECCELLENZA',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -456,7 +507,7 @@ export class CampionatoService {
           case '20': {
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 10 RETROCESSIONI IN SERIE ECCELLENZA',
+                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 10 RETROCESSIONI IN ECCELLENZA',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -1069,7 +1120,10 @@ export class CampionatoService {
     return listaTeamplateCampionato;
   }
 
-  generaCalendarioSpareggi(ultimaGiornata: number, listaEventi: Evento[]): Array<Giornata> {
+  generaCalendarioSpareggi(
+    ultimaGiornata: number,
+    listaEventi: Evento[]
+  ): Array<Giornata> {
     let listaGiornateSpareggi: Array<Giornata>;
     listaGiornateSpareggi = [];
 

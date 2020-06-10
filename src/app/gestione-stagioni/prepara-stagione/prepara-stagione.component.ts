@@ -35,7 +35,10 @@ export class PreparaStagioneComponent implements OnInit {
       this.listaRetrocesse.push(new Array<Team>());
     }
 
-    if (this.stagione.format === '0' && this.stagione.listaCampionati.length > 1) {
+    if (
+      this.stagione.format === '0' &&
+      this.stagione.listaCampionati.length > 1
+    ) {
       for (let i = 0; i < this.stagione.listaCampionati.length; i++) {
         if (i == 0) {
           this.listaRetrocesse[i] = [];
@@ -80,6 +83,67 @@ export class PreparaStagioneComponent implements OnInit {
         4
       );
       this.listaPromosse[3] = [];
+    } else if (this.stagione.format === '2') {
+      for (let i = 0; i < this.stagione.listaCampionati.length; i++) {
+        this.listaPromosse[i] = [];
+        this.listaRetrocesse[i] = [];
+      }
+    } else if (this.stagione.format === '3') {
+      //SERIE A
+      this.listaRetrocesse[0] = [];
+      this.listaPromosse[0] = this.stagione.listaCampionati[1].classifica.listaPromosse;
+
+      //SERIE B
+      this.listaRetrocesse[1] = this.stagione.listaCampionati[0].classifica.listaRetrocesse;
+      this.listaPromosse[1] = this.stagione.listaCampionati[2].classifica.listaPromosse.concat(
+        this.stagione.listaCampionati[3].classifica.listaPromosse
+      );
+
+      //SERIE CA
+      this.listaRetrocesse[2] = this.stagione.listaCampionati[1].classifica.listaRetrocesse.slice(
+        0,
+        2
+      );
+      this.listaPromosse[2] = this.stagione.listaCampionati[4].classifica.listaPromosse.concat(
+        this.stagione.listaCampionati[5].classifica.listaPromosse
+      );
+
+      //SERIE CB
+      this.listaRetrocesse[3] = this.stagione.listaCampionati[1].classifica.listaRetrocesse.slice(
+        2,
+        4
+      );
+      this.listaPromosse[3] = this.stagione.listaCampionati[6].classifica.listaPromosse.concat(
+        this.stagione.listaCampionati[7].classifica.listaPromosse
+      );
+
+      //SERIE DA
+      this.listaRetrocesse[4] = this.stagione.listaCampionati[2].classifica.listaRetrocesse.slice(
+        0,
+        2
+      );
+      this.listaPromosse[4] = [];
+
+      //SERIE DB
+      this.listaRetrocesse[5] = this.stagione.listaCampionati[2].classifica.listaRetrocesse.slice(
+        2,
+        4
+      );
+      this.listaPromosse[5] = [];
+
+      //SERIE DC
+      this.listaRetrocesse[6] = this.stagione.listaCampionati[3].classifica.listaRetrocesse.slice(
+        0,
+        2
+      );
+      this.listaPromosse[6] = [];
+
+      //SERIE DD
+      this.listaRetrocesse[7] = this.stagione.listaCampionati[3].classifica.listaRetrocesse.slice(
+        2,
+        4
+      );
+      this.listaPromosse[7] = [];
     }
   }
 

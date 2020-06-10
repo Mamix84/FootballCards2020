@@ -24,7 +24,7 @@
         </div>
         <div class="ui-g-6">
           <p-dropdown class="appDropDown" [disabled]="stagione.stagioneCorrente === undefined ? true: false"
-            [options]="listaFormatStagione" [(ngModel)]="stagione.format"></p-dropdown>
+            [options]="listaFormatStagione" [(ngModel)]="stagione.format" (ngModelChange)="preparaTemplate()"></p-dropdown>
         </div>
       </div>
       <div class="ui-g">
@@ -32,7 +32,7 @@
         </div>
         <div class="ui-g-2">
           <p-button class="appButton" label="AGGIUNGI CAMPIONATO" (onClick)="aggiungiCampionato()"
-            [disabled]="stagione.format === undefined ? true: false"></p-button>
+            [disabled]="stagione.format === undefined || (stagione.format != '0' && stagione.format != '2') ? true: false"></p-button>
         </div>
         <div class="ui-g-2">
           <p-button class="appButton" [disabled]="checkGioca()" label="GIOCA" (onClick)="giocaStagione()"></p-button>

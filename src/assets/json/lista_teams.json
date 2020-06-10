@@ -1,1882 +1,418 @@
 {
   "listaTeam": [
-    {
-      "id": 1,
-      "nome": "ACIREALE",
-      "logo": "/assets/images/teams/acireale.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 2,
-      "nome": "ACQUI",
-      "logo": "/assets/images/teams/acqui.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 3,
-      "nome": "ACRI",
-      "logo": "/assets/images/teams/acri.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 4,
-      "nome": "AGROPOLI",
-      "logo": "/assets/images/teams/agropoli.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 5,
-      "nome": "AKRAGAS",
-      "logo": "/assets/images/teams/akragas.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 6,
-      "nome": "ALBESE",
-      "logo": "/assets/images/teams/albese.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 7,
-      "nome": "ALBINOLEFFE",
-      "logo": "/assets/images/teams/albinoleffe.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 8,
-      "nome": "ALESSANDRIA",
-      "logo": "/assets/images/teams/alessandria.png",
-      "valoreTecnico": 45
-    },
-    {
-      "id": 9,
-      "nome": "ALGHERO",
-      "logo": "/assets/images/teams/alghero.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 10,
-      "nome": "ALTAMURA",
-      "logo": "/assets/images/teams/altamura.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 11,
-      "nome": "ALZANO",
-      "logo": "/assets/images/teams/alzano.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 12,
-      "nome": "ANCONA",
-      "logo": "/assets/images/teams/ancona.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 13,
-      "nome": "ANDRIA",
-      "logo": "/assets/images/teams/andria.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 14,
-      "nome": "AOSTA",
-      "logo": "/assets/images/teams/aosta.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 15,
-      "nome": "APRILIA",
-      "logo": "/assets/images/teams/aprilia.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 16,
-      "nome": "AREZZO",
-      "logo": "/assets/images/teams/arezzo.png",
-      "valoreTecnico": 55
-    },
-    {
-      "id": 17,
-      "nome": "ASCOLI",
-      "logo": "/assets/images/teams/ascoli.png",
-      "valoreTecnico": 65
-    },
-    {
-      "id": 18,
-      "nome": "ASTI",
-      "logo": "/assets/images/teams/asti.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 19,
-      "nome": "ATALANTA",
-      "logo": "/assets/images/teams/atalanta.png",
-      "valoreTecnico": 85
-    },
-    {
-      "id": 20,
-      "nome": "AVELLINO",
-      "logo": "/assets/images/teams/avellino.png",
-      "valoreTecnico": 70
-    },
-    {
-      "id": 21,
-      "nome": "AVERSA",
-      "logo": "/assets/images/teams/aversa.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 22,
-      "nome": "AVEZZANO",
-      "logo": "/assets/images/teams/avezzano.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 23,
-      "nome": "BAGHERIA",
-      "logo": "/assets/images/teams/bagheria.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 24,
-      "nome": "BARI",
-      "logo": "/assets/images/teams/bari.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 25,
-      "nome": "BARLETTA",
-      "logo": "/assets/images/teams/barletta.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 26,
-      "nome": "BASSANO",
-      "logo": "/assets/images/teams/bassano.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 27,
-      "nome": "BATTIPAGLIESE",
-      "logo": "/assets/images/teams/battipagliese.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 28,
-      "nome": "BELLARIA",
-      "logo": "/assets/images/teams/bellaria.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 29,
-      "nome": "BELLUNO",
-      "logo": "/assets/images/teams/belluno.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 30,
-      "nome": "BENEVENTO",
-      "logo": "/assets/images/teams/benevento.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 31,
-      "nome": "BIANCAVILLA",
-      "logo": "/assets/images/teams/biancavilla.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 32,
-      "nome": "BIELLESE",
-      "logo": "/assets/images/teams/biellese.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 33,
-      "nome": "BISCEGLIE",
-      "logo": "/assets/images/teams/bisceglie.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 34,
-      "nome": "BITONTO",
-      "logo": "/assets/images/teams/bitonto.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 35,
-      "nome": "BOLOGNA",
-      "logo": "/assets/images/teams/bologna.png",
-      "valoreTecnico": 80
-    },
-    {
-      "id": 36,
-      "nome": "BOLZANO",
-      "logo": "/assets/images/teams/bolzano.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 37,
-      "nome": "BORGOSESIA",
-      "logo": "/assets/images/teams/borgosesia.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 38,
-      "nome": "BOVALINESE",
-      "logo": "/assets/images/teams/bovalinese.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 39,
-      "nome": "BRA",
-      "logo": "/assets/images/teams/bra.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 40,
-      "nome": "BRESCELLO",
-      "logo": "/assets/images/teams/brescello.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 41,
-      "nome": "BRESCIA",
-      "logo": "/assets/images/teams/brescia.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 42,
-      "nome": "BRINDISI",
-      "logo": "/assets/images/teams/brindisi.png",
-      "valoreTecnico": 45
-    },
-    {
-      "id": 43,
-      "nome": "CAGLIARI",
-      "logo": "/assets/images/teams/cagliari.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 44,
-      "nome": "CALTAGIRONE",
-      "logo": "/assets/images/teams/caltagirone.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 45,
-      "nome": "CAMPOBASSO",
-      "logo": "/assets/images/teams/campobasso.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 46,
-      "nome": "CANICATTÌ",
-      "logo": "/assets/images/teams/canicattì.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 47,
-      "nome": "CARIATESE",
-      "logo": "/assets/images/teams/cariatese.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 48,
-      "nome": "CARPENEDOLO",
-      "logo": "/assets/images/teams/carpenedolo.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 49,
-      "nome": "CARPI",
-      "logo": "/assets/images/teams/carpi.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 50,
-      "nome": "CARRARESE",
-      "logo": "/assets/images/teams/carrarese.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 51,
-      "nome": "CASALE",
-      "logo": "/assets/images/teams/casale.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 52,
-      "nome": "CASARANO",
-      "logo": "/assets/images/teams/casarano.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 53,
-      "nome": "CASERTANA",
-      "logo": "/assets/images/teams/casertana.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 54,
-      "nome": "CASSINO",
-      "logo": "/assets/images/teams/cassino.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 55,
-      "nome": "CASTEL DI SANGRO",
-      "logo": "/assets/images/teams/castel di sangro.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 56,
-      "nome": "CASTROVILLARI",
-      "logo": "/assets/images/teams/castrovillari.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 57,
-      "nome": "CATANIA",
-      "logo": "/assets/images/teams/catania.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 58,
-      "nome": "CATANZARO",
-      "logo": "/assets/images/teams/catanzaro.png",
-      "valoreTecnico": 70
-    },
-    {
-      "id": 59,
-      "nome": "CATTOLICA",
-      "logo": "/assets/images/teams/cattolica.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 60,
-      "nome": "CAVESE",
-      "logo": "/assets/images/teams/cavese.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 61,
-      "nome": "CERIGNOLA",
-      "logo": "/assets/images/teams/cerignola.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 62,
-      "nome": "CERVETERI",
-      "logo": "/assets/images/teams/cerveteri.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 63,
-      "nome": "CESENA",
-      "logo": "/assets/images/teams/cesena.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 64,
-      "nome": "CHIERI",
-      "logo": "/assets/images/teams/chieri.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 65,
-      "nome": "CHIETI",
-      "logo": "/assets/images/teams/chieti.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 66,
-      "nome": "CHIEVO",
-      "logo": "/assets/images/teams/chievo.png",
-      "valoreTecnico": 70
-    },
-    {
-      "id": 67,
-      "nome": "CHIOGGIA",
-      "logo": "/assets/images/teams/chioggia.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 68,
-      "nome": "CHIUSI",
-      "logo": "/assets/images/teams/chiusi.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 69,
-      "nome": "CITTADELLA",
-      "logo": "/assets/images/teams/cittadella.png",
-      "valoreTecnico": 45
-    },
-    {
-      "id": 70,
-      "nome": "CITTANOVESE",
-      "logo": "/assets/images/teams/cittanovese.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 71,
-      "nome": "CIVITANOVESE",
-      "logo": "/assets/images/teams/civitanovese.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 72,
-      "nome": "CIVITAVECCHIA",
-      "logo": "/assets/images/teams/civitavecchia.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 73,
-      "nome": "COLLIGIANA",
-      "logo": "/assets/images/teams/colligiana.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 74,
-      "nome": "COMO",
-      "logo": "/assets/images/teams/como.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 75,
-      "nome": "CORIGLIANO",
-      "logo": "/assets/images/teams/corigliano.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 76,
-      "nome": "CORREGGESE",
-      "logo": "/assets/images/teams/correggese.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 77,
-      "nome": "COSENZA",
-      "logo": "/assets/images/teams/cosenza.png",
-      "valoreTecnico": 60
-    },
-    {
-      "id": 78,
-      "nome": "CREMISSA",
-      "logo": "/assets/images/teams/cremissa.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 79,
-      "nome": "CREMONESE",
-      "logo": "/assets/images/teams/cremonese.png",
-      "valoreTecnico": 60
-    },
-    {
-      "id": 80,
-      "nome": "CREVALCORE",
-      "logo": "/assets/images/teams/crevalcore.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 81,
-      "nome": "CROTONE",
-      "logo": "/assets/images/teams/crotone.png",
-      "valoreTecnico": 70
-    },
-    {
-      "id": 82,
-      "nome": "CUNEO",
-      "logo": "/assets/images/teams/cuneo.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 83,
-      "nome": "DERTHONA",
-      "logo": "/assets/images/teams/derthona.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 84,
-      "nome": "EBOLITANA",
-      "logo": "/assets/images/teams/ebolitana.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 85,
-      "nome": "ELMAS",
-      "logo": "/assets/images/teams/elmas.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 86,
-      "nome": "EMPOLI",
-      "logo": "/assets/images/teams/empoli.png",
-      "valoreTecnico": 80
-    },
-    {
-      "id": 87,
-      "nome": "ENNA",
-      "logo": "/assets/images/teams/enna.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 88,
-      "nome": "ENTELLA",
-      "logo": "/assets/images/teams/entella.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 89,
-      "nome": "ERCOLANESE",
-      "logo": "/assets/images/teams/ercolanese.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 90,
-      "nome": "FAENZA",
-      "logo": "/assets/images/teams/faenza.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 91,
-      "nome": "FANFULLA",
-      "logo": "/assets/images/teams/fanfulla.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 92,
-      "nome": "FANO",
-      "logo": "/assets/images/teams/fano.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 93,
-      "nome": "FASANO",
-      "logo": "/assets/images/teams/fasano.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 94,
-      "nome": "FERMANA",
-      "logo": "/assets/images/teams/fermana.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 95,
-      "nome": "FERRANDINA",
-      "logo": "/assets/images/teams/ferrandina.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 96,
-      "nome": "FIDENZA",
-      "logo": "/assets/images/teams/fidenza.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 97,
-      "nome": "FIORENTINA",
-      "logo": "/assets/images/teams/fiorentina.png",
-      "valoreTecnico": 90
-    },
-    {
-      "id": 98,
-      "nome": "FIORENZUOLA",
-      "logo": "/assets/images/teams/fiorenzuola.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 99,
-      "nome": "FOGGIA",
-      "logo": "/assets/images/teams/foggia.png",
-      "valoreTecnico": 60
-    },
-    {
-      "id": 100,
-      "nome": "FOLIGNO",
-      "logo": "/assets/images/teams/foligno.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 101,
-      "nome": "FOLLONICA",
-      "logo": "/assets/images/teams/follonica.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 102,
-      "nome": "FONDI",
-      "logo": "/assets/images/teams/fondi.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 103,
-      "nome": "FORLÌ",
-      "logo": "/assets/images/teams/forlì.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 104,
-      "nome": "FORMIA",
-      "logo": "/assets/images/teams/formia.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 105,
-      "nome": "FOSSANO",
-      "logo": "/assets/images/teams/fossano.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 106,
-      "nome": "FRANCAVILLA",
-      "logo": "/assets/images/teams/francavilla.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 107,
-      "nome": "FRATTESE",
-      "logo": "/assets/images/teams/frattese.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 108,
-      "nome": "FROSINONE",
-      "logo": "/assets/images/teams/frosinone.png",
-      "valoreTecnico": 60
-    },
-    {
-      "id": 109,
-      "nome": "GAETA",
-      "logo": "/assets/images/teams/gaeta.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 110,
-      "nome": "GALATINA",
-      "logo": "/assets/images/teams/galatina.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 111,
-      "nome": "GALLIPOLI",
-      "logo": "/assets/images/teams/gallipoli.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 112,
-      "nome": "GAVORRANO",
-      "logo": "/assets/images/teams/gavorrano.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 113,
-      "nome": "GELA",
-      "logo": "/assets/images/teams/gela.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 114,
-      "nome": "GELBISON",
-      "logo": "/assets/images/teams/gelbison.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 115,
-      "nome": "GENOA",
-      "logo": "/assets/images/teams/genoa.png",
-      "valoreTecnico": 80
-    },
-    {
-      "id": 116,
-      "nome": "GIARRE",
-      "logo": "/assets/images/teams/giarre.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 117,
-      "nome": "GIOIESE",
-      "logo": "/assets/images/teams/gioiese.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 118,
-      "nome": "GIUGLIANO",
-      "logo": "/assets/images/teams/giugliano.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 119,
-      "nome": "GIULIANOVA",
-      "logo": "/assets/images/teams/giulianova.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 120,
-      "nome": "GLADIATOR",
-      "logo": "/assets/images/teams/gladiator.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 121,
-      "nome": "GORIZIA",
-      "logo": "/assets/images/teams/gorizia.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 122,
-      "nome": "GRAVINA",
-      "logo": "/assets/images/teams/gravina.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 123,
-      "nome": "GROSSETO",
-      "logo": "/assets/images/teams/grosseto.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 124,
-      "nome": "GUALDO",
-      "logo": "/assets/images/teams/gualdo.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 125,
-      "nome": "GUBBIO",
-      "logo": "/assets/images/teams/gubbio.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 126,
-      "nome": "IGEA VIRTUS",
-      "logo": "/assets/images/teams/igea virtus.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 127,
-      "nome": "IMOLESE",
-      "logo": "/assets/images/teams/imolese.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 128,
-      "nome": "INTER",
-      "logo": "/assets/images/teams/inter.png",
-      "valoreTecnico": 100
-    },
-    {
-      "id": 129,
-      "nome": "ISCHIA",
-      "logo": "/assets/images/teams/ischia.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 130,
-      "nome": "ISERNIA",
-      "logo": "/assets/images/teams/isernia.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 131,
-      "nome": "IVREA",
-      "logo": "/assets/images/teams/ivrea.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 132,
-      "nome": "JESINA",
-      "logo": "/assets/images/teams/jesina.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 133,
-      "nome": "JUVENTUS",
-      "logo": "/assets/images/teams/juventus.png",
-      "valoreTecnico": 100
-    },
-    {
-      "id": 134,
-      "nome": "LADISPOLI",
-      "logo": "/assets/images/teams/ladispoli.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 135,
-      "nome": "LAGONEGRO",
-      "logo": "/assets/images/teams/lagonegro.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 136,
-      "nome": "LAMEZIA",
-      "logo": "/assets/images/teams/lamezia.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 137,
-      "nome": "LANCIANO",
-      "logo": "/assets/images/teams/lanciano.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 138,
-      "nome": "L AQUILA",
-      "logo": "/assets/images/teams/l aquila.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 139,
-      "nome": "LATINA",
-      "logo": "/assets/images/teams/latina.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 140,
-      "nome": "LAURIA",
-      "logo": "/assets/images/teams/lauria.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 141,
-      "nome": "LAVAGNESE",
-      "logo": "/assets/images/teams/lavagnese.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 142,
-      "nome": "LAVELLO",
-      "logo": "/assets/images/teams/lavello.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 143,
-      "nome": "LAZIO",
-      "logo": "/assets/images/teams/lazio.png",
-      "valoreTecnico": 95
-    },
-    {
-      "id": 144,
-      "nome": "LECCE",
-      "logo": "/assets/images/teams/lecce.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 145,
-      "nome": "LECCO",
-      "logo": "/assets/images/teams/lecco.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 146,
-      "nome": "LEGNANO",
-      "logo": "/assets/images/teams/legnano.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 147,
-      "nome": "LEONZIO",
-      "logo": "/assets/images/teams/leonzio.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 148,
-      "nome": "LICATA",
-      "logo": "/assets/images/teams/licata.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 149,
-      "nome": "LIVORNO",
-      "logo": "/assets/images/teams/livorno.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 150,
-      "nome": "LOCRI",
-      "logo": "/assets/images/teams/locri.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 151,
-      "nome": "LUCCHESE",
-      "logo": "/assets/images/teams/lucchese.png",
-      "valoreTecnico": 45
-    },
-    {
-      "id": 152,
-      "nome": "LUCERA",
-      "logo": "/assets/images/teams/lucera.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 153,
-      "nome": "LUMEZZANE",
-      "logo": "/assets/images/teams/lumezzane.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 154,
-      "nome": "LUPARENSE",
-      "logo": "/assets/images/teams/luparense.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 155,
-      "nome": "MACERATESE",
-      "logo": "/assets/images/teams/maceratese.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 156,
-      "nome": "MAGENTA",
-      "logo": "/assets/images/teams/magenta.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 157,
-      "nome": "MAGLIE",
-      "logo": "/assets/images/teams/maglie.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 158,
-      "nome": "MANDURIA",
-      "logo": "/assets/images/teams/manduria.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 159,
-      "nome": "MANFREDONIA",
-      "logo": "/assets/images/teams/manfredonia.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 160,
-      "nome": "MANTOVA",
-      "logo": "/assets/images/teams/mantova.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 161,
-      "nome": "MARSALA",
-      "logo": "/assets/images/teams/marsala.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 162,
-      "nome": "MARTINA",
-      "logo": "/assets/images/teams/martina.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 163,
-      "nome": "MASSESE",
-      "logo": "/assets/images/teams/massese.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 164,
-      "nome": "MATERA",
-      "logo": "/assets/images/teams/matera.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 165,
-      "nome": "MELFI",
-      "logo": "/assets/images/teams/melfi.png",
-      "valoreTecnico": 45
-    },
-    {
-      "id": 166,
-      "nome": "MERANO",
-      "logo": "/assets/images/teams/merano.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 167,
-      "nome": "MESSINA",
-      "logo": "/assets/images/teams/messina.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 168,
-      "nome": "MESTRE",
-      "logo": "/assets/images/teams/mestre.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 169,
-      "nome": "MEZZOCORONA",
-      "logo": "/assets/images/teams/mezzocorona.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 170,
-      "nome": "MILAN",
-      "logo": "/assets/images/teams/milan.png",
-      "valoreTecnico": 100
-    },
-    {
-      "id": 171,
-      "nome": "MILAZZO",
-      "logo": "/assets/images/teams/milazzo.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 172,
-      "nome": "MODENA",
-      "logo": "/assets/images/teams/modena.png",
-      "valoreTecnico": 55
-    },
-    {
-      "id": 173,
-      "nome": "MODICA",
-      "logo": "/assets/images/teams/modica.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 174,
-      "nome": "MOLFETTA",
-      "logo": "/assets/images/teams/molfetta.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 175,
-      "nome": "MONFALCONE",
-      "logo": "/assets/images/teams/monfalcone.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 176,
-      "nome": "MONOPOLI",
-      "logo": "/assets/images/teams/monopoli.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 177,
-      "nome": "MONTEBELLUNA",
-      "logo": "/assets/images/teams/montebelluna.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 178,
-      "nome": "MONTEVARCHI",
-      "logo": "/assets/images/teams/montevarchi.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 179,
-      "nome": "MONZA",
-      "logo": "/assets/images/teams/monza.png",
-      "valoreTecnico": 60
-    },
-    {
-      "id": 180,
-      "nome": "NAPOLI",
-      "logo": "/assets/images/teams/napoli.png",
-      "valoreTecnico": 90
-    },
-    {
-      "id": 181,
-      "nome": "NARDÒ",
-      "logo": "/assets/images/teams/nardò.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 182,
-      "nome": "NARNESE",
-      "logo": "/assets/images/teams/narnese.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 183,
-      "nome": "NISSA",
-      "logo": "/assets/images/teams/nissa.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 184,
-      "nome": "NOCERINA",
-      "logo": "/assets/images/teams/nocerina.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 185,
-      "nome": "NOICATTARO",
-      "logo": "/assets/images/teams/noicattaro.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 186,
-      "nome": "NOLA",
-      "logo": "/assets/images/teams/nola.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 187,
-      "nome": "NOTO",
-      "logo": "/assets/images/teams/noto.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 188,
-      "nome": "NOVARA",
-      "logo": "/assets/images/teams/novara.png",
-      "valoreTecnico": 45
-    },
-    {
-      "id": 189,
-      "nome": "NUORESE",
-      "logo": "/assets/images/teams/nuorese.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 190,
-      "nome": "OLBIA",
-      "logo": "/assets/images/teams/olbia.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 191,
-      "nome": "ORLANDINA",
-      "logo": "/assets/images/teams/orlandina.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 192,
-      "nome": "PADOVA",
-      "logo": "/assets/images/teams/padova.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 193,
-      "nome": "PAGANESE",
-      "logo": "/assets/images/teams/paganese.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 194,
-      "nome": "PALERMO",
-      "logo": "/assets/images/teams/palermo.png",
-      "valoreTecnico": 80
-    },
-    {
-      "id": 195,
-      "nome": "PALMESE",
-      "logo": "/assets/images/teams/palmese.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 196,
-      "nome": "PAOLANA",
-      "logo": "/assets/images/teams/paolana.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 197,
-      "nome": "PARMA",
-      "logo": "/assets/images/teams/parma.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 198,
-      "nome": "PATERNÒ",
-      "logo": "/assets/images/teams/paternò.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 199,
-      "nome": "PATTESE",
-      "logo": "/assets/images/teams/pattese.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 200,
-      "nome": "PAVIA",
-      "logo": "/assets/images/teams/pavia.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 201,
-      "nome": "PERUGIA",
-      "logo": "/assets/images/teams/perugia.png",
-      "valoreTecnico": 70
-    },
-    {
-      "id": 202,
-      "nome": "PESCARA",
-      "logo": "/assets/images/teams/pescara.png",
-      "valoreTecnico": 70
-    },
-    {
-      "id": 203,
-      "nome": "PIACENZA",
-      "logo": "/assets/images/teams/piacenza.png",
-      "valoreTecnico": 65
-    },
-    {
-      "id": 204,
-      "nome": "PICERNO",
-      "logo": "/assets/images/teams/picerno.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 205,
-      "nome": "PINEROLO",
-      "logo": "/assets/images/teams/pinerolo.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 206,
-      "nome": "PISA",
-      "logo": "/assets/images/teams/pisa.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 207,
-      "nome": "PISTOIESE",
-      "logo": "/assets/images/teams/pistoiese.png",
-      "valoreTecnico": 70
-    },
-    {
-      "id": 208,
-      "nome": "POGGIBONSI",
-      "logo": "/assets/images/teams/poggibonsi.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 209,
-      "nome": "POLICORO",
-      "logo": "/assets/images/teams/policoro.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 210,
-      "nome": "POMEZIA",
-      "logo": "/assets/images/teams/pomezia.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 211,
-      "nome": "POMIGLIANO",
-      "logo": "/assets/images/teams/pomigliano.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 212,
-      "nome": "PONSACCO",
-      "logo": "/assets/images/teams/ponsacco.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 213,
-      "nome": "PONTEDERA",
-      "logo": "/assets/images/teams/pontedera.png",
-      "valoreTecnico": 45
-    },
-    {
-      "id": 214,
-      "nome": "PORDENONE",
-      "logo": "/assets/images/teams/pordenone.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 215,
-      "nome": "PORTOGRUARO",
-      "logo": "/assets/images/teams/portogruaro.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 216,
-      "nome": "POTENZA",
-      "logo": "/assets/images/teams/potenza.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 217,
-      "nome": "PRATO",
-      "logo": "/assets/images/teams/prato.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 218,
-      "nome": "PRO PATRIA",
-      "logo": "/assets/images/teams/pro patria.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 219,
-      "nome": "PRO VERCELLI",
-      "logo": "/assets/images/teams/pro vercelli.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 220,
-      "nome": "PUTEOLANA",
-      "logo": "/assets/images/teams/puteolana.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 221,
-      "nome": "RAGUSA",
-      "logo": "/assets/images/teams/ragusa.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 222,
-      "nome": "RAPALLO",
-      "logo": "/assets/images/teams/rapallo.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 223,
-      "nome": "RAVENNA",
-      "logo": "/assets/images/teams/ravenna.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 224,
-      "nome": "RECANATESE",
-      "logo": "/assets/images/teams/recanatese.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 225,
-      "nome": "REGGIANA",
-      "logo": "/assets/images/teams/reggiana.png",
-      "valoreTecnico": 55
-    },
-    {
-      "id": 226,
-      "nome": "REGGINA",
-      "logo": "/assets/images/teams/reggina.png",
-      "valoreTecnico": 80
-    },
-    {
-      "id": 227,
-      "nome": "RENATE",
-      "logo": "/assets/images/teams/renate.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 228,
-      "nome": "RENDE",
-      "logo": "/assets/images/teams/rende.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 229,
-      "nome": "RICCIONE",
-      "logo": "/assets/images/teams/riccione.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 230,
-      "nome": "RIETI",
-      "logo": "/assets/images/teams/rieti.png",
-      "valoreTecnico": 45
-    },
-    {
-      "id": 231,
-      "nome": "RIMINI",
-      "logo": "/assets/images/teams/rimini.png",
-      "valoreTecnico": 55
-    },
-    {
-      "id": 232,
-      "nome": "RIONERO",
-      "logo": "/assets/images/teams/rionero.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 233,
-      "nome": "ROCCELLA",
-      "logo": "/assets/images/teams/roccella.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 234,
-      "nome": "ROMA",
-      "logo": "/assets/images/teams/roma.png",
-      "valoreTecnico": 95
-    },
-    {
-      "id": 235,
-      "nome": "ROSARNO",
-      "logo": "/assets/images/teams/rosarno.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 236,
-      "nome": "ROSETANA",
-      "logo": "/assets/images/teams/rosetana.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 237,
-      "nome": "ROSSANESE",
-      "logo": "/assets/images/teams/rossanese.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 238,
-      "nome": "ROVERETO",
-      "logo": "/assets/images/teams/rovereto.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 239,
-      "nome": "ROVIGO",
-      "logo": "/assets/images/teams/rovigo.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 240,
-      "nome": "RUTIGLIANO",
-      "logo": "/assets/images/teams/rutigliano.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 241,
-      "nome": "SALERNITANA",
-      "logo": "/assets/images/teams/salernitana.png",
-      "valoreTecnico": 60
-    },
-    {
-      "id": 242,
-      "nome": "SALÒ",
-      "logo": "/assets/images/teams/salò.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 243,
-      "nome": "SAMBENEDETTESE",
-      "logo": "/assets/images/teams/sambenedettese.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 244,
-      "nome": "SAMPDORIA",
-      "logo": "/assets/images/teams/sampdoria.png",
-      "valoreTecnico": 90
-    },
-    {
-      "id": 245,
-      "nome": "SANCATALDESE",
-      "logo": "/assets/images/teams/sancataldese.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 246,
-      "nome": "SANDONÀ",
-      "logo": "/assets/images/teams/sandonà.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 247,
-      "nome": "SANGIOVANNESE",
-      "logo": "/assets/images/teams/sangiovannese.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 248,
-      "nome": "SANREMESE",
-      "logo": "/assets/images/teams/sanremese.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 249,
-      "nome": "SAPRI",
-      "logo": "/assets/images/teams/sapri.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 250,
-      "nome": "SARONNO",
-      "logo": "/assets/images/teams/saronno.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 251,
-      "nome": "SARZANESE",
-      "logo": "/assets/images/teams/sarzanese.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 252,
-      "nome": "SASSUOLO",
-      "logo": "/assets/images/teams/sassuolo.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 253,
-      "nome": "SAVOIA",
-      "logo": "/assets/images/teams/savoia.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 254,
-      "nome": "SAVONA",
-      "logo": "/assets/images/teams/savona.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 255,
-      "nome": "SCAFATESE",
-      "logo": "/assets/images/teams/scafatese.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 256,
-      "nome": "SCALEA",
-      "logo": "/assets/images/teams/scalea.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 257,
-      "nome": "SCHIO",
-      "logo": "/assets/images/teams/schio.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 258,
-      "nome": "SCIACCA",
-      "logo": "/assets/images/teams/sciacca.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 259,
-      "nome": "SEREGNO",
-      "logo": "/assets/images/teams/seregno.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 260,
-      "nome": "SIDERNO",
-      "logo": "/assets/images/teams/siderno.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 261,
-      "nome": "SIENA",
-      "logo": "/assets/images/teams/siena.png",
-      "valoreTecnico": 80
-    },
-    {
-      "id": 262,
-      "nome": "SILANA",
-      "logo": "/assets/images/teams/silana.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 263,
-      "nome": "SIRACUSA",
-      "logo": "/assets/images/teams/siracusa.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 264,
-      "nome": "SONDRIO",
-      "logo": "/assets/images/teams/sondrio.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 265,
-      "nome": "SORA",
-      "logo": "/assets/images/teams/sora.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 266,
-      "nome": "SORRENTO",
-      "logo": "/assets/images/teams/sorrento.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 267,
-      "nome": "SOVERATO",
-      "logo": "/assets/images/teams/soverato.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 268,
-      "nome": "SPAL",
-      "logo": "/assets/images/teams/spal.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 269,
-      "nome": "SPEZIA",
-      "logo": "/assets/images/teams/spezia.png",
-      "valoreTecnico": 55
-    },
-    {
-      "id": 270,
-      "nome": "STABIA",
-      "logo": "/assets/images/teams/stabia.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 271,
-      "nome": "SUDTIROL",
-      "logo": "/assets/images/teams/sudtirol.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 272,
-      "nome": "SULMONA",
-      "logo": "/assets/images/teams/sulmona.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 273,
-      "nome": "TARANTO",
-      "logo": "/assets/images/teams/taranto.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 274,
-      "nome": "TAURIANOVESE",
-      "logo": "/assets/images/teams/taurianovese.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 275,
-      "nome": "TAVOLARA",
-      "logo": "/assets/images/teams/tavolara.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 276,
-      "nome": "TEMPIO",
-      "logo": "/assets/images/teams/tempio.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 277,
-      "nome": "TERAMO",
-      "logo": "/assets/images/teams/teramo.png",
-      "valoreTecnico": 35
-    },
-    {
-      "id": 278,
-      "nome": "TERMITANA",
-      "logo": "/assets/images/teams/termitana.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 279,
-      "nome": "TERMOLI",
-      "logo": "/assets/images/teams/termoli.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 280,
-      "nome": "TERNANA",
-      "logo": "/assets/images/teams/ternana.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 281,
-      "nome": "TERRACINA",
-      "logo": "/assets/images/teams/terracina.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 282,
-      "nome": "THIENE",
-      "logo": "/assets/images/teams/thiene.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 283,
-      "nome": "TIVOLI",
-      "logo": "/assets/images/teams/tivoli.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 284,
-      "nome": "TOLENTINO",
-      "logo": "/assets/images/teams/tolentino.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 285,
-      "nome": "TOLMEZZO",
-      "logo": "/assets/images/teams/tolmezzo.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 286,
-      "nome": "TORINO",
-      "logo": "/assets/images/teams/torino.png",
-      "valoreTecnico": 90
-    },
-    {
-      "id": 287,
-      "nome": "TORRES",
-      "logo": "/assets/images/teams/torres.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 288,
-      "nome": "TRANI",
-      "logo": "/assets/images/teams/trani.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 289,
-      "nome": "TRAPANI",
-      "logo": "/assets/images/teams/trapani.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 290,
-      "nome": "TREBISACCE",
-      "logo": "/assets/images/teams/trebisacce.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 291,
-      "nome": "TRENTO",
-      "logo": "/assets/images/teams/trento.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 292,
-      "nome": "TREVISO",
-      "logo": "/assets/images/teams/treviso.png",
-      "valoreTecnico": 40
-    },
-    {
-      "id": 293,
-      "nome": "TRICASE",
-      "logo": "/assets/images/teams/tricase.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 294,
-      "nome": "TRIESTINA",
-      "logo": "/assets/images/teams/triestina.png",
-      "valoreTecnico": 50
-    },
-    {
-      "id": 295,
-      "nome": "TRIVENTO",
-      "logo": "/assets/images/teams/trivento.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 296,
-      "nome": "TURRIS",
-      "logo": "/assets/images/teams/turris.png",
-      "valoreTecnico": 25
-    },
-    {
-      "id": 297,
-      "nome": "UDINESE",
-      "logo": "/assets/images/teams/udinese.png",
-      "valoreTecnico": 85
-    },
-    {
-      "id": 298,
-      "nome": "VARESE",
-      "logo": "/assets/images/teams/varese.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 299,
-      "nome": "VASTESE",
-      "logo": "/assets/images/teams/vastese.png",
-      "valoreTecnico": 20
-    },
-    {
-      "id": 300,
-      "nome": "VENAFRO",
-      "logo": "/assets/images/teams/venafro.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 301,
-      "nome": "VENEZIA",
-      "logo": "/assets/images/teams/venezia.png",
-      "valoreTecnico": 55
-    },
-    {
-      "id": 302,
-      "nome": "VERONA",
-      "logo": "/assets/images/teams/verona.png",
-      "valoreTecnico": 75
-    },
-    {
-      "id": 303,
-      "nome": "VIAREGGIO",
-      "logo": "/assets/images/teams/viareggio.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 304,
-      "nome": "VIBONESE",
-      "logo": "/assets/images/teams/vibonese.png",
-      "valoreTecnico": 45
-    },
-    {
-      "id": 305,
-      "nome": "VICENZA",
-      "logo": "/assets/images/teams/vicenza.png",
-      "valoreTecnico": 70
-    },
-    {
-      "id": 306,
-      "nome": "VIGEVANO",
-      "logo": "/assets/images/teams/vigevano.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 307,
-      "nome": "VILLAFRANCA",
-      "logo": "/assets/images/teams/villafranca.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 308,
-      "nome": "VILLESE",
-      "logo": "/assets/images/teams/villese.png",
-      "valoreTecnico": 15
-    },
-    {
-      "id": 309,
-      "nome": "VIRTUS VERONA",
-      "logo": "/assets/images/teams/virtus verona.png",
-      "valoreTecnico": 10
-    },
-    {
-      "id": 310,
-      "nome": "VIS PESARO",
-      "logo": "/assets/images/teams/vis pesaro.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 311,
-      "nome": "VITERBESE",
-      "logo": "/assets/images/teams/viterbese.png",
-      "valoreTecnico": 30
-    },
-    {
-      "id": 312,
-      "nome": "VITTORIA",
-      "logo": "/assets/images/teams/vittoria.png",
-      "valoreTecnico": 5
-    },
-    {
-      "id": 313,
-      "nome": "VOGHERA",
-      "logo": "/assets/images/teams/voghera.png",
-      "valoreTecnico": 5
-    }
+    {"id": 1, "nome": "ACIREALE", "logo": "/assets/images/teams/acireale.png", "valoreTecnico": 35},
+{"id": 2, "nome": "ACQUI", "logo": "/assets/images/teams/acqui.png", "valoreTecnico": 5},
+{"id": 3, "nome": "ACRI", "logo": "/assets/images/teams/acri.png", "valoreTecnico": 5},
+{"id": 4, "nome": "AGROPOLI", "logo": "/assets/images/teams/agropoli.png", "valoreTecnico": 5},
+{"id": 5, "nome": "AKRAGAS", "logo": "/assets/images/teams/akragas.png", "valoreTecnico": 10},
+{"id": 6, "nome": "ALBESE", "logo": "/assets/images/teams/albese.png", "valoreTecnico": 5},
+{"id": 7, "nome": "ALBINOLEFFE", "logo": "/assets/images/teams/albinoleffe.png", "valoreTecnico": 35},
+{"id": 8, "nome": "ALESSANDRIA", "logo": "/assets/images/teams/alessandria.png", "valoreTecnico": 45},
+{"id": 9, "nome": "ALGHERO", "logo": "/assets/images/teams/alghero.png", "valoreTecnico": 15},
+{"id": 10, "nome": "ALTAMURA", "logo": "/assets/images/teams/altamura.png", "valoreTecnico": 15},
+{"id": 11, "nome": "ALZANO", "logo": "/assets/images/teams/alzano.png", "valoreTecnico": 15},
+{"id": 12, "nome": "ANCONA", "logo": "/assets/images/teams/ancona.png", "valoreTecnico": 50},
+{"id": 13, "nome": "ANDRIA", "logo": "/assets/images/teams/andria.png", "valoreTecnico": 30},
+{"id": 14, "nome": "AOSTA", "logo": "/assets/images/teams/aosta.png", "valoreTecnico": 5},
+{"id": 15, "nome": "APRILIA", "logo": "/assets/images/teams/aprilia.png", "valoreTecnico": 10},
+{"id": 16, "nome": "AREZZO", "logo": "/assets/images/teams/arezzo.png", "valoreTecnico": 55},
+{"id": 17, "nome": "ASCOLI", "logo": "/assets/images/teams/ascoli.png", "valoreTecnico": 65},
+{"id": 18, "nome": "ASTI", "logo": "/assets/images/teams/asti.png", "valoreTecnico": 5},
+{"id": 19, "nome": "ATALANTA", "logo": "/assets/images/teams/atalanta.png", "valoreTecnico": 85},
+{"id": 20, "nome": "AVELLINO", "logo": "/assets/images/teams/avellino.png", "valoreTecnico": 70},
+{"id": 21, "nome": "AVERSA", "logo": "/assets/images/teams/aversa.png", "valoreTecnico": 5},
+{"id": 22, "nome": "AVEZZANO", "logo": "/assets/images/teams/avezzano.png", "valoreTecnico": 5},
+{"id": 23, "nome": "BAGHERIA", "logo": "/assets/images/teams/bagheria.png", "valoreTecnico": 5},
+{"id": 24, "nome": "BARI", "logo": "/assets/images/teams/bari.png", "valoreTecnico": 75},
+{"id": 25, "nome": "BARLETTA", "logo": "/assets/images/teams/barletta.png", "valoreTecnico": 40},
+{"id": 26, "nome": "BASSANO", "logo": "/assets/images/teams/bassano.png", "valoreTecnico": 30},
+{"id": 27, "nome": "BATTIPAGLIESE", "logo": "/assets/images/teams/battipagliese.png", "valoreTecnico": 15},
+{"id": 28, "nome": "BELLARIA", "logo": "/assets/images/teams/bellaria.png", "valoreTecnico": 5},
+{"id": 29, "nome": "BELLUNO", "logo": "/assets/images/teams/belluno.png", "valoreTecnico": 5},
+{"id": 30, "nome": "BENEVENTO", "logo": "/assets/images/teams/benevento.png", "valoreTecnico": 50},
+{"id": 31, "nome": "BIANCAVILLA", "logo": "/assets/images/teams/biancavilla.png", "valoreTecnico": 20},
+{"id": 32, "nome": "BIELLESE", "logo": "/assets/images/teams/biellese.png", "valoreTecnico": 15},
+{"id": 33, "nome": "BISCEGLIE", "logo": "/assets/images/teams/bisceglie.png", "valoreTecnico": 35},
+{"id": 34, "nome": "BITONTO", "logo": "/assets/images/teams/bitonto.png", "valoreTecnico": 10},
+{"id": 35, "nome": "BOLOGNA", "logo": "/assets/images/teams/bologna.png", "valoreTecnico": 80},
+{"id": 36, "nome": "BOLZANO", "logo": "/assets/images/teams/bolzano.png", "valoreTecnico": 15},
+{"id": 37, "nome": "BORGOSESIA", "logo": "/assets/images/teams/borgosesia.png", "valoreTecnico": 10},
+{"id": 38, "nome": "BOVALINESE", "logo": "/assets/images/teams/bovalinese.png", "valoreTecnico": 5},
+{"id": 39, "nome": "BRA", "logo": "/assets/images/teams/bra.png", "valoreTecnico": 5},
+{"id": 40, "nome": "BRESCELLO", "logo": "/assets/images/teams/brescello.png", "valoreTecnico": 5},
+{"id": 41, "nome": "BRESCIA", "logo": "/assets/images/teams/brescia.png", "valoreTecnico": 75},
+{"id": 42, "nome": "BRINDISI", "logo": "/assets/images/teams/brindisi.png", "valoreTecnico": 45},
+{"id": 43, "nome": "CAGLIARI", "logo": "/assets/images/teams/cagliari.png", "valoreTecnico": 75},
+{"id": 44, "nome": "CALTAGIRONE", "logo": "/assets/images/teams/caltagirone.png", "valoreTecnico": 5},
+{"id": 45, "nome": "CAMPOBASSO", "logo": "/assets/images/teams/campobasso.png", "valoreTecnico": 25},
+{"id": 46, "nome": "CANICATTÌ", "logo": "/assets/images/teams/canicattì.png", "valoreTecnico": 5},
+{"id": 47, "nome": "CARIATESE", "logo": "/assets/images/teams/cariatese.png", "valoreTecnico": 5},
+{"id": 48, "nome": "CARPENEDOLO", "logo": "/assets/images/teams/carpenedolo.png", "valoreTecnico": 5},
+{"id": 49, "nome": "CARPI", "logo": "/assets/images/teams/carpi.png", "valoreTecnico": 50},
+{"id": 50, "nome": "CARRARESE", "logo": "/assets/images/teams/carrarese.png", "valoreTecnico": 40},
+{"id": 51, "nome": "CASALE", "logo": "/assets/images/teams/casale.png", "valoreTecnico": 20},
+{"id": 52, "nome": "CASARANO", "logo": "/assets/images/teams/casarano.png", "valoreTecnico": 35},
+{"id": 53, "nome": "CASERTANA", "logo": "/assets/images/teams/casertana.png", "valoreTecnico": 50},
+{"id": 54, "nome": "CASSINO", "logo": "/assets/images/teams/cassino.png", "valoreTecnico": 25},
+{"id": 55, "nome": "CASTEL DI SANGRO", "logo": "/assets/images/teams/castel di sangro.png", "valoreTecnico": 15},
+{"id": 56, "nome": "CASTROVILLARI", "logo": "/assets/images/teams/castrovillari.png", "valoreTecnico": 10},
+{"id": 57, "nome": "CATANIA", "logo": "/assets/images/teams/catania.png", "valoreTecnico": 70},
+{"id": 58, "nome": "CATANZARO", "logo": "/assets/images/teams/catanzaro.png", "valoreTecnico": 70},
+{"id": 59, "nome": "CATTOLICA", "logo": "/assets/images/teams/cattolica.png", "valoreTecnico": 5},
+{"id": 60, "nome": "CAVESE", "logo": "/assets/images/teams/cavese.png", "valoreTecnico": 50},
+{"id": 61, "nome": "CERIGNOLA", "logo": "/assets/images/teams/cerignola.png", "valoreTecnico": 25},
+{"id": 62, "nome": "CERVETERI", "logo": "/assets/images/teams/cerveteri.png", "valoreTecnico": 5},
+{"id": 63, "nome": "CESENA", "logo": "/assets/images/teams/cesena.png", "valoreTecnico": 75},
+{"id": 64, "nome": "CHIERI", "logo": "/assets/images/teams/chieri.png", "valoreTecnico": 5},
+{"id": 65, "nome": "CHIETI", "logo": "/assets/images/teams/chieti.png", "valoreTecnico": 10},
+{"id": 66, "nome": "CHIEVO", "logo": "/assets/images/teams/chievo.png", "valoreTecnico": 70},
+{"id": 67, "nome": "CHIOGGIA", "logo": "/assets/images/teams/chioggia.png", "valoreTecnico": 5},
+{"id": 68, "nome": "CHIUSI", "logo": "/assets/images/teams/chiusi.png", "valoreTecnico": 5},
+{"id": 69, "nome": "CITTADELLA", "logo": "/assets/images/teams/cittadella.png", "valoreTecnico": 45},
+{"id": 70, "nome": "CITTANOVESE", "logo": "/assets/images/teams/cittanovese.png", "valoreTecnico": 10},
+{"id": 71, "nome": "CIVITANOVESE", "logo": "/assets/images/teams/civitanovese.png", "valoreTecnico": 5},
+{"id": 72, "nome": "CIVITAVECCHIA", "logo": "/assets/images/teams/civitavecchia.png", "valoreTecnico": 10},
+{"id": 73, "nome": "COLLIGIANA", "logo": "/assets/images/teams/colligiana.png", "valoreTecnico": 5},
+{"id": 74, "nome": "COMO", "logo": "/assets/images/teams/como.png", "valoreTecnico": 50},
+{"id": 75, "nome": "CORIGLIANO", "logo": "/assets/images/teams/corigliano.png", "valoreTecnico": 20},
+{"id": 76, "nome": "CORREGGESE", "logo": "/assets/images/teams/correggese.png", "valoreTecnico": 20},
+{"id": 77, "nome": "COSENZA", "logo": "/assets/images/teams/cosenza.png", "valoreTecnico": 60},
+{"id": 78, "nome": "CREMONESE", "logo": "/assets/images/teams/cremonese.png", "valoreTecnico": 60},
+{"id": 79, "nome": "CREVALCORE", "logo": "/assets/images/teams/crevalcore.png", "valoreTecnico": 5},
+{"id": 80, "nome": "CROTONE", "logo": "/assets/images/teams/crotone.png", "valoreTecnico": 70},
+{"id": 81, "nome": "CUNEO", "logo": "/assets/images/teams/cuneo.png", "valoreTecnico": 15},
+{"id": 82, "nome": "DERTHONA", "logo": "/assets/images/teams/derthona.png", "valoreTecnico": 15},
+{"id": 83, "nome": "EBOLITANA", "logo": "/assets/images/teams/ebolitana.png", "valoreTecnico": 15},
+{"id": 84, "nome": "ELMAS", "logo": "/assets/images/teams/elmas.png", "valoreTecnico": 5},
+{"id": 85, "nome": "EMPOLI", "logo": "/assets/images/teams/empoli.png", "valoreTecnico": 80},
+{"id": 86, "nome": "ENNA", "logo": "/assets/images/teams/enna.png", "valoreTecnico": 5},
+{"id": 87, "nome": "ENTELLA", "logo": "/assets/images/teams/entella.png", "valoreTecnico": 40},
+{"id": 88, "nome": "ERCOLANESE", "logo": "/assets/images/teams/ercolanese.png", "valoreTecnico": 5},
+{"id": 89, "nome": "FAENZA", "logo": "/assets/images/teams/faenza.png", "valoreTecnico": 5},
+{"id": 90, "nome": "FANFULLA", "logo": "/assets/images/teams/fanfulla.png", "valoreTecnico": 10},
+{"id": 91, "nome": "FANO", "logo": "/assets/images/teams/fano.png", "valoreTecnico": 15},
+{"id": 92, "nome": "FASANO", "logo": "/assets/images/teams/fasano.png", "valoreTecnico": 25},
+{"id": 93, "nome": "FERMANA", "logo": "/assets/images/teams/fermana.png", "valoreTecnico": 30},
+{"id": 94, "nome": "FERRANDINA", "logo": "/assets/images/teams/ferrandina.png", "valoreTecnico": 5},
+{"id": 95, "nome": "FIDENZA", "logo": "/assets/images/teams/fidenza.png", "valoreTecnico": 5},
+{"id": 96, "nome": "FIORENTINA", "logo": "/assets/images/teams/fiorentina.png", "valoreTecnico": 90},
+{"id": 97, "nome": "FIORENZUOLA", "logo": "/assets/images/teams/fiorenzuola.png", "valoreTecnico": 15},
+{"id": 98, "nome": "FOGGIA", "logo": "/assets/images/teams/foggia.png", "valoreTecnico": 60},
+{"id": 99, "nome": "FOLIGNO", "logo": "/assets/images/teams/foligno.png", "valoreTecnico": 30},
+{"id": 100, "nome": "FOLLONICA", "logo": "/assets/images/teams/follonica.png", "valoreTecnico": 5},
+{"id": 101, "nome": "FONDI", "logo": "/assets/images/teams/fondi.png", "valoreTecnico": 10},
+{"id": 102, "nome": "FORLÌ", "logo": "/assets/images/teams/forlì.png", "valoreTecnico": 25},
+{"id": 103, "nome": "FORMIA", "logo": "/assets/images/teams/formia.png", "valoreTecnico": 5},
+{"id": 104, "nome": "FOSSANO", "logo": "/assets/images/teams/fossano.png", "valoreTecnico": 20},
+{"id": 105, "nome": "FRANCAVILLA", "logo": "/assets/images/teams/francavilla.png", "valoreTecnico": 25},
+{"id": 106, "nome": "FRATTESE", "logo": "/assets/images/teams/frattese.png", "valoreTecnico": 15},
+{"id": 107, "nome": "FROSINONE", "logo": "/assets/images/teams/frosinone.png", "valoreTecnico": 60},
+{"id": 108, "nome": "GAETA", "logo": "/assets/images/teams/gaeta.png", "valoreTecnico": 5},
+{"id": 109, "nome": "GALATINA", "logo": "/assets/images/teams/galatina.png", "valoreTecnico": 10},
+{"id": 110, "nome": "GALLIPOLI", "logo": "/assets/images/teams/gallipoli.png", "valoreTecnico": 35},
+{"id": 111, "nome": "GAVORRANO", "logo": "/assets/images/teams/gavorrano.png", "valoreTecnico": 10},
+{"id": 112, "nome": "GELA", "logo": "/assets/images/teams/gela.png", "valoreTecnico": 30},
+{"id": 113, "nome": "GELBISON", "logo": "/assets/images/teams/gelbison.png", "valoreTecnico": 20},
+{"id": 114, "nome": "GENOA", "logo": "/assets/images/teams/genoa.png", "valoreTecnico": 80},
+{"id": 115, "nome": "GIARRE", "logo": "/assets/images/teams/giarre.png", "valoreTecnico": 40},
+{"id": 116, "nome": "GIOIESE", "logo": "/assets/images/teams/gioiese.png", "valoreTecnico": 25},
+{"id": 117, "nome": "GIUGLIANO", "logo": "/assets/images/teams/giugliano.png", "valoreTecnico": 20},
+{"id": 118, "nome": "GIULIANOVA", "logo": "/assets/images/teams/giulianova.png", "valoreTecnico": 25},
+{"id": 119, "nome": "GLADIATOR", "logo": "/assets/images/teams/gladiator.png", "valoreTecnico": 15},
+{"id": 120, "nome": "GORIZIA", "logo": "/assets/images/teams/gorizia.png", "valoreTecnico": 5},
+{"id": 121, "nome": "GRAVINA", "logo": "/assets/images/teams/gravina.png", "valoreTecnico": 10},
+{"id": 122, "nome": "GROSSETO", "logo": "/assets/images/teams/grosseto.png", "valoreTecnico": 30},
+{"id": 123, "nome": "GUALDO", "logo": "/assets/images/teams/gualdo.png", "valoreTecnico": 25},
+{"id": 124, "nome": "GUBBIO", "logo": "/assets/images/teams/gubbio.png", "valoreTecnico": 40},
+{"id": 125, "nome": "IGEA VIRTUS", "logo": "/assets/images/teams/igea virtus.png", "valoreTecnico": 15},
+{"id": 126, "nome": "IMOLESE", "logo": "/assets/images/teams/imolese.png", "valoreTecnico": 20},
+{"id": 127, "nome": "INTER", "logo": "/assets/images/teams/inter.png", "valoreTecnico": 100},
+{"id": 128, "nome": "ISCHIA", "logo": "/assets/images/teams/ischia.png", "valoreTecnico": 25},
+{"id": 129, "nome": "ISERNIA", "logo": "/assets/images/teams/isernia.png", "valoreTecnico": 15},
+{"id": 130, "nome": "IVREA", "logo": "/assets/images/teams/ivrea.png", "valoreTecnico": 5},
+{"id": 131, "nome": "JESINA", "logo": "/assets/images/teams/jesina.png", "valoreTecnico": 5},
+{"id": 132, "nome": "JUVENTUS", "logo": "/assets/images/teams/juventus.png", "valoreTecnico": 100},
+{"id": 133, "nome": "LADISPOLI", "logo": "/assets/images/teams/ladispoli.png", "valoreTecnico": 5},
+{"id": 134, "nome": "LAGONEGRO", "logo": "/assets/images/teams/lagonegro.png", "valoreTecnico": 5},
+{"id": 135, "nome": "LAMEZIA", "logo": "/assets/images/teams/lamezia.png", "valoreTecnico": 35},
+{"id": 136, "nome": "LANCIANO", "logo": "/assets/images/teams/lanciano.png", "valoreTecnico": 50},
+{"id": 137, "nome": "L'AQUILA", "logo": "/assets/images/teams/l'aquila.png", "valoreTecnico": 35},
+{"id": 138, "nome": "LATINA", "logo": "/assets/images/teams/latina.png", "valoreTecnico": 50},
+{"id": 139, "nome": "LAURIA", "logo": "/assets/images/teams/lauria.png", "valoreTecnico": 10},
+{"id": 140, "nome": "LAVAGNESE", "logo": "/assets/images/teams/lavagnese.png", "valoreTecnico": 15},
+{"id": 141, "nome": "LAVELLO", "logo": "/assets/images/teams/lavello.png", "valoreTecnico": 15},
+{"id": 142, "nome": "LAZIO", "logo": "/assets/images/teams/lazio.png", "valoreTecnico": 95},
+{"id": 143, "nome": "LECCE", "logo": "/assets/images/teams/lecce.png", "valoreTecnico": 80},
+{"id": 144, "nome": "LECCO", "logo": "/assets/images/teams/lecco.png", "valoreTecnico": 10},
+{"id": 145, "nome": "LEGNANO", "logo": "/assets/images/teams/legnano.png", "valoreTecnico": 25},
+{"id": 146, "nome": "LEONZIO", "logo": "/assets/images/teams/leonzio.png", "valoreTecnico": 25},
+{"id": 147, "nome": "LICATA", "logo": "/assets/images/teams/licata.png", "valoreTecnico": 30},
+{"id": 148, "nome": "LIVORNO", "logo": "/assets/images/teams/livorno.png", "valoreTecnico": 80},
+{"id": 149, "nome": "LOCRI", "logo": "/assets/images/teams/locri.png", "valoreTecnico": 25},
+{"id": 150, "nome": "LUCCHESE", "logo": "/assets/images/teams/lucchese.png", "valoreTecnico": 45},
+{"id": 151, "nome": "LUCERA", "logo": "/assets/images/teams/lucera.png", "valoreTecnico": 20},
+{"id": 152, "nome": "LUMEZZANE", "logo": "/assets/images/teams/lumezzane.png", "valoreTecnico": 25},
+{"id": 153, "nome": "LUPARENSE", "logo": "/assets/images/teams/luparense.png", "valoreTecnico": 20},
+{"id": 154, "nome": "MACERATESE", "logo": "/assets/images/teams/maceratese.png", "valoreTecnico": 25},
+{"id": 155, "nome": "MAGENTA", "logo": "/assets/images/teams/magenta.png", "valoreTecnico": 15},
+{"id": 156, "nome": "MAGLIE", "logo": "/assets/images/teams/maglie.png", "valoreTecnico": 20},
+{"id": 157, "nome": "MANDURIA", "logo": "/assets/images/teams/manduria.png", "valoreTecnico": 20},
+{"id": 158, "nome": "MANFREDONIA", "logo": "/assets/images/teams/manfredonia.png", "valoreTecnico": 35},
+{"id": 159, "nome": "MANTOVA", "logo": "/assets/images/teams/mantova.png", "valoreTecnico": 40},
+{"id": 160, "nome": "MARSALA", "logo": "/assets/images/teams/marsala.png", "valoreTecnico": 40},
+{"id": 161, "nome": "MARTINA", "logo": "/assets/images/teams/martina.png", "valoreTecnico": 40},
+{"id": 162, "nome": "MASSESE", "logo": "/assets/images/teams/massese.png", "valoreTecnico": 30},
+{"id": 163, "nome": "MATERA", "logo": "/assets/images/teams/matera.png", "valoreTecnico": 50},
+{"id": 164, "nome": "MELFI", "logo": "/assets/images/teams/melfi.png", "valoreTecnico": 45},
+{"id": 165, "nome": "MERANO", "logo": "/assets/images/teams/merano.png", "valoreTecnico": 5},
+{"id": 166, "nome": "MESSINA", "logo": "/assets/images/teams/messina.png", "valoreTecnico": 80},
+{"id": 167, "nome": "MESTRE", "logo": "/assets/images/teams/mestre.png", "valoreTecnico": 15},
+{"id": 168, "nome": "MEZZOCORONA", "logo": "/assets/images/teams/mezzocorona.png", "valoreTecnico": 10},
+{"id": 169, "nome": "MILAN", "logo": "/assets/images/teams/milan.png", "valoreTecnico": 100},
+{"id": 170, "nome": "MILAZZO", "logo": "/assets/images/teams/milazzo.png", "valoreTecnico": 30},
+{"id": 171, "nome": "MODENA", "logo": "/assets/images/teams/modena.png", "valoreTecnico": 55},
+{"id": 172, "nome": "MODICA", "logo": "/assets/images/teams/modica.png", "valoreTecnico": 20},
+{"id": 173, "nome": "MOLFETTA", "logo": "/assets/images/teams/molfetta.png", "valoreTecnico": 10},
+{"id": 174, "nome": "MONFALCONE", "logo": "/assets/images/teams/monfalcone.png", "valoreTecnico": 5},
+{"id": 175, "nome": "MONOPOLI", "logo": "/assets/images/teams/monopoli.png", "valoreTecnico": 40},
+{"id": 176, "nome": "MONTEBELLUNA", "logo": "/assets/images/teams/montebelluna.png", "valoreTecnico": 5},
+{"id": 177, "nome": "MONTEVARCHI", "logo": "/assets/images/teams/montevarchi.png", "valoreTecnico": 5},
+{"id": 178, "nome": "MONZA", "logo": "/assets/images/teams/monza.png", "valoreTecnico": 60},
+{"id": 179, "nome": "NAPOLI", "logo": "/assets/images/teams/napoli.png", "valoreTecnico": 90},
+{"id": 180, "nome": "NARDÒ", "logo": "/assets/images/teams/nardò.png", "valoreTecnico": 20},
+{"id": 181, "nome": "NARNESE", "logo": "/assets/images/teams/narnese.png", "valoreTecnico": 5},
+{"id": 182, "nome": "NISSA", "logo": "/assets/images/teams/nissa.png", "valoreTecnico": 5},
+{"id": 183, "nome": "NOCERINA", "logo": "/assets/images/teams/nocerina.png", "valoreTecnico": 35},
+{"id": 184, "nome": "NOICATTARO", "logo": "/assets/images/teams/noicattaro.png", "valoreTecnico": 25},
+{"id": 185, "nome": "NOLA", "logo": "/assets/images/teams/nola.png", "valoreTecnico": 20},
+{"id": 186, "nome": "NOTO", "logo": "/assets/images/teams/noto.png", "valoreTecnico": 5},
+{"id": 187, "nome": "NOVARA", "logo": "/assets/images/teams/novara.png", "valoreTecnico": 45},
+{"id": 188, "nome": "NUORESE", "logo": "/assets/images/teams/nuorese.png", "valoreTecnico": 10},
+{"id": 189, "nome": "OLBIA", "logo": "/assets/images/teams/olbia.png", "valoreTecnico": 25},
+{"id": 190, "nome": "ORLANDINA", "logo": "/assets/images/teams/orlandina.png", "valoreTecnico": 5},
+{"id": 191, "nome": "PADOVA", "logo": "/assets/images/teams/padova.png", "valoreTecnico": 50},
+{"id": 192, "nome": "PAGANESE", "logo": "/assets/images/teams/paganese.png", "valoreTecnico": 25},
+{"id": 193, "nome": "PALERMO", "logo": "/assets/images/teams/palermo.png", "valoreTecnico": 85},
+{"id": 194, "nome": "PALMESE", "logo": "/assets/images/teams/palmese.png", "valoreTecnico": 25},
+{"id": 195, "nome": "PAOLANA", "logo": "/assets/images/teams/paolana.png", "valoreTecnico": 10},
+{"id": 196, "nome": "PARMA", "logo": "/assets/images/teams/parma.png", "valoreTecnico": 75},
+{"id": 197, "nome": "PATERNÒ", "logo": "/assets/images/teams/paternò.png", "valoreTecnico": 30},
+{"id": 198, "nome": "PATTESE", "logo": "/assets/images/teams/pattese.png", "valoreTecnico": 20},
+{"id": 199, "nome": "PAVIA", "logo": "/assets/images/teams/pavia.png", "valoreTecnico": 50},
+{"id": 200, "nome": "PERUGIA", "logo": "/assets/images/teams/perugia.png", "valoreTecnico": 70},
+{"id": 201, "nome": "PESCARA", "logo": "/assets/images/teams/pescara.png", "valoreTecnico": 70},
+{"id": 202, "nome": "PIACENZA", "logo": "/assets/images/teams/piacenza.png", "valoreTecnico": 65},
+{"id": 203, "nome": "PICERNO", "logo": "/assets/images/teams/picerno.png", "valoreTecnico": 5},
+{"id": 204, "nome": "PINEROLO", "logo": "/assets/images/teams/pinerolo.png", "valoreTecnico": 5},
+{"id": 205, "nome": "PISA", "logo": "/assets/images/teams/pisa.png", "valoreTecnico": 75},
+{"id": 206, "nome": "PISTOIESE", "logo": "/assets/images/teams/pistoiese.png", "valoreTecnico": 70},
+{"id": 207, "nome": "POGGIBONSI", "logo": "/assets/images/teams/poggibonsi.png", "valoreTecnico": 10},
+{"id": 208, "nome": "POLICORO", "logo": "/assets/images/teams/policoro.png", "valoreTecnico": 10},
+{"id": 209, "nome": "POMEZIA", "logo": "/assets/images/teams/pomezia.png", "valoreTecnico": 10},
+{"id": 210, "nome": "POMIGLIANO", "logo": "/assets/images/teams/pomigliano.png", "valoreTecnico": 5},
+{"id": 211, "nome": "PONSACCO", "logo": "/assets/images/teams/ponsacco.png", "valoreTecnico": 5},
+{"id": 212, "nome": "PONTEDERA", "logo": "/assets/images/teams/pontedera.png", "valoreTecnico": 45},
+{"id": 213, "nome": "PORDENONE", "logo": "/assets/images/teams/pordenone.png", "valoreTecnico": 50},
+{"id": 214, "nome": "PORTOGRUARO", "logo": "/assets/images/teams/portogruaro.png", "valoreTecnico": 30},
+{"id": 215, "nome": "POTENZA", "logo": "/assets/images/teams/potenza.png", "valoreTecnico": 50},
+{"id": 216, "nome": "PRATO", "logo": "/assets/images/teams/prato.png", "valoreTecnico": 25},
+{"id": 217, "nome": "PRO PATRIA", "logo": "/assets/images/teams/pro patria.png", "valoreTecnico": 20},
+{"id": 218, "nome": "PRO VERCELLI", "logo": "/assets/images/teams/pro vercelli.png", "valoreTecnico": 20},
+{"id": 219, "nome": "PUTEOLANA", "logo": "/assets/images/teams/puteolana.png", "valoreTecnico": 20},
+{"id": 220, "nome": "RAGUSA", "logo": "/assets/images/teams/ragusa.png", "valoreTecnico": 30},
+{"id": 221, "nome": "RAPALLO", "logo": "/assets/images/teams/rapallo.png", "valoreTecnico": 20},
+{"id": 222, "nome": "RAVENNA", "logo": "/assets/images/teams/ravenna.png", "valoreTecnico": 50},
+{"id": 223, "nome": "RECANATESE", "logo": "/assets/images/teams/recanatese.png", "valoreTecnico": 10},
+{"id": 224, "nome": "REGGIANA", "logo": "/assets/images/teams/reggiana.png", "valoreTecnico": 55},
+{"id": 225, "nome": "REGGINA", "logo": "/assets/images/teams/reggina.png", "valoreTecnico": 85},
+{"id": 226, "nome": "RENATE", "logo": "/assets/images/teams/renate.png", "valoreTecnico": 30},
+{"id": 227, "nome": "RENDE", "logo": "/assets/images/teams/rende.png", "valoreTecnico": 40},
+{"id": 228, "nome": "RICCIONE", "logo": "/assets/images/teams/riccione.png", "valoreTecnico": 25},
+{"id": 229, "nome": "RIETI", "logo": "/assets/images/teams/rieti.png", "valoreTecnico": 45},
+{"id": 230, "nome": "RIMINI", "logo": "/assets/images/teams/rimini.png", "valoreTecnico": 55},
+{"id": 231, "nome": "RIONERO", "logo": "/assets/images/teams/rionero.png", "valoreTecnico": 10},
+{"id": 232, "nome": "ROCCELLA", "logo": "/assets/images/teams/roccella.png", "valoreTecnico": 25},
+{"id": 233, "nome": "ROMA", "logo": "/assets/images/teams/roma.png", "valoreTecnico": 95},
+{"id": 234, "nome": "ROSARNO", "logo": "/assets/images/teams/rosarno.png", "valoreTecnico": 10},
+{"id": 235, "nome": "ROSETANA", "logo": "/assets/images/teams/rosetana.png", "valoreTecnico": 15},
+{"id": 236, "nome": "ROSSANESE", "logo": "/assets/images/teams/rossanese.png", "valoreTecnico": 25},
+{"id": 237, "nome": "ROVERETO", "logo": "/assets/images/teams/rovereto.png", "valoreTecnico": 10},
+{"id": 238, "nome": "ROVIGO", "logo": "/assets/images/teams/rovigo.png", "valoreTecnico": 15},
+{"id": 239, "nome": "RUTIGLIANO", "logo": "/assets/images/teams/rutigliano.png", "valoreTecnico": 20},
+{"id": 240, "nome": "SALERNITANA", "logo": "/assets/images/teams/salernitana.png", "valoreTecnico": 60},
+{"id": 241, "nome": "SALÒ", "logo": "/assets/images/teams/salò.png", "valoreTecnico": 5},
+{"id": 242, "nome": "SAMBENEDETTESE", "logo": "/assets/images/teams/sambenedettese.png", "valoreTecnico": 50},
+{"id": 243, "nome": "SAMPDORIA", "logo": "/assets/images/teams/sampdoria.png", "valoreTecnico": 90},
+{"id": 244, "nome": "SANCATALDESE", "logo": "/assets/images/teams/sancataldese.png", "valoreTecnico": 5},
+{"id": 245, "nome": "SANDONÀ", "logo": "/assets/images/teams/sandonà.png", "valoreTecnico": 5},
+{"id": 246, "nome": "SANGIOVANNESE", "logo": "/assets/images/teams/sangiovannese.png", "valoreTecnico": 10},
+{"id": 247, "nome": "SANREMESE", "logo": "/assets/images/teams/sanremese.png", "valoreTecnico": 15},
+{"id": 248, "nome": "SAPRI", "logo": "/assets/images/teams/sapri.png", "valoreTecnico": 10},
+{"id": 249, "nome": "SARONNO", "logo": "/assets/images/teams/saronno.png", "valoreTecnico": 5},
+{"id": 250, "nome": "SARZANESE", "logo": "/assets/images/teams/sarzanese.png", "valoreTecnico": 5},
+{"id": 251, "nome": "SASSUOLO", "logo": "/assets/images/teams/sassuolo.png", "valoreTecnico": 50},
+{"id": 252, "nome": "SAVOIA", "logo": "/assets/images/teams/savoia.png", "valoreTecnico": 25},
+{"id": 253, "nome": "SAVONA", "logo": "/assets/images/teams/savona.png", "valoreTecnico": 40},
+{"id": 254, "nome": "SCAFATESE", "logo": "/assets/images/teams/scafatese.png", "valoreTecnico": 20},
+{"id": 255, "nome": "SCALEA", "logo": "/assets/images/teams/scalea.png", "valoreTecnico": 20},
+{"id": 256, "nome": "SCHIO", "logo": "/assets/images/teams/schio.png", "valoreTecnico": 15},
+{"id": 257, "nome": "SCIACCA", "logo": "/assets/images/teams/sciacca.png", "valoreTecnico": 10},
+{"id": 258, "nome": "SEREGNO", "logo": "/assets/images/teams/seregno.png", "valoreTecnico": 5},
+{"id": 259, "nome": "SIDERNO", "logo": "/assets/images/teams/siderno.png", "valoreTecnico": 20},
+{"id": 260, "nome": "SIENA", "logo": "/assets/images/teams/siena.png", "valoreTecnico": 80},
+{"id": 261, "nome": "SILANA", "logo": "/assets/images/teams/silana.png", "valoreTecnico": 15},
+{"id": 262, "nome": "SIRACUSA", "logo": "/assets/images/teams/siracusa.png", "valoreTecnico": 30},
+{"id": 263, "nome": "SONDRIO", "logo": "/assets/images/teams/sondrio.png", "valoreTecnico": 5},
+{"id": 264, "nome": "SORA", "logo": "/assets/images/teams/sora.png", "valoreTecnico": 10},
+{"id": 265, "nome": "SORRENTO", "logo": "/assets/images/teams/sorrento.png", "valoreTecnico": 15},
+{"id": 266, "nome": "SOVERATO", "logo": "/assets/images/teams/soverato.png", "valoreTecnico": 5},
+{"id": 267, "nome": "SPAL", "logo": "/assets/images/teams/spal.png", "valoreTecnico": 50},
+{"id": 268, "nome": "SPEZIA", "logo": "/assets/images/teams/spezia.png", "valoreTecnico": 55},
+{"id": 269, "nome": "STABIA", "logo": "/assets/images/teams/stabia.png", "valoreTecnico": 40},
+{"id": 270, "nome": "SUDTIROL", "logo": "/assets/images/teams/sudtirol.png", "valoreTecnico": 25},
+{"id": 271, "nome": "SULMONA", "logo": "/assets/images/teams/sulmona.png", "valoreTecnico": 10},
+{"id": 272, "nome": "TARANTO", "logo": "/assets/images/teams/taranto.png", "valoreTecnico": 50},
+{"id": 273, "nome": "TAURIANOVESE", "logo": "/assets/images/teams/taurianovese.png", "valoreTecnico": 10},
+{"id": 274, "nome": "TAVOLARA", "logo": "/assets/images/teams/tavolara.png", "valoreTecnico": 5},
+{"id": 275, "nome": "TEMPIO", "logo": "/assets/images/teams/tempio.png", "valoreTecnico": 5},
+{"id": 276, "nome": "TERAMO", "logo": "/assets/images/teams/teramo.png", "valoreTecnico": 35},
+{"id": 277, "nome": "TERMITANA", "logo": "/assets/images/teams/termitana.png", "valoreTecnico": 5},
+{"id": 278, "nome": "TERMOLI", "logo": "/assets/images/teams/termoli.png", "valoreTecnico": 5},
+{"id": 279, "nome": "TERNANA", "logo": "/assets/images/teams/ternana.png", "valoreTecnico": 75},
+{"id": 280, "nome": "TERRACINA", "logo": "/assets/images/teams/terracina.png", "valoreTecnico": 10},
+{"id": 281, "nome": "THIENE", "logo": "/assets/images/teams/thiene.png", "valoreTecnico": 5},
+{"id": 282, "nome": "TIVOLI", "logo": "/assets/images/teams/tivoli.png", "valoreTecnico": 5},
+{"id": 283, "nome": "TOLENTINO", "logo": "/assets/images/teams/tolentino.png", "valoreTecnico": 5},
+{"id": 284, "nome": "TOLMEZZO", "logo": "/assets/images/teams/tolmezzo.png", "valoreTecnico": 5},
+{"id": 285, "nome": "TORINO", "logo": "/assets/images/teams/torino.png", "valoreTecnico": 90},
+{"id": 286, "nome": "TORRES", "logo": "/assets/images/teams/torres.png", "valoreTecnico": 10},
+{"id": 287, "nome": "TRANI", "logo": "/assets/images/teams/trani.png", "valoreTecnico": 5},
+{"id": 288, "nome": "TRAPANI", "logo": "/assets/images/teams/trapani.png", "valoreTecnico": 50},
+{"id": 289, "nome": "TREBISACCE", "logo": "/assets/images/teams/trebisacce.png", "valoreTecnico": 20},
+{"id": 290, "nome": "TRENTO", "logo": "/assets/images/teams/trento.png", "valoreTecnico": 25},
+{"id": 291, "nome": "TREVISO", "logo": "/assets/images/teams/treviso.png", "valoreTecnico": 40},
+{"id": 292, "nome": "TRICASE", "logo": "/assets/images/teams/tricase.png", "valoreTecnico": 15},
+{"id": 293, "nome": "TRIESTINA", "logo": "/assets/images/teams/triestina.png", "valoreTecnico": 50},
+{"id": 294, "nome": "TRIVENTO", "logo": "/assets/images/teams/trivento.png", "valoreTecnico": 5},
+{"id": 295, "nome": "TURRIS", "logo": "/assets/images/teams/turris.png", "valoreTecnico": 25},
+{"id": 296, "nome": "UDINESE", "logo": "/assets/images/teams/udinese.png", "valoreTecnico": 80},
+{"id": 297, "nome": "VARESE", "logo": "/assets/images/teams/varese.png", "valoreTecnico": 30},
+{"id": 298, "nome": "VASTESE", "logo": "/assets/images/teams/vastese.png", "valoreTecnico": 20},
+{"id": 299, "nome": "VENAFRO", "logo": "/assets/images/teams/venafro.png", "valoreTecnico": 10},
+{"id": 300, "nome": "VENEZIA", "logo": "/assets/images/teams/venezia.png", "valoreTecnico": 55},
+{"id": 301, "nome": "VERONA", "logo": "/assets/images/teams/verona.png", "valoreTecnico": 75},
+{"id": 302, "nome": "VIAREGGIO", "logo": "/assets/images/teams/viareggio.png", "valoreTecnico": 15},
+{"id": 303, "nome": "VIBONESE", "logo": "/assets/images/teams/vibonese.png", "valoreTecnico": 45},
+{"id": 304, "nome": "VICENZA", "logo": "/assets/images/teams/vicenza.png", "valoreTecnico": 70},
+{"id": 305, "nome": "VIGEVANO", "logo": "/assets/images/teams/vigevano.png", "valoreTecnico": 10},
+{"id": 306, "nome": "VILLAFRANCA", "logo": "/assets/images/teams/villafranca.png", "valoreTecnico": 5},
+{"id": 307, "nome": "VILLESE", "logo": "/assets/images/teams/villese.png", "valoreTecnico": 15},
+{"id": 308, "nome": "VIRTUS VERONA", "logo": "/assets/images/teams/virtus verona.png", "valoreTecnico": 10},
+{"id": 309, "nome": "VIS PESARO", "logo": "/assets/images/teams/vis pesaro.png", "valoreTecnico": 5},
+{"id": 310, "nome": "VITERBESE", "logo": "/assets/images/teams/viterbese.png", "valoreTecnico": 30},
+{"id": 311, "nome": "VITTORIA", "logo": "/assets/images/teams/vittoria.png", "valoreTecnico": 5},
+{"id": 312, "nome": "VOGHERA", "logo": "/assets/images/teams/voghera.png", "valoreTecnico": 5},
+{"id": 313, "nome": "ACERRANA", "logo": "/assets/images/teams/acerrana.png", "valoreTecnico": 10},
+{"id": 314, "nome": "ADRANO", "logo": "/assets/images/teams/adrano.png", "valoreTecnico": 5},
+{"id": 315, "nome": "AFRAGOLESE", "logo": "/assets/images/teams/afragolese.png", "valoreTecnico": 10},
+{"id": 316, "nome": "AGNONESE", "logo": "/assets/images/teams/agnonese.png", "valoreTecnico": 5},
+{"id": 317, "nome": "ALCAMO", "logo": "/assets/images/teams/alcamo.png", "valoreTecnico": 15},
+{"id": 318, "nome": "AMANTEA", "logo": "/assets/images/teams/amantea.png", "valoreTecnico": 5},
+{"id": 319, "nome": "ANGRI", "logo": "/assets/images/teams/angri.png", "valoreTecnico": 15},
+{"id": 320, "nome": "ARIANO", "logo": "/assets/images/teams/ariano.png", "valoreTecnico": 5},
+{"id": 321, "nome": "ARZANESE", "logo": "/assets/images/teams/arzanese.png", "valoreTecnico": 10},
+{"id": 322, "nome": "AVETRANA", "logo": "/assets/images/teams/avetrana.png", "valoreTecnico": 5},
+{"id": 323, "nome": "AVIGLIANO", "logo": "/assets/images/teams/avigliano.png", "valoreTecnico": 5},
+{"id": 324, "nome": "BACOLI", "logo": "/assets/images/teams/bacoli.png", "valoreTecnico": 10},
+{"id": 325, "nome": "BAGALADI", "logo": "/assets/images/teams/bagaladi.png", "valoreTecnico": 5},
+{"id": 326, "nome": "BAGNARESE", "logo": "/assets/images/teams/bagnarese.png", "valoreTecnico": 5},
+{"id": 327, "nome": "BARONISSI", "logo": "/assets/images/teams/baronissi.png", "valoreTecnico": 5},
+{"id": 328, "nome": "BELPASSO", "logo": "/assets/images/teams/belpasso.png", "valoreTecnico": 15},
+{"id": 329, "nome": "BERNALDA", "logo": "/assets/images/teams/bernalda.png", "valoreTecnico": 15},
+{"id": 330, "nome": "BOJANO", "logo": "/assets/images/teams/bojano.png", "valoreTecnico": 15},
+{"id": 331, "nome": "BOVESE", "logo": "/assets/images/teams/bovese.png", "valoreTecnico": 5},
+{"id": 332, "nome": "BRANCALEONE", "logo": "/assets/images/teams/brancaleone.png", "valoreTecnico": 10},
+{"id": 333, "nome": "BRIENZA", "logo": "/assets/images/teams/brienza.png", "valoreTecnico": 5},
+{"id": 334, "nome": "BROLO", "logo": "/assets/images/teams/brolo.png", "valoreTecnico": 15},
+{"id": 335, "nome": "CAIVANESE", "logo": "/assets/images/teams/caivanese.png", "valoreTecnico": 20},
+{"id": 336, "nome": "CAMPANIA", "logo": "/assets/images/teams/campania.png", "valoreTecnico": 20},
+{"id": 337, "nome": "CAMPOBELLO", "logo": "/assets/images/teams/campobello.png", "valoreTecnico": 5},
+{"id": 338, "nome": "CANOSA", "logo": "/assets/images/teams/canosa.png", "valoreTecnico": 10},
+{"id": 339, "nome": "CAPURSO", "logo": "/assets/images/teams/capurso.png", "valoreTecnico": 10},
+{"id": 340, "nome": "CASORIA", "logo": "/assets/images/teams/casoria.png", "valoreTecnico": 25},
+{"id": 341, "nome": "CASTELVETRANO", "logo": "/assets/images/teams/castelvetrano.png", "valoreTecnico": 15},
+{"id": 342, "nome": "CERVINARA", "logo": "/assets/images/teams/cervinara.png", "valoreTecnico": 5},
+{"id": 343, "nome": "CHIARAVALLE", "logo": "/assets/images/teams/chiaravalle.png", "valoreTecnico": 5},
+{"id": 344, "nome": "CINQUEFRONDESE", "logo": "/assets/images/teams/cinquefrondese.png", "valoreTecnico": 5},
+{"id": 345, "nome": "CIRÒ", "logo": "/assets/images/teams/cirò.png", "valoreTecnico": 10},
+{"id": 346, "nome": "COMISO", "logo": "/assets/images/teams/comiso.png", "valoreTecnico": 20},
+{"id": 347, "nome": "CONVERSANO", "logo": "/assets/images/teams/conversano.png", "valoreTecnico": 10},
+{"id": 348, "nome": "COPERTINO", "logo": "/assets/images/teams/copertino.png", "valoreTecnico": 10},
+{"id": 349, "nome": "CORATO", "logo": "/assets/images/teams/corato.png", "valoreTecnico": 5},
+{"id": 350, "nome": "CUTRO", "logo": "/assets/images/teams/cutro.png", "valoreTecnico": 10},
+{"id": 351, "nome": "DECOLLATURA", "logo": "/assets/images/teams/decollatura.png", "valoreTecnico": 5},
+{"id": 352, "nome": "DELIANUOVA", "logo": "/assets/images/teams/delianuova.png", "valoreTecnico": 10},
+{"id": 353, "nome": "FAVARA", "logo": "/assets/images/teams/favara.png", "valoreTecnico": 20},
+{"id": 354, "nome": "FORIO", "logo": "/assets/images/teams/forio.png", "valoreTecnico": 20},
+{"id": 355, "nome": "GANGI", "logo": "/assets/images/teams/gangi.png", "valoreTecnico": 20},
+{"id": 356, "nome": "GINOSA", "logo": "/assets/images/teams/ginosa.png", "valoreTecnico": 5},
+{"id": 357, "nome": "GIOIOSA", "logo": "/assets/images/teams/gioiosa.png", "valoreTecnico": 15},
+{"id": 358, "nome": "GRAGNANO", "logo": "/assets/images/teams/gragnano.png", "valoreTecnico": 25},
+{"id": 359, "nome": "GROTTAGLIE", "logo": "/assets/images/teams/grottaglie.png", "valoreTecnico": 25},
+{"id": 360, "nome": "GRUMESE", "logo": "/assets/images/teams/grumese.png", "valoreTecnico": 5},
+{"id": 361, "nome": "GUARDAVALLE", "logo": "/assets/images/teams/guardavalle.png", "valoreTecnico": 5},
+{"id": 362, "nome": "ISOLA CAPO RIZZUTO", "logo": "/assets/images/teams/isola capo rizzuto.png", "valoreTecnico": 10},
+{"id": 363, "nome": "LATERZA", "logo": "/assets/images/teams/laterza.png", "valoreTecnico": 5},
+{"id": 364, "nome": "LEPORANO", "logo": "/assets/images/teams/leporano.png", "valoreTecnico": 5},
+{"id": 365, "nome": "LOCOROTONDO", "logo": "/assets/images/teams/locorotondo.png", "valoreTecnico": 5},
+{"id": 366, "nome": "MARCIANISE", "logo": "/assets/images/teams/marcianise.png", "valoreTecnico": 25},
+{"id": 367, "nome": "MARUGGIO", "logo": "/assets/images/teams/maruggio.png", "valoreTecnico": 5},
+{"id": 368, "nome": "MASCALUCIA", "logo": "/assets/images/teams/mascalucia.png", "valoreTecnico": 5},
+{"id": 369, "nome": "MASSAFRA", "logo": "/assets/images/teams/massafra.png", "valoreTecnico": 10},
+{"id": 370, "nome": "MAZARA", "logo": "/assets/images/teams/mazara.png", "valoreTecnico": 15},
+{"id": 371, "nome": "MELITESE", "logo": "/assets/images/teams/melitese.png", "valoreTecnico": 5},
+{"id": 372, "nome": "MESAGNE", "logo": "/assets/images/teams/mesagne.png", "valoreTecnico": 5},
+{"id": 373, "nome": "METAPONTO", "logo": "/assets/images/teams/metaponto.png", "valoreTecnico": 20},
+{"id": 374, "nome": "MISTERBIANCO", "logo": "/assets/images/teams/misterbianco.png", "valoreTecnico": 5},
+{"id": 375, "nome": "MOLITERNO", "logo": "/assets/images/teams/moliterno.png", "valoreTecnico": 20},
+{"id": 376, "nome": "MONTALTO", "logo": "/assets/images/teams/montalto.png", "valoreTecnico": 10},
+{"id": 377, "nome": "MONTENERO", "logo": "/assets/images/teams/montenero.png", "valoreTecnico": 25},
+{"id": 378, "nome": "MONTESCAGLIOSO", "logo": "/assets/images/teams/montescaglioso.png", "valoreTecnico": 5},
+{"id": 379, "nome": "MORRONE", "logo": "/assets/images/teams/morrone.png", "valoreTecnico": 25},
+{"id": 380, "nome": "MURESE", "logo": "/assets/images/teams/murese.png", "valoreTecnico": 5},
+{"id": 381, "nome": "NISCEMI", "logo": "/assets/images/teams/niscemi.png", "valoreTecnico": 10},
+{"id": 382, "nome": "NOCI", "logo": "/assets/images/teams/noci.png", "valoreTecnico": 5},
+{"id": 383, "nome": "OSTUNI", "logo": "/assets/images/teams/ostuni.png", "valoreTecnico": 15},
+{"id": 384, "nome": "OTRANTO", "logo": "/assets/images/teams/otranto.png", "valoreTecnico": 10},
+{"id": 385, "nome": "PACECO", "logo": "/assets/images/teams/paceco.png", "valoreTecnico": 10},
+{"id": 386, "nome": "PALAZZOLO", "logo": "/assets/images/teams/palazzolo.png", "valoreTecnico": 10},
+{"id": 387, "nome": "PARTINICO", "logo": "/assets/images/teams/partinico.png", "valoreTecnico": 10},
+{"id": 388, "nome": "PELLARO", "logo": "/assets/images/teams/pellaro.png", "valoreTecnico": 10},
+{"id": 389, "nome": "PISTICCI", "logo": "/assets/images/teams/pisticci.png", "valoreTecnico": 10},
+{"id": 390, "nome": "POMIGLIANO", "logo": "/assets/images/teams/pomigliano.png", "valoreTecnico": 10},
+{"id": 391, "nome": "PORTICI", "logo": "/assets/images/teams/portici.png", "valoreTecnico": 15},
+{"id": 392, "nome": "PUTIGNANO", "logo": "/assets/images/teams/putignano.png", "valoreTecnico": 5},
+{"id": 393, "nome": "QUARTO", "logo": "/assets/images/teams/quarto.png", "valoreTecnico": 10},
+{"id": 394, "nome": "ROTONDA", "logo": "/assets/images/teams/rotonda.png", "valoreTecnico": 15},
+{"id": 395, "nome": "SAMBIASE", "logo": "/assets/images/teams/sambiase.png", "valoreTecnico": 25},
+{"id": 396, "nome": "SAN SEVERO", "logo": "/assets/images/teams/san severo.png", "valoreTecnico": 15},
+{"id": 397, "nome": "SANGIUSEPPESE", "logo": "/assets/images/teams/sangiuseppese.png", "valoreTecnico": 25},
+{"id": 398, "nome": "SARNESE", "logo": "/assets/images/teams/sarnese.png", "valoreTecnico": 25},
+{"id": 399, "nome": "SCICLI", "logo": "/assets/images/teams/scicli.png", "valoreTecnico": 20},
+{"id": 400, "nome": "SCORDIA", "logo": "/assets/images/teams/scordia.png", "valoreTecnico": 25},
+{"id": 401, "nome": "SERRESE", "logo": "/assets/images/teams/serrese.png", "valoreTecnico": 10},
+{"id": 402, "nome": "SERSALE", "logo": "/assets/images/teams/sersale.png", "valoreTecnico": 20},
+{"id": 403, "nome": "SOLOFRA", "logo": "/assets/images/teams/solofra.png", "valoreTecnico": 5},
+{"id": 404, "nome": "SQUINZANO", "logo": "/assets/images/teams/squinzano.png", "valoreTecnico": 15},
+{"id": 405, "nome": "STASIA", "logo": "/assets/images/teams/stasia.png", "valoreTecnico": 5},
+{"id": 406, "nome": "TAORMINA", "logo": "/assets/images/teams/taormina.png", "valoreTecnico": 5},
+{"id": 407, "nome": "TAURISANO", "logo": "/assets/images/teams/taurisano.png", "valoreTecnico": 5},
+{"id": 408, "nome": "TERZIGNO", "logo": "/assets/images/teams/terzigno.png", "valoreTecnico": 10},
+{"id": 409, "nome": "TORRECUSO", "logo": "/assets/images/teams/torrecuso.png", "valoreTecnico": 5},
+{"id": 410, "nome": "TORRETTA", "logo": "/assets/images/teams/torretta.png", "valoreTecnico": 5},
+{"id": 411, "nome": "TRIVENTO", "logo": "/assets/images/teams/trivento.png", "valoreTecnico": 10},
+{"id": 412, "nome": "TROINA", "logo": "/assets/images/teams/troina.png", "valoreTecnico": 15},
+{"id": 413, "nome": "TROPEA", "logo": "/assets/images/teams/tropea.png", "valoreTecnico": 5},
+{"id": 414, "nome": "VICO EQUENSE", "logo": "/assets/images/teams/vico equense.png", "valoreTecnico": 5}
   ]
 }

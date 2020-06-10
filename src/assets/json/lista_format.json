@@ -11,6 +11,14 @@
     {
       "label": "SERIE A / SERIE B / SERIE CA - SERIE CB",
       "value": "1"
+    },
+    {
+      "label": "PARALLELI",
+      "value": "2"
+    },
+    {
+      "label": "CAMPIONATO MERIDIONALE",
+      "value": "3"
     }
   ]
 }

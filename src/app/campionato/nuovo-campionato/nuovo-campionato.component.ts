@@ -47,7 +47,9 @@ export class NuovoCampionatoComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.preparaListaTeams();
+  }
 
   preparaListaTeams() {
     this.numeroSquadre = this.campionatoService.caricaNumeroSquadre(
