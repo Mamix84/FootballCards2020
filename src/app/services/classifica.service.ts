@@ -280,6 +280,12 @@ export class ClassificaService {
         }
       }
 
+      if (campionato.format.playoff != undefined) {
+        for (let i = 1; i < campionato.format.playoff; i++) {
+          campionato.classifica.listaTeams[i].verdetto = 'playoff';
+        }
+      }
+
       if (campionato.format.retrocessione != undefined) {
         for (
           let i = campionato.classifica.listaTeams.length - 1;

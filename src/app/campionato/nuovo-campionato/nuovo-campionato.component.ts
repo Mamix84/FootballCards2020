@@ -151,4 +151,13 @@ export class NuovoCampionatoComponent implements OnInit {
 
     this.visualizzaCaricaTemplate = false;
   }
+
+  selezionaSquadreCasuali(){
+    for(let i=0;i<this.listaTeamsSelezionati.length;i++){
+      let xmin = Math.ceil(0);
+      let xmax = Math.floor(this.listaTeams.length);
+      let index = Math.floor(Math.random() * (xmax - xmin)) + xmin;
+      this.listaTeamsSelezionati[i] = this.listaTeams[index].value;
+    }
+  }
 }

@@ -106,4 +106,8 @@ export class StatisticheComponent implements OnInit, OnChanges {
       ],
     });
   }
+
+  updateLogo(event: any, team: Team) {
+    team.logo = '/assets/images/teams/no_logo.png';
+  }
 }

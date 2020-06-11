@@ -21,7 +21,7 @@
       <ng-template pTemplate="body" let-team>
         <tr [ngClass]="team.verdetto">
           <td style="text-align: center; display: none;">{{team.verdetto}}</td>
-          <td><img class="teamLogo" src={{team.team.logo}} width="30" heigth="30" /></td>
+          <td><img class="teamLogo" src={{team.team.logo}} width="30" heigth="30" (error)="updateLogo($event, team.team)"/></td>
           <td>{{team.team.nome.toUpperCase()}}</td>
           <td style="text-align: center;">{{team.punti}}</td>
           <td style="text-align: center;">{{team.partiteGiocate}}</td>
