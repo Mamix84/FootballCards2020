@@ -9,6 +9,8 @@ import tipologia_torneo from '../../assets/json/tipologia_torneo.json';
 import lista_stagioni from '../../assets/json/lista_stagioni.json';
 import tipologie_risultati from '../../assets/json/tipologie_risultati.json';
 import lista_template_campionato from '../../assets/json/lista_template_campionato.json';
+import lista_numero_squadre from '../../assets/json/lista_numero_squadre.json';
+import lista_format_campionato from '../../assets/json/lista_format_campionato.json';
 
 @Injectable({
   providedIn: 'root',
@@ -26,106 +28,9 @@ export class CampionatoService {
   }
 
   caricaNumeroSquadre(tipologiaTorneo: number): SelectItem[] {
-    let listaNunmeroSquadre = [];
+    let listaNumeroSquadre = lista_numero_squadre[tipologiaTorneo];
 
-    listaNunmeroSquadre.push({
-      label: 'Seleziona il numero di squadre',
-      value: null,
-    });
-
-    switch (tipologiaTorneo) {
-      case 0:
-        for (let i = 16; i < 21; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-
-      case 1:
-        for (let i = 16; i < 21; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-
-      case 2:
-        for (let i = 16; i < 21; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-
-      case 3:
-        for (let i = 16; i < 21; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-
-      case 4:
-        for (let i = 16; i < 21; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-
-      case 5:
-        for (let i = 16; i < 21; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-
-      case 6:
-        for (let i = 14; i < 19; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-
-      case 7:
-        for (let i = 14; i < 19; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-
-      case 8:
-        for (let i = 14; i < 19; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-
-      case 9:
-        for (let i = 4; i < 23; i += 2) {
-          listaNunmeroSquadre.push({
-            label: 'Girone A/R con ' + i + ' Squadre',
-            value: i + '',
-          });
-        }
-        break;
-    }
-
-    return listaNunmeroSquadre;
+    return listaNumeroSquadre;
   }
 
   caricaTipologieTorneo(): SelectItem[] {
@@ -645,8 +550,7 @@ export class CampionatoService {
         switch (numeroTeams) {
           case '14': {
             listaFormat.push({
-              label:
-                'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              label: 'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -663,8 +567,7 @@ export class CampionatoService {
 
           case '16': {
             listaFormat.push({
-              label:
-              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              label: 'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -681,8 +584,7 @@ export class CampionatoService {
 
           case '18': {
             listaFormat.push({
-              label:
-              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              label: 'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -703,8 +605,7 @@ export class CampionatoService {
         switch (numeroTeams) {
           case '14': {
             listaFormat.push({
-              label:
-              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              label: 'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -721,8 +622,7 @@ export class CampionatoService {
 
           case '16': {
             listaFormat.push({
-              label:
-              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              label: 'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -739,8 +639,7 @@ export class CampionatoService {
 
           case '18': {
             listaFormat.push({
-              label:
-              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              label: 'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -761,8 +660,7 @@ export class CampionatoService {
         switch (numeroTeams) {
           case '14': {
             listaFormat.push({
-              label:
-              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              label: 'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -779,8 +677,7 @@ export class CampionatoService {
 
           case '16': {
             listaFormat.push({
-              label:
-              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              label: 'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -797,8 +694,7 @@ export class CampionatoService {
 
           case '18': {
             listaFormat.push({
-              label:
-              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              label: 'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -818,6 +714,18 @@ export class CampionatoService {
       case 9: {
         switch (numeroTeams) {
           case '4': {
+            listaFormat.push({
+              label: 'VINCITORE',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: undefined,
+                retrocessione: undefined,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
             listaFormat.push({
               label: 'VINCITORE / 1 RETROCESSIONE TORNEO LOW',
               value: {
