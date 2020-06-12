@@ -151,7 +151,7 @@ export class CampionatoService {
           case '16': {
             listaFormat.push({
               label:
-                'VINCITORE / 4 CHAMPIONS LEAGUE / 4 EUROPA LEAGUE / 3 RETROCESSIONI IN SERIE B',
+                'VINCITORE / 4 CHAMPIONS LEAGUE / 4 EUROPA LEAGUE / 3 RETROCESSE IN SERIE B',
               value: {
                 champions: 4,
                 europa: 4,
@@ -164,7 +164,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 3 CHAMPIONS LEAGUE / 3 EUROPA LEAGUE / 3 RETROCESSIONI IN SERIE B',
+                'VINCITORE / 3 CHAMPIONS LEAGUE / 3 EUROPA LEAGUE / 3 RETROCESSE IN SERIE B',
               value: {
                 champions: 3,
                 europa: 3,
@@ -177,7 +177,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                '[MERIDIONALE] - CAMPIONE MERIDIONALE / 4 RETROCESSIONI IN SERIE B',
+                '[MERIDIONALE] - CAMPIONE MERIDIONALE / 4 RETROCESSE IN SERIE B',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -194,7 +194,7 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 4 CHAMPIONS LEAGUE / 4 EUROPA LEAGUE / 4 RETROCESSIONI IN SERIE B',
+                'VINCITORE / 4 CHAMPIONS LEAGUE / 4 EUROPA LEAGUE / 4 RETROCESSE IN SERIE B',
               value: {
                 champions: 4,
                 europa: 4,
@@ -207,7 +207,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 4 CHAMPIONS LEAGUE / 4 EUROPA LEAGUE / 3 RETROCESSIONI IN SERIE B',
+                'VINCITORE / 4 CHAMPIONS LEAGUE / 4 EUROPA LEAGUE / 3 RETROCESSE IN SERIE B',
               value: {
                 champions: 4,
                 europa: 4,
@@ -223,7 +223,7 @@ export class CampionatoService {
           case '20': {
             listaFormat.push({
               label:
-                'VINCITORE / 4 CHAMPIONS LEAGUE / 4 EUROPA LEAGUE / 4 RETROCESSIONI IN SERIE B',
+                'VINCITORE / 4 CHAMPIONS LEAGUE / 4 EUROPA LEAGUE / 4 RETROCESSE IN SERIE B',
               value: {
                 champions: 4,
                 europa: 4,
@@ -245,7 +245,7 @@ export class CampionatoService {
           case '16': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE A / 4 RETROCESSIONI IN SERIE C',
+                'VINCITORE / 3 PROMOSSE IN SERIE A / 4 RETROCESSE IN SERIE C',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -258,7 +258,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                '[MERIDIONALE] - VINCITORE / 4 PROMOSSE IN SERIE A / 4 RETROCESSIONI IN SERIE C',
+                '[MERIDIONALE] - VINCITORE / 4 PROMOSSE IN SERIE A / 4 RETROCESSE IN SERIE C',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -275,7 +275,7 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 4 PROMOSSE IN SERIE A / 4 RETROCESSIONI IN SERIE C',
+                'VINCITORE / 4 PROMOSSE IN SERIE A / 4 RETROCESSE IN SERIE C',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -288,7 +288,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE A / 4 RETROCESSIONI IN SERIE C',
+                'VINCITORE / 3 PROMOSSE IN SERIE A / 4 RETROCESSE IN SERIE C',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -301,7 +301,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE A / 4 RETROCESSIONI IN SERIE C',
+                'VINCITORE / 2 PROMOSSE IN SERIE A / 4 RETROCESSE IN SERIE C',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -317,7 +317,7 @@ export class CampionatoService {
           case '20': {
             listaFormat.push({
               label:
-                'VINCITORE / 4 PROMOSSE IN SERIE A / 4 RETROCESSIONI IN SERIE C',
+                'VINCITORE / 4 PROMOSSE IN SERIE A / 4 RETROCESSE IN SERIE C',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -339,7 +339,7 @@ export class CampionatoService {
           case '16': {
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE B / 3 RETROCESSIONI IN SERIE D',
+                'VINCITORE / 2 PROMOSSE IN SERIE B / 3 RETROCESSE IN SERIE D',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -352,7 +352,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE B / 4 RETROCESSIONI IN SERIE D',
+                'VINCITORE / 2 PROMOSSE IN SERIE B / 4 RETROCESSE IN SERIE D',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -365,7 +365,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                '[MERIDIONALE] - VINCITORE / 2 PROMOSSE IN SERIE B / 4 RETROCESSIONI IN SERIE D',
+                '[MERIDIONALE] - VINCITORE / 2 PROMOSSE IN SERIE B / 4 RETROCESSE IN SERIE D',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -382,7 +382,7 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE B / 4 RETROCESSIONI IN SERIE D',
+                'VINCITORE / 2 PROMOSSE IN SERIE B / 4 RETROCESSE IN SERIE D',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -395,7 +395,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE B / 3 RETROCESSIONI IN SERIE D',
+                'VINCITORE / 2 PROMOSSE IN SERIE B / 3 RETROCESSE IN SERIE D',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -408,7 +408,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE B (PLAYOFF) / 9 RETROCESSIONI IN SERIE D',
+                'VINCITORE / 2 PROMOSSE IN SERIE B (PLAYOFF) / 9 RETROCESSE IN SERIE D',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -424,7 +424,7 @@ export class CampionatoService {
           case '20': {
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE B (PLAYOFF) / 10 RETROCESSIONI IN SERIE D',
+                'VINCITORE / 2 PROMOSSE IN SERIE B (PLAYOFF) / 10 RETROCESSE IN SERIE D',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -446,7 +446,7 @@ export class CampionatoService {
           case '16': {
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSIONI IN ECCELLENZA',
+                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSE IN ECCELLENZA',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -459,7 +459,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                '[MERIDIONALE] - VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSIONI IN ECCELLENZA',
+                '[MERIDIONALE] - VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSE IN ECCELLENZA',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -477,7 +477,7 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSIONI IN ECCELLENZA',
+                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 4 RETROCESSE IN ECCELLENZA',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -490,7 +490,7 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 9 RETROCESSIONI IN ECCELLENZA',
+                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 9 RETROCESSE IN ECCELLENZA',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -508,7 +508,7 @@ export class CampionatoService {
           case '20': {
             listaFormat.push({
               label:
-                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 10 RETROCESSIONI IN ECCELLENZA',
+                'VINCITORE / 2 PROMOSSE IN SERIE C (PLAYOFF) / 10 RETROCESSE IN ECCELLENZA',
               value: {
                 champions: undefined,
                 europa: undefined,
@@ -530,12 +530,12 @@ export class CampionatoService {
           case '16': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+                'VINCITORE / 1 PROMOSSA IN SERIE D / 3 RETROCESSE IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
+                promozione: 1,
                 retrocessione: 3,
                 playoff: undefined,
                 playout: undefined,
@@ -548,12 +548,12 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+                'VINCITORE / 1 PROMOSSA IN SERIE D / 3 RETROCESSE IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
+                promozione: 1,
                 retrocessione: 3,
                 playoff: undefined,
                 playout: undefined,
@@ -566,12 +566,12 @@ export class CampionatoService {
           case '20': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+                'VINCITORE / 1 PROMOSSA IN SERIE D / 3 RETROCESSE IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
+                promozione: 1,
                 retrocessione: 3,
                 playoff: undefined,
                 playout: undefined,
@@ -588,12 +588,12 @@ export class CampionatoService {
           case '16': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+                'VINCITORE / 1 PROMOSSA IN ECCELLENZA / 3 RETROCESSE IN CATEGORIA INFERIORE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
+                promozione: 1,
                 retrocessione: 3,
                 playoff: undefined,
                 playout: undefined,
@@ -606,12 +606,12 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+                'VINCITORE / 1 PROMOSSA IN ECCELLENZA / 3 RETROCESSE IN CATEGORIA INFERIORE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
+                promozione: 1,
                 retrocessione: 3,
                 playoff: undefined,
                 playout: undefined,
@@ -624,12 +624,12 @@ export class CampionatoService {
           case '20': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+                'VINCITORE / 1 PROMOSSA IN ECCELLENZA / 3 RETROCESSE IN CATEGORIA INFERIORE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
+                promozione: 1,
                 retrocessione: 3,
                 playoff: undefined,
                 playout: undefined,
@@ -643,16 +643,34 @@ export class CampionatoService {
       }
       case 6: {
         switch (numeroTeams) {
-          case '16': {
+          case '14': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+                'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
-                retrocessione: 3,
+                promozione: 1,
+                retrocessione: undefined,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
+
+            break;
+          }
+
+          case '16': {
+            listaFormat.push({
+              label:
+              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: 1,
+                retrocessione: undefined,
                 playoff: undefined,
                 playout: undefined,
               },
@@ -664,31 +682,13 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
-                retrocessione: 3,
-                playoff: undefined,
-                playout: undefined,
-              },
-            });
-
-            break;
-          }
-
-          case '20': {
-            listaFormat.push({
-              label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
-              value: {
-                champions: undefined,
-                europa: undefined,
-                intertoto: undefined,
-                promozione: 3,
-                retrocessione: 3,
+                promozione: 1,
+                retrocessione: undefined,
                 playoff: undefined,
                 playout: undefined,
               },
@@ -701,16 +701,34 @@ export class CampionatoService {
       }
       case 7: {
         switch (numeroTeams) {
-          case '16': {
+          case '14': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
-                retrocessione: 3,
+                promozione: 1,
+                retrocessione: undefined,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
+
+            break;
+          }
+
+          case '16': {
+            listaFormat.push({
+              label:
+              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: 1,
+                retrocessione: undefined,
                 playoff: undefined,
                 playout: undefined,
               },
@@ -722,31 +740,13 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
-                retrocessione: 3,
-                playoff: undefined,
-                playout: undefined,
-              },
-            });
-
-            break;
-          }
-
-          case '20': {
-            listaFormat.push({
-              label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
-              value: {
-                champions: undefined,
-                europa: undefined,
-                intertoto: undefined,
-                promozione: 3,
-                retrocessione: 3,
+                promozione: 1,
+                retrocessione: undefined,
                 playoff: undefined,
                 playout: undefined,
               },
@@ -759,16 +759,34 @@ export class CampionatoService {
       }
       case 8: {
         switch (numeroTeams) {
-          case '16': {
+          case '14': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
-                retrocessione: 3,
+                promozione: 1,
+                retrocessione: undefined,
+                playoff: undefined,
+                playout: undefined,
+              },
+            });
+
+            break;
+          }
+
+          case '16': {
+            listaFormat.push({
+              label:
+              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
+              value: {
+                champions: undefined,
+                europa: undefined,
+                intertoto: undefined,
+                promozione: 1,
+                retrocessione: undefined,
                 playoff: undefined,
                 playout: undefined,
               },
@@ -780,31 +798,13 @@ export class CampionatoService {
           case '18': {
             listaFormat.push({
               label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
+              'VINCITORE / 1 PROMOSSA IN PROMOZIONE',
               value: {
                 champions: undefined,
                 europa: undefined,
                 intertoto: undefined,
-                promozione: 3,
-                retrocessione: 3,
-                playoff: undefined,
-                playout: undefined,
-              },
-            });
-
-            break;
-          }
-
-          case '20': {
-            listaFormat.push({
-              label:
-                'VINCITORE / 3 PROMOSSE IN SERIE CATEGORIA SUPERIORE / 3 RETROCESSIONI IN CATEGORIA INFERIORE',
-              value: {
-                champions: undefined,
-                europa: undefined,
-                intertoto: undefined,
-                promozione: 3,
-                retrocessione: 3,
+                promozione: 1,
+                retrocessione: undefined,
                 playoff: undefined,
                 playout: undefined,
               },

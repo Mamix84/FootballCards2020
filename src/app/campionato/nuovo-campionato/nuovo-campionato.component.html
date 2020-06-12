@@ -61,7 +61,7 @@
           <h3>SELEZIONE SQUADRE</h3>
         </div>
       </div>
-      <div class="ui-g" *ngIf="campionato.stagione && campionato.numeroTeams && campionato.denominazioneLega">
+      <div class="ui-g" *ngIf="campionato.stagione && campionato.numeroTeams && campionato.denominazioneLega && campionato.format">
         <div class="ui-g-12" *ngFor="let i = index; let team of listaTeamsDaSelezionare">
           <div class="ui-g-3">
             <h3>SQUADRA N° {{i+1}}</h3>

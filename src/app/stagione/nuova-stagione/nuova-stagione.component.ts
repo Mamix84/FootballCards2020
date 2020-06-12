@@ -79,6 +79,7 @@ export class NuovaStagioneComponent implements OnInit {
   preparaTemplate() {
     switch (this.stagione.format) {
       case '0':
+        this.stagione.listaCampionati = [];
         break;
       case '1': {
         this.stagione.listaCampionati = [];
@@ -117,6 +118,7 @@ export class NuovaStagioneComponent implements OnInit {
         break;
       }
       case '2':
+        this.stagione.listaCampionati = [];
         break;
       case '3': {
         this.stagione.listaCampionati = [];
