@@ -95,6 +95,13 @@ export class HeaderComponent implements OnInit {
           this.router.navigate(['/nuova-carriera-casuale']);
         },
       },
+      { separator: true },
+      {
+        label: 'CONFIGURATORE',
+        command: (event) => {
+          this.router.navigate(['/configuratore']);
+        },
+      },
     ];
   }
 }

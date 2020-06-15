@@ -5,6 +5,7 @@ import { SelectItem } from 'primeng/api/selectitem';
 import { TeamsService } from 'src/app/services/teams.service';
 import { Team } from 'src/app/model/team';
 import { Router } from '@angular/router';
+import { StagioniDBService } from 'src/app/database/stagioni-db.service';
 
 @Component({
   selector: 'app-nuovo-campionato',
@@ -32,9 +33,10 @@ export class NuovoCampionatoComponent implements OnInit {
   constructor(
     private campionatoService: CampionatoService,
     private teamsService: TeamsService,
-    private router: Router
+    private router: Router,
+    private stagioniDbService: StagioniDBService
   ) {
-    this.stagioni = campionatoService.caricaStagioni();
+    this.caricaStagioni();
     this.listaTeams = teamsService.caricaListaTeamItems();
     this.listaTipologieTorneo = campionatoService.caricaTipologieTorneo();
     this.listaValoriTecnici = teamsService.caricaListaValoriTecnici();
@@ -152,12 +154,22 @@ export class NuovoCampionatoComponent implements OnInit {
     this.visualizzaCaricaTemplate = false;
   }
 
-  selezionaSquadreCasuali(){
-    for(let i=0;i<this.listaTeamsSelezionati.length;i++){
+  selezionaSquadreCasuali() {
+    for (let i = 0; i < this.listaTeamsSelezionati.length; i++) {
       let xmin = Math.ceil(0);
       let xmax = Math.floor(this.listaTeams.length);
       let index = Math.floor(Math.random() * (xmax - xmin)) + xmin;
       this.listaTeamsSelezionati[i] = this.listaTeams[index].value;
     }
+  }
+
+  caricaStagioni() {
+    this.stagioniDbService.readAll().subscribe((data) => {
+      let listaStagioniDB = data.map((e) => {
+        return e.payload.doc.data() as any;
+      });
+
+      this.stagioni = listaStagioniDB[0].listaStagioni;
+    });
   }
 }

@@ -12,6 +12,11 @@ import { StagioneModule } from './stagione/stagione.module';
 import { CoppaModule } from './coppa/coppa.module';
 import { CarrieraModule } from './carriera/carriera.module';
 import { GestioneStagioniModule } from './gestione-stagioni/gestione-stagioni.module';
+import { ConfiguratoreModule } from './configuratore/configuratore.module';
+
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,7 +30,11 @@ import { GestioneStagioniModule } from './gestione-stagioni/gestione-stagioni.mo
     CoppaModule,
     CarrieraModule,
     MenuModule,
-    GestioneStagioniModule
+    GestioneStagioniModule,
+    ConfiguratoreModule,
+
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

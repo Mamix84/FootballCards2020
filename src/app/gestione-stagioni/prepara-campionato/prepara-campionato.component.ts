@@ -11,7 +11,6 @@ import { SelectItem } from 'primeng/api/selectitem';
 import { CampionatoService } from 'src/app/services/campionato.service';
 import { TeamsService } from 'src/app/services/teams.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Stagione } from 'src/app/model/stagione';
 import { Team } from 'src/app/model/team';
 
 @Component({
@@ -41,7 +40,7 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
     private router: Router,
     private route: ActivatedRoute
   ) {
-    this.stagioni = campionatoService.caricaStagioni();
+    this.stagioni = [];
     this.listaTeams = teamsService.caricaListaTeamItems();
     this.listaTipologieTorneo = campionatoService.caricaTipologieTorneo();
     this.listaValoriTecnici = teamsService.caricaListaValoriTecnici();

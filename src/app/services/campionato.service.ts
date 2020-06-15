@@ -6,7 +6,6 @@ import { StorageService } from './storage.service';
 import { Salvataggio } from '../model/files';
 import { TeamsService } from './teams.service';
 import tipologia_torneo from '../../assets/json/tipologia_torneo.json';
-import lista_stagioni from '../../assets/json/lista_stagioni.json';
 import tipologie_risultati from '../../assets/json/tipologie_risultati.json';
 import lista_template_campionato from '../../assets/json/lista_template_campionato.json';
 import lista_numero_squadre from '../../assets/json/lista_numero_squadre.json';
@@ -20,12 +19,6 @@ export class CampionatoService {
     private storageService: StorageService,
     private teamService: TeamsService
   ) {}
-
-  caricaStagioni(): SelectItem[] {
-    let listaStagioni = lista_stagioni.listaStagioni;
-
-    return listaStagioni;
-  }
 
   caricaNumeroSquadre(tipologiaTorneo: number): SelectItem[] {
     let listaNumeroSquadre = lista_numero_squadre[tipologiaTorneo];
