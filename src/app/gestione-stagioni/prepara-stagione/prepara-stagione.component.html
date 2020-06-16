@@ -1,11 +1,25 @@
 <div class="ui-g">
   <div class="ui-g-12">
+    <p-fieldset legend="Denominazione prossima stagione">
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>DENOMINAZIONE STAGIONE</h3>
+        </div>
+        <div class="ui-g-6">
+          <input type="text" pInputText [(ngModel)]="stagione.denominazione" />
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
     <p-fieldset legend="Prepara prossima stagione">
       <div class="ui-g">
         <div class="ui-g-12" *ngFor="let i=index; let campionato of stagione.listaCampionati">
           <app-prepara-campionato [campionato]="campionato" [singolo]="false" (campionatoPronto)="checkStagionePronta()"
-            [listaPromosse]="listaPromosse[i]"
-            [listaRetrocesse]="listaRetrocesse[i]"></app-prepara-campionato>
+            [listaPromosse]="listaPromosse[i]" [listaRetrocesse]="listaRetrocesse[i]"></app-prepara-campionato>
         </div>
       </div>
       <div class="ui-g">
