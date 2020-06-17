@@ -414,6 +414,7 @@
     {"id": 412, "nome": "VOGHERA", "logo": "/assets/images/teams/voghera.png", "valoreTecnico": 5},
     {"id": 413, "nome": "PRO SESTO", "logo": "/assets/images/teams/pro sesto.png", "valoreTecnico": 20},
     {"id": 414, "nome": "CASTELNUOVO", "logo": "/assets/images/teams/castelnuovo.png", "valoreTecnico": 15},
-    {"id": 415, "nome": "SANSOVINO", "logo": "/assets/images/teams/sansovino.png", "valoreTecnico": 5}
+    {"id": 415, "nome": "SANSOVINO", "logo": "/assets/images/teams/sansovino.png", "valoreTecnico": 5},
+    {"id": 416, "nome": "CAMPODARSEGO", "logo": "/assets/images/teams/campodarsego.png", "valoreTecnico": 20}
   ]
 }

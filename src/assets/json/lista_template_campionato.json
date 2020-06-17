@@ -40,19 +40,19 @@
             "id": 229,
             "nome": "MILAN",
             "logo": "/assets/images/teams/milan.png",
-            "valoreTecnico": 95
+            "valoreTecnico": 100
           },
           {
             "id": 313,
             "nome": "ROMA",
             "logo": "/assets/images/teams/roma.png",
-            "valoreTecnico": 95
+            "valoreTecnico": 90
           },
           {
             "id": 175,
             "nome": "INTER",
             "logo": "/assets/images/teams/inter.png",
-            "valoreTecnico": 90
+            "valoreTecnico": 95
           },
           {
             "id": 246,
@@ -76,55 +76,191 @@
             "id": 136,
             "nome": "FIORENTINA",
             "logo": "/assets/images/teams/fiorentina.png",
-            "valoreTecnico": 80
+            "valoreTecnico": 85
           },
           {
             "id": 380,
             "nome": "TORINO",
             "logo": "/assets/images/teams/torino.png",
-            "valoreTecnico": 80
+            "valoreTecnico": 85
           },
           {
             "id": 38,
             "nome": "BARI",
             "logo": "/assets/images/teams/bari.png",
-            "valoreTecnico": 80
+            "valoreTecnico": 85
           },
           {
             "id": 115,
             "nome": "CREMONESE",
             "logo": "/assets/images/teams/cremonese.png",
-            "valoreTecnico": 75
+            "valoreTecnico": 80
           },
           {
             "id": 263,
             "nome": "PADOVA",
             "logo": "/assets/images/teams/padova.png",
-            "valoreTecnico": 75
+            "valoreTecnico": 80
           },
           {
             "id": 156,
             "nome": "GENOA",
             "logo": "/assets/images/teams/genoa.png",
-            "valoreTecnico": 75
+            "valoreTecnico": 80
           },
           {
             "id": 138,
             "nome": "FOGGIA",
             "logo": "/assets/images/teams/foggia.png",
-            "valoreTecnico": 70
+            "valoreTecnico": 80
           },
           {
             "id": 304,
             "nome": "REGGIANA",
             "logo": "/assets/images/teams/reggiana.png",
-            "valoreTecnico": 70
+            "valoreTecnico": 80
           },
           {
             "id": 61,
             "nome": "BRESCIA",
             "logo": "/assets/images/teams/brescia.png",
+            "valoreTecnico": 80
+          }
+        ]
+      }
+    },
+    {
+      "label": "SERIE B 1994-1995",
+      "value": {
+        "tipologia": 1,
+        "denominazioneLega": "STAGIONE 1994-1995",
+        "stagione": "1994/1995",
+        "tipologiaRisultati": 0,
+        "numeroTeams": 20,
+        "format": {
+          "promozione": 4,
+          "retrocessione": 4
+        },
+        "listaTeams": [
+          {
+            "id": 2,
+            "nome": "ACIREALE",
+            "logo": "/assets/images/teams/acireale.png",
+            "valoreTecnico": 55
+          },
+          {
+            "id": 18,
+            "nome": "ANCONA",
+            "logo": "/assets/images/teams/ancona.png",
             "valoreTecnico": 70
+          },
+          {
+            "id": 19,
+            "nome": "ANDRIA",
+            "logo": "/assets/images/teams/andria.png",
+            "valoreTecnico": 60
+          },
+          {
+            "id": 26,
+            "nome": "ASCOLI",
+            "logo": "/assets/images/teams/ascoli.png",
+            "valoreTecnico": 55
+          },
+          {
+            "id": 28,
+            "nome": "ATALANTA",
+            "logo": "/assets/images/teams/atalanta.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 93,
+            "nome": "CESENA",
+            "logo": "/assets/images/teams/cesena.png",
+            "valoreTecnico": 65
+          },
+          {
+            "id": 97,
+            "nome": "CHIEVO",
+            "logo": "/assets/images/teams/chievo.png",
+            "valoreTecnico": 70
+          },
+          {
+            "id": 108,
+            "nome": "COMO",
+            "logo": "/assets/images/teams/como.png",
+            "valoreTecnico": 60
+          },
+          {
+            "id": 114,
+            "nome": "COSENZA",
+            "logo": "/assets/images/teams/cosenza.png",
+            "valoreTecnico": 55
+          },
+          {
+            "id": 193,
+            "nome": "LECCE",
+            "logo": "/assets/images/teams/lecce.png",
+            "valoreTecnico": 55
+          },
+          {
+            "id": 202,
+            "nome": "LUCCHESE",
+            "logo": "/assets/images/teams/lucchese.png",
+            "valoreTecnico": 55
+          },
+          {
+            "id": 266,
+            "nome": "PALERMO",
+            "logo": "/assets/images/teams/palermo.png",
+            "valoreTecnico": 65
+          },
+          {
+            "id": 275,
+            "nome": "PERUGIA",
+            "logo": "/assets/images/teams/perugia.png",
+            "valoreTecnico": 70
+          },
+          {
+            "id": 276,
+            "nome": "PESCARA",
+            "logo": "/assets/images/teams/pescara.png",
+            "valoreTecnico": 65
+          },
+          {
+            "id": 277,
+            "nome": "PIACENZA",
+            "logo": "/assets/images/teams/piacenza.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 321,
+            "nome": "SALERNITANA",
+            "logo": "/assets/images/teams/salernitana.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 395,
+            "nome": "UDINESE",
+            "logo": "/assets/images/teams/udinese.png",
+            "valoreTecnico": 75
+          },
+          {
+            "id": 399,
+            "nome": "VENEZIA",
+            "logo": "/assets/images/teams/venezia.png",
+            "valoreTecnico": 65
+          },
+          {
+            "id": 400,
+            "nome": "VERONA",
+            "logo": "/assets/images/teams/verona.png",
+            "valoreTecnico": 65
+          },
+          {
+            "id": 403,
+            "nome": "VICENZA",
+            "logo": "/assets/images/teams/vicenza.png",
+            "valoreTecnico": 75
           }
         ]
       }
