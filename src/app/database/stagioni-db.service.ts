@@ -21,7 +21,7 @@ export class StagioniDBService implements DatabaseService {
   }
 
   update(id: string, object: any) {
-    throw new Error('Method not implemented.');
+    this.firestore.doc('stagioni/' + id).update({listaStagioni: object});
   }
 
   delete(id: string) {
