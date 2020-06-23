@@ -8,6 +8,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
 
 import { ConfiguraStagioniComponent } from './configura-stagioni/configura-stagioni.component';
 import { ConfiguraFormatCampionatoComponent } from './configura-format-campionato/configura-format-campionato.component';
@@ -34,6 +35,7 @@ import { ConfiguratoreComponent } from './configuratore/configuratore.component'
     ButtonModule,
     TableModule,
     InputTextModule,
+    InputNumberModule,
   ],
   exports: [
     ConfiguraStagioniComponent,

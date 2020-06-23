@@ -28,7 +28,7 @@ export class ConfiguraStagioniComponent implements OnInit {
     });
   }
 
-  aggiungiRigaStagione() {
+  aggiungiNuovaConfigurazione() {
     this.listaStagioni.unshift({
       label: 'Inserisci etichetta',
       value: 'Inserisci valore',

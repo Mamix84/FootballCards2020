@@ -29,7 +29,7 @@ export class NuovaStagioneCasualeComponent implements OnInit {
     private router: Router,
     private stagioniDbService: StagioniDBService
   ) {
-    this.listaTipologieTorneo = campionatoService.caricaTipologieTorneo();
+    //this.listaTipologieTorneo = campionatoService.caricaTipologieTorneo();
     this.listaTeams = teamsService.caricaListaTeamItems();
     this.stagione = new Stagione();
     this.stagione.listaCampionati = [];

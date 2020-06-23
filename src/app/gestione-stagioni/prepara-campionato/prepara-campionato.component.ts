@@ -12,6 +12,8 @@ import { CampionatoService } from 'src/app/services/campionato.service';
 import { TeamsService } from 'src/app/services/teams.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Team } from 'src/app/model/team';
+import { TorneiDBService } from 'src/app/database/tornei-db.service';
+import { TipologiaTorneo } from 'src/app/model/dominio';
 
 @Component({
   selector: 'app-prepara-campionato',
@@ -38,11 +40,12 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
     private campionatoService: CampionatoService,
     private teamsService: TeamsService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private torneiDbService: TorneiDBService
   ) {
     this.stagioni = [];
     this.listaTeams = teamsService.caricaListaTeamItems();
-    this.listaTipologieTorneo = campionatoService.caricaTipologieTorneo();
+    this.caricaTipologieTorneo();
     this.listaValoriTecnici = teamsService.caricaListaValoriTecnici();
     this.disabledTeams = [];
   }
@@ -244,5 +247,35 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
 
     if (this.singolo === true)
       this.router.navigate(['/gioca-campionato/' + this.campionato.id]);
+  }
+
+  caricaTipologieTorneo() {
+    this.torneiDbService.readAll().subscribe((data) => {
+      let listaDB = data.map((e) => {
+        let torneo = e.payload.doc.data() as TipologiaTorneo;
+        return {
+          label: torneo.etichetta,
+          value: torneo.valore,
+        } as SelectItem;
+      });
+
+      var listaOrdinata: SelectItem[] = listaDB.sort((obj1, obj2) => {
+        if (obj1.value === null) {
+          return -1;
+        }
+
+        if (obj2.value === null) {
+          return 1;
+        }
+
+        if (obj1.value < obj2.value) {
+          return -1;
+        } else if (obj1.value > obj2.value) {
+          return 1;
+        } else return 0;
+      });
+
+      this.listaTipologieTorneo = listaOrdinata;
+    });
   }
 }

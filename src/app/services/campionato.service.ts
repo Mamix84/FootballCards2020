@@ -26,12 +26,6 @@ export class CampionatoService {
     return listaNumeroSquadre;
   }
 
-  caricaTipologieTorneo(): SelectItem[] {
-    let listaTipologieTorneo = tipologia_torneo.listaTipologieTorneo;
-
-    return listaTipologieTorneo;
-  }
-
   caricaFormatCampionato(
     tipologiaTorneo: number,
     numeroTeams: string

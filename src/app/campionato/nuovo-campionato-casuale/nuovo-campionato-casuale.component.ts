@@ -26,7 +26,7 @@ export class NuovoCampionatoCasualeComponent implements OnInit {
     private router: Router,
     private stagioniDbService: StagioniDBService
   ) {
-    this.listaTipologieTorneo = campionatoService.caricaTipologieTorneo();
+    //this.listaTipologieTorneo = campionatoService.caricaTipologieTorneo();
     this.listaTeams = teamsService.caricaListaTeamItems();
     this.campionato = new Campionato();
     this.campionato.listaTeams = new Array<Team>();

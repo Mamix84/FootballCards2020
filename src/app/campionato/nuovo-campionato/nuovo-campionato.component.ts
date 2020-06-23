@@ -6,6 +6,8 @@ import { TeamsService } from 'src/app/services/teams.service';
 import { Team } from 'src/app/model/team';
 import { Router } from '@angular/router';
 import { StagioniDBService } from 'src/app/database/stagioni-db.service';
+import { TorneiDBService } from 'src/app/database/tornei-db.service';
+import { TipologiaTorneo } from 'src/app/model/dominio';
 
 @Component({
   selector: 'app-nuovo-campionato',
@@ -34,11 +36,12 @@ export class NuovoCampionatoComponent implements OnInit {
     private campionatoService: CampionatoService,
     private teamsService: TeamsService,
     private router: Router,
-    private stagioniDbService: StagioniDBService
+    private stagioniDbService: StagioniDBService,
+    private torneiDbService: TorneiDBService
   ) {
     this.caricaStagioni();
     this.listaTeams = teamsService.caricaListaTeamItems();
-    this.listaTipologieTorneo = campionatoService.caricaTipologieTorneo();
+    this.caricaTipologieTorneo();
     this.listaValoriTecnici = teamsService.caricaListaValoriTecnici();
     this.listaTipologieRisultati = campionatoService.caricaListaTipologiaRisultati();
     this.campionato = new Campionato();
@@ -170,6 +173,36 @@ export class NuovoCampionatoComponent implements OnInit {
       });
 
       this.stagioni = listaStagioniDB[0].listaStagioni;
+    });
+  }
+
+  caricaTipologieTorneo() {
+    this.torneiDbService.readAll().subscribe((data) => {
+      let listaDB = data.map((e) => {
+        let torneo = e.payload.doc.data() as TipologiaTorneo;
+        return {
+          label: torneo.etichetta,
+          value: torneo.valore,
+        } as SelectItem;
+      });
+
+      var listaOrdinata: SelectItem[] = listaDB.sort((obj1, obj2) => {
+        if (obj1.value === null) {
+          return -1;
+        }
+
+        if (obj2.value === null) {
+          return 1;
+        }
+
+        if (obj1.value < obj2.value) {
+          return -1;
+        } else if (obj1.value > obj2.value) {
+          return 1;
+        } else return 0;
+      });
+
+      this.listaTipologieTorneo = listaOrdinata;
     });
   }
 }
