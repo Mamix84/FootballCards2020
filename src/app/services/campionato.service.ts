@@ -7,8 +7,6 @@ import { Salvataggio } from '../model/files';
 import { TeamsService } from './teams.service';
 import tipologie_risultati from '../../assets/json/tipologie_risultati.json';
 import lista_template_campionato from '../../assets/json/lista_template_campionato.json';
-import lista_numero_squadre from '../../assets/json/lista_numero_squadre.json';
-import lista_format_campionato from '../../assets/json/lista_format_campionato.json';
 
 @Injectable({
   providedIn: 'root',
@@ -18,12 +16,6 @@ export class CampionatoService {
     private storageService: StorageService,
     private teamService: TeamsService
   ) {}
-
-  caricaNumeroSquadre(tipologiaTorneo: number): SelectItem[] {
-    let listaNumeroSquadre = lista_numero_squadre[tipologiaTorneo];
-
-    return listaNumeroSquadre;
-  }
 
   caricaFormatCampionato(
     tipologiaTorneo: number,

@@ -13,7 +13,8 @@ import { TeamsService } from 'src/app/services/teams.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Team } from 'src/app/model/team';
 import { TorneiDBService } from 'src/app/database/tornei-db.service';
-import { TipologiaTorneo } from 'src/app/model/dominio';
+import { TipologiaTorneo, NumeroTeams } from 'src/app/model/dominio';
+import { NumeroTeamsDbService } from 'src/app/database/numero-teams-db.service';
 
 @Component({
   selector: 'app-prepara-campionato',
@@ -41,7 +42,8 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
     private teamsService: TeamsService,
     private router: Router,
     private route: ActivatedRoute,
-    private torneiDbService: TorneiDBService
+    private torneiDbService: TorneiDBService,
+    private numeroTeamsDbService: NumeroTeamsDbService
   ) {
     this.stagioni = [];
     this.listaTeams = teamsService.caricaListaTeamItems();
@@ -65,9 +67,7 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
     this.campionato.stagione = stagione;
     this.stagioni.push({ label: stagione, value: stagione });
 
-    this.numeroSquadre = this.campionatoService.caricaNumeroSquadre(
-      this.campionato.tipologia
-    );
+    this.caricaNumeroSquadre(this.campionato.tipologia);
     this.listaFormat = this.campionatoService.caricaFormatCampionato(
       this.campionato.tipologia,
       this.campionato.numeroTeams + ''
@@ -283,5 +283,39 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
         });
       });
     });
+  }
+
+  caricaNumeroSquadre(tipologiaTorneo: number) {
+    this.numeroTeamsDbService
+      .readAllByTipologiaTorneo(tipologiaTorneo)
+      .then((data) => {
+        data.subscribe((listaIn) => {
+          let listaDB = listaIn.map((e) => {
+            let numero = e.payload.doc.data() as NumeroTeams;
+            return {
+              label: numero.etichetta,
+              value: numero.valore,
+            } as SelectItem;
+          });
+
+          var listaOrdinata: SelectItem[] = listaDB.sort((obj1, obj2) => {
+            if (obj1.value === null) {
+              return -1;
+            }
+
+            if (obj2.value === null) {
+              return 1;
+            }
+
+            if (obj1.value < obj2.value) {
+              return -1;
+            } else if (obj1.value > obj2.value) {
+              return 1;
+            } else return 0;
+          });
+
+          this.numeroSquadre = listaOrdinata;
+        });
+      });
   }
 }
