@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TipologiaTorneo } from 'src/app/model/dominio';
 import { TorneiDBService } from 'src/app/database/tornei-db.service';
-import tipologia_torneo from '../../../assets/json/tipologia_torneo.json';
 
 @Component({
   selector: 'app-configura-tipologia-torneo',
@@ -16,18 +15,20 @@ export class ConfiguraTipologiaTorneoComponent implements OnInit {
   constructor(private torneiDBService: TorneiDBService) {}
 
   ngOnInit(): void {
-    this.torneiDBService.readAll().subscribe((data) => {
-      let listaDB = data.map((e) => {
-        let torneo = e.payload.doc.data() as TipologiaTorneo;
-        return {
-          id: e.payload.doc.id,
-          etichetta: torneo.etichetta,
-          valore: torneo.valore,
-        } as TipologiaTorneo;
-      });
+    this.torneiDBService.readAll().then((data) => {
+      data.subscribe((listaIn) => {
+        let listaDB = listaIn.map((e) => {
+          let torneo = e.payload.doc.data() as TipologiaTorneo;
+          return {
+            id: e.payload.doc.id,
+            etichetta: torneo.etichetta,
+            valore: torneo.valore,
+          } as TipologiaTorneo;
+        });
 
-      this.lista = listaDB;
-      this.ordinaLista();
+        this.lista = listaDB;
+        this.ordinaLista();
+      });
     });
   }
 

@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
+import { DropdownModule } from 'primeng/dropdown';
 
 import { ConfiguraStagioniComponent } from './configura-stagioni/configura-stagioni.component';
 import { ConfiguraFormatCampionatoComponent } from './configura-format-campionato/configura-format-campionato.component';
@@ -16,6 +17,7 @@ import { ConfiguraTipologiaTorneoComponent } from './configura-tipologia-torneo/
 import { ConfiguraListaTeamsComponent } from './configura-lista-teams/configura-lista-teams.component';
 import { ShareModule } from '../share/share.module';
 import { ConfiguratoreComponent } from './configuratore/configuratore.component';
+import { ConfiguraNumeroTeamsComponent } from './configura-numero-teams/configura-numero-teams.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { ConfiguratoreComponent } from './configuratore/configuratore.component'
     ConfiguraTipologiaTorneoComponent,
     ConfiguraListaTeamsComponent,
     ConfiguratoreComponent,
+    ConfiguraNumeroTeamsComponent,
   ],
   imports: [
     CommonModule,
@@ -36,6 +39,7 @@ import { ConfiguratoreComponent } from './configuratore/configuratore.component'
     TableModule,
     InputTextModule,
     InputNumberModule,
+    DropdownModule,
   ],
   exports: [
     ConfiguraStagioniComponent,
@@ -43,6 +47,7 @@ import { ConfiguratoreComponent } from './configuratore/configuratore.component'
     ConfiguraTipologiaTorneoComponent,
     ConfiguraListaTeamsComponent,
     ConfiguratoreComponent,
+    ConfiguraNumeroTeamsComponent,
   ],
 })
 export class ConfiguratoreModule {}

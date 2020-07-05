@@ -40,120 +40,126 @@ export class NuovaStagioneCasualeComponent implements OnInit {
   }
 
   preparaStagione() {
-    this.stagioniDbService.readAll().subscribe((data) => {
-      let listaStagioniDB = data.map((e) => {
-        return e.payload.doc.data() as any;
-      });
+    this.caricaStagioni();
 
-      this.stagioni = listaStagioniDB[0].listaStagioni;
+    let xmin = Math.ceil(2);
+    let xmax = Math.floor(4);
+    let numeroCampionati = Math.floor(Math.random() * (xmax - xmin)) + xmin;
 
-      let xmin = Math.ceil(2);
-      let xmax = Math.floor(4);
-      let numeroCampionati = Math.floor(Math.random() * (xmax - xmin)) + xmin;
+    //DESCRIZIONE STAGIONE
+    let descrzione = [
+      'LEGA SUPER',
+      'SUPER CAMPIONATO',
+      'TORNEO DEI CAMPIONI',
+      'SCAPOLI CONTRO AMMOGLIATI',
+      'TORNEO DILETTANTI',
+      'TORNEO ESTIVO',
+    ];
+    xmin = Math.ceil(0);
+    xmax = Math.floor(5);
+    this.stagione.denominazione =
+      descrzione[Math.floor(Math.random() * (xmax - xmin)) + xmin];
 
-      //DESCRIZIONE STAGIONE
+    //STAGIONE
+    xmin = Math.ceil(0);
+    xmax = Math.floor(this.stagioni.length);
+    this.stagione.stagioneCorrente = this.stagioni[
+      Math.floor(Math.random() * (xmax - xmin)) + xmin
+    ].value;
+
+    //FORMAT
+    this.stagione.format = '0';
+
+    for (let i = 0; i < numeroCampionati; i++) {
+      let campionato = new Campionato();
+      campionato.singolo = false;
+      campionato.tipologiaRisultati = 0;
+      campionato.giornataCorrente = 0;
+      campionato.stagione = this.stagione.stagioneCorrente;
+      campionato.listaTeams = new Array<Team>();
+
+      //DESCRIZIONE
       let descrzione = [
-        'LEGA SUPER',
-        'SUPER CAMPIONATO',
-        'TORNEO DEI CAMPIONI',
-        'SCAPOLI CONTRO AMMOGLIATI',
-        'TORNEO DILETTANTI',
+        'LEGA SERIE A',
+        'LEGA SERIE B',
+        'LEGA PRO',
+        'SERIE C',
+        'CAMPIONATO DILETTANTI',
         'TORNEO ESTIVO',
       ];
       xmin = Math.ceil(0);
       xmax = Math.floor(5);
-      this.stagione.denominazione =
+      campionato.denominazioneLega =
         descrzione[Math.floor(Math.random() * (xmax - xmin)) + xmin];
 
-      //STAGIONE
+      //TIPOLOGIA
       xmin = Math.ceil(0);
-      xmax = Math.floor(this.stagioni.length);
-      this.stagione.stagioneCorrente = this.stagioni[
+      xmax = Math.floor(this.listaTipologieTorneo.length);
+      let tipologia = Math.floor(Math.random() * (xmax - xmin)) + xmin;
+      campionato.tipologia = this.listaTipologieTorneo[tipologia].value;
+      campionato.descrizioneTipologia = this.listaTipologieTorneo[
+        tipologia
+      ].label;
+
+      //NUMERO SQUADRE
+      this.numeroSquadre = this.campionatoService.caricaNumeroSquadre(
+        tipologia
+      );
+      xmin = Math.ceil(0);
+      xmax = Math.floor(this.numeroSquadre.length);
+      campionato.numeroTeams = this.numeroSquadre[
         Math.floor(Math.random() * (xmax - xmin)) + xmin
       ].value;
 
       //FORMAT
-      this.stagione.format = '0';
+      let listaFormat = this.campionatoService.caricaFormatCampionato(
+        tipologia,
+        campionato.numeroTeams + ''
+      );
+      xmin = Math.ceil(0);
+      xmax = Math.floor(listaFormat.length);
+      campionato.format =
+        listaFormat[Math.floor(Math.random() * (xmax - xmin)) + xmin].value;
 
-      for (let i = 0; i < numeroCampionati; i++) {
-        let campionato = new Campionato();
-        campionato.singolo = false;
-        campionato.tipologiaRisultati = 0;
-        campionato.giornataCorrente = 0;
-        campionato.stagione = this.stagione.stagioneCorrente;
-        campionato.listaTeams = new Array<Team>();
-
-        //DESCRIZIONE
-        let descrzione = [
-          'LEGA SERIE A',
-          'LEGA SERIE B',
-          'LEGA PRO',
-          'SERIE C',
-          'CAMPIONATO DILETTANTI',
-          'TORNEO ESTIVO',
-        ];
+      //SQUADRE
+      for (let i = 0; i < campionato.numeroTeams; i++) {
         xmin = Math.ceil(0);
-        xmax = Math.floor(5);
-        campionato.denominazioneLega =
-          descrzione[Math.floor(Math.random() * (xmax - xmin)) + xmin];
-
-        //TIPOLOGIA
-        xmin = Math.ceil(0);
-        xmax = Math.floor(this.listaTipologieTorneo.length);
-        let tipologia = Math.floor(Math.random() * (xmax - xmin)) + xmin;
-        campionato.tipologia = this.listaTipologieTorneo[tipologia].value;
-        campionato.descrizioneTipologia = this.listaTipologieTorneo[
-          tipologia
-        ].label;
-
-        //NUMERO SQUADRE
-        this.numeroSquadre = this.campionatoService.caricaNumeroSquadre(
-          tipologia
-        );
-        xmin = Math.ceil(0);
-        xmax = Math.floor(this.numeroSquadre.length);
-        campionato.numeroTeams = this.numeroSquadre[
-          Math.floor(Math.random() * (xmax - xmin)) + xmin
-        ].value;
-
-        //FORMAT
-        let listaFormat = this.campionatoService.caricaFormatCampionato(
-          tipologia,
-          campionato.numeroTeams + ''
-        );
-        xmin = Math.ceil(0);
-        xmax = Math.floor(listaFormat.length);
-        campionato.format =
-          listaFormat[Math.floor(Math.random() * (xmax - xmin)) + xmin].value;
-
-        //SQUADRE
-        for (let i = 0; i < campionato.numeroTeams; i++) {
-          xmin = Math.ceil(0);
-          xmax = Math.floor(this.listaTeams.length);
-          let teamIndex = Math.floor(Math.random() * (xmax - xmin)) + xmin;
-          campionato.listaTeams.push(this.listaTeams[teamIndex].value);
-          this.listaTeams.splice(teamIndex, 1);
-        }
-
-        campionato.listaGiornate = this.campionatoService.generaCalendario(
-          campionato,
-          campionato.listaTeams
-        );
-
-        let date = new Date();
-        campionato.id =
-          campionato.denominazioneLega.trim() + '_' + date.getTime().toString();
-
-        this.stagione.listaCampionati.push(campionato);
+        xmax = Math.floor(this.listaTeams.length);
+        let teamIndex = Math.floor(Math.random() * (xmax - xmin)) + xmin;
+        campionato.listaTeams.push(this.listaTeams[teamIndex].value);
+        this.listaTeams.splice(teamIndex, 1);
       }
 
-      this.stagioneService.inizializzaStagione(this.stagione);
+      campionato.listaGiornate = this.campionatoService.generaCalendario(
+        campionato,
+        campionato.listaTeams
+      );
 
       let date = new Date();
-      this.stagione.id =
-        this.stagione.denominazione.trim() + '_' + date.getTime().toString();
-      this.stagioneService.salvaStagione(this.stagione);
-      this.router.navigate(['/gioca-stagione/' + this.stagione.id]);
+      campionato.id =
+        campionato.denominazioneLega.trim() + '_' + date.getTime().toString();
+
+      this.stagione.listaCampionati.push(campionato);
+    }
+
+    this.stagioneService.inizializzaStagione(this.stagione);
+
+    let date = new Date();
+    this.stagione.id =
+      this.stagione.denominazione.trim() + '_' + date.getTime().toString();
+    this.stagioneService.salvaStagione(this.stagione);
+    this.router.navigate(['/gioca-stagione/' + this.stagione.id]);
+  }
+
+  caricaStagioni() {
+    this.stagioniDbService.readAll().then((data) => {
+      data.subscribe((listaIn) => {
+        let listaDB = listaIn.map((e) => {
+          return e.payload.doc.data() as any;
+        });
+
+        this.stagioni = listaDB[0].listaStagioni;
+      });
     });
   }
 }

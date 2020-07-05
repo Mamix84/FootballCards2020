@@ -18,13 +18,34 @@ export class ConfiguraStagioniComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.stagioniDbService.readAll().subscribe((data) => {
-      let listaStagioniDB = data.map((e) => {
-        this.listaStagioniID = e.payload.doc.id;
-        return e.payload.doc.data() as any;
-      });
+    this.stagioniDbService.readAll().then((data) => {
+      data.subscribe((listaIn) => {
+        let listaDB = listaIn.map((e) => {
+          this.listaStagioniID = e.payload.doc.id;
+          return e.payload.doc.data() as any;
+        });
 
-      this.listaStagioni = listaStagioniDB[0].listaStagioni;
+        var listaStagioniOrdinata: SelectItem[] = listaDB[0].listaStagioni.sort((obj1, obj2) => {
+          if (obj1.value === null) {
+            return -1;
+          }
+
+          if (obj2.value === null) {
+            return 1;
+          }
+
+          let year1 = obj1.value.substr(0, 4);
+          let year2 = obj2.value.substr(0, 4);
+
+          if (year1 < year2) {
+            return 1;
+          } else if (year1 > year2) {
+            return -1;
+          } else return 0;
+        });
+
+        this.listaStagioni = listaStagioniOrdinata;
+      });
     });
   }
 
@@ -61,7 +82,7 @@ export class ConfiguraStagioniComponent implements OnInit {
       }
     );
     this.listaStagioni = listaStagioniOrdinata;
-    console.log(listaStagioniOrdinata);
+
     //this.stagioniDbService.update(this.listaStagioniID, listaStagioniOrdinata);
   }
 

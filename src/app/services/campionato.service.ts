@@ -5,7 +5,6 @@ import { Giornata, Evento, Campionato } from '../model/campionato';
 import { StorageService } from './storage.service';
 import { Salvataggio } from '../model/files';
 import { TeamsService } from './teams.service';
-import tipologia_torneo from '../../assets/json/tipologia_torneo.json';
 import tipologie_risultati from '../../assets/json/tipologie_risultati.json';
 import lista_template_campionato from '../../assets/json/lista_template_campionato.json';
 import lista_numero_squadre from '../../assets/json/lista_numero_squadre.json';

@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { SelectItem } from 'primeng/api/selectitem';
 import { StagioneService } from 'src/app/services/stagione.service';
 import { NuovoCampionatoCasualeComponent } from 'src/app/campionato/nuovo-campionato-casuale/nuovo-campionato-casuale.component';
+import { StagioniDBService } from 'src/app/database/stagioni-db.service';
 
 @Component({
   selector: 'app-nuova-stagione',
@@ -19,15 +20,28 @@ export class NuovaStagioneComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private stagioneService: StagioneService
+    private stagioneService: StagioneService,
+    private stagioniDbService: StagioniDBService
   ) {
     this.stagione = new Stagione();
     this.campionatiPronti = [];
   }
 
   ngOnInit(): void {
-    this.listaStagioni = this.stagioneService.caricaListaStagioni();
+    this.caricaStagioni();
     this.listaFormatStagione = this.stagioneService.caricaListaFormatStagioni();
+  }
+
+  caricaStagioni() {
+    this.stagioniDbService.readAll().then((data) => {
+      data.subscribe((listaIn) => {
+        let listaDB = listaIn.map((e) => {
+          return e.payload.doc.data() as any;
+        });
+
+        this.listaStagioni = listaDB[0].listaStagioni;
+      });
+    });
   }
 
   aggiungiCampionato() {

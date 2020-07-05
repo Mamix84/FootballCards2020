@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import lista_stagioni from '../../assets/json/lista_stagioni.json';
 import { SelectItem } from 'primeng/api/selectitem';
 import { Stagione } from '../model/stagione';
 import { StorageService } from './storage.service';
@@ -16,12 +15,6 @@ export class StagioneService {
 
   inizializzaStagione(stagione: Stagione) {
     this.stagione = stagione;
-  }
-
-  caricaListaStagioni(): SelectItem[] {
-    let listaStagioni = lista_stagioni.listaStagioni;
-
-    return listaStagioni;
   }
 
   caricaStagione(idStagione: string): Stagione {

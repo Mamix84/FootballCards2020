@@ -167,42 +167,50 @@ export class NuovoCampionatoComponent implements OnInit {
   }
 
   caricaStagioni() {
-    this.stagioniDbService.readAll().subscribe((data) => {
-      let listaStagioniDB = data.map((e) => {
-        return e.payload.doc.data() as any;
-      });
+    this.stagioniDbService.readAll().then((data) => {
+      data.subscribe((listaIn) => {
+        let listaDB = listaIn.map((e) => {
+          return e.payload.doc.data() as any;
+        });
 
-      this.stagioni = listaStagioniDB[0].listaStagioni;
+        this.stagioni = listaDB[0].listaStagioni;
+      });
     });
   }
 
   caricaTipologieTorneo() {
-    this.torneiDbService.readAll().subscribe((data) => {
-      let listaDB = data.map((e) => {
-        let torneo = e.payload.doc.data() as TipologiaTorneo;
-        return {
-          label: torneo.etichetta,
-          value: torneo.valore,
-        } as SelectItem;
+    this.torneiDbService.readAll().then((data) => {
+      data.subscribe((listaIn) => {
+        let listaDB = listaIn.map((e) => {
+          let torneo = e.payload.doc.data() as TipologiaTorneo;
+          return {
+            label: torneo.etichetta,
+            value: torneo.valore,
+          } as SelectItem;
+        });
+
+        var listaOrdinata: SelectItem[] = listaDB.sort((obj1, obj2) => {
+          if (obj1.value === null) {
+            return -1;
+          }
+
+          if (obj2.value === null) {
+            return 1;
+          }
+
+          if (obj1.value < obj2.value) {
+            return -1;
+          } else if (obj1.value > obj2.value) {
+            return 1;
+          } else return 0;
+        });
+
+        this.listaTipologieTorneo = listaOrdinata;
+        this.listaTipologieTorneo.unshift({
+          label: 'Seleziona la tipologia torneo',
+          value: null,
+        });
       });
-
-      var listaOrdinata: SelectItem[] = listaDB.sort((obj1, obj2) => {
-        if (obj1.value === null) {
-          return -1;
-        }
-
-        if (obj2.value === null) {
-          return 1;
-        }
-
-        if (obj1.value < obj2.value) {
-          return -1;
-        } else if (obj1.value > obj2.value) {
-          return 1;
-        } else return 0;
-      });
-
-      this.listaTipologieTorneo = listaOrdinata;
     });
   }
 }

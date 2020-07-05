@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { DatabaseService } from './database-service';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,12 +9,14 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class StagioniDBService implements DatabaseService {
   constructor(private firestore: AngularFirestore) {}
 
-  readAll() {
-    return this.firestore.collection('stagioni').snapshotChanges();
+  async readAll() {
+    return await of(
+      this.firestore.collection('stagioni').snapshotChanges()
+    ).toPromise();
   }
 
-  read(id: string) {
-    throw new Error('Method not implemented.');
+  async read(id: string) {
+    return await of(this.firestore.doc('stagioni/' + id).get()).toPromise();
   }
 
   create(object: any) {
@@ -21,10 +24,10 @@ export class StagioniDBService implements DatabaseService {
   }
 
   update(id: string, object: any) {
-    this.firestore.doc('stagioni/' + id).update({listaStagioni: object});
+    this.firestore.doc('stagioni/' + id).update({ listaStagioni: object });
   }
 
   delete(id: string) {
-    throw new Error('Method not implemented.');
+    this.firestore.doc('stagioni/' + id).delete();
   }
 }

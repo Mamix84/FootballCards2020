@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import tipologie_risultati from '../../assets/json/tipologie_risultati.json';
 import { SelectItem, TreeNode } from 'primeng/api';
-import lista_stagioni from '../../assets/json/lista_stagioni.json';
 import lista_tipologie_coppa from '../../assets/json/lista_tipologie_coppa.json';
 import lista_numero_squadre_coppa from '../../assets/json/lista_numero_squadre_coppa.json';
 import { StorageService } from './storage.service';
@@ -21,12 +20,6 @@ export class CoppaService {
     let listaTipologiaRisultati = tipologie_risultati.listaTipologieRisultati;
 
     return listaTipologiaRisultati;
-  }
-
-  caricaListaStagioni(): SelectItem[] {
-    let listaStagioni = lista_stagioni.listaStagioni;
-
-    return listaStagioni;
   }
 
   caricaListaTipologieCoppa(): SelectItem[] {

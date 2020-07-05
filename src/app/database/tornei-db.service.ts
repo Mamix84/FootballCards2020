@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { DatabaseService } from './database-service';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { TipologiaTorneo, NumeroTeams } from '../model/dominio';
+import { map } from 'rxjs/operators';
+import { pipe, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -8,12 +11,14 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class TorneiDBService implements DatabaseService {
   constructor(private firestore: AngularFirestore) {}
 
-  readAll() {
-    return this.firestore.collection('tornei').snapshotChanges();
+  async readAll() {
+    return await of(
+      this.firestore.collection('tornei').snapshotChanges()
+    ).toPromise();
   }
 
-  read(id: string) {
-    this.firestore.doc('tornei/' + id).get();
+  async read(id: string) {
+    return await of(this.firestore.doc('tornei/' + id).get()).toPromise();
   }
 
   create(object: any) {

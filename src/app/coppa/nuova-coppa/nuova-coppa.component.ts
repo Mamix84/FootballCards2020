@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { SelectItem } from 'primeng/api';
 import { Team } from 'src/app/model/team';
 import { TeamsService } from 'src/app/services/teams.service';
+import { StagioniDBService } from 'src/app/database/stagioni-db.service';
 
 @Component({
   selector: 'app-nuova-coppa',
@@ -27,10 +28,11 @@ export class NuovaCoppaComponent implements OnInit {
   constructor(
     private coppaService: CoppaService,
     private router: Router,
-    private teamsService: TeamsService
+    private teamsService: TeamsService,
+    private stagioniDbService: StagioniDBService
   ) {
     this.listaTipologieRisultati = coppaService.caricaListaTipologiaRisultati();
-    this.listaStagioni = coppaService.caricaListaStagioni();
+    this.caricaStagioni();
     this.listaTipologieCoppa = coppaService.caricaListaTipologieCoppa();
     this.listaTeamsDaSelezionare = [];
     this.listaTeamsSelezionati = [];
@@ -42,6 +44,18 @@ export class NuovaCoppaComponent implements OnInit {
 
   ngOnInit(): void {
     this.coppa.tipologiaRisultati = 2;
+  }
+
+  caricaStagioni() {
+    this.stagioniDbService.readAll().then((data) => {
+      data.subscribe((listaIn) => {
+        let listaDB = listaIn.map((e) => {
+          return e.payload.doc.data() as any;
+        });
+
+        this.listaStagioni = listaDB[0].listaStagioni;
+      });
+    });
   }
 
   preparaListaTeams() {
