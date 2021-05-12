@@ -47,10 +47,10 @@ export class CampionatoService {
             });
             listaFormat.push({
               label:
-                'VINCITORE / 3 CHAMPIONS LEAGUE / 3 EUROPA LEAGUE / 3 RETROCESSE IN SERIE B',
+                'VINCITORE / 4 CHAMPIONS LEAGUE / 4 EUROPA LEAGUE / 3 RETROCESSE IN SERIE B',
               value: {
-                champions: 3,
-                europa: 3,
+                champions: 4,
+                europa: 4,
                 intertoto: undefined,
                 promozione: undefined,
                 retrocessione: 3,

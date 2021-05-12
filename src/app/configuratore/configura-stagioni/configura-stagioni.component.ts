@@ -86,7 +86,7 @@ export class ConfiguraStagioniComponent implements OnInit {
     //this.stagioniDbService.update(this.listaStagioniID, listaStagioniOrdinata);
   }
 
-  onRowEditCancel(iteam: SelectItem, index: number) {
+  onRowEditCancel(item: SelectItem, index: number) {
     this.listaStagioni.splice(index, 1);
     //this.stagioniDbService.update(this.listaStagioniID, listaStagioniOrdinata);
   }

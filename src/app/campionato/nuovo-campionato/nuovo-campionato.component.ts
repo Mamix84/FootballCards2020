@@ -7,8 +7,13 @@ import { Team } from 'src/app/model/team';
 import { Router } from '@angular/router';
 import { StagioniDBService } from 'src/app/database/stagioni-db.service';
 import { TorneiDBService } from 'src/app/database/tornei-db.service';
-import { TipologiaTorneo, NumeroTeams } from 'src/app/model/dominio';
+import {
+  TipologiaTorneo,
+  NumeroTeams,
+  FormatDominio,
+} from 'src/app/model/dominio';
 import { NumeroTeamsDbService } from 'src/app/database/numero-teams-db.service';
+import { FormatDbService } from 'src/app/database/format-db.service';
 
 @Component({
   selector: 'app-nuovo-campionato',
@@ -39,7 +44,8 @@ export class NuovoCampionatoComponent implements OnInit {
     private router: Router,
     private stagioniDbService: StagioniDBService,
     private torneiDbService: TorneiDBService,
-    private numeroTeamsDbService: NumeroTeamsDbService
+    private numeroTeamsDbService: NumeroTeamsDbService,
+    private formatDbService: FormatDbService
   ) {
     this.caricaStagioni();
     this.listaTeams = teamsService.caricaListaTeamItems();
@@ -60,10 +66,7 @@ export class NuovoCampionatoComponent implements OnInit {
 
   preparaListaTeams() {
     this.caricaNumeroSquadre(this.campionato.tipologia);
-    this.listaFormat = this.campionatoService.caricaFormatCampionato(
-      this.campionato.tipologia,
-      this.campionato.numeroTeams + ''
-    );
+    this.caricaListaFormat();
 
     this.listaTeamsDaSelezionare = new Array<Team>();
     for (let i = 0; i < this.campionato.numeroTeams; i++) {
@@ -215,6 +218,8 @@ export class NuovoCampionatoComponent implements OnInit {
   }
 
   caricaNumeroSquadre(tipologiaTorneo: number) {
+    if (tipologiaTorneo === undefined) return;
+
     this.numeroTeamsDbService
       .readAllByTipologiaTorneo(tipologiaTorneo)
       .then((data) => {
@@ -244,6 +249,53 @@ export class NuovoCampionatoComponent implements OnInit {
           });
 
           this.numeroSquadre = listaOrdinata;
+          this.numeroSquadre.unshift({
+            label: 'Seleziona il numero squadre',
+            value: null,
+          });
+        });
+      });
+  }
+
+  caricaListaFormat() {
+    if (this.campionato === undefined) return;
+
+    if (
+      this.campionato.tipologia === undefined ||
+      this.campionato.numeroTeams === undefined
+    )
+      return;
+
+    this.formatDbService
+      .readAllByFilters(
+        this.campionato.tipologia,
+        this.campionato.numeroTeams + ''
+      )
+      .then((data) => {
+        data.subscribe((listaIn) => {
+          let listaDB = listaIn.map((e) => {
+            let format = e.payload.doc.data() as FormatDominio;
+            return {
+              label: format.label,
+              value: {
+                tipologiaTorneo: format.tipologiaTorneo,
+                numeroTeams: format.numeroTeams,
+                champions: format.champions,
+                europa: format.europa,
+                intertoto: format.intertoto,
+                promozione: format.promozione,
+                retrocessione: format.retrocessione,
+                playoff: format.playoff,
+                playout: format.playout,
+              },
+            } as SelectItem;
+          });
+
+          this.listaFormat = listaDB;
+          this.listaFormat.unshift({
+            label: 'Seleziona il format del torneo',
+            value: null,
+          });
         });
       });
   }

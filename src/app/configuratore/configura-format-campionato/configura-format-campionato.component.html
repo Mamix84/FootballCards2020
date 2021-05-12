@@ -1,1 +1,130 @@
-<p>configura-format-campionato works!</p>
+<div class="ui-g">
+  <div class="ui-g-3 ui-sm-12">
+    <h3>TIPOLOGIA TORNEO</h3>
+  </div>
+  <div class="ui-g-6 ui-sm-12">
+    <p-dropdown class="appDropDown" [options]="listaTipologieTorneo" [(ngModel)]="tipologiaTorneo"
+      (onChange)="caricaNumeroSquadre(tipologiaTorneo)">
+    </p-dropdown>
+  </div>
+</div>
+<div class="ui-g">
+  <div class="ui-g-3 ui-sm-12">
+    <h3>NUMERO SQUADRE</h3>
+  </div>
+  <div class="ui-g-6 ui-sm-12">
+    <p-dropdown class="appDropDown" [disabled]="tipologiaTorneo === undefined" [options]="numeroSquadre"
+      [(ngModel)]="numeroTeams" (onChange)="caricaListaFormat()">
+    </p-dropdown>
+  </div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-4">
+    <p-button class="appButton" label="AGGIUNGI CONFIGURAZIONE" (onClick)="aggiungiNuovaConfigurazione()"></p-button>
+  </div>
+  <div class="ui-g-8"></div>
+</div>
+
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-table [value]="lista" dataKey="id" editMode="row">
+      <ng-template pTemplate="header">
+        <tr>
+          <th style="width: 11%;">ID</th>
+          <th style="width: 40%;">ETICHETTA</th>
+          <th style="width: 7%;">CHAMPIONS</th>
+          <th style="width: 7%;">EUROPA</th>
+          <th style="width: 7%;">PROMOZIONE</th>
+          <th style="width: 7%;">RETROCESSIONE</th>
+          <th style="width: 7%;">PLAYOFF</th>
+          <th style="width: 7%;">PLAYOUT</th>
+          <th style="width: 7%;"></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-editing="editing" let-ri="rowIndex">
+        <tr [pEditableRow]="rowData">
+          <td>{{rowData.id}}</td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input id="etichetta-input" pInputText type="text" [(ngModel)]="rowData.label" required>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.label}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input id="champions-input" pInputText type="number" [(ngModel)]="rowData.champions" required>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.champions}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input id="europa-input" pInputText type="number" [(ngModel)]="rowData.europa" required>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.europa}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input id="promozione-input" pInputText type="number" [(ngModel)]="rowData.promozione" required>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.promozione}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input id="retrocessione-input" pInputText type="number" [(ngModel)]="rowData.retrocessione" required>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.retrocessione}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input id="playoff-input" pInputText type="number" [(ngModel)]="rowData.playoff" required>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.playoff}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input id="playout-input" pInputText type="number" [(ngModel)]="rowData.playout" required>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.playout}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td style="text-align:center">
+            <button *ngIf="!editing" pButton type="button" pInitEditableRow icon="pi pi-pencil" class="ui-button-info"
+              (click)="onRowEditInit(rowData, ri)"></button>
+            <button *ngIf="editing" pButton type="button" pSaveEditableRow icon="pi pi-check" class="ui-button-success"
+              style="margin-right: .5em" (click)="onRowEditSave(rowData, ri)"></button>
+            <button *ngIf="editing" pButton type="button" pCancelEditableRow icon="pi pi-times" class="ui-button-danger"
+              (click)="onRowEditCancel(rowData, ri)"></button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

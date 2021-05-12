@@ -13,8 +13,9 @@ import { TeamsService } from 'src/app/services/teams.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Team } from 'src/app/model/team';
 import { TorneiDBService } from 'src/app/database/tornei-db.service';
-import { TipologiaTorneo, NumeroTeams } from 'src/app/model/dominio';
+import { TipologiaTorneo, NumeroTeams, FormatDominio } from 'src/app/model/dominio';
 import { NumeroTeamsDbService } from 'src/app/database/numero-teams-db.service';
+import { FormatDbService } from 'src/app/database/format-db.service';
 
 @Component({
   selector: 'app-prepara-campionato',
@@ -43,7 +44,8 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
     private router: Router,
     private route: ActivatedRoute,
     private torneiDbService: TorneiDBService,
-    private numeroTeamsDbService: NumeroTeamsDbService
+    private numeroTeamsDbService: NumeroTeamsDbService,
+    private formatDbService: FormatDbService
   ) {
     this.stagioni = [];
     this.listaTeams = teamsService.caricaListaTeamItems();
@@ -68,10 +70,7 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
     this.stagioni.push({ label: stagione, value: stagione });
 
     this.caricaNumeroSquadre(this.campionato.tipologia);
-    this.listaFormat = this.campionatoService.caricaFormatCampionato(
-      this.campionato.tipologia,
-      this.campionato.numeroTeams + ''
-    );
+    this.caricaListaFormat();
 
     this.campionato.listaTeams = [];
 
@@ -315,6 +314,49 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
           });
 
           this.numeroSquadre = listaOrdinata;
+        });
+      });
+  }
+
+  caricaListaFormat() {
+    if (this.campionato === undefined) return;
+
+    if (
+      this.campionato.tipologia === undefined ||
+      this.campionato.numeroTeams === undefined
+    )
+      return;
+
+    this.formatDbService
+      .readAllByFilters(
+        this.campionato.tipologia,
+        this.campionato.numeroTeams + ''
+      )
+      .then((data) => {
+        data.subscribe((listaIn) => {
+          let listaDB = listaIn.map((e) => {
+            let format = e.payload.doc.data() as FormatDominio;
+            return {
+              label: format.label,
+              value: {
+                tipologiaTorneo: format.tipologiaTorneo,
+                numeroTeams: format.numeroTeams,
+                champions: format.champions,
+                europa: format.europa,
+                intertoto: format.intertoto,
+                promozione: format.promozione,
+                retrocessione: format.retrocessione,
+                playoff: format.playoff,
+                playout: format.playout,
+              },
+            } as SelectItem;
+          });
+
+          this.listaFormat = listaDB;
+          this.listaFormat.unshift({
+            label: 'Seleziona il format del torneo',
+            value: null,
+          });
         });
       });
   }
