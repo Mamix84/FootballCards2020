@@ -122,19 +122,6 @@ export class GiocaCampionatoComponent implements OnInit {
     this.aggiornaSalvataggioStagione.emit(null);
   }
 
-  generaRisultati() {
-    this.campionatoService.generaRisultatiCasuali(
-      this.giornataCorrente.numeroGiornata,
-      this.giornataCorrente.girone,
-      this.campionato
-    );
-    this.campionato.classifica = this.classificaService.aggiornaClassifica(
-      this.giornataCorrente.numeroGiornata,
-      this.giornataCorrente.girone,
-      this.campionato
-    );
-  }
-
   aggiornaClassifica() {
     if (this.giornataCorrente != undefined) {
       this.campionato.classifica = this.classificaService.aggiornaClassifica(

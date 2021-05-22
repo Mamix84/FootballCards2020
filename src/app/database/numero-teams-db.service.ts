@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { of } from 'rxjs';
+import { DatabaseService } from './database-service';
 
 @Injectable({
   providedIn: 'root',
 })
-export class NumeroTeamsDbService {
+export class NumeroTeamsDbService implements DatabaseService{
   constructor(private firestore: AngularFirestore) {}
 
   async readAll() {

@@ -22,7 +22,8 @@
       <div class="ui-g-6 ui-sm-10">
         <h5 style="text-align: right;">{{campionato.denominazioneLega}} - STAGIONE {{campionato.stagione}}</h5>
         <h4 style="text-align: right;">GIORNATA N°
-          {{giornataCorrente === undefined ? '' : giornataCorrente.girone === 'A' ? giornataCorrente.numeroGiornata : giornataCorrente.numeroGiornata + campionato.listaTeams.length-1}}
+          {{giornataCorrente === undefined ? '' : giornataCorrente.girone === 'A' ? giornataCorrente.numeroGiornata :
+          giornataCorrente.numeroGiornata + campionato.listaTeams.length-1}}
         </h4>
         <h5 style="text-align: right;">GIRONE DI
           {{giornataCorrente === undefined ? '' : giornataCorrente.girone === 'A' ? 'ANDATA' : 'RITORNO' }}</h5>
@@ -65,7 +66,9 @@
         <div class="ui-g-6" style="align-content: center;">
           <img style="  display: block;
           margin-left: auto;
-          margin-right: auto;" class="teamLogo" src={{vincitore.logo}} width="120" heigth="80" />
+          margin-right: auto;" class="teamLogo"
+            src="https://firebasestorage.googleapis.com/v0/b/football-cards-2020.appspot.com/o{{vincitore.logo}}?alt=media"
+            width="120" heigth="80" />
         </div>
         <div class="ui-g-3"></div>
       </div>
@@ -84,36 +87,55 @@
             <h5>CHAMPIONS LEAGUE</h5>
           </div>
           <div>{{campionato.classifica.listaTeams[0].team.nome}}</div>
-          <div>{{campionato.classifica.listaTeams[1].team.nome}}</div>
-          <div>{{campionato.classifica.listaTeams[2].team.nome}}</div>
-          <div>{{campionato.classifica.listaTeams[3].team.nome}}</div>
+          <div *ngIf="campionato.classifica.listaTeams[1].verdetto === 'champions'">
+            {{campionato.classifica.listaTeams[1].team.nome}}</div>
+          <div *ngIf="campionato.classifica.listaTeams[2].verdetto === 'champions'">
+            {{campionato.classifica.listaTeams[2].team.nome}}</div>
+          <div *ngIf="campionato.classifica.listaTeams[3].verdetto === 'champions'">
+            {{campionato.classifica.listaTeams[3].team.nome}}</div>
         </div>
         <div class="ui-g-3" *ngIf="campionato.classifica.listaTeams[4].verdetto === 'europa'">
           <div>
             <h5>EUROPA LEAGUE</h5>
-            <div>{{campionato.classifica.listaTeams[4].team.nome}}</div>
-            <div>{{campionato.classifica.listaTeams[5].team.nome}}</div>
-            <div>{{campionato.classifica.listaTeams[6].team.nome}}</div>
-            <div>{{campionato.classifica.listaTeams[7].team.nome}}</div>
+            <div *ngIf="campionato.classifica.listaTeams[4].verdetto === 'europa'">
+              {{campionato.classifica.listaTeams[4].team.nome}}</div>
+            <div *ngIf="campionato.classifica.listaTeams[5].verdetto === 'europa'">
+              {{campionato.classifica.listaTeams[5].team.nome}}</div>
+            <div *ngIf="campionato.classifica.listaTeams[6].verdetto === 'europa'">
+              {{campionato.classifica.listaTeams[6].team.nome}}</div>
+            <div *ngIf="campionato.classifica.listaTeams[7].verdetto === 'europa'">
+              {{campionato.classifica.listaTeams[7].team.nome}}</div>
           </div>
         </div>
-        <div class="ui-g-3" *ngIf="campionato.classifica.listaTeams[3].verdetto === 'promozione'">
+        <div class="ui-g-3" *ngIf="campionato.classifica.listaTeams[2].verdetto === 'promozione'">
           <div>
             <h5>PROMOZIONI</h5>
-            <div>{{campionato.classifica.listaTeams[0].team.nome}}</div>
-            <div>{{campionato.classifica.listaTeams[1].team.nome}}</div>
-            <div>{{campionato.classifica.listaTeams[2].team.nome}}</div>
-            <div>{{campionato.classifica.listaTeams[3].team.nome}}</div>
+            <div *ngIf="campionato.classifica.listaTeams[0].verdetto === 'promozione'">
+              {{campionato.classifica.listaTeams[0].team.nome}}</div>
+            <div *ngIf="campionato.classifica.listaTeams[1].verdetto === 'promozione'">
+              {{campionato.classifica.listaTeams[1].team.nome}}</div>
+            <div *ngIf="campionato.classifica.listaTeams[2].verdetto === 'promozione'">
+              {{campionato.classifica.listaTeams[2].team.nome}}</div>
+            <div *ngIf="campionato.classifica.listaTeams[3].verdetto === 'promozione'">
+              {{campionato.classifica.listaTeams[3].team.nome}}</div>
           </div>
         </div>
         <div class="ui-g-3"
           *ngIf="campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-4].verdetto === 'retrocessione'">
           <div>
             <h5>RETROCESSIONI</h5>
-            <div>{{campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-4].team.nome}}</div>
-            <div>{{campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-3].team.nome}}</div>
-            <div>{{campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-2].team.nome}}</div>
-            <div>{{campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-1].team.nome}}</div>
+            <div
+              *ngIf="campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-4].verdetto === 'retrocessione'">
+              {{campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-4].team.nome}}</div>
+            <div
+              *ngIf="campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-3].verdetto === 'retrocessione'">
+              {{campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-3].team.nome}}</div>
+            <div
+              *ngIf="campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-2].verdetto === 'retrocessione'">
+              {{campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-2].team.nome}}</div>
+            <div
+              *ngIf="campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-1].verdetto === 'retrocessione'">
+              {{campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-1].team.nome}}</div>
           </div>
         </div>
         <div class="ui-g-3" *ngIf="campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-3].verdetto === 'retrocessione' &&
@@ -160,7 +182,9 @@
         <div class="ui-g-6" style="align-content: center;">
           <img style="  display: block;
           margin-left: auto;
-          margin-right: auto;" class="teamLogo" src={{vincitore.logo}} width="120" heigth="80" />
+          margin-right: auto;" class="teamLogo"
+            src="https://firebasestorage.googleapis.com/v0/b/football-cards-2020.appspot.com/o{{vincitore.logo}}?alt=media"
+            width="120" heigth="80" />
         </div>
         <div class="ui-g-3"></div>
       </div>

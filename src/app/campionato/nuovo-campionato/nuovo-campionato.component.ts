@@ -14,6 +14,7 @@ import {
 } from 'src/app/model/dominio';
 import { NumeroTeamsDbService } from 'src/app/database/numero-teams-db.service';
 import { FormatDbService } from 'src/app/database/format-db.service';
+import { TeamsDBService } from 'src/app/database/teams-db.service';
 
 @Component({
   selector: 'app-nuovo-campionato',
@@ -25,7 +26,7 @@ export class NuovoCampionatoComponent implements OnInit {
   @Input() singolo: boolean = true;
   stagioni: SelectItem[];
   numeroSquadre: SelectItem[];
-  listaTeams: SelectItem[];
+  listaTeams: SelectItem[] = [];
   listaTeamsDaSelezionare: Array<Team>;
   listaTeamsSelezionati: Team[];
   listaTipologieTorneo: SelectItem[];
@@ -45,23 +46,18 @@ export class NuovoCampionatoComponent implements OnInit {
     private stagioniDbService: StagioniDBService,
     private torneiDbService: TorneiDBService,
     private numeroTeamsDbService: NumeroTeamsDbService,
-    private formatDbService: FormatDbService
+    private formatDbService: FormatDbService,
+    private teamsDbService: TeamsDBService
   ) {
-    this.caricaStagioni();
-    this.listaTeams = teamsService.caricaListaTeamItems();
-    this.caricaTipologieTorneo();
-    this.listaValoriTecnici = teamsService.caricaListaValoriTecnici();
-    this.listaTipologieRisultati = campionatoService.caricaListaTipologiaRisultati();
     this.campionato = new Campionato();
-    this.campionato.tipologiaRisultati = 2;
-    this.listaTeamsDaSelezionare = new Array<Team>();
-    for (let i = 0; i < this.campionato.numeroTeams; i++) {
-      this.listaTeamsDaSelezionare[i] = new Team();
-    }
+    this.caricaStagioni();
+    this.caricaListaTeamItems();
   }
 
   ngOnInit(): void {
-    this.preparaListaTeams();
+    if (this.campionato != undefined) {
+      this.preparaListaTeams();
+    }
   }
 
   preparaListaTeams() {
@@ -135,7 +131,8 @@ export class NuovoCampionatoComponent implements OnInit {
   }
 
   visualizzaCaricaTemplateDialog() {
-    this.listaTemplateCampionato = this.campionatoService.caricaListaTemplateCampionato();
+    this.listaTemplateCampionato =
+      this.campionatoService.caricaListaTemplateCampionato();
     this.visualizzaCaricaTemplate = true;
   }
 
@@ -150,9 +147,8 @@ export class NuovoCampionatoComponent implements OnInit {
           this.listaTeams[j].value != null &&
           this.listaTeams[j].value.id === this.campionato.listaTeams[i].id
         ) {
-          this.listaTeams[j].value.valoreTecnico = this.campionato.listaTeams[
-            i
-          ].valoreTecnico;
+          this.listaTeams[j].value.valoreTecnico =
+            this.campionato.listaTeams[i].valoreTecnico;
         }
       }
     }
@@ -298,5 +294,67 @@ export class NuovoCampionatoComponent implements OnInit {
           });
         });
       });
+  }
+
+  caricaListaTeamItems() {
+    this.teamsDbService.readAll().then((data) => {
+      data.subscribe((listaIn) => {
+        let listaDB = listaIn.map((e) => {
+          let team = e.payload.doc.data() as Team;
+          return {
+            idTecnico: e.payload.doc.id,
+            id: team.id,
+            nome: team.nome,
+            logo:
+              '/assets%2Fimages%2Fteams%2F' + team.nome.toLowerCase() + '.png',
+            valoreTecnico: team.valoreTecnico,
+          } as Team;
+        });
+
+        var listaTeamsOrdinata: Team[] = listaDB.sort((obj1, obj2) => {
+          if (obj1.id === null) {
+            return -1;
+          }
+
+          if (obj2.id === null) {
+            return 1;
+          }
+
+          let year1 = obj1.id;
+          let year2 = obj2.id;
+
+          if (year1 < year2) {
+            return -1;
+          } else if (year1 > year2) {
+            return 1;
+          } else return 0;
+        });
+
+        let listaTeamsItems = [];
+
+        listaTeamsItems.push({ label: 'Seleziona squadra', value: null });
+
+        for (let i = 0; i < listaTeamsOrdinata.length; i++) {
+          listaTeamsItems.push({
+            label: listaTeamsOrdinata[i].nome,
+            value: listaTeamsOrdinata[i],
+          });
+        }
+
+        this.listaTeams = listaTeamsItems;
+
+        this.caricaTipologieTorneo();
+        this.listaValoriTecnici = this.teamsService.caricaListaValoriTecnici();
+        this.listaTipologieRisultati =
+          this.campionatoService.caricaListaTipologiaRisultati();
+        this.campionato = new Campionato();
+        this.campionato.tipologiaRisultati = 2;
+        this.listaTeamsDaSelezionare = new Array<Team>();
+        for (let i = 0; i < this.campionato.numeroTeams; i++) {
+          this.listaTeamsDaSelezionare[i] = new Team();
+        }
+        this.preparaListaTeams();
+      });
+    });
   }
 }

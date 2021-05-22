@@ -15,7 +15,9 @@ import { DropdownModule } from 'primeng/dropdown';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { TooltipModule } from 'primeng/tooltip';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
-import {OrganizationChartModule} from 'primeng/organizationchart';
+import { OrganizationChartModule } from 'primeng/organizationchart';
+import { FileUploadModule } from 'primeng/fileupload';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CardComponent } from './card/card.component';
 import { EventoComponent } from './evento/evento.component';
@@ -52,7 +54,9 @@ import { TabelloneComponent } from './tabellone/tabellone.component';
     TieredMenuModule,
     TooltipModule,
     ScrollPanelModule,
-    OrganizationChartModule
+    OrganizationChartModule,
+    FileUploadModule,
+    HttpClientModule,
   ],
   exports: [
     HeaderComponent,

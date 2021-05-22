@@ -2,12 +2,14 @@
   "listaDerby": [
     {
       "teamA": {
+        "idTecnico": "",
         "id": 123,
         "nome": "INTER",
         "logo": "/assets/images/teams/inter.png",
         "valoreTecnico": 0
       },
       "teamB": {
+        "idTecnico": "",
         "id": 163,
         "nome": "MILAN",
         "logo": "/assets/images/teams/milan.png",
@@ -16,12 +18,14 @@
     },
     {
       "teamA": {
+        "idTecnico": "",
         "id": 128,
         "nome": "JUVENTUS",
         "logo": "/assets/images/teams/juventus.png",
         "valoreTecnico": 0
       },
       "teamB": {
+        "idTecnico": "",
         "id": 275,
         "nome": "TORINO",
         "logo": "/assets/images/teams/torino.png",
@@ -30,12 +34,14 @@
     },
     {
       "teamA": {
+        "idTecnico": "",
         "id": 225,
         "nome": "ROMA",
         "logo": "/assets/images/teams/roma.png",
         "valoreTecnico": 0
       },
       "teamB": {
+        "idTecnico": "",
         "id": 138,
         "nome": "LAZIO",
         "logo": "/assets/images/teams/lazio.png",
@@ -44,12 +50,14 @@
     },
     {
       "teamA": {
+        "idTecnico": "",
         "id": 291,
         "nome": "VERONA",
         "logo": "/assets/images/teams/verona.png",
         "valoreTecnico": 0
       },
       "teamB": {
+        "idTecnico": "",
         "id": 62,
         "nome": "CHIEVO",
         "logo": "/assets/images/teams/chievo.png",
@@ -58,12 +66,14 @@
     },
     {
       "teamA": {
+        "idTecnico": "",
         "id": 235,
         "nome": "SAMPDORIA",
         "logo": "/assets/images/teams/sampdoria.png",
         "valoreTecnico": 0
       },
       "teamB": {
+        "idTecnico": "",
         "id": 110,
         "nome": "GENOA",
         "logo": "/assets/images/teams/genoa.png",
@@ -72,12 +82,14 @@
     },
     {
       "teamA": {
+        "idTecnico": "",
         "id": 217,
         "nome": "REGGIANA",
         "logo": "/assets/images/teams/reggiana.png",
         "valoreTecnico": 0
       },
       "teamB": {
+        "idTecnico": "",
         "id": 242,
         "nome": "SASSUOLO",
         "logo": "/assets/images/teams/sassuolo.png",
@@ -86,12 +98,14 @@
     },
     {
       "teamA": {
+        "idTecnico": "",
         "id": 17,
         "nome": "ATALANTA",
         "logo": "/assets/images/teams/atalanta.png",
         "valoreTecnico": 0
       },
       "teamB": {
+        "idTecnico": "",
         "id": 301,
         "nome": "ALBINOLEFFE",
         "logo": "/assets/images/teams/albinoleffe.png",

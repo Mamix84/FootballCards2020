@@ -5,13 +5,13 @@
         binary="true" class="appCheckBox" (onChange)="onChangheCheckBox()"></p-checkbox>
     </div>
   </div>
-  <div class="ui-g-1"><img class="teamLogo" src={{evento.teamC.logo}} width="30" heigth="30"
+  <div class="ui-g-1"><img class="teamLogo" src="https://firebasestorage.googleapis.com/v0/b/football-cards-2020.appspot.com/o{{evento.teamC.logo}}?alt=media" width="30" heigth="30"
       (error)="updateLogo($event, 'C')" /></div>
   <div class="ui-g-3">
     <h3 pTooltip="{{'Valore tecnico ' +evento.teamC.nome.toUpperCase() +': '+ evento.teamC.valoreTecnico}}"
       tooltipPosition="top">{{evento.teamC.nome.toUpperCase()}}</h3>
   </div>
-  <div class="ui-g-1"><img class="teamLogo" src={{evento.teamFC.logo}} width="30" heigth="30"
+  <div class="ui-g-1"><img class="teamLogo" src="https://firebasestorage.googleapis.com/v0/b/football-cards-2020.appspot.com/o{{evento.teamFC.logo}}?alt=media" width="30" heigth="30"
       (error)="updateLogo($event, 'FC')" /></div>
   <div class="ui-g-3"
     pTooltip="{{'Valore tecnico ' +evento.teamFC.nome.toUpperCase() +': '+ evento.teamFC.valoreTecnico}}"

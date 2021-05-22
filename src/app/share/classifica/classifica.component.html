@@ -21,7 +21,7 @@
       <ng-template pTemplate="body" let-team>
         <tr [ngClass]="team.verdetto">
           <td style="text-align: center; display: none;">{{team.verdetto}}</td>
-          <td><img class="teamLogo" src={{team.team.logo}} width="30" heigth="30" (error)="updateLogo($event, team.team)"/></td>
+          <td><img class="teamLogo" src="https://firebasestorage.googleapis.com/v0/b/football-cards-2020.appspot.com/o{{team.team.logo}}?alt=media" width="30" heigth="30" (error)="updateLogo($event, team.team)"/></td>
           <td>{{team.team.nome.toUpperCase()}}</td>
           <td style="text-align: center;">{{team.punti}}</td>
           <td style="text-align: center;">{{team.partiteGiocate}}</td>

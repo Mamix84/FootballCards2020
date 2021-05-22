@@ -1,9 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Classifica, ClassificaItem } from '../model/classifica';
-import { Evento, Campionato, Giornata } from '../model/campionato';
+import { Campionato, Giornata } from '../model/campionato';
 import { Team } from '../model/team';
-import { IfStmt } from '@angular/compiler';
-import { CampionatoService } from './campionato.service';
 
 @Injectable({
   providedIn: 'root',

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CardsService } from 'src/app/services/cards.service';
 import { Evento } from 'src/app/model/campionato';
-import { Subscription } from 'rxjs';
 import { SelectItem } from 'primeng/api';
 
 @Component({
@@ -10,7 +9,6 @@ import { SelectItem } from 'primeng/api';
   styleUrls: ['./evento.component.css'],
 })
 export class EventoComponent implements OnInit {
-  disableCheck: boolean;
   checked: boolean;
 
   @Input() evento: Evento;
@@ -19,8 +17,6 @@ export class EventoComponent implements OnInit {
 
   displayModificaRisultato: boolean = false;
   visualizzaModificaRisultati: boolean = false;
-
-  subscription: Subscription;
 
   opzioniGoalC: SelectItem[];
   opzioniGoalFC: SelectItem[];
@@ -33,14 +29,12 @@ export class EventoComponent implements OnInit {
   ngOnInit(): void {
     if (this.evento.goalC != null && this.evento.goalFC != null) {
       this.checked = true;
-      this.disableCheck = true;
     }
   }
 
   onChangheCheckBox() {
     this.cardsService.prossimaGiocata(this.evento);
     this.selected.emit(this.evento.id);
-    //    this.disableCheck = true;
   }
 
   updateLogo(event: Evento, casaTrasferta: string) {

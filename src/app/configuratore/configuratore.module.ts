@@ -10,6 +10,8 @@ import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputNumberModule } from 'primeng/inputnumber';
 import { DropdownModule } from 'primeng/dropdown';
+import { FileUploadModule } from 'primeng/fileupload';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ConfiguraStagioniComponent } from './configura-stagioni/configura-stagioni.component';
 import { ConfiguraFormatCampionatoComponent } from './configura-format-campionato/configura-format-campionato.component';
@@ -40,6 +42,8 @@ import { ConfiguraNumeroTeamsComponent } from './configura-numero-teams/configur
     InputTextModule,
     InputNumberModule,
     DropdownModule,
+    FileUploadModule,
+    HttpClientModule
   ],
   exports: [
     ConfiguraStagioniComponent,

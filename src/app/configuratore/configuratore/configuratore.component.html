@@ -6,16 +6,24 @@
           <app-configura-tipologia-torneo></app-configura-tipologia-torneo>
         </p-tabPanel>
         <p-tabPanel header="STAGIONI">
-          <app-configura-stagioni></app-configura-stagioni>
+          <ng-template pTemplate="content">
+            <app-configura-stagioni></app-configura-stagioni>
+          </ng-template>
         </p-tabPanel>
         <p-tabPanel header="NUMERO SQUADRE">
-          <app-configura-numero-teams></app-configura-numero-teams>
+          <ng-template pTemplate="content">
+            <app-configura-numero-teams></app-configura-numero-teams>
+          </ng-template>
         </p-tabPanel>
         <p-tabPanel header="FORMAT CAMPIONATO">
-          <app-configura-format-campionato></app-configura-format-campionato>
+          <ng-template pTemplate="content">
+            <app-configura-format-campionato></app-configura-format-campionato>
+          </ng-template>
         </p-tabPanel>
         <p-tabPanel header="SQUADRE">
-          <app-configura-lista-teams></app-configura-lista-teams>
+          <ng-template pTemplate="content">
+            <app-configura-lista-teams></app-configura-lista-teams>
+          </ng-template>
         </p-tabPanel>
       </p-tabView>
     </p-fieldset>

@@ -30,9 +30,9 @@ export class CardComponent implements OnInit {
     });
 
     this.subscription = cardsService.giocaCarte$.subscribe((evento) => {
-      this.evento = evento;
-      this.start = true;
-      this.gioca();
+     this.evento = evento;
+     this.start = true;
+     this.gioca();
     });
   }
 
