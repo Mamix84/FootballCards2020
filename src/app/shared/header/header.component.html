@@ -1,11 +1,11 @@
-<div class="ui-g">
-  <div class="ui-g-12  ui-sm-12 gradient">
-    <div class="ui-g">
-      <div class="ui-g-1 ui-sm-3">
+<div class="p-grid">
+  <div class="p-col-12  gradient">
+    <div class="p-grid">
+      <div class="p-col-1">
         <p-button #btn class="appButton" icon="pi pi-bars" (click)="menu.toggle($event)"></p-button>
         <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
       </div>
-      <div class="ui-g-11 ui-sm-9">
+      <div class="p-col-11">
         <h1>FOOTBALL CARDS 2020</h1>
       </div>
     </div>

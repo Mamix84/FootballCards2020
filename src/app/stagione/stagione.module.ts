@@ -13,7 +13,7 @@ import { NuovaStagioneComponent } from './nuova-stagione/nuova-stagione.componen
 import { CaricaStagioneComponent } from './carica-stagione/carica-stagione.component';
 import { GiocaStagioneComponent } from './gioca-stagione/gioca-stagione.component';
 import { NuovaStagioneCasualeComponent } from './nuova-stagione-casuale/nuova-stagione-casuale.component';
-import { CampionatoModule } from '../campionato/campionato.module';
+import { CampionatoModule } from '../views/campionato/campionato.module';
 
 @NgModule({
   declarations: [

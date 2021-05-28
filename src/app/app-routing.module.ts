@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CaricaCampionatoComponent } from './campionato/carica-campionato/carica-campionato.component';
-import { NuovoCampionatoComponent } from './campionato/nuovo-campionato/nuovo-campionato.component';
-import { MenuComponent } from './menu/menu/menu.component';
-import { GiocaCampionatoComponent } from './campionato/gioca-campionato/gioca-campionato.component';
-import { NuovoCampionatoCasualeComponent } from './campionato/nuovo-campionato-casuale/nuovo-campionato-casuale.component';
+import { CaricaCampionatoComponent } from './views/campionato/carica-campionato/carica-campionato.component';
+import { MenuComponent } from './views/menu/menu/menu.component';
 import { NuovaStagioneComponent } from './stagione/nuova-stagione/nuova-stagione.component';
 import { GiocaStagioneComponent } from './stagione/gioca-stagione/gioca-stagione.component';
 import { CaricaStagioneComponent } from './stagione/carica-stagione/carica-stagione.component';
@@ -25,6 +22,9 @@ import { PreparaStagioneComponent } from './gestione-stagioni/prepara-stagione/p
 import { NuovoSpareggioStagioneComponent } from './gestione-stagioni/nuovo-spareggio-stagione/nuovo-spareggio-stagione.component';
 import { GiocaSpareggioStagioneComponent } from './gestione-stagioni/gioca-spareggio-stagione/gioca-spareggio-stagione.component';
 import { ConfiguratoreComponent } from './configuratore/configuratore/configuratore.component';
+import { NuovoCampionatoComponent } from './views/campionato/nuovo-campionato/nuovo-campionato.component';
+import { GiocaCampionatoComponent } from './views/campionato/gioca-campionato/gioca-campionato.component';
+import { NuovoCampionatoCasualeComponent } from './views/campionato/nuovo-campionato-casuale/nuovo-campionato-casuale.component';
 
 const routes: Routes = [
   { path: '', component: MenuComponent },

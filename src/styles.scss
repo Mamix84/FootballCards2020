@@ -44,7 +44,7 @@ body {
       box-shadow: 10em
   }
 
-  .ui-inputtext{
+  .p-inputtext{
       width: 100%;
   }
 
@@ -70,7 +70,7 @@ body {
     font-size:0.8em;
   }
 
-  .appButton .ui-button{
+  .appButton .p-button{
     background-color: rgb(131, 17, 47);
     border-color: rgb(131, 17, 47);
     font-family: "Arial", Times, serif;
@@ -79,34 +79,34 @@ body {
     width: 90%;
   }
 
-  .appSelectButton .ui-selectbutton .ui-button.ui-state-active{
+  .appSelectButton .p-selectbutton .p-button.p-state-active{
     background-color: rgb(131, 17, 47);
     border-color: rgb(131, 17, 47);
     font-family: "Arial", Times, serif;
   }
 
-  .menuButton .ui-button{
+  .menuButton .p-button{
     width: 50% !important;
     height: 3.0em;
     font-size: 3.0em;
   }
 
-  p-button{
+  .p-button{
     margin: auto;
     display: block !important;
   }
 
-  .appCheckBox .ui-chkbox .ui-chkbox-box.ui-state-active {
+  .appCheckBox .p-chkbox .p-chkbox-box.p-state-active {
     background-color: rgb(131, 17, 47);
     border-color: rgb(131, 17, 47);
   }
 
-  .appCheckBox .ui-chkbox .ui-chkbox-box.ui-state-active {
+  .appCheckBox .p-chkbox .p-chkbox-box.p-state-active {
     background-color: rgb(131, 17, 47);
     border-color: rgb(131, 17, 47);
   }
 
-  .appDropDown .ui-dropdown {
+  .appDropDown .p-dropdown {
     width: 100%;
   }
 
@@ -117,6 +117,6 @@ body {
     box-shadow: 2px 2px 1px grey;
   }
 
-  body .ui-fieldset{
+  body .p-fieldset{
     margin-top: 1.0em;
   }

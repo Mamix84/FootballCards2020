@@ -22,8 +22,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CardComponent } from './card/card.component';
 import { EventoComponent } from './evento/evento.component';
 import { ClassificaComponent } from './classifica/classifica.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { GiornataComponent } from './giornata/giornata.component';
 import { StatisticheComponent } from './statistiche/statistiche.component';
 import { TabelloneComponent } from './tabellone/tabellone.component';
@@ -33,8 +31,6 @@ import { TabelloneComponent } from './tabellone/tabellone.component';
     CardComponent,
     EventoComponent,
     ClassificaComponent,
-    HeaderComponent,
-    FooterComponent,
     GiornataComponent,
     StatisticheComponent,
     TabelloneComponent,
@@ -59,8 +55,6 @@ import { TabelloneComponent } from './tabellone/tabellone.component';
     HttpClientModule,
   ],
   exports: [
-    HeaderComponent,
-    FooterComponent,
     CardComponent,
     EventoComponent,
     ClassificaComponent,

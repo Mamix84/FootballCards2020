@@ -4,7 +4,6 @@ import { Campionato } from 'src/app/model/campionato';
 import { Router } from '@angular/router';
 import { SelectItem } from 'primeng/api/selectitem';
 import { StagioneService } from 'src/app/services/stagione.service';
-import { NuovoCampionatoCasualeComponent } from 'src/app/campionato/nuovo-campionato-casuale/nuovo-campionato-casuale.component';
 import { StagioniDBService } from 'src/app/database/stagioni-db.service';
 
 @Component({
