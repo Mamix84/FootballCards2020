@@ -5,7 +5,6 @@ import { SelectItem } from 'primeng/api/selectitem';
 import { TeamsService } from 'src/app/services/teams.service';
 import { Team } from 'src/app/model/team';
 import { Router } from '@angular/router';
-import { StagioniDBService } from 'src/app/database/stagioni-db.service';
 import { TorneiDBService } from 'src/app/database/tornei-db.service';
 import {
   TipologiaTorneo,
@@ -43,14 +42,12 @@ export class NuovoCampionatoComponent implements OnInit {
     private campionatoService: CampionatoService,
     private teamsService: TeamsService,
     private router: Router,
-    private stagioniDbService: StagioniDBService,
     private torneiDbService: TorneiDBService,
     private numeroTeamsDbService: NumeroTeamsDbService,
     private formatDbService: FormatDbService,
     private teamsDbService: TeamsDBService
   ) {
     this.campionato = new Campionato();
-    this.caricaStagioni();
     this.caricaListaTeamItems();
   }
 
@@ -61,6 +58,7 @@ export class NuovoCampionatoComponent implements OnInit {
   }
 
   preparaListaTeams() {
+    console.log('STAGIONE '+this.campionato.stagione);
     this.caricaNumeroSquadre(this.campionato.tipologia);
     this.caricaListaFormat();
 
@@ -163,54 +161,6 @@ export class NuovoCampionatoComponent implements OnInit {
       let index = Math.floor(Math.random() * (xmax - xmin)) + xmin;
       this.listaTeamsSelezionati[i] = this.listaTeams[index].value;
     }
-  }
-
-  caricaStagioni() {
-    this.stagioniDbService.readAll().then((data) => {
-      data.subscribe((listaIn) => {
-        let listaDB = listaIn.map((e) => {
-          return e.payload.doc.data() as any;
-        });
-
-        this.stagioni = listaDB[0].listaStagioni;
-      });
-    });
-  }
-
-  caricaTipologieTorneo() {
-    this.torneiDbService.readAll().then((data) => {
-      data.subscribe((listaIn) => {
-        let listaDB = listaIn.map((e) => {
-          let torneo = e.payload.doc.data() as TipologiaTorneo;
-          return {
-            label: torneo.etichetta,
-            value: torneo.valore,
-          } as SelectItem;
-        });
-
-        var listaOrdinata: SelectItem[] = listaDB.sort((obj1, obj2) => {
-          if (obj1.value === null) {
-            return -1;
-          }
-
-          if (obj2.value === null) {
-            return 1;
-          }
-
-          if (obj1.value < obj2.value) {
-            return -1;
-          } else if (obj1.value > obj2.value) {
-            return 1;
-          } else return 0;
-        });
-
-        this.listaTipologieTorneo = listaOrdinata;
-        this.listaTipologieTorneo.unshift({
-          label: 'Seleziona la tipologia torneo',
-          value: null,
-        });
-      });
-    });
   }
 
   caricaNumeroSquadre(tipologiaTorneo: number) {
@@ -343,7 +293,6 @@ export class NuovoCampionatoComponent implements OnInit {
 
         this.listaTeams = listaTeamsItems;
 
-        this.caricaTipologieTorneo();
         this.listaValoriTecnici = this.teamsService.caricaListaValoriTecnici();
         this.listaTipologieRisultati =
           this.campionatoService.caricaListaTipologiaRisultati();

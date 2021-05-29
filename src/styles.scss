@@ -79,10 +79,20 @@ body {
     width: 90%;
   }
 
-  .appSelectButton .p-selectbutton .p-button.p-state-active{
+  .appSelectButton .p-selectbutton .p-button.p-highlight{
     background-color: rgb(131, 17, 47);
     border-color: rgb(131, 17, 47);
     font-family: "Arial", Times, serif;
+  }
+
+  .appSelectButton .p-selectbutton .p-button.p-highlight:hover{
+    background-color: rgb(131, 17, 47);
+    border-color: rgb(131, 17, 47);
+    font-family: "Arial", Times, serif;
+  }
+
+  .appSelectButton .p-selectbutton .p-button{
+    display: inline-block !important;
   }
 
   .menuButton .p-button{

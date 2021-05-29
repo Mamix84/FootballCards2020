@@ -8,9 +8,16 @@ import { Dropdown, DropdownModule } from 'primeng/dropdown';
 import { Dialog, DialogModule } from 'primeng/dialog';
 import { SelectButton, SelectButtonModule } from 'primeng/selectbutton';
 import { Table, TableModule } from 'primeng/table';
+import { InputText, InputTextModule } from 'primeng/inputtext';
+import { Ripple, RippleModule } from 'primeng/ripple';
+import { StagioniComponent } from './stagioni/stagioni.component';
+import { TipologiaTorneoComponent } from './tipologia-torneo/tipologia-torneo.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    StagioniComponent,
+    TipologiaTorneoComponent
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -21,8 +28,12 @@ import { Table, TableModule } from 'primeng/table';
     DialogModule,
     SelectButtonModule,
     TableModule,
+    InputTextModule,
+    RippleModule,
   ],
   exports: [
+    InputText,
+    Ripple,
     Button,
     TieredMenu,
     Fieldset,
@@ -30,6 +41,8 @@ import { Table, TableModule } from 'primeng/table';
     Dialog,
     SelectButton,
     Table,
+    StagioniComponent,
+    TipologiaTorneoComponent
   ],
 })
 export class WidgetModule {}
