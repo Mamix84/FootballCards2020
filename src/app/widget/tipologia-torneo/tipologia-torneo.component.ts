@@ -12,7 +12,7 @@ import { TipologiaTorneo } from 'src/app/model/dominio';
 export class TipologiaTorneoComponent implements OnInit {
   @Input() disabled: boolean = false;
   list: SelectItem[];
-  selected: string;
+  @Input() selected: string;
   @Output() selezioneTipologiaTorneo = new EventEmitter();
 
   constructor(private torneiDbService: TorneiDBService) {

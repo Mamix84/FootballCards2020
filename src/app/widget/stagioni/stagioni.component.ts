@@ -11,7 +11,7 @@ import { StagioniDBService } from 'src/app/database/stagioni-db.service';
 export class StagioniComponent implements OnInit {
   @Input() disabled: boolean = false;
   list: SelectItem[];
-  selected: string;
+  @Input() selected: string;
   @Output() selezioneStagione = new EventEmitter();
 
   constructor(private stagioniDbService: StagioniDBService) {

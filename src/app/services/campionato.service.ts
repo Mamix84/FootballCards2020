@@ -17,6 +17,31 @@ export class CampionatoService {
     private teamService: TeamsService
   ) {}
 
+  preparaCampionato(campionato: Campionato, listaTeamsSelezionati: Team[] ): Campionato {
+    if (campionato.listaTeams.length === 0) {
+      for (let i = 0; i < listaTeamsSelezionati.length; i++) {
+        campionato.listaTeams.push(listaTeamsSelezionati[i]);
+      }
+    }
+    campionato.giornataCorrente = 0;
+
+    campionato.listaGiornate = this.generaCalendario(
+      campionato,
+      campionato.listaTeams
+    );
+
+    let date = new Date();
+    campionato.id =
+      campionato.denominazioneLega.trim() +
+      '_' +
+      date.getTime().toString();
+    if (campionato.singolo === true) {
+      this.salvaCampionato(campionato);
+    }
+
+    return campionato;
+  }
+
   generaCalendario(
     campionato: Campionato,
     listaTeams: Array<Team>

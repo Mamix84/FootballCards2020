@@ -12,11 +12,16 @@ import { InputText, InputTextModule } from 'primeng/inputtext';
 import { Ripple, RippleModule } from 'primeng/ripple';
 import { StagioniComponent } from './stagioni/stagioni.component';
 import { TipologiaTorneoComponent } from './tipologia-torneo/tipologia-torneo.component';
+import { NumeroSquadreComponent } from './numero-squadre/numero-squadre.component';
+import { FormatComponent } from './format/format.component';
+import {Divider, DividerModule} from 'primeng/divider';
 
 @NgModule({
   declarations: [
     StagioniComponent,
-    TipologiaTorneoComponent
+    TipologiaTorneoComponent,
+    NumeroSquadreComponent,
+    FormatComponent
   ],
   imports: [
     CommonModule,
@@ -30,6 +35,7 @@ import { TipologiaTorneoComponent } from './tipologia-torneo/tipologia-torneo.co
     TableModule,
     InputTextModule,
     RippleModule,
+    DividerModule
   ],
   exports: [
     InputText,
@@ -41,8 +47,11 @@ import { TipologiaTorneoComponent } from './tipologia-torneo/tipologia-torneo.co
     Dialog,
     SelectButton,
     Table,
+    Divider,
     StagioniComponent,
-    TipologiaTorneoComponent
+    TipologiaTorneoComponent,
+    NumeroSquadreComponent,
+    FormatComponent
   ],
 })
 export class WidgetModule {}
