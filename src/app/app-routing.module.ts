@@ -1,30 +1,31 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CaricaCampionatoComponent } from './views/campionato/carica-campionato/carica-campionato.component';
-import { MenuComponent } from './views/menu/menu/menu.component';
-import { NuovaStagioneComponent } from './stagione/nuova-stagione/nuova-stagione.component';
-import { GiocaStagioneComponent } from './stagione/gioca-stagione/gioca-stagione.component';
-import { CaricaStagioneComponent } from './stagione/carica-stagione/carica-stagione.component';
-import { NuovaStagioneCasualeComponent } from './stagione/nuova-stagione-casuale/nuova-stagione-casuale.component';
-import { GiornataComponent } from './share/giornata/giornata.component';
-import { NuovaCoppaComponent } from './coppa/nuova-coppa/nuova-coppa.component';
-import { GiocaCoppaComponent } from './coppa/gioca-coppa/gioca-coppa.component';
-import { CaricaCoppaComponent } from './coppa/carica-coppa/carica-coppa.component';
-import { NuovaCoppaCasualeComponent } from './coppa/nuova-coppa-casuale/nuova-coppa-casuale.component';
-import { NuovaCarrieraComponent } from './carriera/nuova-carriera/nuova-carriera.component';
-import { GiocaCarrieraComponent } from './carriera/gioca-carriera/gioca-carriera.component';
-import { CaricaCarrieraComponent } from './carriera/carica-carriera/carica-carriera.component';
-import { NuovaCarrieraCasualeComponent } from './carriera/nuova-carriera-casuale/nuova-carriera-casuale.component';
-import { NuovoSpareggioComponent } from './gestione-stagioni/nuovo-spareggio/nuovo-spareggio.component';
-import { GiocaSpareggioComponent } from './gestione-stagioni/gioca-spareggio/gioca-spareggio.component';
-import { PreparaCampionatoComponent } from './gestione-stagioni/prepara-campionato/prepara-campionato.component';
-import { PreparaStagioneComponent } from './gestione-stagioni/prepara-stagione/prepara-stagione.component';
-import { NuovoSpareggioStagioneComponent } from './gestione-stagioni/nuovo-spareggio-stagione/nuovo-spareggio-stagione.component';
-import { GiocaSpareggioStagioneComponent } from './gestione-stagioni/gioca-spareggio-stagione/gioca-spareggio-stagione.component';
-import { ConfiguratoreComponent } from './configuratore/configuratore/configuratore.component';
-import { NuovoCampionatoComponent } from './views/campionato/nuovo-campionato/nuovo-campionato.component';
 import { GiocaCampionatoComponent } from './views/campionato/gioca-campionato/gioca-campionato.component';
 import { NuovoCampionatoCasualeComponent } from './views/campionato/nuovo-campionato-casuale/nuovo-campionato-casuale.component';
+import { NuovoCampionatoComponent } from './views/campionato/nuovo-campionato/nuovo-campionato.component';
+import { CaricaCarrieraComponent } from './views/carriera/carica-carriera/carica-carriera.component';
+import { GiocaCarrieraComponent } from './views/carriera/gioca-carriera/gioca-carriera.component';
+import { NuovaCarrieraCasualeComponent } from './views/carriera/nuova-carriera-casuale/nuova-carriera-casuale.component';
+import { NuovaCarrieraComponent } from './views/carriera/nuova-carriera/nuova-carriera.component';
+import { ConfiguratoreComponent } from './views/configuratore/configuratore/configuratore.component';
+import { CaricaCoppaComponent } from './views/coppa/carica-coppa/carica-coppa.component';
+import { GiocaCoppaComponent } from './views/coppa/gioca-coppa/gioca-coppa.component';
+import { NuovaCoppaCasualeComponent } from './views/coppa/nuova-coppa-casuale/nuova-coppa-casuale.component';
+import { NuovaCoppaComponent } from './views/coppa/nuova-coppa/nuova-coppa.component';
+import { GiocaSpareggioStagioneComponent } from './views/gestione-stagioni/gioca-spareggio-stagione/gioca-spareggio-stagione.component';
+import { GiocaSpareggioComponent } from './views/gestione-stagioni/gioca-spareggio/gioca-spareggio.component';
+import { NuovoSpareggioStagioneComponent } from './views/gestione-stagioni/nuovo-spareggio-stagione/nuovo-spareggio-stagione.component';
+import { NuovoSpareggioComponent } from './views/gestione-stagioni/nuovo-spareggio/nuovo-spareggio.component';
+import { PreparaCampionatoComponent } from './views/gestione-stagioni/prepara-campionato/prepara-campionato.component';
+import { PreparaStagioneComponent } from './views/gestione-stagioni/prepara-stagione/prepara-stagione.component';
+import { MenuComponent } from './views/menu/menu/menu.component';
+import { CaricaStagioneComponent } from './views/stagione/carica-stagione/carica-stagione.component';
+import { GiocaStagioneComponent } from './views/stagione/gioca-stagione/gioca-stagione.component';
+import { NuovaStagioneCasualeComponent } from './views/stagione/nuova-stagione-casuale/nuova-stagione-casuale.component';
+import { NuovaStagioneComponent } from './views/stagione/nuova-stagione/nuova-stagione.component';
+import { GiornataComponent } from './widget/giornata/giornata.component';
+
 
 const routes: Routes = [
   { path: '', component: MenuComponent },

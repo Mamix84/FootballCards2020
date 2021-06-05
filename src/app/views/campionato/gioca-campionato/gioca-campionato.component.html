@@ -1,25 +1,25 @@
-<div class="ui-g">
-  <div class="ui-g-6 ui-sm-12">
-    <div class="ui-g">
-      <div class="ui-g-4 ui-sm-12">
+<div class="p-grid">
+  <div class="p-col-6">
+    <div class="p-grid">
+      <div class="p-col-4">
         <p-button class="appButton" label="GIORNATA PRECEDENTE" (onClick)="giornataPrecedente()"
           [disabled]="this.campionato.giornataCorrente===0"></p-button>
       </div>
-      <div class="ui-g-4 ui-sm-12">
+      <div class="p-col-4">
         <p-dropdown class="appDropDown" [options]="listaGiornate" [(ngModel)]="this.campionato.giornataCorrente"
           (onChange)="caricaGiornata()"></p-dropdown>
       </div>
-      <div class="ui-g-4 ui-sm-12">
+      <div class="p-col-4">
         <p-button class="appButton" label="GIORNATA SUCCESSIVA" (onClick)="giornataSuccessiva()"
           [disabled]="this.campionato.giornataCorrente===campionato.listaGiornate.length-1"></p-button>
       </div>
     </div>
   </div>
-  <div class="ui-g-6 ui-sm-12">
-    <div class="ui-g">
-      <div class="ui-g-6 ui-sm-2">
+  <div class="p-col-6">
+    <div class="p-grid">
+      <div class="p-col-6">
       </div>
-      <div class="ui-g-6 ui-sm-10">
+      <div class="p-col-6">
         <h5 style="text-align: right;">{{campionato.denominazioneLega}} - STAGIONE {{campionato.stagione}}</h5>
         <h4 style="text-align: right;">GIORNATA N°
           {{giornataCorrente === undefined ? '' : giornataCorrente.girone === 'A' ? giornataCorrente.numeroGiornata :
@@ -32,57 +32,57 @@
   </div>
 </div>
 
-<div class="ui-g">
-  <div class="ui-g-12">
+<div class="p-grid">
+  <div class="p-col-12">
     <app-giornata [giornata]="giornataCorrente" (aggiornaSalvataggio)="aggiornaSalvataggio()"
       [tipologiaRisultati]="campionato.tipologiaRisultati" (aggiornaClassificaEvent)="aggiornaClassifica()">
     </app-giornata>
   </div>
 </div>
 
-<div class="ui-g">
-  <div class="ui-g-12">
+<div class="p-grid">
+  <div class="p-col-12">
     <app-classifica [classifica]="campionato.classifica"></app-classifica>
   </div>
 </div>
 
-<div class="ui-g">
-  <div class="ui-g-12">
+<div class="p-grid">
+  <div class="p-col-12">
     <app-statistiche [campionato]="this.campionato" [index]="giornataCorrente"></app-statistiche>
   </div>
 </div>
 
 <p-dialog header="VINCITORE!!!" [(visible)]="visualizzaVincitore">
-  <div class="ui-g" style="width: 800px; height: 400px;">
-    <div class="ui-g-12">
+  <div class="p-grid" style="width: 800px; height: 400px;">
+    <div class="p-col-12">
 
-      <div class="ui-g">
-        <div class="ui-g-3"></div>
-        <div class="ui-g-6">
+      <div class="p-grid">
+        <div class="p-col-3"></div>
+        <div class="p-col-6">
           <h3 style="text-align: center;">{{vincitore.nome}} VINCE IL CAMPIONATO!!!</h3>
         </div>
-        <div class="ui-g-3"></div>
-        <div class="ui-g-3"></div>
-        <div class="ui-g-6" style="align-content: center;">
+        <div class="p-col-3"></div>
+        <div class="p-col-3"></div>
+        <div class="p-col-6" style="align-content: center;">
           <img style="  display: block;
           margin-left: auto;
           margin-right: auto;" class="teamLogo"
             src="https://firebasestorage.googleapis.com/v0/b/football-cards-2020.appspot.com/o{{vincitore.logo}}?alt=media"
             width="120" heigth="80" />
         </div>
-        <div class="ui-g-3"></div>
+        <div class="p-col-3"></div>
       </div>
 
       <br>
 
-      <div class="ui-g" *ngIf="campionato.classifica.listaTeams.length >= 16" style="padding-top: 1.0em;">
-        <div class="ui-g-12">
+      <div class="p-grid" *ngIf="campionato.classifica.listaTeams.length >= 16" style="padding-top: 1.0em;">
+        <div class="p-col-12">
           <h4 style="text-align: center;">VERDETTI</h4>
         </div>
       </div>
 
-      <div class="ui-g" *ngIf="campionato.classifica.listaTeams.length >= 16">
-        <div class="ui-g-3" *ngIf="campionato.classifica.listaTeams[1].verdetto === 'champions'">
+      <div class="p-grid" *ngIf="campionato.classifica.listaTeams.length >= 16">
+        <div class="p-col-3" *ngIf="campionato.classifica.listaTeams[1].verdetto === 'champions'">
           <div>
             <h5>CHAMPIONS LEAGUE</h5>
           </div>
@@ -94,7 +94,7 @@
           <div *ngIf="campionato.classifica.listaTeams[3].verdetto === 'champions'">
             {{campionato.classifica.listaTeams[3].team.nome}}</div>
         </div>
-        <div class="ui-g-3" *ngIf="campionato.classifica.listaTeams[4].verdetto === 'europa'">
+        <div class="p-col-3" *ngIf="campionato.classifica.listaTeams[4].verdetto === 'europa'">
           <div>
             <h5>EUROPA LEAGUE</h5>
             <div *ngIf="campionato.classifica.listaTeams[4].verdetto === 'europa'">
@@ -107,7 +107,7 @@
               {{campionato.classifica.listaTeams[7].team.nome}}</div>
           </div>
         </div>
-        <div class="ui-g-3" *ngIf="campionato.classifica.listaTeams[2].verdetto === 'promozione'">
+        <div class="p-col-3" *ngIf="campionato.classifica.listaTeams[2].verdetto === 'promozione'">
           <div>
             <h5>PROMOZIONI</h5>
             <div *ngIf="campionato.classifica.listaTeams[0].verdetto === 'promozione'">
@@ -120,7 +120,7 @@
               {{campionato.classifica.listaTeams[3].team.nome}}</div>
           </div>
         </div>
-        <div class="ui-g-3"
+        <div class="p-col-3"
           *ngIf="campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-4].verdetto === 'retrocessione'">
           <div>
             <h5>RETROCESSIONI</h5>
@@ -138,7 +138,7 @@
               {{campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-1].team.nome}}</div>
           </div>
         </div>
-        <div class="ui-g-3" *ngIf="campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-3].verdetto === 'retrocessione' &&
+        <div class="p-col-3" *ngIf="campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-3].verdetto === 'retrocessione' &&
         campionato.classifica.listaTeams[campionato.classifica.listaTeams.length-4].verdetto != 'retrocessione'">
           <div>
             <h5>RETROCESSIONI</h5>
@@ -151,15 +151,15 @@
 
 
 
-      <div class="ui-g">
-        <div class="ui-g-3"></div>
-        <div class="ui-g-3">
+      <div class="p-grid">
+        <div class="p-col-3"></div>
+        <div class="p-col-3">
           <p-button class="appButton" label="TERMINA CAMPIONATO" (onClick)="terminaCampionato()"></p-button>
         </div>
-        <div class="ui-g-3">
+        <div class="p-col-3">
           <p-button class="appButton" label="GIOCA SPAREGGI" (onClick)="preparaSpareggi()"></p-button>
         </div>
-        <div class="ui-g-3">
+        <div class="p-col-3">
           <p-button class="appButton" label="PROSEGUI CAMPIONATO" (onClick)="proseguiCampionato()"></p-button>
         </div>
       </div>
@@ -169,24 +169,24 @@
 </p-dialog>
 
 <p-dialog header="CAMPIONE D'INVERNO!!!" [(visible)]="visualizzaCampioneDInverno">
-  <div class="ui-g" style="width: 600px; height: 200px;">
-    <div class="ui-g-12">
+  <div class="p-grid" style="width: 600px; height: 200px;">
+    <div class="p-col-12">
 
-      <div class="ui-g">
-        <div class="ui-g-3"></div>
-        <div class="ui-g-6">
+      <div class="p-grid">
+        <div class="p-col-3"></div>
+        <div class="p-col-6">
           <h3 style="text-align: center;">{{vincitore.nome}} CAMPIONE D'INVERNO!!!</h3>
         </div>
-        <div class="ui-g-3"></div>
-        <div class="ui-g-3"></div>
-        <div class="ui-g-6" style="align-content: center;">
+        <div class="p-col-3"></div>
+        <div class="p-col-3"></div>
+        <div class="p-col-6" style="align-content: center;">
           <img style="  display: block;
           margin-left: auto;
           margin-right: auto;" class="teamLogo"
             src="https://firebasestorage.googleapis.com/v0/b/football-cards-2020.appspot.com/o{{vincitore.logo}}?alt=media"
             width="120" heigth="80" />
         </div>
-        <div class="ui-g-3"></div>
+        <div class="p-col-3"></div>
       </div>
     </div>
   </div>

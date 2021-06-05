@@ -6,7 +6,7 @@ import { NuovoCampionatoCasualeComponent } from './nuovo-campionato-casuale/nuov
 import { NuovoCampionatoComponent } from './nuovo-campionato/nuovo-campionato.component';
 import { WidgetModule } from 'src/app/widget/widget.module';
 import { FormsModule } from '@angular/forms';
-import { ShareModule } from 'src/app/share/share.module';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,7 @@ import { ShareModule } from 'src/app/share/share.module';
     CaricaCampionatoComponent,
     GiocaCampionatoComponent,
   ],
-  imports: [CommonModule, FormsModule, ShareModule, WidgetModule],
+  imports: [CommonModule, FormsModule, WidgetModule, TableModule],
   exports: [
     NuovoCampionatoComponent,
     NuovoCampionatoCasualeComponent,

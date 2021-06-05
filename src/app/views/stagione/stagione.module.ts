@@ -13,7 +13,9 @@ import { NuovaStagioneComponent } from './nuova-stagione/nuova-stagione.componen
 import { CaricaStagioneComponent } from './carica-stagione/carica-stagione.component';
 import { GiocaStagioneComponent } from './gioca-stagione/gioca-stagione.component';
 import { NuovaStagioneCasualeComponent } from './nuova-stagione-casuale/nuova-stagione-casuale.component';
-import { CampionatoModule } from '../views/campionato/campionato.module';
+import { WidgetModule } from 'src/app/widget/widget.module';
+import { CampionatoModule } from '../campionato/campionato.module';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { CampionatoModule } from '../views/campionato/campionato.module';
     ButtonModule,
     CampionatoModule,
     DropdownModule,
-    TableModule
+    TableModule,
+    WidgetModule
   ],
   exports: [
     NuovaStagioneComponent,

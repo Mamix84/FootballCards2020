@@ -65,9 +65,8 @@ export class NuovoCampionatoComponent implements OnInit {
   }
 
   preparaCampionato() {
-    this.campionato = this.campionatoService.preparaCampionato(this.campionato, this.listaTeamsSelezionati);
-
     this.campionato.singolo = this.singolo;
+    this.campionato = this.campionatoService.preparaCampionato(this.campionato, this.listaTeamsSelezionati);
 
     this.campionatoPronto.emit(this.campionato);
 

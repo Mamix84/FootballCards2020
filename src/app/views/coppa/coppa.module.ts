@@ -15,7 +15,7 @@ import { NuovaCoppaComponent } from './nuova-coppa/nuova-coppa.component';
 import { GiocaCoppaComponent } from './gioca-coppa/gioca-coppa.component';
 import { CaricaCoppaComponent } from './carica-coppa/carica-coppa.component';
 import { NuovaCoppaCasualeComponent } from './nuova-coppa-casuale/nuova-coppa-casuale.component';
-import { ShareModule } from '../share/share.module';
+import { WidgetModule } from 'src/app/widget/widget.module';
 
 @NgModule({
   declarations: [
@@ -28,14 +28,14 @@ import { ShareModule } from '../share/share.module';
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    ShareModule,
     FieldsetModule,
     SelectButtonModule,
     DropdownModule,
     InputTextModule,
     ButtonModule,
     TableModule,
-    DialogModule
+    DialogModule,
+    WidgetModule
   ],
   exports: [
     NuovaCoppaComponent,

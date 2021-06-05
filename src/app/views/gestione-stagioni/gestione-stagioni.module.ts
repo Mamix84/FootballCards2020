@@ -15,8 +15,8 @@ import { GiocaSpareggioComponent } from './gioca-spareggio/gioca-spareggio.compo
 import { PreparaCampionatoComponent } from './prepara-campionato/prepara-campionato.component';
 import { PreparaStagioneComponent } from './prepara-stagione/prepara-stagione.component';
 import { NuovoSpareggioStagioneComponent } from './nuovo-spareggio-stagione/nuovo-spareggio-stagione.component';
-import { ShareModule } from '../share/share.module';
 import { GiocaSpareggioStagioneComponent } from './gioca-spareggio-stagione/gioca-spareggio-stagione.component';
+import { WidgetModule } from 'src/app/widget/widget.module';
 
 @NgModule({
   declarations: [
@@ -36,8 +36,8 @@ import { GiocaSpareggioStagioneComponent } from './gioca-spareggio-stagione/gioc
     ButtonModule,
     DropdownModule,
     TableModule,
-    ShareModule,
-    DialogModule
+    DialogModule,
+    WidgetModule
   ],
   exports: [
     NuovoSpareggioComponent,

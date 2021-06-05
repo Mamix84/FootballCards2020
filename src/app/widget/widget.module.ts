@@ -14,14 +14,38 @@ import { StagioniComponent } from './stagioni/stagioni.component';
 import { TipologiaTorneoComponent } from './tipologia-torneo/tipologia-torneo.component';
 import { NumeroSquadreComponent } from './numero-squadre/numero-squadre.component';
 import { FormatComponent } from './format/format.component';
-import {Divider, DividerModule} from 'primeng/divider';
+import { Divider, DividerModule } from 'primeng/divider';
+import { CardComponent } from './card/card.component';
+import { EventoComponent } from './evento/evento.component';
+import { Tooltip, TooltipModule } from 'primeng/tooltip';
+import { GiornataComponent } from './giornata/giornata.component';
+import { Checkbox, CheckboxModule } from 'primeng/checkbox';
+import { ClassificaComponent } from './classifica/classifica.component';
+import { StatisticheComponent } from './statistiche/statistiche.component';
+import { TabelloneComponent } from './tabellone/tabellone.component';
+import {
+  OrganizationChart,
+  OrganizationChartModule,
+} from 'primeng/organizationchart';
+import { ScrollPanel, ScrollPanelModule } from 'primeng/scrollpanel';
+import {ChartModule} from 'primeng/chart';
+import { MessageService } from 'primeng/api';
+import { TabPanel, TabView, TabViewModule } from 'primeng/tabview';
+import { InputNumber, InputNumberModule } from 'primeng/inputnumber';
+import { FileUpload, FileUploadModule } from 'primeng/fileupload';
 
 @NgModule({
   declarations: [
     StagioniComponent,
     TipologiaTorneoComponent,
     NumeroSquadreComponent,
-    FormatComponent
+    FormatComponent,
+    CardComponent,
+    EventoComponent,
+    GiornataComponent,
+    ClassificaComponent,
+    StatisticheComponent,
+    TabelloneComponent,
   ],
   imports: [
     CommonModule,
@@ -35,7 +59,15 @@ import {Divider, DividerModule} from 'primeng/divider';
     TableModule,
     InputTextModule,
     RippleModule,
-    DividerModule
+    DividerModule,
+    TooltipModule,
+    CheckboxModule,
+    OrganizationChartModule,
+    ScrollPanelModule,
+    ChartModule,
+    TabViewModule,
+    InputNumberModule,
+    FileUploadModule
   ],
   exports: [
     InputText,
@@ -48,10 +80,26 @@ import {Divider, DividerModule} from 'primeng/divider';
     SelectButton,
     Table,
     Divider,
+    Tooltip,
+    Checkbox,
+    OrganizationChart,
+    ScrollPanel,
+    TabView,
+    TabPanel,
+    InputNumber,
+    FileUpload,
+
     StagioniComponent,
     TipologiaTorneoComponent,
     NumeroSquadreComponent,
-    FormatComponent
+    FormatComponent,
+    CardComponent,
+    EventoComponent,
+    GiornataComponent,
+    ClassificaComponent,
+    StatisticheComponent,
+    TabelloneComponent,
   ],
+  providers: [MessageService]
 })
 export class WidgetModule {}
