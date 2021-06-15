@@ -3,10 +3,6 @@ import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
-import { FieldsetModule } from 'primeng/fieldset';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
 
 import { NuovaStagioneComponent } from './nuova-stagione/nuova-stagione.component';
@@ -28,11 +24,7 @@ import { CampionatoModule } from '../campionato/campionato.module';
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    FieldsetModule,
-    InputTextModule,
-    ButtonModule,
     CampionatoModule,
-    DropdownModule,
     TableModule,
     WidgetModule
   ],

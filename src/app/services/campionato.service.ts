@@ -5,7 +5,6 @@ import { Giornata, Evento, Campionato } from '../model/campionato';
 import { StorageService } from './storage.service';
 import { Salvataggio } from '../model/files';
 import { TeamsService } from './teams.service';
-import tipologie_risultati from '../../assets/json/tipologie_risultati.json';
 import lista_template_campionato from '../../assets/json/lista_template_campionato.json';
 
 @Injectable({
@@ -546,12 +545,6 @@ export class CampionatoService {
         }
       }
     }
-  }
-
-  caricaListaTipologiaRisultati(): SelectItem[] {
-    let listaTipologiaRisultati = tipologie_risultati.listaTipologieRisultati;
-
-    return listaTipologiaRisultati;
   }
 
   caricaListaTemplateCampionato(): SelectItem[] {

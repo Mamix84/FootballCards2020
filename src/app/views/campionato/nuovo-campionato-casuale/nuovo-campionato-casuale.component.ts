@@ -95,55 +95,56 @@ export class NuovoCampionatoCasualeComponent implements OnInit {
         //STAGIONE
         let xmin = Math.ceil(1);
         let xmax = Math.floor(this.stagioni.length);
-        this.campionato.stagione = this.stagioni[
-          Math.floor(Math.random() * (xmax - xmin)) + xmin
-        ].value;
+        this.campionato.stagione =
+          this.stagioni[Math.floor(Math.random() * (xmax - xmin)) + xmin].value;
       });
     });
   }
 
   caricaTipologieTorneo() {
-    this.torneiDbService.readAll().then((data) => {
-      data.subscribe((listaIn) => {
-        let listaDB = listaIn.map((e) => {
-          let torneo = e.payload.doc.data() as TipologiaTorneo;
-          return {
-            label: torneo.etichetta,
-            value: torneo.valore,
-          } as SelectItem;
+    this.torneiDbService
+      .readAll()
+      .then((data) => {
+        data.subscribe((listaIn) => {
+          let listaDB = listaIn.map((e) => {
+            let torneo = e.payload.doc.data() as TipologiaTorneo;
+            return {
+              label: torneo.etichetta,
+              value: torneo.valore,
+            } as SelectItem;
+          });
+
+          var listaOrdinata: SelectItem[] = listaDB.sort((obj1, obj2) => {
+            if (obj1.value === null) {
+              return -1;
+            }
+
+            if (obj2.value === null) {
+              return 1;
+            }
+
+            if (obj1.value < obj2.value) {
+              return -1;
+            } else if (obj1.value > obj2.value) {
+              return 1;
+            } else return 0;
+          });
+
+          this.listaTipologieTorneo = listaOrdinata;
+
+          //TIPOLOGIA
+          let xmin = Math.ceil(0);
+          let xmax = Math.floor(this.listaTipologieTorneo.length);
+          let tipologia = Math.floor(Math.random() * (xmax - xmin)) + xmin;
+          this.campionato.tipologia =
+            this.listaTipologieTorneo[tipologia].value;
+          this.campionato.descrizioneTipologia =
+            this.listaTipologieTorneo[tipologia].label;
+
+          //NUMERO SQUADRE
+          this.caricaNumeroSquadre(this.campionato.tipologia);
         });
-
-        var listaOrdinata: SelectItem[] = listaDB.sort((obj1, obj2) => {
-          if (obj1.value === null) {
-            return -1;
-          }
-
-          if (obj2.value === null) {
-            return 1;
-          }
-
-          if (obj1.value < obj2.value) {
-            return -1;
-          } else if (obj1.value > obj2.value) {
-            return 1;
-          } else return 0;
-        });
-
-        this.listaTipologieTorneo = listaOrdinata;
-
-        //TIPOLOGIA
-        let xmin = Math.ceil(0);
-        let xmax = Math.floor(this.listaTipologieTorneo.length);
-        let tipologia = Math.floor(Math.random() * (xmax - xmin)) + xmin;
-        this.campionato.tipologia = this.listaTipologieTorneo[tipologia].value;
-        this.campionato.descrizioneTipologia = this.listaTipologieTorneo[
-          tipologia
-        ].label;
-
-        //NUMERO SQUADRE
-        this.caricaNumeroSquadre(this.campionato.tipologia);
       });
-    });
   }
 
   caricaNumeroSquadre(tipologiaTorneo: number) {
@@ -236,10 +237,11 @@ export class NuovoCampionatoCasualeComponent implements OnInit {
                 this.campionato.giornataCorrente = 0;
                 this.campionato.tipologiaRisultati = 0;
 
-                this.campionato.listaGiornate = this.campionatoService.generaCalendario(
-                  this.campionato,
-                  this.campionato.listaTeams
-                );
+                this.campionato.listaGiornate =
+                  this.campionatoService.generaCalendario(
+                    this.campionato,
+                    this.campionato.listaTeams
+                  );
 
                 let date = new Date();
                 this.campionato.id =
@@ -260,51 +262,8 @@ export class NuovoCampionatoCasualeComponent implements OnInit {
   }
 
   caricaListaTeamItems() {
-    this.teamsDbService.readAll().then((data) => {
-      data.subscribe((listaIn) => {
-        let listaDB = listaIn.map((e) => {
-          let team = e.payload.doc.data() as Team;
-          return {
-            idTecnico: e.payload.doc.id,
-            id: team.id,
-            nome: team.nome,
-            logo: '/assets%2Fimages%2Fteams%2F' + team.nome.toLowerCase() + '.png',
-            valoreTecnico: team.valoreTecnico,
-          } as Team;
-        });
-
-        var listaTeamsOrdinata: Team[] = listaDB.sort((obj1, obj2) => {
-          if (obj1.id === null) {
-            return -1;
-          }
-
-          if (obj2.id === null) {
-            return 1;
-          }
-
-          let year1 = obj1.id;
-          let year2 = obj2.id;
-
-          if (year1 < year2) {
-            return -1;
-          } else if (year1 > year2) {
-            return 1;
-          } else return 0;
-        });
-
-        let listaTeamsItems = [];
-
-        listaTeamsItems.push({ label: 'Seleziona squadra', value: null });
-
-        for (let i = 0; i < listaTeamsOrdinata.length; i++) {
-          listaTeamsItems.push({
-            label: listaTeamsOrdinata[i].nome,
-            value: listaTeamsOrdinata[i],
-          });
-        }
-
-        this.listaTeams = listaTeamsItems;
-      });
-    });
+    this.teamsService
+      .caricaListaTeam()
+      .then((data: SelectItem<Team>[]) => (this.listaTeams = data));
   }
 }

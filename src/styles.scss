@@ -4,129 +4,179 @@ $red: rgb(243, 78, 78);
 $grey: rgb(117, 111, 111);
 
 body {
-    font-family: "Arial", Times, serif;
-  }
+  font-family: "Arial", Times, serif;
+}
 
-  .main {
-      width: 100%;
-  }
+.main {
+  width: 100%;
+}
 
-  h1{
-    color: $grey;
-    margin: 0;
-  }
+h1 {
+  color: $grey;
+  margin: 0;
+}
 
-  h2{
-    color: $grey;
-    margin: 0;
-  }
+h2 {
+  color: $grey;
+  margin: 0;
+}
 
-  h3{
-    color: $grey;
-    margin: 0;
-  }
+h3 {
+  color: $grey;
+  margin: 0;
+}
 
-  h4{
-    color: $grey;
-    margin: 0;
-  }
+h4 {
+  color: $grey;
+  margin: 0;
+}
 
-  h5{
-    color: $grey;
-    margin: 0;
-  }
+h5 {
+  color: $grey;
+  margin: 0;
+}
 
-  label{
-      color: $grey;
-  }
+label {
+  color: $grey;
+}
 
-  input{
-      box-shadow: 10em
-  }
+input {
+  box-shadow: 10em;
+}
 
-  .p-inputtext{
-      width: 100%;
-  }
+.p-inputtext {
+  width: 100%;
+}
 
-  .logo{
-    font-size:3.0em;
-    color: $red;
-    font-style: oblique;
-    text-shadow: 2px 2px $grey;
-  }
+.logo {
+  font-size: 3em;
+  color: $red;
+  font-style: oblique;
+  text-shadow: 2px 2px $grey;
+}
 
-  .gradient{
-    background-image: linear-gradient(to right, white , rgb(131, 17, 47));
-    margin-bottom: 1.0em;
-  }
+.gradient {
+  background-image: linear-gradient(to right, white, rgb(131, 17, 47));
+  margin-bottom: 1em;
+}
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(131, 17, 47);
-    color: white;
-    text-align: center;
-    font-size:0.8em;
-  }
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(131, 17, 47);
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+}
 
-  .appButton .p-button{
-    background-color: rgb(131, 17, 47);
-    border-color: rgb(131, 17, 47);
-    font-family: "Arial", Times, serif;
-    margin: auto;
-    display: block;
-    width: 90%;
-  }
+.appButton .p-button {
+  background-color: rgb(131, 17, 47, 0.8);
+  border-color: rgb(131, 17, 47);
+  font-family: "Arial", Times, serif;
+  margin: auto;
+  display: block;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(131, 17, 47, 0.2), 0 6px 20px 0 rgba(131, 17, 47, 0.19);
+}
 
-  .appSelectButton .p-selectbutton .p-button.p-highlight{
-    background-color: rgb(131, 17, 47);
-    border-color: rgb(131, 17, 47);
-    font-family: "Arial", Times, serif;
-  }
+.appButton .p-button:enabled:hover {
+  background-color: rgb(131, 17, 47);
+  border-color: rgb(131, 17, 47);
+  font-family: "Arial", Times, serif;
+  margin: auto;
+  display: block;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(131, 17, 47, 0.2), 0 6px 20px 0 rgba(131, 17, 47, 0.19);
+}
 
-  .appSelectButton .p-selectbutton .p-button.p-highlight:hover{
-    background-color: rgb(131, 17, 47);
-    border-color: rgb(131, 17, 47);
-    font-family: "Arial", Times, serif;
-  }
+.appSelectButton .p-selectbutton .p-button.p-highlight {
+  background-color: rgb(131, 17, 47);
+  border-color: rgb(131, 17, 47);
+  font-family: "Arial", Times, serif;
+}
 
-  .appSelectButton .p-selectbutton .p-button{
-    display: inline-block !important;
-  }
+.appSelectButton .p-selectbutton .p-button.p-highlight:hover {
+  background-color: rgb(131, 17, 47);
+  border-color: rgb(131, 17, 47);
+  font-family: "Arial", Times, serif;
+}
 
-  .menuButton .p-button{
-    width: 50% !important;
-    height: 3.0em;
-    font-size: 3.0em;
-  }
+.appSelectButton .p-selectbutton .p-button {
+  display: inline-block !important;
+}
 
-  .p-button{
-    margin: auto;
-    display: block !important;
-  }
+.menuButton .p-button {
+  width: 50% !important;
+  height: 3em;
+  font-size: 3em;
+}
 
-  .appCheckBox .p-chkbox .p-chkbox-box.p-state-active {
-    background-color: rgb(131, 17, 47);
-    border-color: rgb(131, 17, 47);
-  }
+.p-button {
+  margin: auto;
+  display: block !important;
+}
 
-  .appCheckBox .p-chkbox .p-chkbox-box.p-state-active {
-    background-color: rgb(131, 17, 47);
-    border-color: rgb(131, 17, 47);
-  }
+.appCheckBox .p-chkbox .p-chkbox-box.p-state-active {
+  background-color: rgb(131, 17, 47);
+  border-color: rgb(131, 17, 47);
+}
 
-  .appDropDown .p-dropdown {
-    width: 100%;
-  }
+.appCheckBox .p-chkbox .p-chkbox-box.p-state-active {
+  background-color: rgb(131, 17, 47);
+  border-color: rgb(131, 17, 47);
+}
 
-  .teamLogo{
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(117, 111, 111);
-    box-shadow: 2px 2px 1px grey;
-  }
+.appDropDown .p-dropdown {
+  width: 100%;
+}
 
-  body .p-fieldset{
-    margin-top: 1.0em;
-  }
+.teamLogo {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(117, 111, 111);
+  box-shadow: 2px 2px 1px grey;
+}
+
+body .p-fieldset {
+  margin-top: 1em;
+}
+
+.p-fieldset{
+  box-shadow: 0 4px 8px 0 rgba(131, 17, 47, 0.2), 0 6px 20px 0 rgba(131, 17, 47, 0.19);
+  background-color: rgb(131, 17, 47, 0.05) !important;
+  border-radius: 1.0em !important;
+}
+
+.p-fieldset .p-fieldset-legend{
+  background-color: rgb(131, 17, 47, 0.8) !important;
+  color: white !important;
+  font-family: "Arial", Times, serif;
+  border-radius: 0.5em !important;
+}
+
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend a{
+  background-color: rgb(131, 17, 47, 0.8) !important;
+  color: white !important;
+  font-family: "Arial", Times, serif !important;
+  border-radius: 0.5em !important;
+}
+
+.p-datatable .p-datatable-thead > tr > th{
+  background-color: rgb(131, 17, 47, 0.8) !important;
+  color: white !important;
+  font-family: "Arial", Times, serif !important;
+  text-align: center !important;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight{
+  background-color: rgb(131, 17, 47, 0.8) !important;
+  color: white !important;
+  font-family: "Arial", Times, serif !important;
+  border-color: rgb(131, 17, 47) !important;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight{
+  background-color: rgb(131, 17, 47, 0.8) !important;
+  border-color: rgb(131, 17, 47) !important;
+}

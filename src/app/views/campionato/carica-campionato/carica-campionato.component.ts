@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Salvataggio } from 'src/app/model/files';
 import { CampionatoService } from 'src/app/services/campionato.service';
@@ -9,6 +9,7 @@ import { CampionatoService } from 'src/app/services/campionato.service';
   styleUrls: ['./carica-campionato.component.css'],
 })
 export class CaricaCampionatoComponent implements OnInit {
+  @Input() light = false;
   idFile: number;
   listaSalvataggi: Array<Salvataggio>;
 

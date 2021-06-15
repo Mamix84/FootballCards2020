@@ -16,7 +16,6 @@ import { TeamsDBService } from 'src/app/database/teams-db.service';
 export class NuovaCoppaComponent implements OnInit {
   coppa: Coppa;
 
-  listaTipologieRisultati: SelectItem[];
   listaStagioni: SelectItem[];
   listaTipologieCoppa: SelectItem[];
   listaNumeroSquadre: SelectItem[];
@@ -33,7 +32,6 @@ export class NuovaCoppaComponent implements OnInit {
     private stagioniDbService: StagioniDBService,
     private teamsDbService: TeamsDBService
   ) {
-    this.listaTipologieRisultati = coppaService.caricaListaTipologiaRisultati();
     this.caricaStagioni();
     this.listaTipologieCoppa = coppaService.caricaListaTipologieCoppa();
     this.listaTeamsDaSelezionare = [];

@@ -5,9 +5,49 @@
         <p-button #btn class="appButton" icon="pi pi-bars" (click)="menu.toggle($event)"></p-button>
         <p-tieredMenu #menu [model]="items" [popup]="true"></p-tieredMenu>
       </div>
-      <div class="p-col-11">
+      <div class="p-col-8">
         <h1>FOOTBALL CARDS 2020</h1>
+      </div>
+      <div class="p-col-1" *ngIf="auth.user$ | async; then authenticated else guest">
+        <!-- template will replace this div -->
+      </div>
+      <div class="p-col-1" *ngIf="auth.user$ | async; then authenticatedname">
+        <!-- template will replace this div -->
+      </div>
+      <div class="p-col-1" *ngIf="auth.user$ | async; then authenticatedpic">
+        <!-- template will replace this div -->
       </div>
     </div>
   </div>
 </div>
+
+<!-- User NOT logged in -->
+<ng-template #guest>
+  <div class="p-col-1">
+    <p-button (onClick)="auth.googleSignin()" label="LOGIN" class="appButton">
+    </p-button>
+  </div>
+</ng-template>
+
+
+<!-- User logged in -->
+<ng-template #authenticated>
+  <div class="p-col-1" *ngIf="auth.user$ | async as user">
+      <p-button (onClick)="auth.signOut()" label="LOGOUT" class="appButton" icon="fa fa-google">
+      </p-button>
+  </div>
+</ng-template>
+
+<!-- User logged in -->
+<ng-template #authenticatedname>
+  <div class="p-col-1" *ngIf="auth.user$ | async as user" >
+    <h5 style="text-align: right; color: white;">{{user.displayName.toUpperCase()}}</h5>
+  </div>
+</ng-template>
+
+<!-- User logged in -->
+<ng-template #authenticatedpic>
+  <div class="p-col-1" *ngIf="auth.user$ | async as user" style="padding-left: 3%;">
+    <img [src]="user.photoURL" style="width: 2.0em;">
+  </div>
+</ng-template>

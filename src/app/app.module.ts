@@ -13,6 +13,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ViewsModule } from './views/views.module';
 import { SharedModule } from './shared/shared.module';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,6 +28,7 @@ import { SharedModule } from './shared/shared.module';
 
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent],

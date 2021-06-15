@@ -33,6 +33,7 @@ import { MessageService } from 'primeng/api';
 import { TabPanel, TabView, TabViewModule } from 'primeng/tabview';
 import { InputNumber, InputNumberModule } from 'primeng/inputnumber';
 import { FileUpload, FileUploadModule } from 'primeng/fileupload';
+import { TipologiaRisultatiComponent } from './tipologia-risultati/tipologia-risultati.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { FileUpload, FileUploadModule } from 'primeng/fileupload';
     ClassificaComponent,
     StatisticheComponent,
     TabelloneComponent,
+    TipologiaRisultatiComponent,
   ],
   imports: [
     CommonModule,
@@ -99,6 +101,7 @@ import { FileUpload, FileUploadModule } from 'primeng/fileupload';
     ClassificaComponent,
     StatisticheComponent,
     TabelloneComponent,
+    TipologiaRisultatiComponent
   ],
   providers: [MessageService]
 })

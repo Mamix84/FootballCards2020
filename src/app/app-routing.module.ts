@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './guard/auth.guard';
+import { ErrorComponent } from './shared/error/error.component';
+import { LoginComponent } from './shared/login/login.component';
 import { CaricaCampionatoComponent } from './views/campionato/carica-campionato/carica-campionato.component';
 import { GiocaCampionatoComponent } from './views/campionato/gioca-campionato/gioca-campionato.component';
 import { NuovoCampionatoCasualeComponent } from './views/campionato/nuovo-campionato-casuale/nuovo-campionato-casuale.component';
@@ -28,34 +31,36 @@ import { GiornataComponent } from './widget/giornata/giornata.component';
 
 
 const routes: Routes = [
-  { path: '', component: MenuComponent },
-  { path: 'carica-campionato', component: CaricaCampionatoComponent },
-  { path: 'nuovo-campionato', component: NuovoCampionatoComponent },
-  { path: 'gioca-giornata', component: GiornataComponent },
-  { path: 'gioca-campionato/:id', component: GiocaCampionatoComponent },
+  { path: '', component: MenuComponent,  canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
+  { path: 'error', component: ErrorComponent },
+  { path: 'carica-campionato', component: CaricaCampionatoComponent,  canActivate: [AuthGuard] },
+  { path: 'nuovo-campionato', component: NuovoCampionatoComponent,  canActivate: [AuthGuard] },
+  { path: 'gioca-giornata', component: GiornataComponent,  canActivate: [AuthGuard] },
+  { path: 'gioca-campionato/:id', component: GiocaCampionatoComponent,  canActivate: [AuthGuard] },
   {
     path: 'nuovo-campionato-casuale',
     component: NuovoCampionatoCasualeComponent,
   },
-  { path: 'nuova-stagione', component: NuovaStagioneComponent },
-  { path: 'gioca-stagione/:id', component: GiocaStagioneComponent },
-  { path: 'carica-stagione', component: CaricaStagioneComponent },
-  { path: 'nuova-stagione-casuale', component: NuovaStagioneCasualeComponent },
+  { path: 'nuova-stagione', component: NuovaStagioneComponent,  canActivate: [AuthGuard] },
+  { path: 'gioca-stagione/:id', component: GiocaStagioneComponent,  canActivate: [AuthGuard] },
+  { path: 'carica-stagione', component: CaricaStagioneComponent,  canActivate: [AuthGuard] },
+  { path: 'nuova-stagione-casuale', component: NuovaStagioneCasualeComponent,  canActivate: [AuthGuard] },
 
-  { path: 'nuova-coppa', component: NuovaCoppaComponent },
-  { path: 'gioca-coppa/:id', component: GiocaCoppaComponent },
-  { path: 'carica-coppa', component: CaricaCoppaComponent },
-  { path: 'nuova-coppa-casuale', component: NuovaCoppaCasualeComponent },
+  { path: 'nuova-coppa', component: NuovaCoppaComponent,  canActivate: [AuthGuard] },
+  { path: 'gioca-coppa/:id', component: GiocaCoppaComponent,  canActivate: [AuthGuard] },
+  { path: 'carica-coppa', component: CaricaCoppaComponent,  canActivate: [AuthGuard] },
+  { path: 'nuova-coppa-casuale', component: NuovaCoppaCasualeComponent,  canActivate: [AuthGuard] },
 
-  { path: 'nuova-carriera', component: NuovaCarrieraComponent },
-  { path: 'gioca-carriera/:id', component: GiocaCarrieraComponent },
-  { path: 'carica-carriera', component: CaricaCarrieraComponent },
-  { path: 'nuova-carriera-casuale', component: NuovaCarrieraCasualeComponent },
+  { path: 'nuova-carriera', component: NuovaCarrieraComponent,  canActivate: [AuthGuard] },
+  { path: 'gioca-carriera/:id', component: GiocaCarrieraComponent,  canActivate: [AuthGuard] },
+  { path: 'carica-carriera', component: CaricaCarrieraComponent,  canActivate: [AuthGuard] },
+  { path: 'nuova-carriera-casuale', component: NuovaCarrieraCasualeComponent,  canActivate: [AuthGuard] },
 
-  { path: 'nuovo-spareggio/:id', component: NuovoSpareggioComponent },
-  { path: 'gioca-spareggio/:id', component: GiocaSpareggioComponent },
-  { path: 'prepara-campionato/:id', component: PreparaCampionatoComponent },
-  { path: 'prepara-stagione/:id', component: PreparaStagioneComponent },
+  { path: 'nuovo-spareggio/:id', component: NuovoSpareggioComponent,  canActivate: [AuthGuard] },
+  { path: 'gioca-spareggio/:id', component: GiocaSpareggioComponent,  canActivate: [AuthGuard] },
+  { path: 'prepara-campionato/:id', component: PreparaCampionatoComponent,  canActivate: [AuthGuard] },
+  { path: 'prepara-stagione/:id', component: PreparaStagioneComponent,  canActivate: [AuthGuard] },
   {
     path: 'nuovo-spareggio-stagione/:id',
     component: NuovoSpareggioStagioneComponent,

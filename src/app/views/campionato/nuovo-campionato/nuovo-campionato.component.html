@@ -9,8 +9,8 @@
           <input type="text" pInputText [(ngModel)]="campionato.denominazioneLega" />
         </div>
         <div class="p-col-3">
-          <p-selectButton class="appSelectButton" [options]="listaTipologieRisultati"
-            [(ngModel)]="campionato.tipologiaRisultati"></p-selectButton>
+          <app-tipologia-risultati [selected]="campionato.tipologiaRisultati"
+          (selezioneTipologiaRisultato)="this.campionato.tipologiaRisultati = +$event;"></app-tipologia-risultati>
         </div>
       </div>
       <div class="p-grid">

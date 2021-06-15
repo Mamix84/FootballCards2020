@@ -3,12 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FieldsetModule } from 'primeng/fieldset';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
-import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
-import { DialogModule } from 'primeng/dialog';
 
 import { NuovoSpareggioComponent } from './nuovo-spareggio/nuovo-spareggio.component';
 import { GiocaSpareggioComponent } from './gioca-spareggio/gioca-spareggio.component';
@@ -31,13 +26,8 @@ import { WidgetModule } from 'src/app/widget/widget.module';
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    FieldsetModule,
-    InputTextModule,
-    ButtonModule,
-    DropdownModule,
-    TableModule,
-    DialogModule,
-    WidgetModule
+    WidgetModule,
+    TableModule
   ],
   exports: [
     NuovoSpareggioComponent,

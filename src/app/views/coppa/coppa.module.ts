@@ -3,13 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FieldsetModule } from 'primeng/fieldset';
-import { SelectButtonModule } from 'primeng/selectbutton';
-import { DropdownModule } from 'primeng/dropdown';
-import { InputTextModule } from 'primeng/inputtext';
-import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
-import { DialogModule } from 'primeng/dialog';
 
 import { NuovaCoppaComponent } from './nuova-coppa/nuova-coppa.component';
 import { GiocaCoppaComponent } from './gioca-coppa/gioca-coppa.component';
@@ -28,13 +22,7 @@ import { WidgetModule } from 'src/app/widget/widget.module';
     CommonModule,
     FormsModule,
     BrowserAnimationsModule,
-    FieldsetModule,
-    SelectButtonModule,
-    DropdownModule,
-    InputTextModule,
-    ButtonModule,
     TableModule,
-    DialogModule,
     WidgetModule
   ],
   exports: [

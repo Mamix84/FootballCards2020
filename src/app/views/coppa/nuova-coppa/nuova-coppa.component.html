@@ -8,9 +8,9 @@
         <div class="ui-g-6">
           <input type="text" pInputText [(ngModel)]="coppa.denominazioneCoppa" />
         </div>
-        <div class="ui-g-3">
-          <p-selectButton class="appSelectButton" [options]="listaTipologieRisultati"
-            [(ngModel)]="coppa.tipologiaRisultati"></p-selectButton>
+        <div class="p-col-3">
+          <app-tipologia-risultati [selected]="coppa.tipologiaRisultati"
+          (selezioneTipologiaRisultato)="this.coppa.tipologiaRisultati = +$event;"></app-tipologia-risultati>
         </div>
       </div>
       <div class="ui-g">

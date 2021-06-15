@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TeamsDBService } from 'src/app/database/teams-db.service';
 import { Team } from 'src/app/model/team';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { TeamsService } from 'src/app/services/teams.service';
 
 @Component({
   selector: 'app-configura-lista-teams',
@@ -17,7 +18,8 @@ export class ConfiguraListaTeamsComponent implements OnInit {
 
   constructor(
     private teamsDbService: TeamsDBService,
-    private storage: AngularFireStorage
+    private storage: AngularFireStorage,
+    private teamsService: TeamsService
   ) {}
 
   ngOnInit(): void {
@@ -33,7 +35,8 @@ export class ConfiguraListaTeamsComponent implements OnInit {
             idTecnico: e.payload.doc.id,
             id: team.id,
             nome: team.nome,
-            logo: '/assets%2Fimages%2Fteams%2F' + team.nome.toLowerCase() + '.png',
+            logo:
+              '/assets%2Fimages%2Fteams%2F' + team.nome.toLowerCase() + '.png',
             valoreTecnico: team.valoreTecnico,
           } as Team;
         });
@@ -105,6 +108,7 @@ export class ConfiguraListaTeamsComponent implements OnInit {
     }
     this.create = false;
     this.uploadedFiles = [];
+    this.teamsService.svuotaListaTeams();
 
     this.caricaListaTeams();
   }
