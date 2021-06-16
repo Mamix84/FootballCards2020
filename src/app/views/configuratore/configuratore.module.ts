@@ -13,6 +13,7 @@ import { ConfiguraListaTeamsComponent } from './configura-lista-teams/configura-
 import { ConfiguratoreComponent } from './configuratore/configuratore.component';
 import { ConfiguraNumeroTeamsComponent } from './configura-numero-teams/configura-numero-teams.component';
 import { WidgetModule } from 'src/app/widget/widget.module';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { WidgetModule } from 'src/app/widget/widget.module';
   imports: [
     CommonModule,
     FormsModule,
+    BrowserModule,
     BrowserAnimationsModule,
     TableModule,
     HttpClientModule,

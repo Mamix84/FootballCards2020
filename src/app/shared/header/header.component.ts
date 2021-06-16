@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -10,98 +9,90 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class HeaderComponent implements OnInit {
   items: MenuItem[];
-  constructor(private router: Router, public auth: AuthService) {}
+  constructor(public auth: AuthService) {}
 
   ngOnInit(): void {
     this.items = [
       {
         label: 'HOME',
-        command: (event) => {
-          this.router.navigate(['/']);
-        },
+        routerLink: ['/'],
       },
       { separator: true },
       {
-        label: 'NUOVO CAMPIONATO',
-        command: (event) => {
-          this.router.navigate(['/nuovo-campionato']);
-        },
-      },
-      {
-        label: 'CARICA CAMPIONATO',
-        command: (event) => {
-          this.router.navigate(['/carica-campionato']);
-        },
-      },
-      {
-        label: 'CAMPIONATO CASUALE',
-        command: (event) => {
-          this.router.navigate(['/nuovo-campionato-casuale']);
-        },
-      },
-      { separator: true },
-      {
-        label: 'NUOVA STAGIONE',
-        command: (event) => {
-          this.router.navigate(['/nuova-stagione']);
-        },
-      },
-      {
-        label: 'CARICA STAGIONE',
-        command: (event) => {
-          this.router.navigate(['/carica-stagione']);
-        },
-      },
-      {
-        label: 'STAGIONE CASUALE',
-        command: (event) => {
-          this.router.navigate(['/nuova-stagione-casuale']);
-        },
+        label: 'CAMPIONATO',
+        items: [
+          {
+            label: 'NUOVO CAMPIONATO',
+            routerLink: ['/nuovo-campionato'],
+          },
+          {
+            label: 'CARICA CAMPIONATO',
+            routerLink: ['/carica-campionato'],
+          },
+          {
+            label: 'CAMPIONATO CASUALE',
+            routerLink: ['/nuovo-campionato-casuale'],
+          },
+        ],
       },
       { separator: true },
       {
-        label: 'NUOVA COPPA',
-        command: (event) => {
-          this.router.navigate(['/nuova-coppa']);
-        },
-      },
-      {
-        label: 'CARICA COPPA',
-        command: (event) => {
-          this.router.navigate(['/carica-coppa']);
-        },
-      },
-      {
-        label: 'COPPA CASUALE',
-        command: (event) => {
-          this.router.navigate(['/nuova-coppa-casuale']);
-        },
+        label: 'STAGIONE',
+        items: [
+          {
+            label: 'NUOVA STAGIONE',
+            routerLink: ['/nuova-stagione'],
+          },
+          {
+            label: 'CARICA STAGIONE',
+            routerLink: ['/carica-stagione'],
+          },
+          {
+            label: 'STAGIONE CASUALE',
+            routerLink: ['/nuova-stagione-casuale'],
+          },
+        ],
       },
       { separator: true },
       {
-        label: 'NUOVA CARRIERA',
-        command: (event) => {
-          this.router.navigate(['/nuova-carriera']);
-        },
+        label: 'COPPA',
+        items: [
+          {
+            label: 'NUOVA COPPA',
+            routerLink: ['/nuova-coppa'],
+          },
+          {
+            label: 'CARICA COPPA',
+            routerLink: ['/carica-coppa'],
+          },
+          {
+            label: 'COPPA CASUALE',
+            routerLink: ['/nuova-coppa-casuale'],
+          },
+        ],
       },
+      { separator: true },
       {
-        label: 'CARICA CARRIERA',
-        command: (event) => {
-          this.router.navigate(['/carica-carriera']);
-        },
-      },
-      {
-        label: 'CARRIERA CASUALE',
-        command: (event) => {
-          this.router.navigate(['/nuova-carriera-casuale']);
-        },
+        label: 'CARRIERA',
+        items: [
+          {
+            label: 'NUOVA CARRIERA',
+            routerLink: ['/nuova-carriera'],
+          },
+          {
+            label: 'CARICA CARRIERA',
+            routerLink: ['/carica-carriera'],
+          },
+          {
+            label: 'CARRIERA CASUALE',
+            routerLink: ['/nuova-carriera-casuale'],
+          },
+        ],
       },
       { separator: true },
       {
         label: 'CONFIGURATORE',
-        command: (event) => {
-          this.router.navigate(['/configuratore']);
-        },
+        routerLink: ['/configuratore'],
       },
     ];
   }
