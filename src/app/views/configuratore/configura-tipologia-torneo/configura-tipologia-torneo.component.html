@@ -40,14 +40,22 @@
             </p-cellEditor>
           </td>
           <td style="text-align:center">
-            <p-button *ngIf="!editing" pRipple pInitEditableRow icon="pi pi-pencil"
-              class="p-button-rounded p-button-text" (onClick)="onRowEditInit(rowData, ri)"></p-button>
-            <p-button *ngIf="editing" pRipple pSaveEditableRow icon="pi pi-check"
-              class="p-button-rounded p-button-text p-button-success p-mr-2" (onClick)="onRowEditSave(rowData, ri)">
-            </p-button>
-            <p-button *ngIf="editing" pRipple pCancelEditableRow icon="pi pi-times"
-              class="p-button-rounded p-button-text p-button-danger" (onClick)="onRowEditCancel(rowData, ri)">
-            </p-button>
+            <div class="p-grid">
+              <div class="p-col" *ngIf="!editing">
+                <p-button pRipple pInitEditableRow icon="pi pi-pencil" class="p-button-rounded p-button-text"
+                  (onClick)="onRowEditInit(rowData, ri)"></p-button>
+              </div>
+              <div class="p-col-6" *ngIf="editing">
+                <p-button pRipple pSaveEditableRow icon="pi pi-check"
+                  class="p-button-rounded p-button-text p-button-success p-mr-2" (onClick)="onRowEditSave(rowData, ri)">
+                </p-button>
+              </div>
+              <div class="p-col-6" *ngIf="editing">
+                <p-button pRipple pCancelEditableRow icon="pi pi-times"
+                  class="p-button-rounded p-button-text p-button-danger" (onClick)="onRowEditCancel(rowData, ri)">
+                </p-button>
+              </div>
+            </div>
           </td>
         </tr>
       </ng-template>
