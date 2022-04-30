@@ -2,15 +2,19 @@
   <div class="p-col-12">
     <p-fieldset legend="NUOVO CAMPIONATO">
       <div class="p-grid">
+        <div class="p-col-6">
+          <app-tipologia-risultati [selected]="campionato.tipologiaRisultati"
+          (selezioneTipologiaRisultato)="this.campionato.tipologiaRisultati = +$event;"></app-tipologia-risultati>
+        </div>
+        <div class="p-col-6">
+        </div>
+      </div>
+      <div class="p-grid">
         <div class="p-col-3">
           <h3>DENOMINAZIONE LEGA</h3>
         </div>
-        <div class="p-col-6">
+        <div class="p-col-9">
           <input type="text" pInputText [(ngModel)]="campionato.denominazioneLega" />
-        </div>
-        <div class="p-col-3">
-          <app-tipologia-risultati [selected]="campionato.tipologiaRisultati"
-          (selezioneTipologiaRisultato)="this.campionato.tipologiaRisultati = +$event;"></app-tipologia-risultati>
         </div>
       </div>
       <div class="p-grid">

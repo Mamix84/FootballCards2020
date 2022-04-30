@@ -3,7 +3,7 @@ export class Team{
   id: number;
   nome: string;
   logo: string;
-  valoreTecnico: number;
+  valoreTecnico: number = 0;
 }
 
 export class Derby{
