@@ -1,0 +1,33 @@
+<div class="p-grid">
+  <div class="p-col-12">
+    <div *ngIf="start===false" style="background-image: url(../assets/images/cards/cover_card.jpg);
+      background-repeat: no-repeat;
+      background-position-x: 0px;
+      background-position-y: 0px;
+      background-size: 204px 354px;
+      width: 204px;
+      height: 354px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;">
+    </div>
+    <div *ngIf=" start===true" id="img" style="background-image: url(../assets/images/cards/cards.jpg);
+      background-repeat: no-repeat;
+      background-position-x: {{xpos}}px;
+      background-position-y: {{ypos}}px;
+      backgroud-size: 1753px 1199px;
+      width: 204px;
+      height: 354px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;"></div>
+  </div>
+</div>
+
+<div class=" p-grid">
+  <div class="p-col-12">
+    <div>
+      <p-button class="appButton" label="{{buttonLabel}}" (onClick)="gioca()"></p-button>
+  </div>
+</div>
+</div>

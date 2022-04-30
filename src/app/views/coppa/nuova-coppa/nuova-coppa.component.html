@@ -1,0 +1,89 @@
+<div class="ui-g">
+  <div class="ui-g-12">
+    <p-fieldset legend="Nuova Coppa">
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>DENOMINAZIONE COPPA</h3>
+        </div>
+        <div class="ui-g-6">
+          <input type="text" pInputText [(ngModel)]="coppa.denominazioneCoppa" />
+        </div>
+        <div class="p-col-3">
+          <app-tipologia-risultati [selected]="coppa.tipologiaRisultati"
+          (selezioneTipologiaRisultato)="this.coppa.tipologiaRisultati = +$event;"></app-tipologia-risultati>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>TIPOLOGIA TORNEO</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown
+            [disabled]="coppa.denominazioneCoppa === undefined || coppa.denominazioneCoppa === '' ? true: false"
+            class="appDropDown" [options]="listaTipologieCoppa" [(ngModel)]="coppa.tipologia"
+            (onChange)="preparaListaTeams()">
+          </p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>STAGIONE</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown" [disabled]="coppa.tipologia===undefined || coppa.tipologia===null"
+            [options]="listaStagioni" [(ngModel)]="coppa.stagione"></p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>NUMERO SQUADRE</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown"
+            [disabled]="coppa.stagione===undefined || coppa.stagione===null || listaNumeroSquadre === undefined ? true : false"
+            [options]="listaNumeroSquadre" [(ngModel)]="coppa.numeroTeams" (onChange)="preparaListaTeams()">
+          </p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>FORMAT</h3>
+        </div>
+        <div class="ui-g-6">
+          <p-dropdown class="appDropDown" [disabled]="(coppa.numeroTeams===undefined || coppa.numeroTeams===null || listaFormat===undefined) ||
+            (listaFormat!=undefined && listaFormat.length <1) ? true : false" [options]="listaFormat"
+            [(ngModel)]="coppa.format"></p-dropdown>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-3">
+          <h3>SELEZIONE SQUADRE</h3>
+        </div>
+      </div>
+      <div class="ui-g" *ngIf="coppa.stagione && coppa.numeroTeams && coppa.denominazioneCoppa">
+        <div class="ui-g-12" *ngFor="let i = index; let team of listaTeamsDaSelezionare">
+          <div class="ui-g-3">
+            <h3>SQUADRA N° {{i+1}}</h3>
+          </div>
+          <div class="ui-g-6">
+            <p-dropdown class="appDropDown" [options]="listaTeams" filter="true" [(ngModel)]="listaTeamsSelezionati[i]">
+            </p-dropdown>
+          </div>
+          <div class="ui-g-3" *ngIf="listaTeamsSelezionati[i] != null">
+            <p-dropdown class="appDropDown" [options]="listaValoriTecnici" filter="true"
+              [(ngModel)]="listaTeamsSelezionati[i].valoreTecnico">
+            </p-dropdown>
+          </div>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-10">
+        </div>
+        <div class="ui-g-2">
+          <p-button class="appButton" [disabled]="checkCoppaCompleta()" label="PREPARA"
+            (onClick)="preparaCoppa()"></p-button>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+</div>

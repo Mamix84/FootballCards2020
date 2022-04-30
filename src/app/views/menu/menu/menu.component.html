@@ -1,0 +1,64 @@
+<div class="p-grid">
+  <div class="p-col-4">
+    <p-fieldset legend="CAMPIONATO" class="p-col-nopad">
+      <div class="p-grid">
+        <div class="p-col-6">
+          <p-button icon="pi pi-calendar" (onClick)="nuovoCampionato()" label="NUOVO CAMPIONATO"></p-button>
+        </div>
+        <div class="p-col-6">
+          <p-button class="p-button-secondary" icon="pi pi-folder-open" (onClick)="caricaCampionato()" label="CARICA CAMPIONATO"></p-button>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col-4">
+    <p-fieldset legend="STAGIONE" class="p-col-nopad">
+      <div class="p-grid">
+        <div class="p-col-6">
+          <p-button icon="pi pi-user" (onClick)="nuovaStagione()" label="NUOVA STAGIONE"></p-button>
+        </div>
+        <div class="p-col-6">
+          <p-button class="p-button-secondary" icon="pi pi-folder-open" (onClick)="caricaStagione()" label="CARICA STAGIONE"></p-button>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+
+  <div class="p-col-4">
+    <p-fieldset legend="COPPA" class="p-col-nopad">
+      <div class="p-grid">
+        <div class="p-col-6">
+          <p-button icon="pi pi-user" (onClick)="nuovaCoppa()" label="NUOVA COPPA"></p-button>
+        </div>
+        <div class="p-col-6">
+          <p-button class="p-button-secondary" icon="pi pi-folder-open" (onClick)="caricaCoppa()" label="CARICA COPPA"></p-button>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-6">
+    <app-carica-campionato [light]="true"></app-carica-campionato>
+  </div>
+  <div class="p-col-6">
+    <app-carica-stagione [light]="true"></app-carica-stagione>
+  </div>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-6">
+    <p-fieldset legend="CLASSIFICA SERIE A" class="p-col-nopad">
+      <iframe id="myframe" src="http://www.footstats.it/classifica_ext.php?show=a" height="500" width="100%"
+        frameborder="0" scrolling="no" style="margin:10px 0;"></iframe>
+    </p-fieldset>
+  </div>
+  <div class="p-col-6">
+    <p-fieldset legend="CLASSIFICA SERIE B" class="p-col-nopad">
+      <iframe id="myframe" src="http://www.footstats.it/classifica_ext.php?show=b" height="500" width="100%"
+        frameborder="0" scrolling="no" style="margin:10px 0;"></iframe>
+    </p-fieldset>
+  </div>
+</div>

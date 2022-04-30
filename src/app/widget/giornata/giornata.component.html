@@ -1,0 +1,22 @@
+<p-fieldset legend="GIORNATA" [toggleable]="true">
+  <div class="p-grid">
+    <div class="p-col-8">
+      <div *ngFor="let i = index; let evento of giornata.listaEventi" [ngStyle]="{'background-color': i%2 === 0 ? '#FFFFFF' : '#F0F5F5'}">
+        <app-evento [evento]="evento" (selected)="eventoCorrente($event)"
+          (aggiornaClassifica)="aggiornaClassifica()">
+        </app-evento>
+      </div>
+    </div>
+    <div class="p-col-4">
+      <div class="p-grid">
+        <div class="p-col-6">
+          <app-card id="card-casa" [buttonLabel]="'CASA'" (risultato)="inviaRisultatoCasa($event)"></app-card>
+        </div>
+        <div class="p-col-6">
+          <app-card id="card-fuori-casa" [buttonLabel]="'FUORI CASA'" (risultato)="inviaRisultatoFuoriCasa($event)">
+          </app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</p-fieldset>

@@ -1,0 +1,118 @@
+<div class="p-grid">
+  <div class="p-col-12">
+    <p-fieldset legend="NUOVO CAMPIONATO">
+      <div class="p-grid">
+        <div class="p-col-3">
+          <h3>DENOMINAZIONE LEGA</h3>
+        </div>
+        <div class="p-col-6">
+          <input type="text" pInputText [(ngModel)]="campionato.denominazioneLega" />
+        </div>
+        <div class="p-col-3">
+          <app-tipologia-risultati [selected]="campionato.tipologiaRisultati"
+          (selezioneTipologiaRisultato)="this.campionato.tipologiaRisultati = +$event;"></app-tipologia-risultati>
+        </div>
+      </div>
+      <div class="p-grid">
+        <div class="p-col">
+          <app-stagioni [selected]="campionato.stagione"
+            [disabled]="campionato.denominazioneLega === undefined || campionato.denominazioneLega === '' ? true: false"
+            (selezioneStagione)="campionato.stagione = $event;"></app-stagioni>
+        </div>
+      </div>
+      <div class="p-grid">
+        <div class="p-col">
+          <app-tipologia-torneo [selected]="campionato.tipologia"
+            [disabled]="campionato.stagione===undefined || campionato.stagione===null  || campionato.singolo === false ? true : false"
+            (selezioneTipologiaTorneo)="this.campionato.tipologia = $event"></app-tipologia-torneo>
+        </div>
+      </div>
+      <div class="p-grid">
+        <div class="p-col">
+          <app-numero-squadre [selected]="campionato.numeroTeams"
+            [disabled]="(campionato.stagione===undefined || campionato.stagione===null) || (campionato.tipologia===undefined || campionato.tipologia===null)"
+            [tipologiaTorneo]="campionato.tipologia" (selezioneNumeroSquadre)="campionato.numeroTeams = $event">
+          </app-numero-squadre>
+        </div>
+      </div>
+      <div class="p-grid">
+        <div class="p-col">
+          <app-format [disabled]="(campionato.numeroTeams===undefined || campionato.numeroTeams===null)"
+            [tipologiaTorneo]="campionato.tipologia" [numeroTeams]="campionato.numeroTeams"
+            (selezioneFormat)="campionato.format = $event; this.preparaListaTeams();"></app-format>
+        </div>
+      </div>
+      <div *ngIf="campionato.stagione && campionato.numeroTeams && campionato.denominazioneLega && campionato.format">
+        <p-divider></p-divider>
+        <div class="p-grid">
+          <div class="p-col-12" *ngFor="let i = index; let team of listaTeamsDaSelezionare">
+            <div class="p-grid">
+              <div class="p-col-3">
+                <h3>SQUADRA N° {{i+1}}</h3>
+              </div>
+              <div class="p-col-6">
+                <p-dropdown class="appDropDown" [options]="listaTeams" filter="true"
+                  [(ngModel)]="listaTeamsSelezionati[i]">
+                </p-dropdown>
+              </div>
+              <div class="p-col-3" *ngIf="listaTeamsSelezionati[i] != null">
+                <p-dropdown class="appDropDown" [options]="listaValoriTecnici" filter="true"
+                  [(ngModel)]="listaTeamsSelezionati[i].valoreTecnico">
+                </p-dropdown>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-grid">
+          <div class="p-col-4">
+          </div>
+          <div class="p-col-2">
+            <p-button class="appButton" label="SQUADRE CASUALI" (onClick)="selezionaSquadreCasuali()"></p-button>
+          </div>
+          <div class="p-col-2">
+            <p-button class="appButton" label="CARICA TEMPLATE" (onClick)="visualizzaCaricaTemplateDialog()"></p-button>
+          </div>
+          <div class="p-col-2" [ngStyle]="{'visibility': this.singolo === true ? 'hidden' : ''}">
+            <p-button class="appButton" label="ELIMINA" (onClick)="eliminaCampionato()"></p-button>
+          </div>
+          <div class="p-col-2">
+            <p-button class="appButton" [disabled]="checkCampionatoCompleto()" label="PREPARA"
+              (onClick)="preparaCampionato()"></p-button>
+          </div>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+</div>
+
+<p-dialog header="CARICA CAMPIONATO TEMPLATE" [(visible)]="visualizzaCaricaTemplate">
+  <div class="p-grid" style="width: 600px; height: 200px;">
+    <div class="p-col-12">
+
+      <div class="p-grid">
+        <div class="p-col-8">
+          <h3>SELEZIONA CAMPIONATO DA CARICARE</h3>
+        </div>
+        <div class="p-col-4">
+        </div>
+      </div>
+
+      <div class="p-grid">
+        <div class="p-col-12">
+          <p-dropdown class="appDropDown" appendTo="body" [options]="listaTemplateCampionato" filter="true"
+            [(ngModel)]="campionato">
+          </p-dropdown>
+        </div>
+      </div>
+
+      <div class="p-grid">
+        <div class="p-col-8">
+        </div>
+        <div class="p-col-4">
+          <p-button class="appButton" label="CONFERMA" (onClick)="nascondiVisualizzaCaricaTemplate()"></p-button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</p-dialog>

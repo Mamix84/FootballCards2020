@@ -1,0 +1,43 @@
+<div class="p-grid">
+  <div class="p-col-12">
+    <p-fieldset legend="CARICA CAMPIONATO">
+      <div class="p-grid">
+        <div class="p-col-12">
+          <p-table #dt [value]="listaSalvataggi" dataKey="id" styleClass="ui-table-customers" [rowHover]="true"
+            [rows]="idFile" [paginator]="light" [rows]="light === true ?  3 : 0">
+            <ng-template pTemplate="header">
+              <tr>
+                <th *ngIf="!light">ID</th>
+                <th >DESCRIZIONE</th>
+                <th >STAGIONE</th>
+                <th *ngIf="!light">NUMERO SQUADRE</th>
+                <th *ngIf="!light">DATA CREAZIONE</th>
+                <th *ngIf="!light">DATA SALVATAGGIO</th>
+                <th *ngIf="!light"></th>
+                <th ></th>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-salvataggio>
+              <tr>
+                <td *ngIf="!light">{{salvataggio.idCampionato}}</td>
+                <td>{{salvataggio.descrizione}}</td>
+                <td>{{salvataggio.stagione}}</td>
+                <td *ngIf="!light">{{salvataggio.numeroTeams}}</td>
+                <td *ngIf="!light">{{salvataggio.dataCreazione | date : 'medium'}}</td>
+                <td *ngIf="!light">{{salvataggio.dataUltimoSalvataggio | date : 'medium'}}</td>
+                <td>
+                  <p-button class="appButton" label="CARICA" (onClick)="caricaCampionato(salvataggio.idCampionato)">
+                  </p-button>
+                </td>
+                <td *ngIf="!light">
+                  <p-button class="appButton" label="ELIMINA" (onClick)="eliminaSalvataggio(salvataggio.idCampionato)">
+                  </p-button>
+                </td>
+              </tr>
+            </ng-template>
+          </p-table>
+        </div>
+      </div>
+    </p-fieldset>
+  </div>
+</div>

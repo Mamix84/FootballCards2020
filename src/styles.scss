@@ -1,122 +1,98 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/theme/football_light_theme.scss';
 
 $red: rgb(243, 78, 78);
 $grey: rgb(117, 111, 111);
+$amaranth: rgba(131, 17, 47, 1);
+$amaranth-08: rgba(131, 17, 47, 0.8);
+$prussian-blue: rgba(0, 48, 73, 1);
+$prussian-blue-08: rgba(0, 48, 73, 1);
+$orange: rgba(247, 127, 0, 1);
+$maximum-yellow-red: rgba(252, 191, 73, 1);
+$lemon-meringue: rgba(234, 226, 183, 1);
 
 body {
-    font-family: "Arial", Times, serif;
-  }
+  font-family: "Arial", Times, serif;
+}
 
-  .main {
-      width: 100%;
-  }
+.main {
+  width: 100%;
+}
 
-  h1{
-    color: $grey;
-    margin: 0;
-  }
+h1 {
+  color: $grey;
+  margin: 0;
+}
 
-  h2{
-    color: $grey;
-    margin: 0;
-  }
+h2 {
+  color: $grey;
+  margin: 0;
+}
 
-  h3{
-    color: $grey;
-    margin: 0;
-  }
+h3 {
+  color: $grey;
+  margin: 0;
+}
 
-  h4{
-    color: $grey;
-    margin: 0;
-  }
+h4 {
+  color: $grey;
+  margin: 0;
+}
 
-  h5{
-    color: $grey;
-    margin: 0;
-  }
+h5 {
+  color: $grey;
+  margin: 0;
+}
 
-  label{
-      color: $grey;
-  }
+label {
+  color: $grey;
+}
 
-  input{
-      box-shadow: 10em
-  }
+input {
+  box-shadow: 10em;
+}
 
-  .ui-inputtext{
-      width: 100%;
-  }
+.logo {
+  font-size: 3em;
+  color: $red;
+  font-style: oblique;
+  text-shadow: 2px 2px $grey;
+}
 
-  .logo{
-    font-size:3.0em;
-    color: $red;
-    font-style: oblique;
-    text-shadow: 2px 2px $grey;
-  }
+.gradient {
+  background-image: linear-gradient(to right, white, $amaranth);
+  margin-bottom: 1em;
+}
 
-  .gradient{
-    background-image: linear-gradient(to right, white , rgb(131, 17, 47));
-    margin-bottom: 1.0em;
-  }
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $amaranth;
+  color: white;
+  text-align: center;
+  font-size: 0.8em;
+}
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgb(131, 17, 47);
-    color: white;
-    text-align: center;
-    font-size:0.8em;
-  }
+.teamLogo {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(117, 111, 111);
+  box-shadow: 2px 2px 1px grey;
+}
 
-  .appButton .ui-button{
-    background-color: rgb(131, 17, 47);
-    border-color: rgb(131, 17, 47);
-    font-family: "Arial", Times, serif;
-    margin: auto;
-    display: block;
-    width: 90%;
-  }
+.grass{
+  background-image: url('./assets/images/grass.jpg');
+}
 
-  .appSelectButton .ui-selectbutton .ui-button.ui-state-active{
-    background-color: rgb(131, 17, 47);
-    border-color: rgb(131, 17, 47);
-    font-family: "Arial", Times, serif;
-  }
+.grass h1{
+  color: white !important;
+  text-shadow: red 0.0em 0em 0.5em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
 
-  .menuButton .ui-button{
-    width: 50% !important;
-    height: 3.0em;
-    font-size: 3.0em;
-  }
-
-  p-button{
-    margin: auto;
-    display: block !important;
-  }
-
-  .appCheckBox .ui-chkbox .ui-chkbox-box.ui-state-active {
-    background-color: rgb(131, 17, 47);
-    border-color: rgb(131, 17, 47);
-  }
-
-  .appCheckBox .ui-chkbox .ui-chkbox-box.ui-state-active {
-    background-color: rgb(131, 17, 47);
-    border-color: rgb(131, 17, 47);
-  }
-
-  .appDropDown .ui-dropdown {
-    width: 100%;
-  }
-
-  .teamLogo{
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(117, 111, 111);
-    box-shadow: 2px 2px 1px grey;
-  }
-
-  body .ui-fieldset{
-    margin-top: 1.0em;
-  }
+.grass h5{
+  color: white !important;
+  text-shadow: red 0.0em 0em 0.5em;
+}

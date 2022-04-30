@@ -5,7 +5,6 @@ import { Giornata, Evento, Campionato } from '../model/campionato';
 import { StorageService } from './storage.service';
 import { Salvataggio } from '../model/files';
 import { TeamsService } from './teams.service';
-import tipologie_risultati from '../../assets/json/tipologie_risultati.json';
 import lista_template_campionato from '../../assets/json/lista_template_campionato.json';
 
 @Injectable({
@@ -16,6 +15,31 @@ export class CampionatoService {
     private storageService: StorageService,
     private teamService: TeamsService
   ) {}
+
+  preparaCampionato(campionato: Campionato, listaTeamsSelezionati: Team[] ): Campionato {
+    if (campionato.listaTeams.length === 0) {
+      for (let i = 0; i < listaTeamsSelezionati.length; i++) {
+        campionato.listaTeams.push(listaTeamsSelezionati[i]);
+      }
+    }
+    campionato.giornataCorrente = 0;
+
+    campionato.listaGiornate = this.generaCalendario(
+      campionato,
+      campionato.listaTeams
+    );
+
+    let date = new Date();
+    campionato.id =
+      campionato.denominazioneLega.trim() +
+      '_' +
+      date.getTime().toString();
+    if (campionato.singolo === true) {
+      this.salvaCampionato(campionato);
+    }
+
+    return campionato;
+  }
 
   generaCalendario(
     campionato: Campionato,
@@ -521,12 +545,6 @@ export class CampionatoService {
         }
       }
     }
-  }
-
-  caricaListaTipologiaRisultati(): SelectItem[] {
-    let listaTipologiaRisultati = tipologie_risultati.listaTipologieRisultati;
-
-    return listaTipologiaRisultati;
   }
 
   caricaListaTemplateCampionato(): SelectItem[] {

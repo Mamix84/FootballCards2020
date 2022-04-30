@@ -1,0 +1,64 @@
+<div class="p-grid">
+  <div class="p-col-4">
+    <p-button class="appButton" label="AGGIUNGI STAGIONE" (onClick)="aggiungiNuovaConfigurazione()"></p-button>
+  </div>
+  <div class="p-col-8"></div>
+</div>
+
+<div class="p-grid">
+  <div class="p-col-12">
+    <p-table [value]="listaStagioni" dataKey="ri" editMode="row">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>ID</th>
+          <th>ETICHETTA</th>
+          <th>VALORE</th>
+          <th style="width:8em"></th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-editing="editing" let-ri="rowIndex">
+        <tr [pEditableRow]="rowData">
+          <td>{{ri}}</td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input pInputText type="text" [(ngModel)]="rowData.label" required>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.label}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+              <ng-template pTemplate="input">
+                <input pInputText type="text" [(ngModel)]="rowData.value" required>
+              </ng-template>
+              <ng-template pTemplate="output">
+                {{rowData.value}}
+              </ng-template>
+            </p-cellEditor>
+          </td>
+          <td style="text-align:center">
+            <div class="p-grid">
+              <div class="p-col" *ngIf="!editing">
+                <p-button pRipple pInitEditableRow icon="pi pi-pencil" class="p-button-rounded p-button-text"
+                  (onClick)="onRowEditInit(rowData, ri)"></p-button>
+              </div>
+              <div class="p-col-6" *ngIf="editing">
+                <p-button pRipple pSaveEditableRow icon="pi pi-check"
+                  class="p-button-rounded p-button-text p-button-success p-mr-2" (onClick)="onRowEditSave(rowData, ri)">
+                </p-button>
+              </div>
+              <div class="p-col-6" *ngIf="editing">
+                <p-button pRipple pCancelEditableRow icon="pi pi-times"
+                  class="p-button-rounded p-button-text p-button-danger" (onClick)="onRowEditCancel(rowData, ri)">
+                </p-button>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
