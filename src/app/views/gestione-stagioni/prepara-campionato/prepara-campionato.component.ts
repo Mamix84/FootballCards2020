@@ -224,6 +224,8 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
         }
       }
     }
+
+    console.log(this.campionato.listaTeams);
   }
 
   proseguiStagione() {
@@ -407,7 +409,7 @@ export class PreparaCampionatoComponent implements OnInit, AfterViewInit {
 
         let listaTeamsItems = [];
 
-        listaTeamsItems.push({ label: 'Seleziona squadra', value: null });
+        listaTeamsItems.push({ label: 'Seleziona squadra', value: new Team() });
 
         for (let i = 0; i < listaTeamsOrdinata.length; i++) {
           listaTeamsItems.push({
