@@ -89,6 +89,13 @@ h1{
   box-shadow: 0 0 0 0.2rem $primary-color-focus;
 }
 
+.p-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+  margin-top: 0.0rem !important;
+}
 
 // Button START
 
@@ -211,13 +218,13 @@ h1{
   color: #333333;
   border-radius: 0.5em;
   box-shadow: 0.5em 0.5em 0.5em $secondary-color;
-  margin-top: 1.0em;
-  margin-bottom: 1.0em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
   background: $primary-color;
   background: linear-gradient(180deg, $primary-color 0, rgba(255,255,255,1) 20px);
 }
 .p-fieldset .p-fieldset-legend {
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.25rem;
   border: 0.15em solid $primary-color;
   color: $primary-text-color;
   background: $secondary-color;
@@ -229,7 +236,7 @@ h1{
   transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
 }
 .p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.25rem;
   color: $primary-text-color;
   border-radius: 3px;
   transition: background-color 0.2s, box-shadow 0.2s;
@@ -248,7 +255,7 @@ h1{
   color: #333333;
 }
 .p-fieldset .p-fieldset-content {
-  padding: 1.5rem 1.5rem;
+  padding: 0.55rem 0.5rem;
 }
 //Fieldset END
 

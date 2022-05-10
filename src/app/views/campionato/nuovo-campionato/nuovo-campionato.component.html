@@ -27,7 +27,7 @@
       <div class="p-grid">
         <div class="p-col">
           <app-tipologia-torneo [selected]="campionato.tipologia"
-            [disabled]="campionato.stagione===undefined || campionato.stagione===null  || campionato.singolo === false ? true : false"
+            [disabled]="campionato.stagione===undefined || campionato.stagione===null  || campionato.denominazioneLega === undefined || campionato.denominazioneLega === '' ? true : false"
             (selezioneTipologiaTorneo)="this.campionato.tipologia = $event"></app-tipologia-torneo>
         </div>
       </div>

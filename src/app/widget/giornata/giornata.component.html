@@ -1,7 +1,7 @@
 <p-fieldset legend="GIORNATA" [toggleable]="true">
   <div class="p-grid">
     <div class="p-col-8">
-      <div *ngFor="let i = index; let evento of giornata.listaEventi" [ngStyle]="{'background-color': i%2 === 0 ? '#FFFFFF' : '#F0F5F5'}">
+      <div *ngFor="let i = index; let evento of giornata.listaEventi" [ngStyle]="{'background-color': i%2 === 0 ? '#FFFFFF' : '#F0F5F5', 'height':'4.0em'}">
         <app-evento [evento]="evento" (selected)="eventoCorrente($event)"
           (aggiornaClassifica)="aggiornaClassifica()">
         </app-evento>

@@ -11,12 +11,14 @@ import {
 
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { StorageService } from './storage.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
   user$: Observable<User>;
+  user: User;
 
   constructor(
     private afAuth: AngularFireAuth,
@@ -25,10 +27,11 @@ export class AuthService {
   ) {
     // Get the auth state, then fetch the Firestore user document or return null
     this.user$ = this.afAuth.authState.pipe(
-      switchMap((user) => {
+      switchMap((userTemp) => {
         // Logged in
-        if (user) {
-          return this.afs.doc<User>(`users/${user.uid}`).valueChanges();
+        if (userTemp) {
+          this.user = userTemp;
+          return this.afs.doc<User>(`users/${userTemp.uid}`).valueChanges();
         } else {
           // Logged out
           return of(null);
