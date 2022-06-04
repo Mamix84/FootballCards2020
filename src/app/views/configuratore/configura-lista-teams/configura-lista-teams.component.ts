@@ -72,7 +72,7 @@ export class ConfiguraListaTeamsComponent implements OnInit {
   aggiungiNuovaConfigurazione() {
     this.listaTeams.unshift({
       idTecnico: null,
-      id: this.listaTeams.length + 1,
+      id: this.maxTeamsIndex(this.listaTeams),
       nome: null,
       logo: null,
       valoreTecnico: null,
@@ -94,10 +94,6 @@ export class ConfiguraListaTeamsComponent implements OnInit {
         logo: '/assets/images/teams/' + item.nome.toLowerCase() + '.png',
         valoreTecnico: item.valoreTecnico,
       });
-
-      for (let file of this.uploadedFiles) {
-        this.pushFileToStorage(file);
-      }
     } else {
       this.teamsDbService.update(item.idTecnico, {
         id: item.id,
@@ -106,6 +102,11 @@ export class ConfiguraListaTeamsComponent implements OnInit {
         valoreTecnico: item.valoreTecnico,
       });
     }
+
+    for (let file of this.uploadedFiles) {
+      this.pushFileToStorage(file);
+    }
+
     this.create = false;
     this.uploadedFiles = [];
     this.teamsService.svuotaListaTeams();
@@ -131,5 +132,13 @@ export class ConfiguraListaTeamsComponent implements OnInit {
     const uploadTask = this.storage.upload(filePath, fileUpload);
 
     uploadTask.snapshotChanges();
+  }
+
+  maxTeamsIndex(listaTeams: Team[]): number {
+    let max = 0;
+    listaTeams.forEach((team) => {
+      if (team.id > max) max = team.id;
+    });
+    return max + 1;
   }
 }
