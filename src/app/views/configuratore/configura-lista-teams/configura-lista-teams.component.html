@@ -69,16 +69,16 @@
           <td style="text-align:center">
             <div class="p-grid">
               <div class="p-col" *ngIf="!editing">
-                <p-button pRipple pInitEditableRow icon="pi pi-pencil" class="p-button-rounded p-button-text"
+                <p-button pInitEditableRow icon="pi pi-pencil" class="p-button-rounded p-button-text"
                   (onClick)="onRowEditInit(rowData, ri)"></p-button>
               </div>
               <div class="p-col-6" *ngIf="editing">
-                <p-button pRipple pSaveEditableRow icon="pi pi-check"
+                <p-button pSaveEditableRow icon="pi pi-check"
                   class="p-button-rounded p-button-text p-button-success p-mr-2" (onClick)="onRowEditSave(rowData, ri)">
                 </p-button>
               </div>
               <div class="p-col-6" *ngIf="editing">
-                <p-button pRipple pCancelEditableRow icon="pi pi-times"
+                <p-button pCancelEditableRow icon="pi pi-times"
                   class="p-button-rounded p-button-text p-button-danger" (onClick)="onRowEditCancel(rowData, ri)">
                 </p-button>
               </div>
